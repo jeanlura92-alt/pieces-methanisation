@@ -38,9 +38,9 @@
               </p>
               
               <p style="color: var(--text-gray); font-size: 14px; margin-bottom: 12px;">
-                Créée le {{ listing.created_at[:10] }}
+                Créée le {{ (listing.created_at|string)[:10] }}
                 {% if listing.published_at %}
-                • Publiée le {{ listing.published_at[:10] }}
+                • Publiée le {{ (listing.published_at|string)[:10] }}
                 {% endif %}
               </p>
 

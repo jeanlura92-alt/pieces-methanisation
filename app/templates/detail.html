@@ -104,7 +104,7 @@
           <div class="contact-info" style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border-color);">
             <div class="contact-info-item">
               <div class="contact-info-label">Référence</div>
-              <div class="contact-info-value">#{{ listing.id[:8] }}</div>
+              <div class="contact-info-value">#{{ listing.id|string|truncate(8, True, '') }}</div>
             </div>
           </div>
           

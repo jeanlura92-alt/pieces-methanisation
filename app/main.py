@@ -5,9 +5,13 @@ from fastapi.templating import Jinja2Templates
 from typing import Optional
 import stripe
 import json
+import logging
 
 from . import db
 from . import config
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 app = FastAPI(title="Pieces Methanisation Pro")
 
@@ -309,7 +313,7 @@ async def wizard_step4_post(
     request: Request,
     listing_id: str = Form(...),
     price_type: str = Form(...),
-    price_amount: Optional[int] = Form(None),
+    price_amount: Optional[str] = Form(None),
     location: str = Form(...),
 ):
     """Save step 4 and redirect to step 5"""
@@ -317,8 +321,14 @@ async def wizard_step4_post(
         price_amount_cents = None
         price_display = "Sur devis"
     else:
-        price_amount_cents = price_amount * 100 if price_amount else None
-        price_display = format_price_display(price_amount_cents)
+        try:
+            # Convert string to float, then to cents
+            amount = float(price_amount) if price_amount else 0
+            price_amount_cents = int(amount * 100)
+            price_display = format_price_display(price_amount_cents)
+        except (ValueError, TypeError):
+            price_amount_cents = None
+            price_display = "Prix non défini"
     
     updates = {
         "price_amount": price_amount_cents,
@@ -407,7 +417,7 @@ async def wizard_step5_post(
         return RedirectResponse(url=checkout_session.url, status_code=303)
     
     except Exception as e:
-        print(f"Stripe error: {e}")
+        logger.error(f"Stripe error: {e}")
         raise HTTPException(status_code=500, detail="Erreur lors de la création de la session de paiement")
 
 
@@ -491,7 +501,12 @@ async def stripe_webhook(request: Request):
 
 @app.get("/dashboard", response_class=HTMLResponse)
 def dashboard(request: Request, user_email: Optional[str] = Cookie(None)):
-    """Seller dashboard"""
+    """Seller dashboard
+    
+    NOTE: This is a simplified implementation without proper authentication.
+    In production, implement proper user authentication (OAuth, JWT, etc.)
+    before using this dashboard functionality.
+    """
     # In a real app, you'd get user from session/auth
     # For now, we'll get all listings (simplified)
     

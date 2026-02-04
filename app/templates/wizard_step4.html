@@ -28,7 +28,7 @@
     <label for="price_amount">Prix en € *</label>
     <input type="number" id="price_amount" name="price_amount" 
            placeholder="12900"
-           value="{{ draft.price_amount // 100 if draft and draft.price_amount else '' }}" />
+           value="{% if draft and draft.price_amount %}{{ draft.price_amount // 100 }}{% endif %}" />
     <small>Prix en euros (ex: 12900 pour 12 900 €)</small>
   </div>
 

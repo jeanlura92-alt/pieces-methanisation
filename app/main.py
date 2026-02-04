@@ -35,7 +35,7 @@ def listing_detail(request: Request, listing_id: int):
         raise HTTPException(status_code=404, detail="Annonce introuvable")
     return templates.TemplateResponse(
         "detail.html",
-        {"request": request, "listing": listing},
+        {"request": request, "listing": listing, "listings": LISTINGS},
     )
 
 

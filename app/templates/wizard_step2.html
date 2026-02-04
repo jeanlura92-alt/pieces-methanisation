@@ -5,6 +5,7 @@
 <p class="subtitle">Décrivez les caractéristiques techniques de votre équipement</p>
 
 <form method="post" action="/deposer/step2">
+  <input type="hidden" name="listing_id" value="{{ draft.id }}" />
   <div class="form-group">
     <label for="condition">État *</label>
     <select id="condition" name="condition" required>

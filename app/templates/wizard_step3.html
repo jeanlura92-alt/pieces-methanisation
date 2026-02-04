@@ -5,6 +5,7 @@
 <p class="subtitle">Ajoutez des photos et documents techniques</p>
 
 <form method="post" action="/deposer/step3">
+  <input type="hidden" name="listing_id" value="{{ draft.id }}" />
   <div class="form-group">
     <label for="image_url">URL de la photo principale</label>
     <input type="url" id="image_url" name="image_url" 

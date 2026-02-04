@@ -5,6 +5,7 @@
 <p class="subtitle">Vérifiez vos informations et ajoutez vos coordonnées</p>
 
 <form method="post" action="/deposer/step5">
+  <input type="hidden" name="listing_id" value="{{ draft.id }}" />
   <div style="background: var(--bg-light); padding: 24px; border-radius: var(--radius); margin-bottom: 32px;">
     <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 16px;">Récapitulatif de votre annonce</h3>
     

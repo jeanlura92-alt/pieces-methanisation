@@ -5,6 +5,7 @@
 <p class="subtitle">Définissez le prix et la localisation</p>
 
 <form method="post" action="/deposer/step4">
+  <input type="hidden" name="listing_id" value="{{ draft.id }}" />
   <div class="form-group">
     <label>Type de prix *</label>
     <div style="display: flex; gap: 16px; margin-top: 8px;">

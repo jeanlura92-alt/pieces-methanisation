@@ -1,8 +1,136 @@
 {% extends "base.html" %}
 
-{% block title %}Detail{% endblock %}
-
 {% block content %}
-    <h2>Detail Page</h2>
-    <p>Details about the selected item will go here.</p>
+<section class="detail-header">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Accueil</a> / <a href="/annonces">Annonces</a> / {{ listing.title }}
+    </div>
+  </div>
+</section>
+
+<section class="detail-content">
+  <div class="container">
+    <div class="detail-grid">
+      <div class="detail-main">
+        <h1>{{ listing.title }}</h1>
+        
+        <div class="detail-meta">
+          <div class="detail-meta-item">
+            <span class="detail-meta-label">Catégorie</span>
+            <span class="detail-meta-value">{{ listing.category }}</span>
+          </div>
+          <div class="detail-meta-item">
+            <span class="detail-meta-label">État</span>
+            <span class="detail-meta-value">{{ listing.condition }}</span>
+          </div>
+          <div class="detail-meta-item">
+            <span class="detail-meta-label">Localisation</span>
+            <span class="detail-meta-value">{{ listing.location }}</span>
+          </div>
+          {% if listing.year %}
+          <div class="detail-meta-item">
+            <span class="detail-meta-label">Année</span>
+            <span class="detail-meta-value">{{ listing.year }}</span>
+          </div>
+          {% endif %}
+          {% if listing.manufacturer %}
+          <div class="detail-meta-item">
+            <span class="detail-meta-label">Fabricant</span>
+            <span class="detail-meta-value">{{ listing.manufacturer }}</span>
+          </div>
+          {% endif %}
+        </div>
+
+        <img src="{{ listing.image }}" alt="{{ listing.title }}" />
+
+        <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; color: var(--text-dark);">Description</h2>
+        <div class="detail-description">
+          {% if listing.description %}
+          <p>{{ listing.description }}</p>
+          {% else %}
+          <p>{{ listing.summary }}</p>
+          {% endif %}
+        </div>
+
+        <div style="background: var(--bg-light); padding: 24px; border-radius: var(--radius-lg); margin-top: 32px;">
+          <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 12px;">Informations importantes</h3>
+          <ul style="list-style: none; color: var(--text-gray); line-height: 2;">
+            <li>✓ Équipement vérifié et fonctionnel</li>
+            <li>✓ Documentation technique disponible</li>
+            <li>✓ Possibilité de visite sur site</li>
+            <li>✓ Assistance à l'installation disponible</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="detail-sidebar">
+        <div class="contact-card">
+          <h3>Contacter le vendeur</h3>
+          <span class="price-large">{{ listing.price }}</span>
+          
+          <div class="contact-info">
+            {% if listing.contact_email %}
+            <div class="contact-info-item">
+              <div class="contact-info-label">Email</div>
+              <div class="contact-info-value">{{ listing.contact_email }}</div>
+            </div>
+            {% endif %}
+            {% if listing.contact_phone %}
+            <div class="contact-info-item">
+              <div class="contact-info-label">Téléphone</div>
+              <div class="contact-info-value">{{ listing.contact_phone }}</div>
+            </div>
+            {% endif %}
+            <div class="contact-info-item">
+              <div class="contact-info-label">Référence</div>
+              <div class="contact-info-value">#{{ listing.id }}</div>
+            </div>
+          </div>
+
+          <a href="/contact?ref={{ listing.id }}" class="btn-primary" style="width: 100%; text-align: center; margin-top: 24px;">Envoyer un message</a>
+          
+          <p style="font-size: 13px; color: var(--text-light); margin-top: 16px; text-align: center;">
+            Réponse sous 24h en moyenne
+          </p>
+        </div>
+
+        <div style="background: var(--bg-light); padding: 24px; border-radius: var(--radius-lg); margin-top: 24px;">
+          <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 12px;">Besoin d'aide ?</h4>
+          <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin-bottom: 16px;">
+            Notre équipe est disponible pour vous accompagner dans votre achat.
+          </p>
+          <a href="/contact" class="btn-secondary" style="width: 100%; text-align: center;">Contactez-nous</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background: var(--bg-light);">
+  <div class="container">
+    <h2>Annonces similaires</h2>
+    <div class="cards">
+      {% for item in listings[:3] %}
+      {% if item.id != listing.id %}
+      <article class="card">
+        <img src="{{ item.image }}" alt="{{ item.title }}" />
+        <div class="card-body">
+          <div style="margin-bottom: 12px;">
+            <span class="badge badge-info">{{ item.category }}</span>
+          </div>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.summary }}</p>
+          <div class="meta">
+            <span>📍 {{ item.location }}</span>
+            <span class="price">{{ item.price }}</span>
+          </div>
+          <a class="link" href="/annonces/{{ item.id }}">Voir les détails →</a>
+        </div>
+      </article>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
 {% endblock %}

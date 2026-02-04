@@ -1,10 +1,101 @@
 {% extends "base.html" %}
 
-{% block title %}Listings{% endblock %}
-
 {% block content %}
-    <h2>Listing Page</h2>
-    <ul>
-        <!-- Listings will go here -->
-    </ul>
+<section class="section">
+  <div class="container-wide">
+    <h1 style="font-size: 36px; font-weight: 700; margin-bottom: 16px;">Toutes les annonces</h1>
+    <p style="color: var(--text-gray); margin-bottom: 32px; font-size: 18px;">Découvrez notre sélection d'équipements de méthanisation et biogaz disponibles en Europe.</p>
+
+    <div class="filters">
+      <div class="filter-grid">
+        <div class="filter-group">
+          <label>Rechercher</label>
+          <input type="text" id="search" placeholder="Mots-clés..." />
+        </div>
+        <div class="filter-group">
+          <label>Catégorie</label>
+          <select id="category">
+            <option value="">Toutes les catégories</option>
+            <option value="Agitation">Agitation</option>
+            <option value="Pompage">Pompage</option>
+            <option value="Épuration">Épuration</option>
+            <option value="Sécurité">Sécurité</option>
+            <option value="Thermique">Thermique</option>
+            <option value="Automatisme">Automatisme</option>
+            <option value="Compression">Compression</option>
+            <option value="Stockage">Stockage</option>
+            <option value="Séparation">Séparation</option>
+            <option value="Cogénération">Cogénération</option>
+            <option value="Analyse">Analyse</option>
+            <option value="Prétraitement">Prétraitement</option>
+            <option value="Instrumentation">Instrumentation</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>État</label>
+          <select id="condition">
+            <option value="">Tous les états</option>
+            <option value="Neuf">Neuf</option>
+            <option value="Comme neuf">Comme neuf</option>
+            <option value="Très bon état">Très bon état</option>
+            <option value="Bon état">Bon état</option>
+            <option value="Révisé">Révisé</option>
+            <option value="Reconditionné">Reconditionné</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Localisation</label>
+          <input type="text" id="location" placeholder="Région, pays..." />
+        </div>
+      </div>
+    </div>
+
+    <div class="stats" style="margin-bottom: 40px;">
+      <div class="stat-card">
+        <span class="stat-number">{{ listings|length }}</span>
+        <span class="stat-label">Annonces disponibles</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">{{ listings|selectattr('category')|unique|list|length }}</span>
+        <span class="stat-label">Catégories</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">8</span>
+        <span class="stat-label">Pays couverts</span>
+      </div>
+    </div>
+
+    <div class="cards" id="listings-container">
+      {% for item in listings %}
+      <article class="card" data-category="{{ item.category }}" data-condition="{{ item.condition }}" data-location="{{ item.location }}" data-title="{{ item.title|lower }}">
+        <img src="{{ item.image }}" alt="{{ item.title }}" />
+        <div class="card-body">
+          <div style="margin-bottom: 12px;">
+            <span class="badge badge-info">{{ item.category }}</span>
+            {% if item.condition == 'Neuf' %}
+            <span class="badge badge-success">{{ item.condition }}</span>
+            {% elif item.condition == 'Comme neuf' or item.condition == 'Très bon état' %}
+            <span class="badge badge-success">{{ item.condition }}</span>
+            {% else %}
+            <span class="badge">{{ item.condition }}</span>
+            {% endif %}
+          </div>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.summary }}</p>
+          <div class="meta">
+            <span>📍 {{ item.location }}</span>
+            <span class="price">{{ item.price }}</span>
+          </div>
+          <a class="link" href="/annonces/{{ item.id }}">Voir les détails →</a>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div id="no-results" style="display: none; text-align: center; padding: 60px 20px;">
+      <h3 style="font-size: 24px; color: var(--text-gray); margin-bottom: 16px;">Aucune annonce trouvée</h3>
+      <p style="color: var(--text-light);">Essayez de modifier vos filtres de recherche.</p>
+    </div>
+  </div>
+</section>
 {% endblock %}

@@ -1,0 +1,67 @@
+{% extends "wizard_base.html" %}
+
+{% block wizard_content %}
+<h1>Déposer une annonce - Étape 5/5</h1>
+<p class="subtitle">Vérifiez vos informations et ajoutez vos coordonnées</p>
+
+<form method="post" action="/deposer/step5">
+  <div style="background: var(--bg-light); padding: 24px; border-radius: var(--radius); margin-bottom: 32px;">
+    <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 16px;">Récapitulatif de votre annonce</h3>
+    
+    <div style="display: grid; gap: 12px;">
+      <div><strong>Titre :</strong> {{ draft.title }}</div>
+      <div><strong>Type :</strong> {{ draft.listing_type }}</div>
+      <div><strong>Catégorie :</strong> {{ draft.category }}</div>
+      <div><strong>État :</strong> {{ draft.condition }}</div>
+      {% if draft.year %}
+      <div><strong>Année :</strong> {{ draft.year }}</div>
+      {% endif %}
+      {% if draft.manufacturer %}
+      <div><strong>Fabricant :</strong> {{ draft.manufacturer }}</div>
+      {% endif %}
+      <div><strong>Prix :</strong> {{ draft.price_display }}</div>
+      <div><strong>Localisation :</strong> {{ draft.location }}</div>
+    </div>
+    
+    <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-color);">
+      <p style="font-size: 14px; color: var(--text-gray); margin: 0;">
+        <strong>Résumé :</strong> {{ draft.summary }}
+      </p>
+    </div>
+  </div>
+
+  <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">Informations de contact</h3>
+  
+  <div class="form-grid">
+    <div class="form-group">
+      <label for="contact_email">Email *</label>
+      <input type="email" id="contact_email" name="contact_email" required 
+             placeholder="votre@email.fr"
+             value="{{ draft.contact_email if draft and draft.contact_email else '' }}" />
+    </div>
+
+    <div class="form-group">
+      <label for="contact_phone">Téléphone *</label>
+      <input type="tel" id="contact_phone" name="contact_phone" required 
+             placeholder="+33 X XX XX XX XX"
+             value="{{ draft.contact_phone if draft and draft.contact_phone else '' }}" />
+    </div>
+  </div>
+
+  <div style="margin-top: 32px; padding: 20px; background: var(--secondary-color); background: rgba(16, 185, 129, 0.1); border-radius: var(--radius); border-left: 4px solid var(--secondary-color);">
+    <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; color: var(--text-dark);">
+      💳 Paiement de la publication
+    </h4>
+    <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin: 0;">
+      Pour publier votre annonce, un paiement unique de <strong>{{ listing_price }} €</strong> est requis. 
+      Vous serez redirigé vers une page de paiement sécurisée Stripe. Votre annonce sera publiée 
+      immédiatement après la confirmation du paiement.
+    </p>
+  </div>
+
+  <div style="margin-top: 32px; display: flex; gap: 16px; justify-content: space-between;">
+    <a href="/deposer/step4" class="btn-secondary">← Retour</a>
+    <button type="submit" class="btn-primary">Procéder au paiement →</button>
+  </div>
+</form>
+{% endblock %}

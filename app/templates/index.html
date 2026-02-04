@@ -1,7 +1,73 @@
 {% extends "base.html" %}
-
-{% block title %}Home{% endblock %}
-
 {% block content %}
-    <h2>Welcome to the Marketplace</h2>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Le marché pro des pièces de méthanisation & biogaz</h1>
+      <p>
+        Achetez, vendez et trouvez rapidement des équipements
+        fiables pour vos unités de méthanisation.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="/annonces">Voir les annonces</a>
+        <a class="btn-secondary" href="/deposer">Déposer une annonce</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>{{ count }}</strong> annonces en ligne</div>
+        <div><strong>France & Europe</strong> couverture</div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Dernières annonces</h3>
+      <ul>
+        {% for item in featured %}
+        <li>
+          <span>{{ item.title }}</span>
+          <small>{{ item.location }}</small>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="container section">
+  <h2>Catégories phares</h2>
+  <div class="categories">
+    <div class="category">Agitation</div>
+    <div class="category">Pompage</div>
+    <div class="category">Épuration</div>
+    <div class="category">Sécurité</div>
+    <div class="category">Automatisme</div>
+    <div class="category">Thermique</div>
+  </div>
+</section>
+
+<section class="container section">
+  <h2>Dernières annonces</h2>
+  <div class="cards">
+    {% for item in featured %}
+    <article class="card">
+      <img src="{{ item.image }}" alt="{{ item.title }}" />
+      <div class="card-body">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.summary }}</p>
+        <div class="meta">
+          <span>{{ item.location }}</span>
+          <span class="price">{{ item.price }}</span>
+        </div>
+        <a class="link" href="/annonces/{{ item.id }}">Voir l’annonce</a>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container">
+    <h2>Vous avez du matériel à vendre ?</h2>
+    <p>Publiez une annonce en quelques minutes.</p>
+    <a class="btn-primary" href="/deposer">Déposer une annonce</a>
+  </div>
+</section>
 {% endblock %}

@@ -1,25 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/styles.css">
-    <title>{% block title %}Marketplace{% endblock %}</title>
-</head>
-<body>
-    <header>
-        <h1>Marketplace</h1>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/listing">Listing</a></li>
-                <li><a href="/create">Create</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pieces Methanisation Pro</title>
+    <link rel="stylesheet" href="/static/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="/">Pieces Méthanisation Pro</a>
+        <nav class="nav">
+          <a href="/annonces">Annonces</a>
+          <a href="/deposer">Déposer</a>
+          <a href="/contact">Contact</a>
         </nav>
+        <button class="cta">Déposer une annonce</button>
+      </div>
     </header>
-    <main>
-        {% block content %}{% endblock %}
+
+    <main class="site-main">
+      {% block content %}{% endblock %}
     </main>
-</body>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h4>À propos</h4>
+          <p>
+            Plateforme professionnelle dédiée aux équipements de
+            méthanisation & biogaz en France et en Europe.
+          </p>
+        </div>
+        <div>
+          <h4>Catégories</h4>
+          <ul>
+            <li>Agitation</li>
+            <li>Pompage</li>
+            <li>Épuration</li>
+            <li>Automatisme</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>contact@pieces-methanisation.fr</p>
+        </div>
+      </div>
+      <div class="container copyright">
+        © 2026 Pieces Méthanisation Pro
+      </div>
+    </footer>
+  </body>
 </html>

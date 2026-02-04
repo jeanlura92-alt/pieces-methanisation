@@ -1,0 +1,67 @@
+{% extends "wizard_base.html" %}
+
+{% block wizard_content %}
+<h1>Déposer une annonce - Étape 4/5</h1>
+<p class="subtitle">Définissez le prix et la localisation</p>
+
+<form method="post" action="/deposer/step4">
+  <input type="hidden" name="listing_id" value="{{ draft.id }}" />
+  <div class="form-group">
+    <label>Type de prix *</label>
+    <div style="display: flex; gap: 16px; margin-top: 8px;">
+      <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+        <input type="radio" name="price_type" value="fixed" 
+               {% if not draft or not draft.price_display or draft.price_display != 'Sur devis' %}checked{% endif %} 
+               onchange="togglePriceInput()" />
+        <span>Prix fixe</span>
+      </label>
+      <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+        <input type="radio" name="price_type" value="quote" 
+               {% if draft and draft.price_display == 'Sur devis' %}checked{% endif %}
+               onchange="togglePriceInput()" />
+        <span>Sur devis</span>
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group" id="price_input_group">
+    <label for="price_amount">Prix en € *</label>
+    <input type="number" id="price_amount" name="price_amount" 
+           placeholder="12900"
+           value="{% if draft and draft.price_amount %}{{ draft.price_amount // 100 }}{% endif %}" />
+    <small>Prix en euros (ex: 12900 pour 12 900 €)</small>
+  </div>
+
+  <div class="form-group">
+    <label for="location">Localisation *</label>
+    <input type="text" id="location" name="location" required 
+           placeholder="Ex: Bretagne, FR"
+           value="{{ draft.location if draft else '' }}" />
+    <small>Région et pays</small>
+  </div>
+
+  <div style="margin-top: 32px; display: flex; gap: 16px; justify-content: space-between;">
+    <a href="/deposer/step3" class="btn-secondary">← Retour</a>
+    <button type="submit" class="btn-primary">Suivant →</button>
+  </div>
+</form>
+
+<script>
+function togglePriceInput() {
+  const priceType = document.querySelector('input[name="price_type"]:checked').value;
+  const priceInputGroup = document.getElementById('price_input_group');
+  const priceInput = document.getElementById('price_amount');
+  
+  if (priceType === 'quote') {
+    priceInputGroup.style.display = 'none';
+    priceInput.removeAttribute('required');
+  } else {
+    priceInputGroup.style.display = 'block';
+    priceInput.setAttribute('required', 'required');
+  }
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', togglePriceInput);
+</script>
+{% endblock %}

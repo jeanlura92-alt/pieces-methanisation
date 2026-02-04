@@ -84,7 +84,7 @@
           <p>{{ item.summary }}</p>
           <div class="meta">
             <span>📍 {{ item.location }}</span>
-            <span class="price">{{ item.price }}</span>
+            <span class="price">{{ item.price_display or item.price }}</span>
           </div>
           <a class="link" href="/annonces/{{ item.id }}">Voir les détails →</a>
         </div>

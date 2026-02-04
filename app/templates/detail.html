@@ -67,28 +67,46 @@
       <div class="detail-sidebar">
         <div class="contact-card">
           <h3>Contacter le vendeur</h3>
-          <span class="price-large">{{ listing.price }}</span>
+          <span class="price-large">{{ listing.price_display or listing.price }}</span>
           
-          <div class="contact-info">
-            {% if listing.contact_email %}
-            <div class="contact-info-item">
-              <div class="contact-info-label">Email</div>
-              <div class="contact-info-value">{{ listing.contact_email }}</div>
+          {% if request.query_params.get('inquiry') == 'success' %}
+          <div style="background: var(--secondary-color); background: rgba(16, 185, 129, 0.1); border: 1px solid var(--secondary-color); padding: 16px; border-radius: var(--radius); margin-top: 16px;">
+            <p style="font-size: 14px; color: var(--text-dark); margin: 0;">
+              ✓ Votre message a été envoyé avec succès !
+            </p>
+          </div>
+          {% endif %}
+          
+          <form method="post" action="/annonces/{{ listing.id }}/inquiry" style="margin-top: 24px;">
+            <div class="form-group">
+              <label for="buyer_name">Votre nom *</label>
+              <input type="text" id="buyer_name" name="buyer_name" required placeholder="Jean Dupont" />
             </div>
-            {% endif %}
-            {% if listing.contact_phone %}
-            <div class="contact-info-item">
-              <div class="contact-info-label">Téléphone</div>
-              <div class="contact-info-value">{{ listing.contact_phone }}</div>
+            
+            <div class="form-group">
+              <label for="buyer_email">Votre email *</label>
+              <input type="email" id="buyer_email" name="buyer_email" required placeholder="votre@email.fr" />
             </div>
-            {% endif %}
+            
+            <div class="form-group">
+              <label for="buyer_phone">Votre téléphone</label>
+              <input type="tel" id="buyer_phone" name="buyer_phone" placeholder="+33 X XX XX XX XX" />
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Votre message *</label>
+              <textarea id="message" name="message" required placeholder="Bonjour, je suis intéressé par votre équipement..." rows="4"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-primary" style="width: 100%;">Envoyer le message</button>
+          </form>
+          
+          <div class="contact-info" style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border-color);">
             <div class="contact-info-item">
               <div class="contact-info-label">Référence</div>
-              <div class="contact-info-value">#{{ listing.id }}</div>
+              <div class="contact-info-value">#{{ listing.id|string|truncate(8, True, '') }}</div>
             </div>
           </div>
-
-          <a href="/contact?ref={{ listing.id }}" class="btn-primary" style="width: 100%; text-align: center; margin-top: 24px;">Envoyer un message</a>
           
           <p style="font-size: 13px; color: var(--text-light); margin-top: 16px; text-align: center;">
             Réponse sous 24h en moyenne
@@ -123,7 +141,7 @@
           <p>{{ item.summary }}</p>
           <div class="meta">
             <span>📍 {{ item.location }}</span>
-            <span class="price">{{ item.price }}</span>
+            <span class="price">{{ item.price_display or item.price }}</span>
           </div>
           <a class="link" href="/annonces/{{ item.id }}">Voir les détails →</a>
         </div>

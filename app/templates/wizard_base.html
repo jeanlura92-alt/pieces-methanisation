@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="form-page">
+  <div class="form-container">
+    <div class="wizard-progress">
+      <div class="wizard-step {% if current_step >= 1 %}active{% endif %} {% if current_step > 1 %}completed{% endif %}">
+        <div class="step-number">1</div>
+        <div class="step-label">Type & Catégorie</div>
+      </div>
+      <div class="wizard-step {% if current_step >= 2 %}active{% endif %} {% if current_step > 2 %}completed{% endif %}">
+        <div class="step-number">2</div>
+        <div class="step-label">Détails techniques</div>
+      </div>
+      <div class="wizard-step {% if current_step >= 3 %}active{% endif %} {% if current_step > 3 %}completed{% endif %}">
+        <div class="step-number">3</div>
+        <div class="step-label">Photos & Documents</div>
+      </div>
+      <div class="wizard-step {% if current_step >= 4 %}active{% endif %} {% if current_step > 4 %}completed{% endif %}">
+        <div class="step-number">4</div>
+        <div class="step-label">Prix & Localisation</div>
+      </div>
+      <div class="wizard-step {% if current_step >= 5 %}active{% endif %} {% if current_step > 5 %}completed{% endif %}">
+        <div class="step-number">5</div>
+        <div class="step-label">Contact & Récap</div>
+      </div>
+    </div>
+
+    {% block wizard_content %}{% endblock %}
+  </div>
+</section>
+
+<style>
+.wizard-progress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border-color);
+  gap: 10px;
+}
+
+.wizard-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  opacity: 0.4;
+}
+
+.wizard-step.active {
+  opacity: 1;
+}
+
+.wizard-step.completed {
+  opacity: 0.8;
+}
+
+.wizard-step.completed .step-number {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  background: white;
+  transition: all 0.3s;
+}
+
+.wizard-step.active .step-number {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.step-label {
+  font-size: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .wizard-progress {
+    gap: 5px;
+  }
+  
+  .step-number {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+  
+  .step-label {
+    font-size: 10px;
+  }
+}
+</style>
+{% endblock %}

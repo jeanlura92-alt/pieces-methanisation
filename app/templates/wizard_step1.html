@@ -1,0 +1,41 @@
+{% extends "wizard_base.html" %}
+
+{% block wizard_content %}
+<h1>Déposer une annonce - Étape 1/5</h1>
+<p class="subtitle">Commencez par définir le type et la catégorie de votre équipement</p>
+
+<form method="post" action="/deposer/step1">
+  <div class="form-group">
+    <label for="listing_type">Type d'annonce *</label>
+    <select id="listing_type" name="listing_type" required>
+      <option value="">Sélectionnez...</option>
+      {% for type in listing_types %}
+      <option value="{{ type.value }}" {% if draft and draft.listing_type == type.value %}selected{% endif %}>{{ type.label }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="category">Catégorie *</label>
+    <select id="category" name="category" required>
+      <option value="">Sélectionnez...</option>
+      {% for cat in categories %}
+      <option value="{{ cat }}" {% if draft and draft.category == cat %}selected{% endif %}>{{ cat }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="title">Titre de l'annonce *</label>
+    <input type="text" id="title" name="title" required 
+           placeholder="Ex: Mélangeur de digesteur inox 30 kW"
+           value="{{ draft.title if draft else '' }}" />
+    <small>Soyez précis et descriptif</small>
+  </div>
+
+  <div style="margin-top: 32px; display: flex; gap: 16px; justify-content: flex-end;">
+    <a href="/annonces" class="btn-secondary">Annuler</a>
+    <button type="submit" class="btn-primary">Suivant →</button>
+  </div>
+</form>
+{% endblock %}

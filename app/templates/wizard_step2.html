@@ -1,0 +1,55 @@
+{% extends "wizard_base.html" %}
+
+{% block wizard_content %}
+<h1>Déposer une annonce - Étape 2/5</h1>
+<p class="subtitle">Décrivez les caractéristiques techniques de votre équipement</p>
+
+<form method="post" action="/deposer/step2">
+  <input type="hidden" name="listing_id" value="{{ draft.id }}" />
+  <div class="form-group">
+    <label for="condition">État *</label>
+    <select id="condition" name="condition" required>
+      <option value="">Sélectionnez...</option>
+      {% for cond in conditions %}
+      <option value="{{ cond }}" {% if draft and draft.condition == cond %}selected{% endif %}>{{ cond }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="form-grid">
+    <div class="form-group">
+      <label for="year">Année de fabrication</label>
+      <input type="text" id="year" name="year" 
+             placeholder="Ex: 2019"
+             value="{{ draft.year if draft and draft.year else '' }}" />
+    </div>
+
+    <div class="form-group">
+      <label for="manufacturer">Fabricant</label>
+      <input type="text" id="manufacturer" name="manufacturer" 
+             placeholder="Ex: Landia"
+             value="{{ draft.manufacturer if draft and draft.manufacturer else '' }}" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="summary">Résumé court *</label>
+    <input type="text" id="summary" name="summary" required 
+           placeholder="Description en une ligne" maxlength="255"
+           value="{{ draft.summary if draft else '' }}" />
+    <small>Maximum 255 caractères</small>
+  </div>
+
+  <div class="form-group">
+    <label for="description">Description détaillée *</label>
+    <textarea id="description" name="description" required 
+              placeholder="Décrivez votre équipement en détail : spécifications techniques, historique d'utilisation, maintenance effectuée, etc.">{{ draft.description if draft else '' }}</textarea>
+    <small>Soyez le plus détaillé possible pour faciliter la vente</small>
+  </div>
+
+  <div style="margin-top: 32px; display: flex; gap: 16px; justify-content: space-between;">
+    <a href="/deposer/step1" class="btn-secondary">← Retour</a>
+    <button type="submit" class="btn-primary">Suivant →</button>
+  </div>
+</form>
+{% endblock %}

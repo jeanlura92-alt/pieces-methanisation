@@ -1,0 +1,29 @@
+{% extends "wizard_base.html" %}
+
+{% block wizard_content %}
+<h1>Déposer une annonce - Étape 3/5</h1>
+<p class="subtitle">Ajoutez des photos et documents techniques</p>
+
+<form method="post" action="/deposer/step3">
+  <input type="hidden" name="listing_id" value="{{ draft.id }}" />
+  <div class="form-group">
+    <label for="image_url">URL de la photo principale</label>
+    <input type="url" id="image_url" name="image_url" 
+           placeholder="https://..."
+           value="{{ draft.image_url if draft and draft.image_url else '' }}" />
+    <small>Lien vers une photo de votre équipement (Unsplash, votre hébergement, etc.)</small>
+  </div>
+
+  <div style="margin-top: 20px; padding: 20px; background: var(--bg-light); border-radius: var(--radius); border-left: 4px solid var(--primary-color);">
+    <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin: 0;">
+      <strong>Note :</strong> Pour cette version, veuillez fournir l'URL d'une image hébergée en ligne. 
+      Dans une version complète, vous pourriez uploader directement vos photos et documents PDF.
+    </p>
+  </div>
+
+  <div style="margin-top: 32px; display: flex; gap: 16px; justify-content: space-between;">
+    <a href="/deposer/step2" class="btn-secondary">← Retour</a>
+    <button type="submit" class="btn-primary">Suivant →</button>
+  </div>
+</form>
+{% endblock %}

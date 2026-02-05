@@ -60,6 +60,9 @@ document.getElementById('photo-form').addEventListener('submit', function(e) {
   const errorDiv = document.getElementById('file-error');
   const submitBtn = document.getElementById('submit-btn');
   
+  // Reset color to danger
+  errorDiv.style.color = 'var(--danger-color)';
+  
   if (fileInput.files.length > 3) {
     e.preventDefault();
     errorDiv.textContent = 'Vous ne pouvez sélectionner que 3 photos maximum.';
@@ -99,11 +102,12 @@ document.getElementById('photos').addEventListener('change', function(e) {
   const count = e.target.files.length;
   
   if (count > 3) {
+    errorDiv.style.color = 'var(--danger-color)';
     errorDiv.textContent = `Vous avez sélectionné ${count} photos. Maximum : 3. Veuillez en retirer ${count - 3}.`;
     errorDiv.style.display = 'block';
   } else if (count > 0) {
-    errorDiv.textContent = `${count} photo${count > 1 ? 's' : ''} sélectionnée${count > 1 ? 's' : ''}.`;
     errorDiv.style.color = 'var(--success-color)';
+    errorDiv.textContent = `${count} photo${count > 1 ? 's' : ''} sélectionnée${count > 1 ? 's' : ''}.`;
     errorDiv.style.display = 'block';
   } else {
     errorDiv.style.display = 'none';

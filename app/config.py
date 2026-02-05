@@ -59,3 +59,8 @@ LISTING_TYPES = [
     {"value": "equipment", "label": "Équipement complet"},
     {"value": "part", "label": "Pièce détachée"},
 ]
+
+# Photo upload configuration
+MAX_PHOTOS_PER_LISTING = 3
+ALLOWED_PHOTO_TYPES = ["image/jpeg", "image/jpg", "image/png", "image/webp", "image/gif"]
+ALLOWED_PHOTO_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".gif"]

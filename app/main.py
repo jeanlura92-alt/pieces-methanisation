@@ -281,10 +281,10 @@ async def wizard_step3_post(
     """Save step 3 (upload photos) and redirect to step 4"""
     
     # Server-side validation: max 3 photos
-    if len(photos) > 3:
+    if len(photos) > config.MAX_PHOTOS_PER_LISTING:
         raise HTTPException(
             status_code=400, 
-            detail="Vous ne pouvez télécharger que 3 photos maximum."
+            detail=f"Vous ne pouvez télécharger que {config.MAX_PHOTOS_PER_LISTING} photos maximum."
         )
     
     # Server-side validation: at least 1 photo
@@ -295,9 +295,8 @@ async def wizard_step3_post(
         )
     
     # Validate file types
-    allowed_types = ["image/jpeg", "image/jpg", "image/png", "image/webp", "image/gif"]
     for photo in photos:
-        if photo.content_type not in allowed_types:
+        if photo.content_type not in config.ALLOWED_PHOTO_TYPES:
             raise HTTPException(
                 status_code=400,
                 detail=f"Type de fichier non autorisé: {photo.content_type}. Utilisez JPG, PNG, WEBP ou GIF."

@@ -3,11 +3,15 @@ Supabase Storage helper for file uploads
 """
 import os
 import uuid
+import logging
 from typing import Optional, BinaryIO
 from pathlib import Path
 from supabase import Client
 
 from . import config
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 
 def generate_filename(listing_id: str, original_filename: str) -> str:
@@ -57,7 +61,7 @@ def upload_file(
         return public_url
     
     except Exception as e:
-        print(f"Error uploading file to Supabase Storage: {e}")
+        logger.error(f"Error uploading file to Supabase Storage: {e}")
         return None
 
 
@@ -77,7 +81,7 @@ def delete_file(supabase: Client, bucket_name: str, file_path: str) -> bool:
         supabase.storage.from_(bucket_name).remove([file_path])
         return True
     except Exception as e:
-        print(f"Error deleting file from Supabase Storage: {e}")
+        logger.error(f"Error deleting file from Supabase Storage: {e}")
         return False
 
 

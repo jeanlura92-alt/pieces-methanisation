@@ -2,9 +2,13 @@
 Database access layer for Supabase
 """
 import os
+import logging
 from typing import Optional, List, Dict, Any
 from datetime import datetime
 from supabase import create_client, Client
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 # Initialize Supabase client
 supabase_url = os.getenv("SUPABASE_URL")
@@ -156,6 +160,32 @@ def get_listing_media(listing_id: str) -> List[Dict[str, Any]]:
         .execute()
     )
     return result.data if result.data else []
+
+
+def delete_listing_media(listing_id: str) -> bool:
+    """Delete all media for a listing"""
+    if not supabase:
+        return True
+    
+    try:
+        supabase.table("media").delete().eq("listing_id", listing_id).execute()
+        return True
+    except Exception as e:
+        logger.error(f"Error deleting media: {e}")
+        return False
+
+
+def delete_media_by_id(media_id: str) -> bool:
+    """Delete a specific media entry by ID"""
+    if not supabase:
+        return True
+    
+    try:
+        supabase.table("media").delete().eq("id", media_id).execute()
+        return True
+    except Exception as e:
+        logger.error(f"Error deleting media by ID: {e}")
+        return False
 
 
 # ==================== Inquiries ====================

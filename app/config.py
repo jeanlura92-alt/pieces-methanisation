@@ -15,6 +15,7 @@ load_dotenv()
 # Supabase Configuration
 SUPABASE_URL = os.getenv("SUPABASE_URL", "")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY", "")
+SUPABASE_STORAGE_BUCKET = os.getenv("SUPABASE_STORAGE_BUCKET", "listing-photos")
 
 # Stripe Configuration
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY", "")
@@ -58,3 +59,8 @@ LISTING_TYPES = [
     {"value": "equipment", "label": "Équipement complet"},
     {"value": "part", "label": "Pièce détachée"},
 ]
+
+# Photo upload configuration
+MAX_PHOTOS_PER_LISTING = 3
+ALLOWED_PHOTO_TYPES = ["image/jpeg", "image/jpg", "image/png", "image/webp", "image/gif"]
+ALLOWED_PHOTO_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".gif"]

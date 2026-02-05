@@ -1,14 +1,15 @@
-from fastapi import FastAPI, Request, HTTPException, Form, Cookie
+from fastapi import FastAPI, Request, HTTPException, Form, Cookie, UploadFile, File
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
-from typing import Optional
+from typing import Optional, List
 import stripe
 import json
 import logging
 
 from . import db
 from . import config
+from . import storage
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -259,8 +260,7 @@ def wizard_step3(request: Request, listing_id: str):
     
     # Get existing media
     media = db.get_listing_media(listing_id)
-    if media and len(media) > 0:
-        draft["image_url"] = media[0]["url"]
+    draft["photos"] = media  # Add photos list to draft
     
     return templates.TemplateResponse(
         "wizard_step3.html",
@@ -276,17 +276,99 @@ def wizard_step3(request: Request, listing_id: str):
 async def wizard_step3_post(
     request: Request,
     listing_id: str = Form(...),
-    image_url: str = Form(""),
+    photos: List[UploadFile] = File(...),
 ):
-    """Save step 3 and redirect to step 4"""
-    # If image URL provided, save it as media
-    if image_url:
-        # Remove existing media first
+    """Save step 3 (upload photos) and redirect to step 4"""
+    
+    # Server-side validation: max 3 photos
+    if len(photos) > config.MAX_PHOTOS_PER_LISTING:
+        raise HTTPException(
+            status_code=400, 
+            detail=f"Vous ne pouvez télécharger que {config.MAX_PHOTOS_PER_LISTING} photos maximum."
+        )
+    
+    # Server-side validation: at least 1 photo
+    if len(photos) == 0:
+        raise HTTPException(
+            status_code=400,
+            detail="Veuillez télécharger au moins une photo."
+        )
+    
+    # Validate file types
+    for photo in photos:
+        if photo.content_type not in config.ALLOWED_PHOTO_TYPES:
+            raise HTTPException(
+                status_code=400,
+                detail=f"Type de fichier non autorisé: {photo.content_type}. Utilisez JPG, PNG, WEBP ou GIF."
+            )
+    
+    # Check if Supabase is configured
+    if not db.supabase:
+        # Mock mode - skip upload but continue
+        logger.warning("Supabase not configured - skipping photo upload in mock mode")
+        return RedirectResponse(url=f"/deposer/step4?listing_id={listing_id}", status_code=303)
+    
+    try:
+        # Delete existing media for this listing
         existing_media = db.get_listing_media(listing_id)
-        # Note: In production, you'd implement delete_media function
+        for media_item in existing_media:
+            # Extract storage path and delete from storage
+            storage_path = storage.extract_storage_path(media_item["url"], config.SUPABASE_STORAGE_BUCKET)
+            if storage_path:
+                storage.delete_file(db.supabase, config.SUPABASE_STORAGE_BUCKET, storage_path)
         
-        # Add new media
-        db.add_media(listing_id, "photo", image_url, display_order=0)
+        # Delete media records from database
+        db.delete_listing_media(listing_id)
+        
+        # Upload new photos
+        uploaded_count = 0
+        for idx, photo in enumerate(photos):
+            # Read file content
+            file_content = await photo.read()
+            
+            # Generate unique filename
+            filename = storage.generate_filename(listing_id, photo.filename)
+            
+            # Get content type
+            content_type = storage.get_content_type(photo.filename)
+            
+            # Upload to Supabase Storage
+            public_url = storage.upload_file(
+                db.supabase,
+                config.SUPABASE_STORAGE_BUCKET,
+                filename,
+                file_content,
+                content_type
+            )
+            
+            if public_url:
+                # Save media record to database
+                db.add_media(
+                    listing_id=listing_id,
+                    media_type="photo",
+                    url=public_url,
+                    filename=photo.filename,
+                    display_order=idx
+                )
+                uploaded_count += 1
+            else:
+                # Upload failed
+                logger.error(f"Failed to upload photo: {photo.filename}")
+                raise HTTPException(
+                    status_code=500,
+                    detail=f"Échec du téléchargement de la photo: {photo.filename}"
+                )
+        
+        logger.info(f"Successfully uploaded {uploaded_count} photos for listing {listing_id}")
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error uploading photos: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail="Erreur lors du téléchargement des photos. Veuillez réessayer."
+        )
     
     return RedirectResponse(url=f"/deposer/step4?listing_id={listing_id}", status_code=303)
 

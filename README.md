@@ -84,12 +84,19 @@ Si vous ne configurez pas Supabase et Stripe, l'application fonctionne en mode "
 1. Créez un compte gratuit sur [supabase.com](https://supabase.com)
 2. Créez un nouveau projet
 3. Exécutez le script SQL fourni dans `DATABASE_SCHEMA.md` via l'éditeur SQL Supabase
-4. Récupérez votre URL de projet et votre clé anonyme dans Settings > API
-5. Ajoutez-les dans votre fichier `.env` :
+4. **Configurez le stockage de fichiers** :
+   - Allez dans Storage dans le dashboard Supabase
+   - Créez un nouveau bucket public nommé `listing-photos`
+   - Configurez les politiques d'accès :
+     - Lecture publique (public read) pour permettre l'affichage des images
+     - Écriture authentifiée ou désactivez RLS pour le développement
+5. Récupérez votre URL de projet et votre clé anonyme dans Settings > API
+6. Ajoutez-les dans votre fichier `.env` :
 
 ```env
 SUPABASE_URL=https://votre-projet.supabase.co
 SUPABASE_KEY=votre-cle-anonyme
+SUPABASE_STORAGE_BUCKET=listing-photos
 ```
 
 ### Configuration Stripe
@@ -266,7 +273,7 @@ LISTING_PRICE_AMOUNT=4900  # 49.00 EUR en centimes
 Pour une version de production complète, considérez d'ajouter :
 
 - **Authentification utilisateur** : OAuth, email/password avec tokens JWT
-- **Upload de fichiers** : Stockage S3/Supabase Storage pour photos et PDFs
+- **Upload de documents PDF** : Extension du stockage Supabase pour documents techniques
 - **Envoi d'emails** : Notifications automatiques (SendGrid, AWS SES)
 - **Modération** : Workflow de validation des annonces
 - **Analytics** : Suivi des performances des annonces

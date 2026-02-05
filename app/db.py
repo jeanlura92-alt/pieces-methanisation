@@ -158,6 +158,32 @@ def get_listing_media(listing_id: str) -> List[Dict[str, Any]]:
     return result.data if result.data else []
 
 
+def delete_listing_media(listing_id: str) -> bool:
+    """Delete all media for a listing"""
+    if not supabase:
+        return True
+    
+    try:
+        supabase.table("media").delete().eq("listing_id", listing_id).execute()
+        return True
+    except Exception as e:
+        print(f"Error deleting media: {e}")
+        return False
+
+
+def delete_media_by_id(media_id: str) -> bool:
+    """Delete a specific media entry by ID"""
+    if not supabase:
+        return True
+    
+    try:
+        supabase.table("media").delete().eq("id", media_id).execute()
+        return True
+    except Exception as e:
+        print(f"Error deleting media by ID: {e}")
+        return False
+
+
 # ==================== Inquiries ====================
 
 def create_inquiry(listing_id: str, inquiry_data: Dict[str, Any]) -> Optional[Dict[str, Any]]:

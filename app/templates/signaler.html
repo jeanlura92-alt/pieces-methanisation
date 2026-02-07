@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="form-page">
+  <div class="form-container">
+    <h1>🚨 Signaler une annonce</h1>
+    <p class="subtitle">Signalez-nous tout contenu problématique, frauduleux ou contraire à nos conditions d'utilisation</p>
+
+    <div style="background: var(--bg-light); padding: 24px; border-radius: var(--radius-lg); margin-bottom: 32px; border-left: 4px solid var(--primary-color);">
+      <h4 style="font-size: 16px; font-weight: 700; color: var(--text-dark); margin-bottom: 12px;">📋 Processus de signalement (DSA)</h4>
+      <p style="font-size: 15px; color: var(--text-gray); line-height: 1.7; margin-bottom: 12px;">
+        Conformément au <strong>Digital Services Act (DSA)</strong>, vous avez le droit de signaler tout contenu que vous estimez illicite, frauduleux ou non conforme à nos conditions d'utilisation.
+      </p>
+      <p style="font-size: 15px; color: var(--text-gray); line-height: 1.7;">
+        Votre signalement sera <strong>examiné sous 48 à 72 heures</strong>. Si l'annonce est jugée non conforme, elle sera retirée et le vendeur en sera informé.
+      </p>
+    </div>
+
+    <form method="post" action="/signaler">
+      <div class="form-group">
+        <label for="listing_url">URL de l'annonce à signaler *</label>
+        <input type="url" id="listing_url" name="listing_url" required placeholder="https://pieces-methanisation.onrender.com/annonces/123" />
+        <small>Copiez-collez l'URL complète de l'annonce concernée</small>
+      </div>
+
+      <div class="form-group">
+        <label for="reason">Motif du signalement *</label>
+        <select id="reason" name="reason" required>
+          <option value="">Sélectionnez un motif...</option>
+          <option value="fraud">Annonce frauduleuse</option>
+          <option value="illegal">Contenu illicite</option>
+          <option value="wrong-contact">Coordonnées erronées</option>
+          <option value="spam">Spam</option>
+          <option value="ip-violation">Violation de propriété intellectuelle</option>
+          <option value="other">Autre</option>
+        </select>
+        <small>Choisissez le motif qui correspond le mieux au problème rencontré</small>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description détaillée *</label>
+        <textarea id="description" name="description" required placeholder="Décrivez précisément le problème rencontré..." style="min-height: 180px;"></textarea>
+        <small>Plus votre description est précise, plus nous pourrons traiter rapidement votre signalement</small>
+      </div>
+
+      <div class="form-group">
+        <label for="reporter_email">Votre email (optionnel)</label>
+        <input type="email" id="reporter_email" name="reporter_email" placeholder="votre.email@exemple.fr" />
+        <small>Si vous souhaitez être tenu informé du traitement de votre signalement</small>
+      </div>
+
+      <div style="margin-top: 32px; padding: 20px; background: var(--bg-light); border-radius: var(--radius); border-left: 4px solid var(--secondary-color);">
+        <h4 style="font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 12px;">ℹ️ À savoir</h4>
+        <ul style="font-size: 14px; color: var(--text-gray); line-height: 1.7; margin-left: 20px;">
+          <li style="margin-bottom: 8px;">Les signalements abusifs ou répétés peuvent entraîner des sanctions</li>
+          <li style="margin-bottom: 8px;">Nous vous informerons de la suite donnée si vous avez fourni votre email</li>
+          <li style="margin-bottom: 8px;">Les données personnelles sont traitées conformément au <a href="/politique-confidentialite" style="color: var(--primary-color); text-decoration: underline;">RGPD</a></li>
+          <li>En cas de litige, vous pouvez consulter notre page <a href="/cgv" style="color: var(--primary-color); text-decoration: underline;">CGV/CGU</a></li>
+        </ul>
+      </div>
+
+      <div style="margin-top: 32px; display: flex; gap: 16px;">
+        <button type="submit" class="btn-primary" style="flex: 1;">📤 Envoyer le signalement</button>
+        <a href="/annonces" class="btn-secondary" style="flex: 1; text-align: center;">Annuler</a>
+      </div>
+    </form>
+
+    <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color);">
+      <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; text-align: center;">Types de contenus à signaler</h2>
+      
+      <div style="margin-top: 32px; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+        
+        <div style="padding: 20px; background: var(--bg-white); border-radius: var(--radius); border: 1px solid var(--border-color);">
+          <h4 style="font-size: 16px; font-weight: 700; color: var(--primary-color); margin-bottom: 12px;">🚫 Annonce frauduleuse</h4>
+          <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6;">
+            Fausses informations, arnaques, équipement qui n'existe pas, prix volontairement trompeur, vendeur injoignable après paiement.
+          </p>
+        </div>
+
+        <div style="padding: 20px; background: var(--bg-white); border-radius: var(--radius); border: 1px solid var(--border-color);">
+          <h4 style="font-size: 16px; font-weight: 700; color: var(--primary-color); margin-bottom: 12px;">⚖️ Contenu illicite</h4>
+          <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6;">
+            Contrefaçons, produits interdits, contenus diffamatoires, incitation à la haine, violation de la législation applicable.
+          </p>
+        </div>
+
+        <div style="padding: 20px; background: var(--bg-white); border-radius: var(--radius); border: 1px solid var(--border-color);">
+          <h4 style="font-size: 16px; font-weight: 700; color: var(--primary-color); margin-bottom: 12px;">📞 Coordonnées erronées</h4>
+          <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6;">
+            Email ou téléphone invalides, vendeur injoignable, coordonnées ne correspondant pas à l'entreprise annoncée.
+          </p>
+        </div>
+
+        <div style="padding: 20px; background: var(--bg-white); border-radius: var(--radius); border: 1px solid var(--border-color);">
+          <h4 style="font-size: 16px; font-weight: 700; color: var(--primary-color); margin-bottom: 12px;">📧 Spam</h4>
+          <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6;">
+            Annonces répétitives, publicité non pertinente, contenu sans rapport avec la méthanisation, annonce dupliquée plusieurs fois.
+          </p>
+        </div>
+
+        <div style="padding: 20px; background: var(--bg-white); border-radius: var(--radius); border: 1px solid var(--border-color);">
+          <h4 style="font-size: 16px; font-weight: 700; color: var(--primary-color); margin-bottom: 12px;">©️ Propriété intellectuelle</h4>
+          <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6;">
+            Utilisation non autorisée de photos, violation de marque déposée, reproduction de contenus protégés par le droit d'auteur.
+          </p>
+        </div>
+
+        <div style="padding: 20px; background: var(--bg-white); border-radius: var(--radius); border: 1px solid var(--border-color);">
+          <h4 style="font-size: 16px; font-weight: 700; color: var(--primary-color); margin-bottom: 12px;">❓ Autre motif</h4>
+          <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6;">
+            Tout autre problème non listé ci-dessus. Veillez à fournir une description détaillée dans le formulaire.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="margin-top: 40px; text-align: center;">
+      <p style="font-size: 14px; color: var(--text-light);">
+        Pour en savoir plus sur le fonctionnement de notre plateforme et nos processus de modération, consultez notre page 
+        <a href="/comment-ca-marche" style="color: var(--primary-color); text-decoration: underline; font-weight: 600;">Comment ça marche</a>.
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}

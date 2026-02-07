@@ -60,6 +60,30 @@
     </p>
   </div>
 
+  {% if error %}
+  <div style="margin-top: 24px; padding: 20px; background: #fee; border-radius: var(--radius); border-left: 4px solid #d00;">
+    <p style="font-size: 14px; color: #d00; font-weight: 600; margin: 0;">
+      ⚠️ {{ error }}
+    </p>
+  </div>
+  {% endif %}
+
+  <div class="form-group" style="margin-top: 24px; border: 2px solid #f59e0b; padding: 20px; border-radius: var(--radius); background: #fffbeb;">
+    <label style="display: flex; align-items: start; gap: 12px; cursor: pointer;">
+      <input type="checkbox" name="consent_public_contact" required style="margin-top: 4px; min-width: 20px; min-height: 20px;" />
+      <span style="font-size: 14px; line-height: 1.6; color: var(--text-dark);">
+        <strong style="color: #d97706; font-size: 16px;">⚠️ Consentement obligatoire (RGPD)</strong><br><br>
+        Je comprends et j'accepte expressément que mes <strong>coordonnées de contact (email et téléphone)</strong> 
+        seront <strong style="text-decoration: underline;">publiées publiquement et visibles par tous</strong> 
+        sur mon annonce une fois celle-ci validée et payée. Ces informations permettront aux acheteurs 
+        potentiels de me contacter directement.<br><br>
+        Je reconnais avoir pris connaissance de la 
+        <a href="/politique-confidentialite" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Politique de Confidentialité</a> 
+        et des <a href="/cgv" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Conditions Générales</a>.
+      </span>
+    </label>
+  </div>
+
   <div style="margin-top: 32px; display: flex; gap: 16px; justify-content: space-between;">
     <a href="/deposer/step4" class="btn-secondary">← Retour</a>
     <button type="submit" class="btn-primary">Procéder au paiement →</button>

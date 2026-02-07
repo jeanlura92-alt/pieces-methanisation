@@ -313,3 +313,64 @@ def get_payment_by_session(stripe_session_id: str) -> Optional[Dict[str, Any]]:
         .execute()
     )
     return result.data[0] if result.data and len(result.data) > 0 else None
+
+
+# ==================== Reports (DSA Compliance) ====================
+
+def create_report(listing_url: str, reason: str, description: str, reporter_email: Optional[str] = None, listing_id: Optional[str] = None) -> Optional[Dict[str, Any]]:
+    """Create a new report for a listing (DSA compliance)"""
+    if not supabase:
+        return {"id": "mock-report-id", "listing_url": listing_url, "reason": reason, "status": "new"}
+    
+    data = {
+        "listing_url": listing_url,
+        "reason": reason,
+        "description": description,
+        "status": "new"
+    }
+    
+    if reporter_email:
+        data["reporter_email"] = reporter_email
+    
+    if listing_id:
+        data["listing_id"] = listing_id
+    
+    result = supabase.table("reports").insert(data).execute()
+    return result.data[0] if result.data else None
+
+
+def get_reports(status: Optional[str] = None, limit: int = 100) -> List[Dict[str, Any]]:
+    """Get reports, optionally filtered by status"""
+    if not supabase:
+        return []
+    
+    query = supabase.table("reports").select("*").order("created_at", desc=True).limit(limit)
+    
+    if status:
+        query = query.eq("status", status)
+    
+    result = query.execute()
+    return result.data if result.data else []
+
+
+def get_report(report_id: str) -> Optional[Dict[str, Any]]:
+    """Get a single report by ID"""
+    if not supabase:
+        return None
+    
+    result = supabase.table("reports").select("*").eq("id", report_id).execute()
+    return result.data[0] if result.data and len(result.data) > 0 else None
+
+
+def update_report_status(report_id: str, status: str) -> Optional[Dict[str, Any]]:
+    """Update report status (new, reviewed, resolved)"""
+    if not supabase:
+        return {"id": report_id, "status": status}
+    
+    updates = {
+        "status": status,
+        "updated_at": datetime.utcnow().isoformat()
+    }
+    
+    result = supabase.table("reports").update(updates).eq("id", report_id).execute()
+    return result.data[0] if result.data else None

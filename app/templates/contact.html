@@ -57,9 +57,41 @@
           <option value="info-generale">Information générale</option>
           <option value="partenariat">Partenariat</option>
           <option value="support">Support technique</option>
+          <option value="rgpd">Demande RGPD (accès, suppression, rectification)</option>
           <option value="autre">Autre</option>
         </select>
       </div>
+
+      <div id="rgpd-notice" style="display: none; margin-top: 16px; padding: 20px; background: #eff6ff; border-radius: var(--radius); border-left: 4px solid var(--primary-color);">
+        <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; color: var(--primary-color);">
+          ℹ️ Demande RGPD
+        </h4>
+        <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin-bottom: 12px;">
+          Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :
+        </p>
+        <ul style="margin-left: 24px; font-size: 14px; color: var(--text-gray); line-height: 1.8;">
+          <li><strong>Droit d'accès</strong> : Obtenir une copie de vos données personnelles</li>
+          <li><strong>Droit de rectification</strong> : Corriger des données inexactes</li>
+          <li><strong>Droit à l'effacement</strong> : Supprimer vos données ("droit à l'oubli")</li>
+          <li><strong>Droit d'opposition</strong> : S'opposer au traitement de vos données</li>
+          <li><strong>Droit à la portabilité</strong> : Recevoir vos données dans un format structuré</li>
+        </ul>
+        <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin-top: 12px; margin-bottom: 0;">
+          Pour exercer ces droits, précisez votre demande dans le message ci-dessous. Nous vous répondrons sous 30 jours.
+          <br>Vous pouvez aussi nous contacter directement à : <strong>privacy@pieces-methanisation.fr</strong>
+        </p>
+      </div>
+
+      <script>
+        document.getElementById('subject').addEventListener('change', function() {
+          const rgpdNotice = document.getElementById('rgpd-notice');
+          if (this.value === 'rgpd') {
+            rgpdNotice.style.display = 'block';
+          } else {
+            rgpdNotice.style.display = 'none';
+          }
+        });
+      </script>
 
       <div class="form-group">
         <label for="reference">Référence d'annonce (si applicable)</label>

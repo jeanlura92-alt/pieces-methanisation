@@ -1,0 +1,89 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="form-page">
+  <div class="form-container" style="max-width: 700px; text-align: center;">
+    
+    <div style="margin-bottom: 32px;">
+      <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; box-shadow: 0 4px 16px rgba(46, 125, 50, 0.3);">
+        <span style="font-size: 40px; color: white;">✓</span>
+      </div>
+    </div>
+
+    <h1 style="font-size: 32px; margin-bottom: 16px;">Signalement envoyé !</h1>
+    <p class="subtitle" style="font-size: 18px; margin-bottom: 40px;">Merci d'avoir pris le temps de nous signaler ce contenu.</p>
+
+    <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); text-align: left; margin-bottom: 32px;">
+      <h2 style="font-size: 20px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; text-align: center;">
+        📋 Prochaines étapes
+      </h2>
+      
+      <div style="line-height: 1.8; color: var(--text-dark);">
+        <div style="display: flex; align-items: start; margin-bottom: 20px; padding: 16px; background: var(--bg-light); border-radius: var(--radius);">
+          <div style="width: 40px; height: 40px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 16px;">
+            <span style="font-size: 20px; color: white; font-weight: 700;">1</span>
+          </div>
+          <div>
+            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Réception de votre signalement</h4>
+            <p style="font-size: 15px; color: var(--text-gray); margin: 0;">
+              Votre signalement a été enregistré et sera examiné par notre équipe de modération.
+            </p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: start; margin-bottom: 20px; padding: 16px; background: var(--bg-light); border-radius: var(--radius);">
+          <div style="width: 40px; height: 40px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 16px;">
+            <span style="font-size: 20px; color: white; font-weight: 700;">2</span>
+          </div>
+          <div>
+            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Examen sous 48 à 72 heures</h4>
+            <p style="font-size: 15px; color: var(--text-gray); margin: 0;">
+              Notre équipe analysera le contenu signalé et vérifiera s'il enfreint nos conditions d'utilisation ou la législation en vigueur.
+            </p>
+          </div>
+        </div>
+
+        <div style="display: flex; align-items: start; padding: 16px; background: var(--bg-light); border-radius: var(--radius);">
+          <div style="width: 40px; height: 40px; background: var(--primary-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-right: 16px;">
+            <span style="font-size: 20px; color: white; font-weight: 700;">3</span>
+          </div>
+          <div>
+            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Décision et notification</h4>
+            <p style="font-size: 15px; color: var(--text-gray); margin: 0;">
+              Si l'annonce est jugée non conforme, elle sera retirée. Si vous avez fourni votre email, nous vous informerons de la décision prise.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="background: var(--bg-light); padding: 24px; border-radius: var(--radius); border-left: 4px solid var(--secondary-color); text-align: left; margin-bottom: 40px;">
+      <h4 style="font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 12px;">ℹ️ Informations importantes</h4>
+      <ul style="font-size: 14px; color: var(--text-gray); line-height: 1.7; margin-left: 20px; text-align: left;">
+        <li style="margin-bottom: 8px;">Les signalements sont traités dans l'ordre de réception</li>
+        <li style="margin-bottom: 8px;">En cas de forte affluence, le délai peut être légèrement supérieur à 72 heures</li>
+        <li style="margin-bottom: 8px;">Les signalements abusifs ou répétés peuvent entraîner des sanctions</li>
+        <li>Votre contribution aide à maintenir une plateforme sûre et fiable pour tous les professionnels</li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 16px; align-items: center;">
+      <a href="/" class="btn-primary" style="display: inline-block; padding: 14px 32px; text-decoration: none; min-width: 250px;">🏠 Retour à l'accueil</a>
+      <a href="/annonces" class="btn-secondary" style="display: inline-block; padding: 14px 32px; text-decoration: none; min-width: 250px;">📋 Voir les annonces</a>
+    </div>
+
+    <div style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color);">
+      <h3 style="font-size: 18px; font-weight: 700; color: var(--text-dark); margin-bottom: 16px;">Besoin d'aide ?</h3>
+      <p style="font-size: 15px; color: var(--text-gray); line-height: 1.7; margin-bottom: 16px;">
+        Si vous avez des questions concernant le traitement de votre signalement ou le fonctionnement de notre plateforme :
+      </p>
+      <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
+        <a href="/contact" style="color: var(--primary-color); text-decoration: underline; font-weight: 600; font-size: 15px;">📧 Nous contacter</a>
+        <a href="/comment-ca-marche" style="color: var(--primary-color); text-decoration: underline; font-weight: 600; font-size: 15px;">📖 Comment ça marche</a>
+        <a href="/cgv" style="color: var(--primary-color); text-decoration: underline; font-weight: 600; font-size: 15px;">📜 CGV/CGU</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+{% endblock %}

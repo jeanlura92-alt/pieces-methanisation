@@ -1,0 +1,299 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="form-page">
+  <div class="form-container" style="max-width: 1000px;">
+    <h1>Politique de Gestion des Cookies</h1>
+    <p class="subtitle">Conformité ePrivacy - Information et gestion des cookies</p>
+
+    <div style="margin-top: 40px;">
+
+      <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
+        <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
+          1. Qu'est-ce qu'un cookie ?
+        </h2>
+        
+        <div style="line-height: 1.8; color: var(--text-dark);">
+          <p style="margin-bottom: 16px;">
+            Un cookie est un <strong>petit fichier texte</strong> déposé sur votre terminal (ordinateur, tablette, smartphone) lors de votre visite sur notre site web. 
+            Il permet de mémoriser des informations relatives à votre navigation et d'améliorer votre expérience utilisateur.
+          </p>
+          <p style="margin-bottom: 16px;">
+            Les cookies peuvent être déposés par notre site (<strong>cookies internes</strong>) ou par des services tiers que nous utilisons 
+            (<strong>cookies tiers</strong>, par exemple Stripe pour les paiements).
+          </p>
+          <p>
+            Conformément à la <strong>directive ePrivacy (2002/58/CE)</strong> et à son application en droit français (article 82 de la loi Informatique et Libertés), 
+            nous sommes tenus de vous informer de l'utilisation de cookies et de recueillir votre consentement pour certains d'entre eux.
+          </p>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
+        <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
+          2. Cookies strictement nécessaires (sans consentement)
+        </h2>
+        
+        <div style="line-height: 1.8; color: var(--text-dark);">
+          <p style="margin-bottom: 16px;">
+            Ces cookies sont <strong>indispensables au fonctionnement du site</strong> et ne peuvent pas être désactivés. 
+            Ils ne nécessitent <strong>pas de consentement préalable</strong> conformément aux recommandations de la CNIL.
+          </p>
+          
+          <div style="overflow-x: auto; margin-top: 20px;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+              <thead>
+                <tr style="background: var(--bg-light); border-bottom: 2px solid var(--border-color);">
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">Nom du cookie</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">Finalité</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">Durée</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 12px;"><code>session</code></td>
+                  <td style="padding: 12px;">
+                    Cookie de session Flask permettant de maintenir votre session active pendant la navigation (ex : formulaire multi-étapes)
+                  </td>
+                  <td style="padding: 12px;">Session (supprimé à la fermeture du navigateur)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid var(--border-color);">
+                  <td style="padding: 12px;"><code>csrf_token</code></td>
+                  <td style="padding: 12px;">
+                    Protection contre les attaques CSRF (Cross-Site Request Forgery) pour sécuriser vos formulaires
+                  </td>
+                  <td style="padding: 12px;">Session</td>
+                </tr>
+                <tr>
+                  <td style="padding: 12px;"><code>cookie_consent</code></td>
+                  <td style="padding: 12px;">
+                    Mémorisation de vos préférences en matière de cookies (acceptation/refus)
+                  </td>
+                  <td style="padding: 12px;">13 mois</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
+        <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
+          3. Cookies analytiques (consentement requis)
+        </h2>
+        
+        <div style="line-height: 1.8; color: var(--text-dark);">
+          <p style="margin-bottom: 16px;">
+            Ces cookies nous permettent d'analyser l'utilisation du site et d'améliorer nos services. 
+            <strong>Votre consentement est requis</strong> avant leur activation.
+          </p>
+          
+          <div style="overflow-x: auto; margin-top: 20px;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+              <thead>
+                <tr style="background: var(--bg-light); border-bottom: 2px solid var(--border-color);">
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">Service</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">Finalité</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">Durée</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 12px;"><strong>Google Analytics</strong> (si activé)</td>
+                  <td style="padding: 12px;">
+                    Mesure d'audience : pages vues, durée de visite, provenance géographique (données anonymisées)
+                  </td>
+                  <td style="padding: 12px;">26 mois</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div style="margin-top: 20px; padding: 16px; background: var(--bg-light); border-radius: var(--radius); border-left: 4px solid var(--primary-color);">
+            <p style="font-size: 14px; color: var(--text-dark); margin: 0;">
+              ℹ️ <strong>Actuellement, aucun cookie analytique n'est activé sur ce site.</strong> 
+              Si nous décidons d'en utiliser à l'avenir, vous serez informé et pourrez gérer vos préférences via le bandeau de cookies.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
+        <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
+          4. Cookies tiers - Stripe (consentement requis)
+        </h2>
+        
+        <div style="line-height: 1.8; color: var(--text-dark);">
+          <p style="margin-bottom: 16px;">
+            Notre site utilise <strong>Stripe</strong> pour le traitement sécurisé des paiements en ligne. 
+            Stripe peut déposer des cookies sur votre terminal pour prévenir la fraude et sécuriser les transactions.
+          </p>
+          
+          <div style="overflow-x: auto; margin-top: 20px;">
+            <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+              <thead>
+                <tr style="background: var(--bg-light); border-bottom: 2px solid var(--border-color);">
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">Service</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">Finalité</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">Durée</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding: 12px;"><strong>Stripe Checkout</strong></td>
+                  <td style="padding: 12px;">
+                    Traitement des paiements, détection de fraude, mémorisation des informations de paiement (avec votre accord)
+                  </td>
+                  <td style="padding: 12px;">Variable (1 à 12 mois selon le type de cookie)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div style="margin-top: 20px; padding: 16px; background: #FFF9E5; border-radius: var(--radius); border-left: 4px solid #FFA500;">
+            <p style="font-size: 14px; color: var(--text-dark); margin: 0;">
+              ⚠️ <strong>Important :</strong> Si vous refusez les cookies Stripe, vous ne pourrez pas effectuer de paiement sur notre plateforme. 
+              Les cookies Stripe sont nécessaires au bon fonctionnement du processus de paiement sécurisé.
+            </p>
+          </div>
+          
+          <p style="margin-top: 20px; margin-bottom: 0;">
+            Pour en savoir plus sur la politique de confidentialité de Stripe : 
+            <a href="https://stripe.com/fr/privacy" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline; font-weight: 600;">
+              https://stripe.com/fr/privacy ↗
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
+        <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
+          5. Comment gérer vos préférences de cookies ?
+        </h2>
+        
+        <div style="line-height: 1.8; color: var(--text-dark);">
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">5.1. Via notre bandeau de consentement</h3>
+          <p style="margin-bottom: 16px;">
+            Lors de votre première visite, un bandeau de consentement s'affiche en bas de page. Vous pouvez :
+          </p>
+          <ul style="margin-left: 24px; margin-bottom: 20px;">
+            <li style="margin-bottom: 8px;"><strong>Accepter tous les cookies</strong> : Active tous les cookies (essentiels + analytiques + tiers)</li>
+            <li style="margin-bottom: 8px;"><strong>Refuser tous les cookies non essentiels</strong> : Seuls les cookies strictement nécessaires sont activés</li>
+            <li><strong>Personnaliser vos préférences</strong> : Choisissez catégorie par catégorie les cookies que vous acceptez</li>
+          </ul>
+          <p style="margin-bottom: 20px;">
+            Vous pouvez modifier vos préférences à tout moment en cliquant sur le lien "Gérer les cookies" présent en bas de chaque page.
+          </p>
+
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">5.2. Via les paramètres de votre navigateur</h3>
+          <p style="margin-bottom: 16px;">
+            Vous pouvez également configurer votre navigateur pour refuser automatiquement les cookies ou être alerté lorsqu'un cookie est déposé. 
+            Voici les liens vers les guides de configuration des principaux navigateurs :
+          </p>
+          
+          <ul style="margin-left: 24px; margin-bottom: 20px;">
+            <li style="margin-bottom: 8px;">
+              <strong>Google Chrome :</strong> 
+              <a href="https://support.google.com/chrome/answer/95647?hl=fr" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">
+                support.google.com/chrome/answer/95647 ↗
+              </a>
+            </li>
+            <li style="margin-bottom: 8px;">
+              <strong>Mozilla Firefox :</strong> 
+              <a href="https://support.mozilla.org/fr/kb/activer-desactiver-cookies" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">
+                support.mozilla.org/fr/kb/activer-desactiver-cookies ↗
+              </a>
+            </li>
+            <li style="margin-bottom: 8px;">
+              <strong>Microsoft Edge :</strong> 
+              <a href="https://support.microsoft.com/fr-fr/microsoft-edge/supprimer-les-cookies-dans-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">
+                support.microsoft.com/fr-fr/microsoft-edge ↗
+              </a>
+            </li>
+            <li style="margin-bottom: 8px;">
+              <strong>Safari :</strong> 
+              <a href="https://support.apple.com/fr-fr/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">
+                support.apple.com/fr-fr/guide/safari ↗
+              </a>
+            </li>
+          </ul>
+
+          <div style="padding: 16px; background: #FFE5E5; border-radius: var(--radius); border-left: 4px solid #FF0000;">
+            <p style="font-size: 14px; color: var(--text-dark); margin: 0;">
+              ⚠️ <strong>Attention :</strong> La désactivation de certains cookies peut impacter votre expérience de navigation et limiter l'accès à certaines fonctionnalités du site 
+              (par exemple : impossibilité de finaliser un paiement si les cookies Stripe sont bloqués).
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
+        <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
+          6. Durée de conservation des cookies
+        </h2>
+        
+        <div style="line-height: 1.8; color: var(--text-dark);">
+          <p style="margin-bottom: 16px;">
+            Conformément aux recommandations de la CNIL, la durée de validité de votre consentement (ou refus) est de <strong>13 mois maximum</strong>. 
+            Au-delà de cette durée, votre consentement vous sera redemandé.
+          </p>
+          <p>
+            Les cookies déposés avec votre consentement ont une durée de vie variable selon leur finalité, 
+            mais ne peuvent excéder <strong>13 mois</strong> pour les cookies de mesure d'audience.
+          </p>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
+        <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
+          7. Contact et réclamation
+        </h2>
+        
+        <div style="line-height: 1.8; color: var(--text-dark);">
+          <p style="margin-bottom: 16px;">
+            Pour toute question concernant notre politique de cookies, vous pouvez nous contacter à :
+          </p>
+          <ul style="margin-left: 24px; margin-bottom: 20px;">
+            <li style="margin-bottom: 8px;"><strong>Email :</strong> privacy@pieces-methanisation.fr</li>
+            <li><strong>Formulaire de contact :</strong> <a href="/contact" style="color: var(--primary-color); text-decoration: underline; font-weight: 600;">/contact</a></li>
+          </ul>
+          
+          <p style="margin-bottom: 16px;">
+            Si vous estimez que vos droits ne sont pas respectés, vous pouvez également introduire une réclamation auprès de la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) :
+          </p>
+          <ul style="margin-left: 24px;">
+            <li style="margin-bottom: 8px;">
+              <strong>En ligne :</strong> 
+              <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">
+                www.cnil.fr/fr/plaintes ↗
+              </a>
+            </li>
+            <li>
+              <strong>Par courrier :</strong> CNIL - 3 Place de Fontenoy - TSA 80715 - 75334 PARIS CEDEX 07
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top: 40px; padding: 24px; background: var(--bg-light); border-radius: var(--radius); border-left: 4px solid var(--secondary-color);">
+        <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin: 0;">
+          <strong>📌 Résumé :</strong> Nous utilisons principalement des cookies strictement nécessaires au fonctionnement du site. 
+          Les cookies tiers (Stripe) ne sont déposés que lors du processus de paiement. Vous gardez le contrôle total sur vos préférences de cookies 
+          et pouvez les modifier à tout moment.
+        </p>
+      </div>
+
+      <div style="margin-top: 32px; text-align: center;">
+        <p style="font-size: 13px; color: var(--text-light);">
+          Dernière mise à jour : Février 2026
+        </p>
+      </div>
+
+    </div>
+
+    <div style="margin-top: 40px; display: flex; justify-content: center;">
+      <a href="/" class="btn-secondary">← Retour à l'accueil</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

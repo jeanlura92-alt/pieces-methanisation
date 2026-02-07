@@ -558,3 +558,90 @@ def contact(request: Request):
         "contact.html",
         {"request": request},
     )
+
+
+# ==================== DSA Compliance Pages ====================
+
+@app.get("/comment-ca-marche", response_class=HTMLResponse)
+def comment_ca_marche(request: Request):
+    """DSA Transparency page"""
+    return templates.TemplateResponse(
+        "comment_ca_marche.html",
+        {"request": request},
+    )
+
+
+@app.get("/signaler", response_class=HTMLResponse)
+def signaler_form(request: Request):
+    """Report listing form (DSA)"""
+    return templates.TemplateResponse(
+        "signaler.html",
+        {"request": request},
+    )
+
+
+@app.post("/signaler")
+async def signaler_submit(
+    request: Request,
+    listing_url: str = Form(...),
+    reason: str = Form(...),
+    description: str = Form(...),
+    reporter_email: Optional[str] = Form(None),
+):
+    """Handle report submission"""
+    # TODO: In production, save report to database and send notification
+    # For now, just log the report
+    logger.info(f"Report received for {listing_url}: {reason}")
+    logger.info(f"Description: {description}")
+    if reporter_email:
+        logger.info(f"Reporter email: {reporter_email}")
+    
+    # Redirect to success page
+    return RedirectResponse(url="/signaler/success", status_code=303)
+
+
+@app.get("/signaler/success", response_class=HTMLResponse)
+def signaler_success(request: Request):
+    """Report submission success page"""
+    return templates.TemplateResponse(
+        "signaler_success.html",
+        {"request": request},
+    )
+
+
+# ==================== Legal Pages ====================
+
+@app.get("/cgv", response_class=HTMLResponse)
+def cgv(request: Request):
+    """Terms and Conditions page"""
+    return templates.TemplateResponse(
+        "cgv.html",
+        {"request": request},
+    )
+
+
+@app.get("/mentions-legales", response_class=HTMLResponse)
+def mentions_legales(request: Request):
+    """Legal Notice page"""
+    return templates.TemplateResponse(
+        "mentions_legales.html",
+        {"request": request},
+    )
+
+
+@app.get("/politique-confidentialite", response_class=HTMLResponse)
+def politique_confidentialite(request: Request):
+    """Privacy Policy page"""
+    return templates.TemplateResponse(
+        "politique_confidentialite.html",
+        {"request": request},
+    )
+
+
+@app.get("/cookies", response_class=HTMLResponse)
+def cookies_page(request: Request):
+    """Cookie Policy page"""
+    return templates.TemplateResponse(
+        "cookies.html",
+        {"request": request},
+    )

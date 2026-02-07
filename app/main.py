@@ -417,8 +417,24 @@ async def wizard_step5_post(
     listing_id: str = Form(...),
     contact_email: str = Form(...),
     contact_phone: str = Form(...),
+    consent_public_contact: Optional[str] = Form(None),
 ):
     """Save step 5 and create Stripe checkout session"""
+    
+    # GDPR consent validation
+    if not consent_public_contact:
+        draft = db.get_listing(listing_id)
+        return templates.TemplateResponse(
+            "wizard_step5.html",
+            {
+                "request": request,
+                "current_step": 5,
+                "draft": draft,
+                "listing_price": config.LISTING_PRICE_AMOUNT / 100,
+                "error": "Vous devez accepter que vos coordonnées soient publiquement visibles."
+            }
+        )
+    
     updates = {
         "contact_email": contact_email,
         "contact_phone": contact_phone,
@@ -558,6 +574,121 @@ def contact(request: Request):
         "contact.html",
         {"request": request},
     )
+
+
+# ==================== Legal Pages (LCEN, RGPD, ePrivacy, Code de Commerce) ====================
+
+@app.get("/mentions-legales", response_class=HTMLResponse)
+async def mentions_legales(request: Request):
+    """Legal notices page (LCEN compliance)"""
+    return templates.TemplateResponse("mentions_legales.html", {"request": request})
+
+
+@app.get("/cgv", response_class=HTMLResponse)
+async def cgv(request: Request):
+    """Terms and conditions page (Code de Commerce B2B compliance)"""
+    return templates.TemplateResponse("cgv.html", {"request": request})
+
+
+@app.get("/politique-confidentialite", response_class=HTMLResponse)
+async def politique_confidentialite(request: Request):
+    """Privacy policy page (RGPD/GDPR compliance)"""
+    return templates.TemplateResponse("politique_confidentialite.html", {"request": request})
+
+
+@app.get("/cookies", response_class=HTMLResponse)
+async def cookies(request: Request):
+    """Cookie management page (ePrivacy compliance)"""
+    return templates.TemplateResponse("cookies.html", {"request": request})
+
+
+# ==================== DSA Compliance Pages ====================
+
+@app.get("/comment-ca-marche", response_class=HTMLResponse)
+async def comment_ca_marche(request: Request):
+    """Transparency page - How the platform works (DSA compliance)"""
+    return templates.TemplateResponse("comment_ca_marche.html", {"request": request})
+
+
+@app.get("/signaler", response_class=HTMLResponse)
+async def signaler(request: Request):
+    """Report form page (DSA compliance)"""
+    return templates.TemplateResponse("signaler.html", {"request": request})
+
+
+@app.post("/signaler")
+async def signaler_post(
+    request: Request,
+    listing_url: str = Form(...),
+    reason: str = Form(...),
+    description: str = Form(...),
+    reporter_email: str = Form(None),
+):
+    """Handle report submission (DSA compliance)"""
+    # Extract listing_id from URL if possible
+    listing_id = None
+    if "/annonces/" in listing_url:
+        try:
+            listing_id = listing_url.split("/annonces/")[1].split("?")[0].split("#")[0]
+        except:
+            pass
+    
+    # Save report to database
+    report = db.create_report(
+        listing_url=listing_url,
+        reason=reason,
+        description=description,
+        reporter_email=reporter_email,
+        listing_id=listing_id
+    )
+    
+    # In production, send email notification to admin
+    if report:
+        logger.info(f"New report created: {report.get('id')} for listing: {listing_url}")
+    
+    return templates.TemplateResponse(
+        "signaler_success.html",
+        {"request": request}
+    )
+
+
+# ==================== Admin Dashboard (Reports Management) ====================
+
+@app.get("/admin/reports", response_class=HTMLResponse)
+async def admin_reports(request: Request, status: Optional[str] = None):
+    """Admin dashboard for managing reports (DSA compliance)"""
+    # TODO: Add authentication for admin access
+    # For now, this is accessible without auth (should be protected in production)
+    
+    reports = db.get_reports(status=status, limit=100)
+    
+    # Get counts by status
+    all_reports = db.get_reports(limit=1000)
+    status_counts = {
+        "new": len([r for r in all_reports if r["status"] == "new"]),
+        "reviewed": len([r for r in all_reports if r["status"] == "reviewed"]),
+        "resolved": len([r for r in all_reports if r["status"] == "resolved"]),
+        "total": len(all_reports)
+    }
+    
+    return templates.TemplateResponse(
+        "admin_reports.html",
+        {
+            "request": request,
+            "reports": reports,
+            "status_counts": status_counts,
+            "current_filter": status
+        }
+    )
+
+
+@app.post("/admin/reports/{report_id}/update-status")
+async def update_report_status(report_id: str, status: str = Form(...)):
+    """Update report status"""
+    # TODO: Add authentication for admin access
+    
+    db.update_report_status(report_id, status)
+    return RedirectResponse(url="/admin/reports", status_code=303)
 
 
 # ==================== DSA Compliance Pages ====================

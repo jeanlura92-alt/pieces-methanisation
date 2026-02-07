@@ -1,0 +1,194 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="form-page">
+  <div class="container-wide" style="max-width: 1400px;">
+    <div style="margin-bottom: 40px;">
+      <h1>Dashboard Admin - Gestion des Signalements</h1>
+      <p class="subtitle">Gestion des signalements conformément au Digital Services Act (DSA)</p>
+      
+      <div style="margin-top: 24px; padding: 20px; background: #fffbeb; border-radius: var(--radius); border-left: 4px solid #f59e0b;">
+        <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin: 0;">
+          <strong>⚠️ Note :</strong> Cette page devrait être protégée par une authentification administrateur en production. 
+          Actuellement accessible sans authentification pour les besoins de démonstration.
+        </p>
+      </div>
+    </div>
+
+    <!-- Statistics -->
+    <div class="stats" style="margin-bottom: 40px;">
+      <div class="stat-card">
+        <span class="stat-number">{{ status_counts.total }}</span>
+        <span class="stat-label">Total</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" style="color: #f59e0b;">{{ status_counts.new }}</span>
+        <span class="stat-label">Nouveaux</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" style="color: #3b82f6;">{{ status_counts.reviewed }}</span>
+        <span class="stat-label">En cours</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number" style="color: #10b981;">{{ status_counts.resolved }}</span>
+        <span class="stat-label">Résolus</span>
+      </div>
+    </div>
+
+    <!-- Filter buttons -->
+    <div style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
+      <a href="/admin/reports" class="btn-secondary {% if not current_filter %}btn-primary{% endif %}" 
+         style="{% if not current_filter %}background: var(--primary-color); color: white;{% endif %}">
+        Tous
+      </a>
+      <a href="/admin/reports?status=new" class="btn-secondary {% if current_filter == 'new' %}btn-primary{% endif %}"
+         style="{% if current_filter == 'new' %}background: #f59e0b; color: white;{% endif %}">
+        Nouveaux
+      </a>
+      <a href="/admin/reports?status=reviewed" class="btn-secondary {% if current_filter == 'reviewed' %}btn-primary{% endif %}"
+         style="{% if current_filter == 'reviewed' %}background: #3b82f6; color: white;{% endif %}">
+        En cours
+      </a>
+      <a href="/admin/reports?status=resolved" class="btn-secondary {% if current_filter == 'resolved' %}btn-primary{% endif %}"
+         style="{% if current_filter == 'resolved' %}background: #10b981; color: white;{% endif %}">
+        Résolus
+      </a>
+    </div>
+
+    <!-- Reports list -->
+    {% if reports %}
+    <div style="background: var(--bg-white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow);">
+      <table style="width: 100%; border-collapse: collapse;">
+        <thead style="background: var(--bg-light); border-bottom: 2px solid var(--border-color);">
+          <tr>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">Date</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">URL signalée</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">Motif</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">Description</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">Email</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">Statut</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for report in reports %}
+          <tr style="border-bottom: 1px solid var(--border-color);">
+            <td style="padding: 16px; font-size: 14px; color: var(--text-gray);">
+              {{ report.created_at[:10] if report.created_at else 'N/A' }}
+            </td>
+            <td style="padding: 16px; font-size: 14px;">
+              <a href="{{ report.listing_url }}" target="_blank" 
+                 style="color: var(--primary-color); text-decoration: underline; word-break: break-all;">
+                {{ report.listing_url[:50] }}{% if report.listing_url|length > 50 %}...{% endif %}
+              </a>
+            </td>
+            <td style="padding: 16px;">
+              <span style="display: inline-block; padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600; background: var(--bg-light); color: var(--text-dark);">
+                {{ report.reason }}
+              </span>
+            </td>
+            <td style="padding: 16px; font-size: 14px; color: var(--text-gray); max-width: 300px;">
+              <div style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+                {{ report.description[:100] }}{% if report.description|length > 100 %}...{% endif %}
+              </div>
+            </td>
+            <td style="padding: 16px; font-size: 14px; color: var(--text-gray);">
+              {{ report.reporter_email if report.reporter_email else 'Anonyme' }}
+            </td>
+            <td style="padding: 16px;">
+              {% if report.status == 'new' %}
+              <span class="badge" style="background: #fef3c7; color: #92400e;">Nouveau</span>
+              {% elif report.status == 'reviewed' %}
+              <span class="badge" style="background: #dbeafe; color: #1e40af;">En cours</span>
+              {% elif report.status == 'resolved' %}
+              <span class="badge" style="background: #d1fae5; color: #065f46;">Résolu</span>
+              {% else %}
+              <span class="badge">{{ report.status }}</span>
+              {% endif %}
+            </td>
+            <td style="padding: 16px;">
+              <form method="post" action="/admin/reports/{{ report.id }}/update-status" style="display: inline-block;">
+                <select name="status" onchange="this.form.submit()" 
+                        style="padding: 6px 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 13px;">
+                  <option value="">Changer...</option>
+                  <option value="new" {% if report.status == 'new' %}disabled{% endif %}>Nouveau</option>
+                  <option value="reviewed" {% if report.status == 'reviewed' %}disabled{% endif %}>En cours</option>
+                  <option value="resolved" {% if report.status == 'resolved' %}disabled{% endif %}>Résolu</option>
+                </select>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% else %}
+    <div style="text-align: center; padding: 60px 20px; background: var(--bg-white); border-radius: var(--radius-lg); box-shadow: var(--shadow);">
+      <p style="font-size: 18px; color: var(--text-gray); margin-bottom: 16px;">
+        {% if current_filter %}
+        Aucun signalement avec le statut "{{ current_filter }}"
+        {% else %}
+        Aucun signalement pour le moment
+        {% endif %}
+      </p>
+      <p style="font-size: 14px; color: var(--text-light);">
+        Les utilisateurs peuvent signaler des annonces via la page <a href="/signaler" style="color: var(--primary-color); text-decoration: underline;">/signaler</a>
+      </p>
+    </div>
+    {% endif %}
+
+    <div style="margin-top: 40px; display: flex; justify-content: center;">
+      <a href="/" class="btn-secondary">← Retour à l'accueil</a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* Responsive table */
+  @media (max-width: 1024px) {
+    table {
+      font-size: 13px;
+    }
+    th, td {
+      padding: 12px !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+    
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    tr {
+      margin-bottom: 16px;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    td {
+      border: none;
+      position: relative;
+      padding-left: 50% !important;
+      text-align: left;
+    }
+    
+    td:before {
+      position: absolute;
+      left: 16px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      font-weight: 600;
+      content: attr(data-label);
+    }
+  }
+</style>
+{% endblock %}

@@ -61,6 +61,6 @@ LISTING_TYPES = [
 ]
 
 # Photo upload configuration
-MAX_PHOTOS_PER_LISTING = 3
+MAX_PHOTOS_PER_LISTING = 1
 ALLOWED_PHOTO_TYPES = ["image/jpeg", "image/jpg", "image/png", "image/webp", "image/gif"]
 ALLOWED_PHOTO_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".gif"]

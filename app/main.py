@@ -117,36 +117,6 @@ def listing_detail(request: Request, listing_id: str):
     )
 
 
-@app.post("/annonces/{listing_id}/inquiry")
-async def submit_inquiry(
-    request: Request,
-    listing_id: str,
-    buyer_name: str = Form(...),
-    buyer_email: str = Form(...),
-    buyer_phone: str = Form(""),
-    message: str = Form(...),
-):
-    """Submit an inquiry for a listing"""
-    listing = db.get_listing(listing_id)
-    if not listing or listing["status"] != "published":
-        raise HTTPException(status_code=404, detail="Annonce introuvable")
-    
-    inquiry_data = {
-        "buyer_name": buyer_name,
-        "buyer_email": buyer_email,
-        "buyer_phone": buyer_phone,
-        "message": message,
-    }
-    
-    db.create_inquiry(listing_id, inquiry_data)
-    
-    # Redirect back to listing with success message
-    return RedirectResponse(
-        url=f"/annonces/{listing_id}?inquiry=success",
-        status_code=303
-    )
-
-
 # ==================== Wizard Flow ====================
 
 @app.get("/deposer")
@@ -577,38 +547,6 @@ async def stripe_webhook(request: Request):
             db.publish_listing(payment["listing_id"])
     
     return {"status": "success"}
-
-
-# ==================== Dashboard ====================
-
-@app.get("/dashboard", response_class=HTMLResponse)
-def dashboard(request: Request, user_email: Optional[str] = Cookie(None)):
-    """Seller dashboard
-    
-    NOTE: This is a simplified implementation without proper authentication.
-    In production, implement proper user authentication (OAuth, JWT, etc.)
-    before using this dashboard functionality.
-    """
-    # In a real app, you'd get user from session/auth
-    # For now, we'll get all listings (simplified)
-    
-    if not user_email:
-        user_email = "anonymous@example.com"
-    
-    # Get user
-    user = db.get_or_create_user(user_email)
-    
-    # Get user's listings
-    user_listings = db.get_user_listings(user["id"])
-    
-    # Add inquiry counts
-    for listing in user_listings:
-        listing["inquiry_count"] = db.count_listing_inquiries(listing["id"])
-    
-    return templates.TemplateResponse(
-        "dashboard.html",
-        {"request": request, "listings": user_listings},
-    )
 
 
 # ==================== Contact ====================

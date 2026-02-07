@@ -82,7 +82,7 @@ def get_listing(listing_id: str) -> Optional[Dict[str, Any]]:
 
 
 def get_published_listings(limit: int = 100, offset: int = 0) -> List[Dict[str, Any]]:
-    """Get all published listings"""
+    """Get all published listings that have not expired"""
     if not supabase:
         return []
     
@@ -90,6 +90,7 @@ def get_published_listings(limit: int = 100, offset: int = 0) -> List[Dict[str, 
         supabase.table("listings")
         .select("*")
         .eq("status", "published")
+        .gte("expires_at", datetime.utcnow().isoformat())  # Include listings expiring at this exact moment
         .order("published_at", desc=True)
         .limit(limit)
         .offset(offset)
@@ -114,18 +115,88 @@ def get_user_listings(user_id: str) -> List[Dict[str, Any]]:
 
 
 def publish_listing(listing_id: str) -> Optional[Dict[str, Any]]:
-    """Publish a listing (set status to published and set published_at)"""
+    """Publish a listing (set status to published, set published_at, and set expires_at to 30 days later)"""
     if not supabase:
         return {"id": listing_id, "status": "published"}
     
+    from datetime import timedelta
+    
+    now = datetime.utcnow()
+    expires_at = now + timedelta(days=30)
+    
     updates = {
         "status": "published",
-        "published_at": datetime.utcnow().isoformat(),
-        "updated_at": datetime.utcnow().isoformat()
+        "published_at": now.isoformat(),
+        "expires_at": expires_at.isoformat(),
+        "updated_at": now.isoformat()
     }
     
     result = supabase.table("listings").update(updates).eq("id", listing_id).execute()
     return result.data[0] if result.data else None
+
+
+def expire_old_listings() -> int:
+    """
+    Mark listings as expired if they are published and past their expiration date.
+    Returns the number of listings that were expired.
+    
+    This function should be called regularly via:
+    - A cron job on your server
+    - A scheduled task (e.g., GitHub Actions, Cloud Scheduler)
+    - A Supabase Edge Function with pg_cron
+    
+    Example cron setup (runs daily at 2 AM):
+    0 2 * * * cd /path/to/app && python -c "from app.db import expire_old_listings; expire_old_listings()"
+    
+    Example Supabase Edge Function with pg_cron:
+    SELECT cron.schedule('expire-listings', '0 2 * * *', $$
+      UPDATE listings 
+      SET status = 'expired', updated_at = NOW()
+      WHERE status = 'published' AND expires_at < NOW()
+    $$);
+    """
+    if not supabase:
+        logger.warning("Supabase not configured - cannot expire listings")
+        return 0
+    
+    try:
+        now = datetime.utcnow().isoformat()
+        
+        # Get count of listings to expire before updating
+        count_result = (
+            supabase.table("listings")
+            .select("id", count="exact")
+            .eq("status", "published")
+            .lt("expires_at", now)
+            .execute()
+        )
+        
+        expired_count = count_result.count if count_result.count is not None else 0
+        
+        if expired_count == 0:
+            logger.info("No listings to expire")
+            return 0
+        
+        # Bulk update all expired listings in a single query
+        # Note: Supabase Python client doesn't support bulk update without filtering,
+        # so we update with the same filter conditions
+        update_result = (
+            supabase.table("listings")
+            .update({
+                "status": "expired",
+                "updated_at": now
+            })
+            .eq("status", "published")
+            .lt("expires_at", now)
+            .execute()
+        )
+        
+        logger.info(f"Expired {expired_count} listings")
+        return expired_count
+        
+    except Exception as e:
+        logger.error(f"Error expiring listings: {e}")
+        return 0
 
 
 # ==================== Media ====================
@@ -186,47 +257,6 @@ def delete_media_by_id(media_id: str) -> bool:
     except Exception as e:
         logger.error(f"Error deleting media by ID: {e}")
         return False
-
-
-# ==================== Inquiries ====================
-
-def create_inquiry(listing_id: str, inquiry_data: Dict[str, Any]) -> Optional[Dict[str, Any]]:
-    """Create a new inquiry for a listing"""
-    if not supabase:
-        return {"id": "mock-inquiry-id", "listing_id": listing_id, **inquiry_data}
-    
-    data = {
-        "listing_id": listing_id,
-        "status": "new",
-        **inquiry_data
-    }
-    
-    result = supabase.table("inquiries").insert(data).execute()
-    return result.data[0] if result.data else None
-
-
-def get_listing_inquiries(listing_id: str) -> List[Dict[str, Any]]:
-    """Get all inquiries for a listing"""
-    if not supabase:
-        return []
-    
-    result = (
-        supabase.table("inquiries")
-        .select("*")
-        .eq("listing_id", listing_id)
-        .order("created_at", desc=True)
-        .execute()
-    )
-    return result.data if result.data else []
-
-
-def count_listing_inquiries(listing_id: str) -> int:
-    """Count inquiries for a listing"""
-    if not supabase:
-        return 0
-    
-    result = supabase.table("inquiries").select("id", count="exact").eq("listing_id", listing_id).execute()
-    return result.count if result.count is not None else 0
 
 
 # ==================== Payments ====================

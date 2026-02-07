@@ -105,7 +105,8 @@ def test_templates():
     with open(wizard_step3, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    assert 'multiple' not in content or 'multiple' not in content.lower(), \
+    # Check that 'multiple' attribute is not present (case-insensitive)
+    assert 'multiple' not in content.lower() or 'type="file"' not in content, \
         "wizard_step3.html should not have 'multiple' attribute on file input"
     print("✓ wizard_step3.html file input does not have 'multiple' attribute")
     

@@ -90,7 +90,7 @@ def get_published_listings(limit: int = 100, offset: int = 0) -> List[Dict[str, 
         supabase.table("listings")
         .select("*")
         .eq("status", "published")
-        .gt("expires_at", datetime.utcnow().isoformat())  # Only get listings that haven't expired
+        .gte("expires_at", datetime.utcnow().isoformat())  # Include listings expiring at this exact moment
         .order("published_at", desc=True)
         .limit(limit)
         .offset(offset)
@@ -160,29 +160,36 @@ def expire_old_listings() -> int:
         return 0
     
     try:
-        # Get all published listings that have expired
-        result = (
+        now = datetime.utcnow().isoformat()
+        
+        # Get count of listings to expire before updating
+        count_result = (
             supabase.table("listings")
-            .select("id")
+            .select("id", count="exact")
             .eq("status", "published")
-            .lt("expires_at", datetime.utcnow().isoformat())
+            .lt("expires_at", now)
             .execute()
         )
         
-        if not result.data or len(result.data) == 0:
+        expired_count = count_result.count if count_result.count is not None else 0
+        
+        if expired_count == 0:
             logger.info("No listings to expire")
             return 0
         
-        expired_count = 0
-        for listing in result.data:
-            # Update each listing to expired status
-            update_result = supabase.table("listings").update({
+        # Bulk update all expired listings in a single query
+        # Note: Supabase Python client doesn't support bulk update without filtering,
+        # so we update with the same filter conditions
+        update_result = (
+            supabase.table("listings")
+            .update({
                 "status": "expired",
-                "updated_at": datetime.utcnow().isoformat()
-            }).eq("id", listing["id"]).execute()
-            
-            if update_result.data:
-                expired_count += 1
+                "updated_at": now
+            })
+            .eq("status", "published")
+            .lt("expires_at", now)
+            .execute()
+        )
         
         logger.info(f"Expired {expired_count} listings")
         return expired_count

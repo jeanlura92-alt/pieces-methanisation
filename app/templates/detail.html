@@ -69,37 +69,33 @@
           <h3>Contacter le vendeur</h3>
           <span class="price-large">{{ listing.price_display or listing.price }}</span>
           
-          {% if request.query_params.get('inquiry') == 'success' %}
-          <div style="background: var(--secondary-color); background: rgba(16, 185, 129, 0.1); border: 1px solid var(--secondary-color); padding: 16px; border-radius: var(--radius); margin-top: 16px;">
-            <p style="font-size: 14px; color: var(--text-dark); margin: 0;">
-              ✓ Votre message a été envoyé avec succès !
+          <div style="margin-top: 24px; padding: 20px; background: var(--bg-light); border-radius: var(--radius);">
+            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 16px; color: var(--text-dark);">
+              Coordonnées du vendeur
+            </h4>
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 18px;">📧</span>
+                <a href="mailto:{{ listing.contact_email }}" 
+                   style="color: var(--primary-color); text-decoration: none; font-weight: 500; word-break: break-all;">
+                  {{ listing.contact_email }}
+                </a>
+              </div>
+              
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 18px;">📞</span>
+                <a href="tel:{{ listing.contact_phone }}" 
+                   style="color: var(--primary-color); text-decoration: none; font-weight: 500;">
+                  {{ listing.contact_phone }}
+                </a>
+              </div>
+            </div>
+            
+            <p style="font-size: 13px; color: var(--text-gray); margin-top: 16px; line-height: 1.5;">
+              Contactez directement le vendeur par email ou téléphone pour plus d'informations sur cet équipement.
             </p>
           </div>
-          {% endif %}
-          
-          <form method="post" action="/annonces/{{ listing.id }}/inquiry" style="margin-top: 24px;">
-            <div class="form-group">
-              <label for="buyer_name">Votre nom *</label>
-              <input type="text" id="buyer_name" name="buyer_name" required placeholder="Jean Dupont" />
-            </div>
-            
-            <div class="form-group">
-              <label for="buyer_email">Votre email *</label>
-              <input type="email" id="buyer_email" name="buyer_email" required placeholder="votre@email.fr" />
-            </div>
-            
-            <div class="form-group">
-              <label for="buyer_phone">Votre téléphone</label>
-              <input type="tel" id="buyer_phone" name="buyer_phone" placeholder="+33 X XX XX XX XX" />
-            </div>
-            
-            <div class="form-group">
-              <label for="message">Votre message *</label>
-              <textarea id="message" name="message" required placeholder="Bonjour, je suis intéressé par votre équipement..." rows="4"></textarea>
-            </div>
-            
-            <button type="submit" class="btn-primary" style="width: 100%;">Envoyer le message</button>
-          </form>
           
           <div class="contact-info" style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border-color);">
             <div class="contact-info-item">
@@ -107,10 +103,6 @@
               <div class="contact-info-value">#{{ listing.id|string|truncate(8, True, '') }}</div>
             </div>
           </div>
-          
-          <p style="font-size: 13px; color: var(--text-light); margin-top: 16px; text-align: center;">
-            Réponse sous 24h en moyenne
-          </p>
         </div>
 
         <div style="background: var(--bg-light); padding: 24px; border-radius: var(--radius-lg); margin-top: 24px;">

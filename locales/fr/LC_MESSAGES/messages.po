@@ -1832,7 +1832,7 @@ msgstr ""
 #: app/templates/wizard_step5.html:76
 #, fuzzy
 msgid "Privacy Policy"
-msgstr "Confidentialité"
+msgstr "Politique de Confidentialité"
 
 #: app/templates/mentions_legales.html:99
 msgid "To exercise your rights, contact us at:"
@@ -1840,7 +1840,7 @@ msgstr ""
 
 #: app/templates/mentions_legales.html:106
 msgid "7. Cookies"
-msgstr ""
+msgstr "7. Cookies"
 
 #: app/templates/mentions_legales.html:111
 msgid ""
@@ -1854,7 +1854,7 @@ msgstr ""
 
 #: app/templates/mentions_legales.html:115
 msgid "Cookie Management"
-msgstr ""
+msgstr "Gestion des Cookies"
 
 #: app/templates/mentions_legales.html:115 app/templates/signaler.html:121
 msgid "page."
@@ -2173,7 +2173,7 @@ msgstr ""
 
 #: app/templates/politique_confidentialite.html:118
 msgid "Consent (Article 6.1.a of the GDPR):"
-msgstr ""
+msgstr "Consentement (Article 6.1.a du RGPD) :"
 
 #: app/templates/politique_confidentialite.html:118
 msgid "Public publication of your contact details on listings"
@@ -2181,7 +2181,7 @@ msgstr ""
 
 #: app/templates/politique_confidentialite.html:121
 msgid "Contract performance (Article 6.1.b of the GDPR):"
-msgstr ""
+msgstr "Exécution du contrat (Article 6.1.b du RGPD) :"
 
 #: app/templates/politique_confidentialite.html:121
 msgid "Listing publication, payment processing, platform service provision"
@@ -2189,7 +2189,7 @@ msgstr ""
 
 #: app/templates/politique_confidentialite.html:124
 msgid "Legal obligation (Article 6.1.c of the GDPR):"
-msgstr ""
+msgstr "Obligation légale (Article 6.1.c du RGPD) :"
 
 #: app/templates/politique_confidentialite.html:124
 msgid ""
@@ -2824,7 +2824,7 @@ msgstr ""
 
 #: app/templates/politique_confidentialite.html:495
 msgid "12. Privacy Policy Modifications"
-msgstr ""
+msgstr "12. Modifications de la Politique de Confidentialité"
 
 #: app/templates/politique_confidentialite.html:500
 msgid ""

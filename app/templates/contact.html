@@ -3,6 +3,26 @@
 {% block content %}
 <section class="form-page">
   <div class="form-container">
+    {% if success %}
+    <div style="background: #10b981; color: white; padding: 20px; border-radius: var(--radius); margin-bottom: 24px; display: flex; align-items: center; gap: 12px;">
+      <span style="font-size: 24px;">✅</span>
+      <div>
+        <strong style="display: block; font-size: 18px; margin-bottom: 4px;">Message envoyé !</strong>
+        <p style="margin: 0;">{{ message }}</p>
+      </div>
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <div style="background: #ef4444; color: white; padding: 20px; border-radius: var(--radius); margin-bottom: 24px; display: flex; align-items: center; gap: 12px;">
+      <span style="font-size: 24px;">❌</span>
+      <div>
+        <strong style="display: block; font-size: 18px; margin-bottom: 4px;">Erreur</strong>
+        <p style="margin: 0;">{{ message }}</p>
+      </div>
+    </div>
+    {% endif %}
+
     <h1>Contactez-nous</h1>
     <p class="subtitle">Une question sur une annonce ou sur nos services ? Notre équipe vous répond rapidement.</p>
 

@@ -64,3 +64,10 @@ LISTING_TYPES = [
 MAX_PHOTOS_PER_LISTING = 1
 ALLOWED_PHOTO_TYPES = ["image/jpeg", "image/jpg", "image/png", "image/webp", "image/gif"]
 ALLOWED_PHOTO_EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp", ".gif"]
+
+# Email configuration (optional)
+SMTP_HOST = os.getenv("SMTP_HOST", "")
+SMTP_PORT = int(os.getenv("SMTP_PORT", "587"))
+SMTP_USER = os.getenv("SMTP_USER", "")
+SMTP_PASSWORD = os.getenv("SMTP_PASSWORD", "")
+CONTACT_EMAIL = os.getenv("CONTACT_EMAIL", "contact@pieces-methanisation.fr")

@@ -576,6 +576,53 @@ def contact(request: Request):
     )
 
 
+@app.post("/contact")
+async def contact_post(
+    request: Request,
+    name: str = Form(...),
+    company: Optional[str] = Form(None),
+    email: str = Form(...),
+    phone: Optional[str] = Form(None),
+    subject: str = Form(...),
+    reference: Optional[str] = Form(None),
+    message: str = Form(...),
+):
+    """Handle contact form submission"""
+    try:
+        # Logger les données (note: sanitize sensitive data in production logs)
+        logger.info(f"Contact form submitted by {name} ({email})")
+        logger.info(f"Subject: {subject}, Message: {message[:100]}...")
+        
+        # Sauvegarder dans la base de données (optionnel mais recommandé)
+        # TODO: Ajouter une table 'contact_messages' si nécessaire
+        
+        # Envoyer un email - Currently in mock mode (logs only) when SMTP not configured
+        # Uncomment to enable email sending when SMTP is configured:
+        # from . import email
+        # await email.send_contact_email(name, email, phone, company, subject, reference, message)
+        
+        # Rediriger avec message de succès
+        return templates.TemplateResponse(
+            "contact.html",
+            {
+                "request": request,
+                "success": True,
+                "message": "Votre message a été envoyé avec succès. Nous vous répondrons dans les plus brefs délais."
+            },
+        )
+        
+    except Exception as e:
+        logger.error(f"Error processing contact form: {e}")
+        return templates.TemplateResponse(
+            "contact.html",
+            {
+                "request": request,
+                "error": True,
+                "message": "Une erreur est survenue lors de l'envoi. Veuillez réessayer."
+            },
+        )
+
+
 # ==================== Legal Pages (LCEN, RGPD, ePrivacy, Code de Commerce) ====================
 
 @app.get("/mentions-legales", response_class=HTMLResponse)

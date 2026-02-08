@@ -1,423 +1,1547 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2026
-# This file is distributed under the same license as the pieces-methanisation project.
+# This file is distributed under the same license as the
+# pieces-methanisation project.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: pieces-methanisation 1.0\n"
 "Report-Msgid-Bugs-To: contact@pieces-methanisation.fr\n"
-"POT-Creation-Date: 2026-02-08 13:51\n"
-"PO-Revision-Date: 2026-02-08 13:51\n"
+"POT-Creation-Date: 2026-02-08 14:09+0000\n"
+"PO-Revision-Date: 2026-02-08 13:51+0000\n"
 "Last-Translator: \n"
-"Language-Team: French\n"
 "Language: fr\n"
+"Language-Team: French\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-# Navigation
-msgid "Listings"
-msgstr "Annonces"
-
-msgid "Post"
-msgstr "Déposer"
-
-msgid "Contact"
-msgstr "Contact"
-
-msgid "Post a listing"
-msgstr "Déposer une annonce"
-
-# Homepage
-msgid "The professional marketplace for methanization & biogas parts"
-msgstr "Le marché pro des pièces de méthanisation & biogaz"
-
-msgid "Buy, sell and quickly find reliable equipment for your methanization units."
-msgstr "Achetez, vendez et trouvez rapidement des équipements fiables pour vos unités de méthanisation."
-
-msgid "View listings"
-msgstr "Voir les annonces"
-
-msgid "listings online"
-msgstr "annonces en ligne"
-
-msgid "France & Europe"
-msgstr "France & Europe"
-
-msgid "coverage"
-msgstr "couverture"
-
-msgid "Latest listings"
-msgstr "Dernières annonces"
-
-msgid "Featured categories"
-msgstr "Catégories phares"
-
-msgid "Do you have equipment to sell?"
-msgstr "Vous avez du matériel à vendre ?"
-
-msgid "Post a listing in a few minutes."
-msgstr "Publiez une annonce en quelques minutes."
-
-msgid "View listing"
-msgstr "Voir l'annonce"
-
-# Listing detail
-msgid "Description"
-msgstr "Description"
-
-msgid "Technical details"
-msgstr "Détails techniques"
-
-msgid "Category"
-msgstr "Catégorie"
-
-msgid "Condition"
-msgstr "État"
-
-msgid "Year"
-msgstr "Année"
-
-msgid "Manufacturer"
-msgstr "Fabricant"
-
-msgid "Location"
-msgstr "Localisation"
-
-msgid "Price"
-msgstr "Prix"
-
-msgid "On quote"
-msgstr "Sur devis"
-
-msgid "Contact the seller"
-msgstr "Contacter le vendeur"
-
-msgid "Your name"
-msgstr "Votre nom"
-
-msgid "Your email"
-msgstr "Votre email"
-
-msgid "Your phone"
-msgstr "Votre téléphone"
-
-msgid "Your message"
-msgstr "Votre message"
-
-msgid "Send inquiry"
-msgstr "Envoyer la demande"
-
-msgid "Similar listings"
-msgstr "Annonces similaires"
-
-# Wizard - Step 1
-msgid "Post a listing - Step 1/5"
-msgstr "Déposer une annonce - Étape 1/5"
-
-msgid "Type & Category"
-msgstr "Type & Catégorie"
-
-msgid "What type of listing?"
-msgstr "Quel type d'annonce ?"
-
-msgid "Equipment type"
-msgstr "Type d'équipement"
-
-msgid "Select a category"
-msgstr "Sélectionnez une catégorie"
-
-msgid "Listing title"
-msgstr "Titre de l'annonce"
-
-msgid "Example: High-capacity biogas purification unit"
-msgstr "Exemple : Unité d'épuration biogaz haute capacité"
-
-msgid "Continue"
-msgstr "Continuer"
-
-# Wizard - Step 2
-msgid "Post a listing - Step 2/5"
-msgstr "Déposer une annonce - Étape 2/5"
-
-msgid "Equipment condition"
-msgstr "État de l'équipement"
-
-msgid "Year of manufacture"
-msgstr "Année de fabrication"
-
-msgid "Optional"
-msgstr "Optionnel"
-
-msgid "Manufacturer / Brand"
-msgstr "Fabricant / Marque"
-
-msgid "Short summary"
-msgstr "Résumé court"
-
-msgid "One sentence describing your equipment"
-msgstr "Une phrase décrivant votre équipement"
-
-msgid "Detailed description"
-msgstr "Description détaillée"
-
-msgid "Describe the equipment, its features, usage history, etc."
-msgstr "Décrivez l'équipement, ses caractéristiques, son historique d'utilisation, etc."
-
-msgid "Previous"
-msgstr "Précédent"
-
-# Wizard - Step 3
-msgid "Post a listing - Step 3/5"
-msgstr "Déposer une annonce - Étape 3/5"
-
-msgid "Photos & Documents"
-msgstr "Photos & Documents"
-
-msgid "Add photos of your equipment"
-msgstr "Ajoutez des photos de votre équipement"
-
-msgid "Select photos"
-msgstr "Sélectionner des photos"
-
-msgid "Upload"
-msgstr "Télécharger"
-
-msgid "Uploaded photos"
-msgstr "Photos téléchargées"
-
-msgid "No photos uploaded yet"
-msgstr "Aucune photo téléchargée pour le moment"
-
-# Wizard - Step 4
-msgid "Post a listing - Step 4/5"
-msgstr "Déposer une annonce - Étape 4/5"
-
-msgid "Price & Location"
-msgstr "Prix & Localisation"
-
-msgid "Price type"
-msgstr "Type de prix"
-
-msgid "Fixed price"
-msgstr "Prix fixe"
-
-msgid "On quote only"
-msgstr "Sur devis uniquement"
-
-msgid "Price (EUR)"
-msgstr "Prix (EUR)"
-
-msgid "Enter amount in euros"
-msgstr "Entrez le montant en euros"
-
-msgid "City or region"
-msgstr "Ville ou région"
-
-msgid "Example: Lyon, Auvergne-Rhône-Alpes"
-msgstr "Exemple : Lyon, Auvergne-Rhône-Alpes"
-
-# Wizard - Step 5
-msgid "Post a listing - Step 5/5"
-msgstr "Déposer une annonce - Étape 5/5"
-
-msgid "Contact & Summary"
-msgstr "Contact & Récapitulatif"
-
-msgid "Your contact information"
-msgstr "Vos coordonnées"
-
-msgid "Contact email"
-msgstr "Email de contact"
-
-msgid "Contact phone"
-msgstr "Téléphone de contact"
-
-msgid "I agree that my contact details will be publicly visible"
-msgstr "J'accepte que mes coordonnées soient publiquement visibles"
-
-msgid "Listing summary"
-msgstr "Récapitulatif de l'annonce"
-
-msgid "Title"
-msgstr "Titre"
-
-msgid "Summary"
-msgstr "Résumé"
-
-msgid "Publication cost"
-msgstr "Coût de publication"
-
-msgid "Pay and publish"
-msgstr "Payer et publier"
-
-msgid "You must accept that your contact details will be publicly visible."
-msgstr "Vous devez accepter que vos coordonnées soient publiquement visibles."
-
-# Payment
-msgid "Payment successful!"
-msgstr "Paiement réussi !"
-
-msgid "Your listing has been published and is now visible on the platform."
-msgstr "Votre annonce a été publiée et est maintenant visible sur la plateforme."
-
-msgid "View my listing"
-msgstr "Voir mon annonce"
-
-msgid "Payment cancelled"
-msgstr "Paiement annulé"
-
-msgid "Your payment has been cancelled. Your listing has been saved as a draft."
-msgstr "Votre paiement a été annulé. Votre annonce a été sauvegardée en brouillon."
-
-msgid "Try again"
-msgstr "Réessayer"
-
-# Contact page
-msgid "Contact us"
-msgstr "Contactez-nous"
-
-msgid "Have a question or need assistance? We're here to help!"
-msgstr "Une question ou besoin d'aide ? Nous sommes là pour vous aider !"
-
-msgid "Send message"
-msgstr "Envoyer le message"
-
-msgid "Your message has been sent!"
-msgstr "Votre message a été envoyé !"
-
-# Footer
-msgid "About"
-msgstr "À propos"
-
-msgid "Professional platform dedicated to methanization & biogas equipment in France and Europe."
-msgstr "Plateforme professionnelle dédiée aux équipements de méthanisation & biogaz en France et en Europe."
-
-msgid "How it works"
-msgstr "Comment ça marche"
-
-msgid "Categories"
-msgstr "Catégories"
-
-msgid "Legal"
-msgstr "Légal"
-
-msgid "Legal notice"
-msgstr "Mentions légales"
-
-msgid "Terms & Conditions"
-msgstr "CGV/CGU"
-
-msgid "Privacy policy"
-msgstr "Confidentialité"
-
-msgid "Cookie policy"
-msgstr "Cookies"
-
-msgid "Report a listing"
-msgstr "Signaler une annonce"
+"Generated-By: Babel 2.10.3\n"
 
 # Error messages
+#: app/main.py:156
 msgid "Listing not found"
 msgstr "Annonce introuvable"
 
-msgid "An error occurred"
-msgstr "Une erreur s'est produite"
+#: app/main.py:336
+msgid "You can only upload up to {} photos."
+msgstr ""
 
-msgid "Please try again"
-msgstr "Veuillez réessayer"
+#: app/main.py:343
+msgid "Please upload at least one photo."
+msgstr ""
 
-# Forms
-msgid "Required field"
-msgstr "Champ obligatoire"
+#: app/main.py:351
+msgid "File type not allowed: {}. Use JPG, PNG, WEBP or GIF."
+msgstr ""
 
-msgid "Invalid email"
-msgstr "Email invalide"
+#: app/main.py:408
+#, fuzzy
+msgid "Photo upload failed: {}"
+msgstr "Aucune photo téléchargée pour le moment"
 
-msgid "Invalid phone number"
-msgstr "Numéro de téléphone invalide"
+#: app/main.py:419
+msgid "Error uploading photos. Please try again."
+msgstr ""
 
-msgid "File too large"
-msgstr "Fichier trop volumineux"
+#: app/main.py:525
+#, fuzzy
+msgid "You must agree to make your contact details publicly visible."
+msgstr "Vous devez accepter que vos coordonnées soient publiquement visibles."
 
-msgid "Invalid file type"
-msgstr "Type de fichier invalide"
+#: app/main.py:582
+msgid "Error creating payment session"
+msgstr ""
 
-# How it works
-msgid "How does it work?"
-msgstr "Comment ça marche ?"
+#: app/templates/admin_reports.html:7
+msgid "Admin Dashboard - Report Management"
+msgstr ""
 
-msgid "For sellers"
-msgstr "Pour les vendeurs"
+#: app/templates/admin_reports.html:8
+msgid "Report management in compliance with the Digital Services Act (DSA)"
+msgstr ""
 
-msgid "Create your listing"
-msgstr "Créez votre annonce"
+#: app/templates/admin_reports.html:12 app/templates/contact.html:109
+#, fuzzy
+msgid "Note:"
+msgstr "Sur devis"
 
-msgid "Fill out the 5-step form with details about your equipment"
-msgstr "Remplissez le formulaire en 5 étapes avec les détails de votre équipement"
+#: app/templates/admin_reports.html:12
+msgid ""
+"This page should be protected by administrator authentication in "
+"production. Currently accessible without authentication for demonstration"
+" purposes."
+msgstr ""
 
-msgid "Pay and publish"
-msgstr "Payez et publiez"
+#: app/templates/admin_reports.html:21
+#, fuzzy
+msgid "Total"
+msgstr "Optionnel"
 
-msgid "Your listing will be published immediately after payment"
-msgstr "Votre annonce sera publiée immédiatement après le paiement"
+#: app/templates/admin_reports.html:25 app/templates/admin_reports.html:99
+#: app/templates/admin_reports.html:113
+msgid "New"
+msgstr ""
 
-msgid "Receive inquiries"
-msgstr "Recevez des demandes"
+#: app/templates/admin_reports.html:29 app/templates/admin_reports.html:101
+#: app/templates/admin_reports.html:114
+msgid "In progress"
+msgstr ""
 
-msgid "Buyers contact you directly through the platform"
-msgstr "Les acheteurs vous contactent directement via la plateforme"
+#: app/templates/admin_reports.html:33 app/templates/admin_reports.html:103
+#: app/templates/admin_reports.html:115
+msgid "Resolved"
+msgstr ""
 
-msgid "For buyers"
-msgstr "Pour les acheteurs"
+#: app/templates/admin_reports.html:41
+msgid "All"
+msgstr ""
 
-msgid "Browse listings"
-msgstr "Parcourez les annonces"
+#: app/templates/admin_reports.html:63
+msgid "Date"
+msgstr ""
 
-msgid "Use filters to find what you need"
-msgstr "Utilisez les filtres pour trouver ce dont vous avez besoin"
+#: app/templates/admin_reports.html:64
+msgid "Reported URL"
+msgstr ""
 
-msgid "Contact sellers"
-msgstr "Contactez les vendeurs"
+#: app/templates/admin_reports.html:65
+msgid "Reason"
+msgstr ""
 
-msgid "Send inquiries directly through the platform"
-msgstr "Envoyez des demandes directement via la plateforme"
+# Listing detail
+#: app/templates/admin_reports.html:66
+msgid "Description"
+msgstr "Description"
 
-msgid "Negotiate"
-msgstr "Négociez"
+#: app/templates/admin_reports.html:67 app/templates/contact.html:12
+#: app/templates/contact.html:41 app/templates/wizard_step5.html:38
+#, fuzzy
+msgid "Email"
+msgstr "Votre email"
 
-msgid "Discuss details and finalize your purchase"
-msgstr "Discutez des détails et finalisez votre achat"
+# Contact page
+#: app/templates/admin_reports.html:68
+#, fuzzy
+msgid "Status"
+msgstr "Contactez-nous"
+
+#: app/templates/admin_reports.html:69
+#, fuzzy
+msgid "Actions"
+msgstr "Localisation"
+
+#: app/templates/admin_reports.html:95
+msgid "Anonymous"
+msgstr ""
+
+#: app/templates/admin_reports.html:112
+msgid "Change..."
+msgstr ""
+
+#: app/templates/admin_reports.html:128
+msgid "No reports with status"
+msgstr ""
+
+#: app/templates/admin_reports.html:130
+msgid "No reports at the moment"
+msgstr ""
+
+#: app/templates/admin_reports.html:134
+msgid "Users can report listings via the"
+msgstr ""
+
+#: app/templates/admin_reports.html:134
+msgid "page"
+msgstr ""
+
+#: app/templates/admin_reports.html:140 app/templates/contact.html:115
+#: app/templates/signaler_success.html:71
+msgid "Back to home"
+msgstr ""
+
+# Navigation
+#: app/templates/base.html:19
+msgid "Listings"
+msgstr "Annonces"
+
+#: app/templates/base.html:20
+msgid "Post"
+msgstr "Déposer"
+
+#: app/templates/base.html:21 app/templates/base.html:61
+msgid "Contact"
+msgstr "Contact"
+
+#: app/templates/base.html:32 app/templates/contact.html:56
+#: app/templates/index.html:12 app/templates/index.html:78
+msgid "Post a listing"
+msgstr "Déposer une annonce"
+
+# Footer
+#: app/templates/base.html:43
+msgid "About"
+msgstr "À propos"
+
+#: app/templates/base.html:45
+msgid ""
+"Professional platform dedicated to methanization & biogas equipment in "
+"France and Europe."
+msgstr ""
+"Plateforme professionnelle dédiée aux équipements de méthanisation & "
+"biogaz en France et en Europe."
+
+#: app/templates/base.html:48 app/templates/comment_ca_marche.html:6
+#: app/templates/signaler.html:121 app/templates/signaler_success.html:82
+msgid "How it works"
+msgstr "Comment ça marche"
+
+#: app/templates/base.html:52
+msgid "Categories"
+msgstr "Catégories"
+
+#: app/templates/base.html:54
+msgid "Agitation"
+msgstr ""
+
+#: app/templates/base.html:55
+msgid "Pumping"
+msgstr ""
+
+#: app/templates/base.html:56
+#, fuzzy
+msgid "Purification"
+msgstr "Localisation"
+
+#: app/templates/base.html:57
+#, fuzzy
+msgid "Automation"
+msgstr "Localisation"
 
 # Report
+#: app/templates/base.html:64 app/templates/signaler.html:6
 msgid "Report a listing"
 msgstr "Signaler une annonce"
 
-msgid "Listing ID"
-msgstr "ID de l'annonce"
+#: app/templates/base.html:68
+msgid "Legal"
+msgstr "Légal"
 
-msgid "Reason for report"
+#: app/templates/base.html:70
+msgid "Legal notice"
+msgstr "Mentions légales"
+
+#: app/templates/base.html:71
+msgid "Terms & Conditions"
+msgstr "CGV/CGU"
+
+#: app/templates/base.html:72
+msgid "Privacy policy"
+msgstr "Confidentialité"
+
+#: app/templates/base.html:73
+msgid "Cookie policy"
+msgstr "Cookies"
+
+#: app/templates/comment_ca_marche.html:7
+msgid "Transparency on the operation of our B2B marketplace"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:13
+msgid "1. Our role as intermediary"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:18
+msgid ""
+"<strong>Pièces Méthanisation Pro</strong> is a <strong>B2B (Business-to-"
+"Business) platform</strong> dedicated to buying and selling equipment and"
+" spare parts for biogas and methanation installations."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:21
+msgid "Our role is that of a <strong>technical intermediary</strong> between:"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:24
+msgid "<strong>Sellers</strong>: professionals who offer equipment for sale"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:25
+msgid "<strong>Buyers</strong>: professionals who are looking for equipment"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:28
+msgid ""
+"<strong>⚠️ Important:</strong> We only provide a space for publishing and"
+" viewing listings. We <strong>do not participate in commercial "
+"transactions</strong> between sellers and buyers."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:31
+msgid ""
+"Negotiations, payment for equipment, delivery and after-sales service are"
+" handled <strong>directly between the parties</strong>, without our "
+"involvement."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:38
+msgid "2. Listing ranking and display"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:42
+msgid "2.1. Main ranking criterion"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:44
+msgid ""
+"Listings are ranked in <strong>chronological order</strong>, from newest "
+"to oldest. The criterion used is the <strong>publication date</strong>."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:47
+msgid ""
+"Each new listing appears <strong>at the top of the list</strong> as soon "
+"as it is published, ensuring fair visibility for all sellers."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:50
+#, fuzzy
+msgid "2.2. Filters and categories"
+msgstr "Catégories phares"
+
+#: app/templates/comment_ca_marche.html:52
+msgid "Users can filter listings by:"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:55
+msgid ""
+"<strong>Equipment category</strong>: Agitation, Pumping, Purification, "
+"Automation, etc."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:56
+msgid "<strong>Listing type</strong>: Sale, Search, Rental"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:57
+msgid "<strong>Condition</strong>: New, Used, For parts"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:58
+#: app/templates/comment_ca_marche.html:176
+msgid "<strong>Geographic location</strong>"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:61
+msgid ""
+"These filters do not affect the ranking order: listings are always sorted"
+" <strong>by publication date, from newest to oldest</strong>."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:68
+msgid "3. Algorithms and recommendations"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:73
+msgid "<strong>No recommendation algorithm</strong> is used on our platform."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:76
+msgid "We do not modify the display order of listings based on:"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:79
+msgid "User browsing behavior"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:80
+msgid "Listing popularity (number of views or contacts)"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:81
+msgid "Seller profile"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:82
+msgid "A rating or review system"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:85
+msgid ""
+"The ranking is <strong>exclusively chronological</strong>, ensuring "
+"complete transparency and fairness among all sellers."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:92
+msgid "4. Paid promotion"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:97
+msgid ""
+"To date, <strong>no paid promotion service</strong> is offered on the "
+"platform."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:100
+msgid "Sellers cannot pay to:"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:103
+msgid "Have their listing appear at the top of the list"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:104
+msgid "Obtain visual highlighting (\"sponsored\" badge, colored border, etc.)"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:105
+msgid "Increase the visibility of their listing"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:108
+msgid ""
+"<strong>All listings benefit from the same visibility</strong>, "
+"determined solely by their publication date."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:111
+msgid ""
+"<strong>📌 Note:</strong> If a paid promotion system were to be "
+"implemented in the future, this page will be updated and sponsored "
+"listings will be clearly identified as such (\"Sponsored\" badge or "
+"explicit mention)."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:118
+msgid "5. Moderation process"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:122
+msgid "5.1. Listing publication"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:124
+msgid ""
+"Listings are <strong>published immediately</strong> after payment "
+"validation (€49 including tax per listing). No prior manual validation is"
+" required."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:127
+msgid "5.2. Post-publication moderation"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:129
+msgid ""
+"We perform <strong>post-publication moderation</strong> (after "
+"publication) to detect problematic content:"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:132
+msgid "<strong>Fraudulent listings</strong>: false information, scams"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:133
+msgid ""
+"<strong>Illegal content</strong>: counterfeits, prohibited products, "
+"defamatory content"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:134
+msgid ""
+"<strong>Intellectual property violations</strong>: unauthorized use of "
+"trademarks or photos"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:135
+msgid "<strong>Incorrect or inaccessible contact information</strong>"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:136
+msgid "<strong>Spam</strong>: repetitive listings, irrelevant advertising content"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:139
+msgid "5.3. User reporting"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:141
+msgid ""
+"In accordance with the <strong>Digital Services Act (DSA)</strong>, any "
+"user can report a problematic listing via our reporting form:"
+msgstr ""
+
+# Report
+#: app/templates/comment_ca_marche.html:144
+#: app/templates/comment_ca_marche.html:227
+#, fuzzy
+msgid "🚨 Report a listing"
+msgstr "Signaler une annonce"
+
+#: app/templates/comment_ca_marche.html:147
+msgid ""
+"Each report is <strong>reviewed within 48 to 72 hours</strong>. If the "
+"listing is deemed non-compliant with our terms of use or legislation, it "
+"is removed without notice."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:150
+msgid "5.4. Listing removal"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:152
+msgid ""
+"We reserve the right to <strong>immediately remove</strong> any listing "
+"that:"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:155
+msgid "Contains false or misleading information"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:156
+msgid "Violates intellectual property rights"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:157
+msgid "Contains illegal content or content contrary to public order"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:158
+msgid "Does not comply with our"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:158
+msgid "Terms of Use"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:165
+msgid "6. Seller identification"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:170
+msgid ""
+"Each published listing publicly displays <strong>the seller's contact "
+"information</strong>, in accordance with B2B regulations:"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:173
+msgid "<strong>Company or professional name</strong>"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:174
+msgid "<strong>Contact email address</strong>"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:175
+msgid "<strong>Phone number</strong>"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:179
+msgid ""
+"This information allows buyers to <strong>directly contact "
+"sellers</strong> to ask questions, negotiate the price or arrange the "
+"transaction."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:182
+msgid ""
+"<strong>🔒 Data protection:</strong> By publishing a listing, the seller "
+"explicitly consents to the public publication of their contact "
+"information (in accordance with GDPR). This data is only used for "
+"professional networking purposes."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:189
+msgid "7. Digital Services Act (DSA) compliance"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:194
+msgid ""
+"This transparency page is established in compliance with "
+"<strong>Regulation (EU) 2022/2065 of the European Parliament and of the "
+"Council of 19 October 2022</strong> on a Single Market For Digital "
+"Services (Digital Services Act - DSA)."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:197
+msgid ""
+"The DSA requires online platforms to provide users with clear information"
+" on:"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:200
+msgid "The platform's role (intermediary)"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:201
+msgid "Content ranking criteria"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:202
+msgid "Use or non-use of recommendation algorithms"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:203
+msgid "Paid promotion mechanisms"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:204
+msgid "Moderation and reporting processes"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:207
+msgid "For any questions regarding the platform's operation, contact us at:"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:214
+msgid ""
+"<strong>📌 Transparency commitment:</strong> This page will be updated in "
+"case of changes to our operation (introduction of algorithms, paid "
+"promotion, modification of ranking criteria, etc.). Users will be "
+"informed of any significant changes."
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:220
+msgid "Last updated: February 2026"
+msgstr ""
+
+#: app/templates/comment_ca_marche.html:228
+msgid "← Back to home"
+msgstr ""
+
+# Contact page
+#: app/templates/contact.html:6 app/templates/signaler_success.html:81
+msgid "Contact us"
+msgstr "Contactez-nous"
+
+#: app/templates/contact.html:7
+msgid ""
+"Have a question about a listing or our services? Our team responds "
+"quickly."
+msgstr ""
+
+#: app/templates/contact.html:16 app/templates/contact.html:46
+#: app/templates/wizard_step5.html:45
+#, fuzzy
+msgid "Phone"
+msgstr "Votre téléphone"
+
+#: app/templates/contact.html:20
+msgid "Hours"
+msgstr ""
+
+#: app/templates/contact.html:21
+msgid "Mon-Fri 9am-6pm"
+msgstr ""
+
+#: app/templates/contact.html:29
+#, fuzzy
+msgid "Full name"
+msgstr "Votre nom"
+
+#: app/templates/contact.html:30
+msgid "John Doe"
+msgstr ""
+
+#: app/templates/contact.html:34
+msgid "Company"
+msgstr ""
+
+#: app/templates/contact.html:35
+msgid "Your company"
+msgstr ""
+
+#: app/templates/contact.html:42
+msgid "john.doe@example.com"
+msgstr ""
+
+#: app/templates/contact.html:47 app/templates/wizard_step5.html:47
+msgid "+33 X XX XX XX XX"
+msgstr ""
+
+#: app/templates/contact.html:52
+msgid "Subject"
+msgstr ""
+
+#: app/templates/contact.html:54
+msgid "Select a subject..."
+msgstr ""
+
+# Report
+#: app/templates/contact.html:55
+#, fuzzy
+msgid "Question about a listing"
+msgstr "Signaler une annonce"
+
+#: app/templates/contact.html:57
+#, fuzzy
+msgid "General information"
+msgstr "Vos coordonnées"
+
+#: app/templates/contact.html:58
+msgid "Partnership"
+msgstr ""
+
+#: app/templates/contact.html:59
+msgid "Technical support"
+msgstr ""
+
+#: app/templates/contact.html:60
+msgid "GDPR request (access, deletion, rectification)"
+msgstr ""
+
+#: app/templates/contact.html:61 app/templates/signaler.html:35
+msgid "Other"
+msgstr ""
+
+#: app/templates/contact.html:67
+msgid "GDPR request"
+msgstr ""
+
+#: app/templates/contact.html:70
+msgid ""
+"In accordance with the General Data Protection Regulation (GDPR), you "
+"have the following rights:"
+msgstr ""
+
+#: app/templates/contact.html:73
+msgid "Right of access"
+msgstr ""
+
+#: app/templates/contact.html:73
+msgid "Obtain a copy of your personal data"
+msgstr ""
+
+#: app/templates/contact.html:74
+msgid "Right to rectification"
+msgstr ""
+
+#: app/templates/contact.html:74
+msgid "Correct inaccurate data"
+msgstr ""
+
+#: app/templates/contact.html:75
+msgid "Right to erasure"
+msgstr ""
+
+#: app/templates/contact.html:75
+msgid "Delete your data (\"right to be forgotten\")"
+msgstr ""
+
+#: app/templates/contact.html:76
+msgid "Right to object"
+msgstr ""
+
+#: app/templates/contact.html:76
+msgid "Object to the processing of your data"
+msgstr ""
+
+#: app/templates/contact.html:77
+msgid "Right to data portability"
+msgstr ""
+
+#: app/templates/contact.html:77
+msgid "Receive your data in a structured format"
+msgstr ""
+
+#: app/templates/contact.html:80
+msgid ""
+"To exercise these rights, specify your request in the message below. We "
+"will respond within 30 days."
+msgstr ""
+
+#: app/templates/contact.html:81
+msgid "You can also contact us directly at:"
+msgstr ""
+
+#: app/templates/contact.html:97
+msgid "Listing reference (if applicable)"
+msgstr ""
+
+#: app/templates/contact.html:99
+msgid "If your question concerns a specific listing"
+msgstr ""
+
+#: app/templates/contact.html:103
+#, fuzzy
+msgid "Message"
+msgstr "Votre message"
+
+#: app/templates/contact.html:104
+#, fuzzy
+msgid "Your message..."
+msgstr "Votre message"
+
+#: app/templates/contact.html:109
+msgid ""
+"This demo does not save data. In a complete version, your message would "
+"be sent and you would receive a response within 24 hours."
+msgstr ""
+
+#: app/templates/contact.html:114
+msgid "Send message"
+msgstr "Envoyer le message"
+
+#: app/templates/contact.html:120
+msgid "Frequently asked questions"
+msgstr ""
+
+#: app/templates/contact.html:124
+#, fuzzy
+msgid "How to publish a listing?"
+msgstr "Déposer une annonce"
+
+#: app/templates/contact.html:126
+msgid ""
+"Go to the \"Post a listing\" page, fill in the form with your equipment "
+"details. Your listing will be validated and published within 24 hours."
+msgstr ""
+
+#: app/templates/contact.html:131
+#, fuzzy
+msgid "Are listings free?"
+msgstr "Dernières annonces"
+
+#: app/templates/contact.html:133
+msgid ""
+"Yes, publishing and browsing listings are completely free to encourage "
+"exchanges between professionals."
+msgstr ""
+
+#: app/templates/contact.html:138
+msgid "What equipment can I find?"
+msgstr ""
+
+#: app/templates/contact.html:140
+msgid ""
+"All types of equipment for methanization and biogas: agitation, pumping, "
+"purification, cogeneration, automation, instrumentation, etc."
+msgstr ""
+
+#: app/templates/contact.html:145
+msgid "Do you cover all of Europe?"
+msgstr ""
+
+#: app/templates/contact.html:147
+msgid ""
+"Yes, our platform covers France and all of Europe (Belgium, Germany, "
+"etc.). Sellers and buyers can be located anywhere in Europe."
+msgstr ""
+
+# Homepage
+#: app/templates/index.html:6
+msgid "The professional marketplace for methanization & biogas parts"
+msgstr "Le marché pro des pièces de méthanisation & biogaz"
+
+#: app/templates/index.html:8
+msgid ""
+"Buy, sell and quickly find reliable equipment for your methanization "
+"units."
+msgstr ""
+"Achetez, vendez et trouvez rapidement des équipements fiables pour vos "
+"unités de méthanisation."
+
+#: app/templates/index.html:11 app/templates/signaler_success.html:72
+msgid "View listings"
+msgstr "Voir les annonces"
+
+#: app/templates/index.html:15
+msgid "listings online"
+msgstr "annonces en ligne"
+
+#: app/templates/index.html:16
+msgid "France & Europe"
+msgstr "France & Europe"
+
+#: app/templates/index.html:16
+msgid "coverage"
+msgstr "couverture"
+
+#: app/templates/index.html:20 app/templates/index.html:55
+msgid "Latest listings"
+msgstr "Dernières annonces"
+
+#: app/templates/index.html:34
+msgid "Featured categories"
+msgstr "Catégories phares"
+
+#: app/templates/index.html:67
+msgid "View listing"
+msgstr "Voir l'annonce"
+
+#: app/templates/index.html:76
+msgid "Do you have equipment to sell?"
+msgstr "Vous avez du matériel à vendre ?"
+
+#: app/templates/index.html:77
+msgid "Post a listing in a few minutes."
+msgstr "Publiez une annonce en quelques minutes."
+
+#: app/templates/payment_cancel.html:7
+msgid "Payment cancelled"
+msgstr "Paiement annulé"
+
+#: app/templates/payment_cancel.html:9
+#, fuzzy
+msgid "The payment was cancelled. Your listing has not been published."
+msgstr "Votre paiement a été annulé. Votre annonce a été sauvegardée en brouillon."
+
+#: app/templates/payment_cancel.html:13
+msgid "What to do now?"
+msgstr ""
+
+#: app/templates/payment_cancel.html:15
+#, fuzzy
+msgid "Your listing has been saved as a draft"
+msgstr "Votre paiement a été annulé. Votre annonce a été sauvegardée en brouillon."
+
+#: app/templates/payment_cancel.html:16
+msgid "You can resume the publication process at any time"
+msgstr ""
+
+#: app/templates/payment_cancel.html:17
+msgid "Access your dashboard to manage your drafts"
+msgstr ""
+
+#: app/templates/payment_cancel.html:22 app/templates/payment_success.html:26
+msgid "Dashboard"
+msgstr ""
+
+#: app/templates/payment_cancel.html:23
+#, fuzzy
+msgid "Back to listings"
+msgstr "Dernières annonces"
+
+#: app/templates/payment_success.html:7
+#, fuzzy
+msgid "Payment confirmed!"
+msgstr "Paiement annulé"
+
+#: app/templates/payment_success.html:9
+#, fuzzy
+msgid "Your listing has been published successfully."
+msgstr "Votre annonce a été publiée et est maintenant visible sur la plateforme."
+
+#: app/templates/payment_success.html:13 app/templates/signaler_success.html:18
+msgid "Next steps"
+msgstr ""
+
+#: app/templates/payment_success.html:15
+#, fuzzy
+msgid "Your listing is now visible on the platform"
+msgstr "Votre annonce a été publiée et est maintenant visible sur la plateforme."
+
+#: app/templates/payment_success.html:16
+msgid "Interested buyers can contact you directly"
+msgstr ""
+
+#: app/templates/payment_success.html:17
+msgid "You will receive contact requests by email"
+msgstr ""
+
+#: app/templates/payment_success.html:18
+msgid "Manage your listings from your dashboard"
+msgstr ""
+
+#: app/templates/payment_success.html:24
+msgid "View my listing"
+msgstr "Voir mon annonce"
+
+#: app/templates/signaler.html:7
+msgid "Report any problematic, fraudulent or non-compliant content"
+msgstr ""
+
+#: app/templates/signaler.html:10
+msgid "Reporting process (DSA)"
+msgstr ""
+
+#: app/templates/signaler.html:12
+msgid ""
+"In accordance with the Digital Services Act (DSA), you have the right to "
+"report any content you consider illegal, fraudulent or non-compliant with"
+" our terms of use."
+msgstr ""
+
+#: app/templates/signaler.html:15
+msgid ""
+"Your report will be reviewed within 48 to 72 hours. If the listing is "
+"found non-compliant, it will be removed and the seller will be notified."
+msgstr ""
+
+#: app/templates/signaler.html:21
+msgid "Listing URL to report"
+msgstr ""
+
+#: app/templates/signaler.html:23
+msgid "Copy and paste the full URL of the listing in question"
+msgstr ""
+
+#: app/templates/signaler.html:27
+#, fuzzy
+msgid "Reason for reporting"
 msgstr "Raison du signalement"
 
-msgid "Additional details"
+#: app/templates/signaler.html:29
+msgid "Select a reason..."
+msgstr ""
+
+#: app/templates/signaler.html:30 app/templates/signaler.html:74
+#, fuzzy
+msgid "Fraudulent listing"
+msgstr "Dernières annonces"
+
+#: app/templates/signaler.html:31 app/templates/signaler.html:81
+msgid "Illegal content"
+msgstr ""
+
+#: app/templates/signaler.html:32 app/templates/signaler.html:88
+#, fuzzy
+msgid "Incorrect contact details"
 msgstr "Détails supplémentaires"
 
-msgid "Submit report"
-msgstr "Envoyer le signalement"
+#: app/templates/signaler.html:33 app/templates/signaler.html:95
+msgid "Spam"
+msgstr ""
 
-msgid "Report submitted successfully"
-msgstr "Signalement envoyé avec succès"
+#: app/templates/signaler.html:34
+msgid "Intellectual property violation"
+msgstr ""
 
-msgid "Thank you for your report. We will review it shortly."
-msgstr "Merci pour votre signalement. Nous l'examinerons rapidement."
+#: app/templates/signaler.html:37
+msgid "Choose the reason that best matches the problem encountered"
+msgstr ""
+
+#: app/templates/signaler.html:41
+msgid "Detailed description"
+msgstr "Description détaillée"
+
+#: app/templates/signaler.html:42
+msgid "Describe precisely the problem encountered..."
+msgstr ""
+
+#: app/templates/signaler.html:43
+msgid "The more precise your description, the faster we can process your report"
+msgstr ""
+
+#: app/templates/signaler.html:47
+msgid "Your email (optional)"
+msgstr ""
+
+#: app/templates/signaler.html:48
+msgid "your.email@example.com"
+msgstr ""
+
+#: app/templates/signaler.html:49
+msgid "If you wish to be kept informed of the processing of your report"
+msgstr ""
+
+#: app/templates/signaler.html:53
+msgid "Good to know"
+msgstr ""
+
+#: app/templates/signaler.html:55 app/templates/signaler_success.html:65
+msgid "Abusive or repeated reports may result in sanctions"
+msgstr ""
+
+#: app/templates/signaler.html:56
+msgid "We will inform you of the follow-up if you provided your email"
+msgstr ""
+
+#: app/templates/signaler.html:57
+msgid "Personal data is processed in accordance with"
+msgstr ""
+
+#: app/templates/signaler.html:57
+msgid "GDPR"
+msgstr ""
+
+#: app/templates/signaler.html:58
+msgid "In case of dispute, you can consult our"
+msgstr ""
+
+#: app/templates/signaler.html:58 app/templates/signaler_success.html:83
+#: app/templates/wizard_step5.html:77
+#, fuzzy
+msgid "Terms and Conditions"
+msgstr "CGV/CGU"
+
+#: app/templates/signaler.html:63
+#, fuzzy
+msgid "Send report"
+msgstr "Raison du signalement"
+
+#: app/templates/signaler.html:64
+msgid "Cancel"
+msgstr ""
+
+#: app/templates/signaler.html:69
+#, fuzzy
+msgid "Types of content to report"
+msgstr "Raison du signalement"
+
+#: app/templates/signaler.html:76
+msgid ""
+"False information, scams, equipment that does not exist, intentionally "
+"misleading price, seller unreachable after payment."
+msgstr ""
+
+#: app/templates/signaler.html:83
+msgid ""
+"Counterfeits, prohibited products, defamatory content, incitement to "
+"hatred, violation of applicable legislation."
+msgstr ""
+
+#: app/templates/signaler.html:90
+msgid ""
+"Invalid email or phone, unreachable seller, contact details do not match "
+"the announced company."
+msgstr ""
+
+#: app/templates/signaler.html:97
+msgid ""
+"Repetitive listings, irrelevant advertising, content unrelated to "
+"methanization, listing duplicated multiple times."
+msgstr ""
+
+#: app/templates/signaler.html:102
+msgid "Intellectual property"
+msgstr ""
+
+#: app/templates/signaler.html:104
+msgid ""
+"Unauthorized use of photos, trademark violation, reproduction of "
+"copyrighted content."
+msgstr ""
+
+#: app/templates/signaler.html:109
+msgid "Other reason"
+msgstr ""
+
+#: app/templates/signaler.html:111
+msgid ""
+"Any other problem not listed above. Make sure to provide a detailed "
+"description in the form."
+msgstr ""
+
+#: app/templates/signaler.html:120
+msgid ""
+"To learn more about the operation of our platform and our moderation "
+"processes, consult our"
+msgstr ""
+
+#: app/templates/signaler.html:121
+msgid "page."
+msgstr ""
+
+#: app/templates/signaler_success.html:13
+msgid "Report sent!"
+msgstr ""
+
+#: app/templates/signaler_success.html:14
+msgid "Thank you for taking the time to report this content."
+msgstr ""
+
+#: app/templates/signaler_success.html:27
+#, fuzzy
+msgid "Receipt of your report"
+msgstr "Raison du signalement"
+
+#: app/templates/signaler_success.html:29
+msgid "Your report has been recorded and will be reviewed by our moderation team."
+msgstr ""
+
+#: app/templates/signaler_success.html:39
+msgid "Review within 48 to 72 hours"
+msgstr ""
+
+#: app/templates/signaler_success.html:41
+msgid ""
+"Our team will analyze the reported content and verify if it violates our "
+"terms of use or applicable legislation."
+msgstr ""
+
+#: app/templates/signaler_success.html:51
+msgid "Decision and notification"
+msgstr ""
+
+#: app/templates/signaler_success.html:53
+msgid ""
+"If the listing is found non-compliant, it will be removed. If you "
+"provided your email, we will inform you of the decision made."
+msgstr ""
+
+#: app/templates/signaler_success.html:61
+#, fuzzy
+msgid "Important information"
+msgstr "Vos coordonnées"
+
+#: app/templates/signaler_success.html:63
+msgid "Reports are processed in the order received"
+msgstr ""
+
+#: app/templates/signaler_success.html:64
+msgid "In case of high volume, the delay may be slightly longer than 72 hours"
+msgstr ""
+
+#: app/templates/signaler_success.html:66
+msgid ""
+"Your contribution helps maintain a safe and reliable platform for all "
+"professionals"
+msgstr ""
+
+#: app/templates/signaler_success.html:76
+msgid "Need help?"
+msgstr ""
+
+#: app/templates/signaler_success.html:78
+msgid ""
+"If you have questions about the processing of your report or the "
+"operation of our platform:"
+msgstr ""
+
+# Wizard - Step 5
+#: app/templates/wizard_step5.html:4
+msgid "Post a listing - Step 5/5"
+msgstr "Déposer une annonce - Étape 5/5"
+
+#: app/templates/wizard_step5.html:5
+msgid "Review your information and add your contact details"
+msgstr ""
+
+#: app/templates/wizard_step5.html:10
+#, fuzzy
+msgid "Summary of your listing"
+msgstr "Créez votre annonce"
+
+#: app/templates/wizard_step5.html:13
+#, fuzzy
+msgid "Title:"
+msgstr "Titre"
+
+#: app/templates/wizard_step5.html:14
+msgid "Type:"
+msgstr ""
+
+#: app/templates/wizard_step5.html:15
+#, fuzzy
+msgid "Category:"
+msgstr "Catégorie"
+
+#: app/templates/wizard_step5.html:16
+#, fuzzy
+msgid "Condition:"
+msgstr "État"
+
+#: app/templates/wizard_step5.html:18
+#, fuzzy
+msgid "Year:"
+msgstr "Année"
+
+#: app/templates/wizard_step5.html:21
+#, fuzzy
+msgid "Manufacturer:"
+msgstr "Fabricant"
+
+#: app/templates/wizard_step5.html:23
+#, fuzzy
+msgid "Price:"
+msgstr "Prix"
+
+#: app/templates/wizard_step5.html:24
+#, fuzzy
+msgid "Location:"
+msgstr "Localisation"
+
+#: app/templates/wizard_step5.html:29
+#, fuzzy
+msgid "Summary:"
+msgstr "Résumé"
+
+#: app/templates/wizard_step5.html:34
+#, fuzzy
+msgid "Contact information"
+msgstr "Vos coordonnées"
+
+#: app/templates/wizard_step5.html:40
+#, fuzzy
+msgid "your@email.com"
+msgstr "Votre email"
+
+#: app/templates/wizard_step5.html:54
+#, fuzzy
+msgid "Publication payment"
+msgstr "Coût de publication"
+
+#: app/templates/wizard_step5.html:57
+msgid "To publish your listing, a one-time payment of"
+msgstr ""
+
+#: app/templates/wizard_step5.html:57
+msgid ""
+"is required. You will be redirected to a secure Stripe payment page. Your"
+" listing will be published immediately after payment confirmation."
+msgstr ""
+
+#: app/templates/wizard_step5.html:73
+msgid "Mandatory consent (GDPR)"
+msgstr ""
+
+#: app/templates/wizard_step5.html:74
+msgid ""
+"I understand and expressly agree that my contact details (email and "
+"phone) will be published publicly and visible to all on my listing once "
+"validated and paid. This information will allow potential buyers to "
+"contact me directly."
+msgstr ""
+
+#: app/templates/wizard_step5.html:75
+msgid "I acknowledge that I have read the"
+msgstr ""
+
+#: app/templates/wizard_step5.html:76
+#, fuzzy
+msgid "Privacy Policy"
+msgstr "Confidentialité"
+
+#: app/templates/wizard_step5.html:77
+msgid "and the"
+msgstr ""
+
+#: app/templates/wizard_step5.html:83
+msgid "Back"
+msgstr ""
+
+#: app/templates/wizard_step5.html:84
+msgid "Proceed to payment"
+msgstr ""
+
+#~ msgid "Technical details"
+#~ msgstr "Détails techniques"
+
+#~ msgid "Contact the seller"
+#~ msgstr "Contacter le vendeur"
+
+#~ msgid "Send inquiry"
+#~ msgstr "Envoyer la demande"
+
+#~ msgid "Similar listings"
+#~ msgstr "Annonces similaires"
+
+# Wizard - Step 1
+#~ msgid "Post a listing - Step 1/5"
+#~ msgstr "Déposer une annonce - Étape 1/5"
+
+#~ msgid "Type & Category"
+#~ msgstr "Type & Catégorie"
+
+#~ msgid "What type of listing?"
+#~ msgstr "Quel type d'annonce ?"
+
+#~ msgid "Equipment type"
+#~ msgstr "Type d'équipement"
+
+#~ msgid "Select a category"
+#~ msgstr "Sélectionnez une catégorie"
+
+#~ msgid "Listing title"
+#~ msgstr "Titre de l'annonce"
+
+#~ msgid "Example: High-capacity biogas purification unit"
+#~ msgstr "Exemple : Unité d'épuration biogaz haute capacité"
+
+#~ msgid "Continue"
+#~ msgstr "Continuer"
+
+# Wizard - Step 2
+#~ msgid "Post a listing - Step 2/5"
+#~ msgstr "Déposer une annonce - Étape 2/5"
+
+#~ msgid "Equipment condition"
+#~ msgstr "État de l'équipement"
+
+#~ msgid "Year of manufacture"
+#~ msgstr "Année de fabrication"
+
+#~ msgid "Manufacturer / Brand"
+#~ msgstr "Fabricant / Marque"
+
+#~ msgid "Short summary"
+#~ msgstr "Résumé court"
+
+#~ msgid "One sentence describing your equipment"
+#~ msgstr "Une phrase décrivant votre équipement"
+
+#~ msgid "Describe the equipment, its features, usage history, etc."
+#~ msgstr ""
+#~ "Décrivez l'équipement, ses caractéristiques, "
+#~ "son historique d'utilisation, etc."
+
+#~ msgid "Previous"
+#~ msgstr "Précédent"
+
+# Wizard - Step 3
+#~ msgid "Post a listing - Step 3/5"
+#~ msgstr "Déposer une annonce - Étape 3/5"
+
+#~ msgid "Photos & Documents"
+#~ msgstr "Photos & Documents"
+
+#~ msgid "Add photos of your equipment"
+#~ msgstr "Ajoutez des photos de votre équipement"
+
+#~ msgid "Select photos"
+#~ msgstr "Sélectionner des photos"
+
+#~ msgid "Upload"
+#~ msgstr "Télécharger"
+
+#~ msgid "Uploaded photos"
+#~ msgstr "Photos téléchargées"
+
+# Wizard - Step 4
+#~ msgid "Post a listing - Step 4/5"
+#~ msgstr "Déposer une annonce - Étape 4/5"
+
+#~ msgid "Price & Location"
+#~ msgstr "Prix & Localisation"
+
+#~ msgid "Price type"
+#~ msgstr "Type de prix"
+
+#~ msgid "Fixed price"
+#~ msgstr "Prix fixe"
+
+#~ msgid "On quote only"
+#~ msgstr "Sur devis uniquement"
+
+#~ msgid "Price (EUR)"
+#~ msgstr "Prix (EUR)"
+
+#~ msgid "Enter amount in euros"
+#~ msgstr "Entrez le montant en euros"
+
+#~ msgid "City or region"
+#~ msgstr "Ville ou région"
+
+#~ msgid "Example: Lyon, Auvergne-Rhône-Alpes"
+#~ msgstr "Exemple : Lyon, Auvergne-Rhône-Alpes"
+
+#~ msgid "Contact & Summary"
+#~ msgstr "Contact & Récapitulatif"
+
+#~ msgid "Contact email"
+#~ msgstr "Email de contact"
+
+#~ msgid "Contact phone"
+#~ msgstr "Téléphone de contact"
+
+#~ msgid "I agree that my contact details will be publicly visible"
+#~ msgstr "J'accepte que mes coordonnées soient publiquement visibles"
+
+#~ msgid "Listing summary"
+#~ msgstr "Récapitulatif de l'annonce"
+
+#~ msgid "Pay and publish"
+#~ msgstr "Payer et publier"
+
+# Payment
+#~ msgid "Payment successful!"
+#~ msgstr "Paiement réussi !"
+
+#~ msgid "Try again"
+#~ msgstr "Réessayer"
+
+#~ msgid "Have a question or need assistance? We're here to help!"
+#~ msgstr "Une question ou besoin d'aide ? Nous sommes là pour vous aider !"
+
+#~ msgid "Your message has been sent!"
+#~ msgstr "Votre message a été envoyé !"
+
+#~ msgid "An error occurred"
+#~ msgstr "Une erreur s'est produite"
+
+#~ msgid "Please try again"
+#~ msgstr "Veuillez réessayer"
+
+# Forms
+#~ msgid "Required field"
+#~ msgstr "Champ obligatoire"
+
+#~ msgid "Invalid email"
+#~ msgstr "Email invalide"
+
+#~ msgid "Invalid phone number"
+#~ msgstr "Numéro de téléphone invalide"
+
+#~ msgid "File too large"
+#~ msgstr "Fichier trop volumineux"
+
+#~ msgid "Invalid file type"
+#~ msgstr "Type de fichier invalide"
+
+# How it works
+#~ msgid "How does it work?"
+#~ msgstr "Comment ça marche ?"
+
+#~ msgid "For sellers"
+#~ msgstr "Pour les vendeurs"
+
+#~ msgid "Fill out the 5-step form with details about your equipment"
+#~ msgstr ""
+#~ "Remplissez le formulaire en 5 étapes "
+#~ "avec les détails de votre équipement"
+
+#~ msgid "Your listing will be published immediately after payment"
+#~ msgstr "Votre annonce sera publiée immédiatement après le paiement"
+
+#~ msgid "Receive inquiries"
+#~ msgstr "Recevez des demandes"
+
+#~ msgid "Buyers contact you directly through the platform"
+#~ msgstr "Les acheteurs vous contactent directement via la plateforme"
+
+#~ msgid "For buyers"
+#~ msgstr "Pour les acheteurs"
+
+#~ msgid "Browse listings"
+#~ msgstr "Parcourez les annonces"
+
+#~ msgid "Use filters to find what you need"
+#~ msgstr "Utilisez les filtres pour trouver ce dont vous avez besoin"
+
+#~ msgid "Contact sellers"
+#~ msgstr "Contactez les vendeurs"
+
+#~ msgid "Send inquiries directly through the platform"
+#~ msgstr "Envoyez des demandes directement via la plateforme"
+
+#~ msgid "Negotiate"
+#~ msgstr "Négociez"
+
+#~ msgid "Discuss details and finalize your purchase"
+#~ msgstr "Discutez des détails et finalisez votre achat"
+
+#~ msgid "Listing ID"
+#~ msgstr "ID de l'annonce"
+
+#~ msgid "Submit report"
+#~ msgstr "Envoyer le signalement"
+
+#~ msgid "Report submitted successfully"
+#~ msgstr "Signalement envoyé avec succès"
+
+#~ msgid "Thank you for your report. We will review it shortly."
+#~ msgstr "Merci pour votre signalement. Nous l'examinerons rapidement."
 
 # Language selector
-msgid "Language"
-msgstr "Langue"
+#~ msgid "Language"
+#~ msgstr "Langue"
 
-msgid "French"
-msgstr "Français"
+#~ msgid "French"
+#~ msgstr "Français"
 
-msgid "English"
-msgstr "Anglais"
+#~ msgid "English"
+#~ msgstr "Anglais"
+

@@ -1,27 +1,25 @@
-# English translations for pieces-methanisation project.
-# Copyright (C) 2026
-# This file is distributed under the same license as the
-# pieces-methanisation project.
+# Translations template for PROJECT.
+# Copyright (C) 2026 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
 #
+#, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: pieces-methanisation 1.0\n"
-"Report-Msgid-Bugs-To: contact@pieces-methanisation.fr\n"
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2026-02-08 14:09+0000\n"
-"PO-Revision-Date: 2026-02-08 13:51+0000\n"
-"Last-Translator: \n"
-"Language: en\n"
-"Language-Team: English\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.10.3\n"
 
-# Error messages
 #: app/main.py:156
 msgid "Listing not found"
-msgstr "Listing not found"
+msgstr ""
 
 #: app/main.py:336
 msgid "You can only upload up to {} photos."
@@ -36,18 +34,16 @@ msgid "File type not allowed: {}. Use JPG, PNG, WEBP or GIF."
 msgstr ""
 
 #: app/main.py:408
-#, fuzzy
 msgid "Photo upload failed: {}"
-msgstr "No photos uploaded yet"
+msgstr ""
 
 #: app/main.py:419
 msgid "Error uploading photos. Please try again."
 msgstr ""
 
 #: app/main.py:525
-#, fuzzy
 msgid "You must agree to make your contact details publicly visible."
-msgstr "You must accept that your contact details will be publicly visible."
+msgstr ""
 
 #: app/main.py:582
 msgid "Error creating payment session"
@@ -62,9 +58,8 @@ msgid "Report management in compliance with the Digital Services Act (DSA)"
 msgstr ""
 
 #: app/templates/admin_reports.html:12 app/templates/contact.html:109
-#, fuzzy
 msgid "Note:"
-msgstr "On quote"
+msgstr ""
 
 #: app/templates/admin_reports.html:12
 msgid ""
@@ -74,9 +69,8 @@ msgid ""
 msgstr ""
 
 #: app/templates/admin_reports.html:21
-#, fuzzy
 msgid "Total"
-msgstr "Optional"
+msgstr ""
 
 #: app/templates/admin_reports.html:25 app/templates/admin_reports.html:99
 #: app/templates/admin_reports.html:113
@@ -109,27 +103,22 @@ msgstr ""
 msgid "Reason"
 msgstr ""
 
-# Listing detail
 #: app/templates/admin_reports.html:66
 msgid "Description"
-msgstr "Description"
+msgstr ""
 
 #: app/templates/admin_reports.html:67 app/templates/contact.html:12
 #: app/templates/contact.html:41 app/templates/wizard_step5.html:38
-#, fuzzy
 msgid "Email"
-msgstr "Your email"
+msgstr ""
 
-# Contact page
 #: app/templates/admin_reports.html:68
-#, fuzzy
 msgid "Status"
-msgstr "Contact us"
+msgstr ""
 
 #: app/templates/admin_reports.html:69
-#, fuzzy
 msgid "Actions"
-msgstr "Location"
+msgstr ""
 
 #: app/templates/admin_reports.html:95
 msgid "Anonymous"
@@ -160,45 +149,41 @@ msgstr ""
 msgid "Back to home"
 msgstr ""
 
-# Navigation
 #: app/templates/base.html:19
 msgid "Listings"
-msgstr "Listings"
+msgstr ""
 
 #: app/templates/base.html:20
 msgid "Post"
-msgstr "Post"
+msgstr ""
 
 #: app/templates/base.html:21 app/templates/base.html:61
 msgid "Contact"
-msgstr "Contact"
+msgstr ""
 
 #: app/templates/base.html:32 app/templates/contact.html:56
 #: app/templates/index.html:12 app/templates/index.html:78
 msgid "Post a listing"
-msgstr "Post a listing"
+msgstr ""
 
-# Footer
 #: app/templates/base.html:43
 msgid "About"
-msgstr "About"
+msgstr ""
 
 #: app/templates/base.html:45
 msgid ""
 "Professional platform dedicated to methanization & biogas equipment in "
 "France and Europe."
 msgstr ""
-"Professional platform dedicated to methanization & biogas equipment in "
-"France and Europe."
 
 #: app/templates/base.html:48 app/templates/comment_ca_marche.html:6
 #: app/templates/signaler.html:121 app/templates/signaler_success.html:82
 msgid "How it works"
-msgstr "How it works"
+msgstr ""
 
 #: app/templates/base.html:52
 msgid "Categories"
-msgstr "Categories"
+msgstr ""
 
 #: app/templates/base.html:54
 msgid "Agitation"
@@ -209,39 +194,36 @@ msgid "Pumping"
 msgstr ""
 
 #: app/templates/base.html:56
-#, fuzzy
 msgid "Purification"
-msgstr "Location"
+msgstr ""
 
 #: app/templates/base.html:57
-#, fuzzy
 msgid "Automation"
-msgstr "Location"
+msgstr ""
 
-# Report
 #: app/templates/base.html:64 app/templates/signaler.html:6
 msgid "Report a listing"
-msgstr "Report a listing"
+msgstr ""
 
 #: app/templates/base.html:68
 msgid "Legal"
-msgstr "Legal"
+msgstr ""
 
 #: app/templates/base.html:70
 msgid "Legal notice"
-msgstr "Legal notice"
+msgstr ""
 
 #: app/templates/base.html:71
 msgid "Terms & Conditions"
-msgstr "Terms & Conditions"
+msgstr ""
 
 #: app/templates/base.html:72
 msgid "Privacy policy"
-msgstr "Privacy policy"
+msgstr ""
 
 #: app/templates/base.html:73
 msgid "Cookie policy"
-msgstr "Cookie policy"
+msgstr ""
 
 #: app/templates/comment_ca_marche.html:7
 msgid "Transparency on the operation of our B2B marketplace"
@@ -305,9 +287,8 @@ msgid ""
 msgstr ""
 
 #: app/templates/comment_ca_marche.html:50
-#, fuzzy
 msgid "2.2. Filters and categories"
-msgstr "Featured categories"
+msgstr ""
 
 #: app/templates/comment_ca_marche.html:52
 msgid "Users can filter listings by:"
@@ -471,12 +452,10 @@ msgid ""
 "user can report a problematic listing via our reporting form:"
 msgstr ""
 
-# Report
 #: app/templates/comment_ca_marche.html:144
 #: app/templates/comment_ca_marche.html:227
-#, fuzzy
 msgid "🚨 Report a listing"
-msgstr "Report a listing"
+msgstr ""
 
 #: app/templates/comment_ca_marche.html:147
 msgid ""
@@ -610,10 +589,9 @@ msgstr ""
 msgid "← Back to home"
 msgstr ""
 
-# Contact page
 #: app/templates/contact.html:6 app/templates/signaler_success.html:81
 msgid "Contact us"
-msgstr "Contact us"
+msgstr ""
 
 #: app/templates/contact.html:7
 msgid ""
@@ -623,9 +601,8 @@ msgstr ""
 
 #: app/templates/contact.html:16 app/templates/contact.html:46
 #: app/templates/wizard_step5.html:45
-#, fuzzy
 msgid "Phone"
-msgstr "Your phone"
+msgstr ""
 
 #: app/templates/contact.html:20
 msgid "Hours"
@@ -636,9 +613,8 @@ msgid "Mon-Fri 9am-6pm"
 msgstr ""
 
 #: app/templates/contact.html:29
-#, fuzzy
 msgid "Full name"
-msgstr "Your name"
+msgstr ""
 
 #: app/templates/contact.html:30
 msgid "John Doe"
@@ -668,16 +644,13 @@ msgstr ""
 msgid "Select a subject..."
 msgstr ""
 
-# Report
 #: app/templates/contact.html:55
-#, fuzzy
 msgid "Question about a listing"
-msgstr "Report a listing"
+msgstr ""
 
 #: app/templates/contact.html:57
-#, fuzzy
 msgid "General information"
-msgstr "Your contact information"
+msgstr ""
 
 #: app/templates/contact.html:58
 msgid "Partnership"
@@ -764,14 +737,12 @@ msgid "If your question concerns a specific listing"
 msgstr ""
 
 #: app/templates/contact.html:103
-#, fuzzy
 msgid "Message"
-msgstr "Your message"
+msgstr ""
 
 #: app/templates/contact.html:104
-#, fuzzy
 msgid "Your message..."
-msgstr "Your message"
+msgstr ""
 
 #: app/templates/contact.html:109
 msgid ""
@@ -781,16 +752,15 @@ msgstr ""
 
 #: app/templates/contact.html:114
 msgid "Send message"
-msgstr "Send message"
+msgstr ""
 
 #: app/templates/contact.html:120
 msgid "Frequently asked questions"
 msgstr ""
 
 #: app/templates/contact.html:124
-#, fuzzy
 msgid "How to publish a listing?"
-msgstr "Post a listing"
+msgstr ""
 
 #: app/templates/contact.html:126
 msgid ""
@@ -799,9 +769,8 @@ msgid ""
 msgstr ""
 
 #: app/templates/contact.html:131
-#, fuzzy
 msgid "Are listings free?"
-msgstr "Latest listings"
+msgstr ""
 
 #: app/templates/contact.html:133
 msgid ""
@@ -829,72 +798,67 @@ msgid ""
 "etc.). Sellers and buyers can be located anywhere in Europe."
 msgstr ""
 
-# Homepage
 #: app/templates/index.html:6
 msgid "The professional marketplace for methanization & biogas parts"
-msgstr "The professional marketplace for methanization & biogas parts"
+msgstr ""
 
 #: app/templates/index.html:8
 msgid ""
 "Buy, sell and quickly find reliable equipment for your methanization "
 "units."
 msgstr ""
-"Buy, sell and quickly find reliable equipment for your methanization "
-"units."
 
 #: app/templates/index.html:11 app/templates/signaler_success.html:72
 msgid "View listings"
-msgstr "View listings"
+msgstr ""
 
 #: app/templates/index.html:15
 msgid "listings online"
-msgstr "listings online"
+msgstr ""
 
 #: app/templates/index.html:16
 msgid "France & Europe"
-msgstr "France & Europe"
+msgstr ""
 
 #: app/templates/index.html:16
 msgid "coverage"
-msgstr "coverage"
+msgstr ""
 
 #: app/templates/index.html:20 app/templates/index.html:55
 msgid "Latest listings"
-msgstr "Latest listings"
+msgstr ""
 
 #: app/templates/index.html:34
 msgid "Featured categories"
-msgstr "Featured categories"
+msgstr ""
 
 #: app/templates/index.html:67
 msgid "View listing"
-msgstr "View listing"
+msgstr ""
 
 #: app/templates/index.html:76
 msgid "Do you have equipment to sell?"
-msgstr "Do you have equipment to sell?"
+msgstr ""
 
 #: app/templates/index.html:77
 msgid "Post a listing in a few minutes."
-msgstr "Post a listing in a few minutes."
+msgstr ""
 
 #: app/templates/payment_cancel.html:7
 msgid "Payment cancelled"
-msgstr "Payment cancelled"
+msgstr ""
 
 #: app/templates/payment_cancel.html:9
-#, fuzzy
 msgid "The payment was cancelled. Your listing has not been published."
-msgstr "Your payment has been cancelled. Your listing has been saved as a draft."
+msgstr ""
 
 #: app/templates/payment_cancel.html:13
 msgid "What to do now?"
 msgstr ""
 
 #: app/templates/payment_cancel.html:15
-#, fuzzy
 msgid "Your listing has been saved as a draft"
-msgstr "Your payment has been cancelled. Your listing has been saved as a draft."
+msgstr ""
 
 #: app/templates/payment_cancel.html:16
 msgid "You can resume the publication process at any time"
@@ -909,28 +873,24 @@ msgid "Dashboard"
 msgstr ""
 
 #: app/templates/payment_cancel.html:23
-#, fuzzy
 msgid "Back to listings"
-msgstr "Latest listings"
+msgstr ""
 
 #: app/templates/payment_success.html:7
-#, fuzzy
 msgid "Payment confirmed!"
-msgstr "Payment cancelled"
+msgstr ""
 
 #: app/templates/payment_success.html:9
-#, fuzzy
 msgid "Your listing has been published successfully."
-msgstr "Your listing has been published and is now visible on the platform."
+msgstr ""
 
 #: app/templates/payment_success.html:13 app/templates/signaler_success.html:18
 msgid "Next steps"
 msgstr ""
 
 #: app/templates/payment_success.html:15
-#, fuzzy
 msgid "Your listing is now visible on the platform"
-msgstr "Your listing has been published and is now visible on the platform."
+msgstr ""
 
 #: app/templates/payment_success.html:16
 msgid "Interested buyers can contact you directly"
@@ -946,7 +906,7 @@ msgstr ""
 
 #: app/templates/payment_success.html:24
 msgid "View my listing"
-msgstr "View my listing"
+msgstr ""
 
 #: app/templates/signaler.html:7
 msgid "Report any problematic, fraudulent or non-compliant content"
@@ -978,27 +938,24 @@ msgid "Copy and paste the full URL of the listing in question"
 msgstr ""
 
 #: app/templates/signaler.html:27
-#, fuzzy
 msgid "Reason for reporting"
-msgstr "Reason for report"
+msgstr ""
 
 #: app/templates/signaler.html:29
 msgid "Select a reason..."
 msgstr ""
 
 #: app/templates/signaler.html:30 app/templates/signaler.html:74
-#, fuzzy
 msgid "Fraudulent listing"
-msgstr "Latest listings"
+msgstr ""
 
 #: app/templates/signaler.html:31 app/templates/signaler.html:81
 msgid "Illegal content"
 msgstr ""
 
 #: app/templates/signaler.html:32 app/templates/signaler.html:88
-#, fuzzy
 msgid "Incorrect contact details"
-msgstr "Additional details"
+msgstr ""
 
 #: app/templates/signaler.html:33 app/templates/signaler.html:95
 msgid "Spam"
@@ -1014,7 +971,7 @@ msgstr ""
 
 #: app/templates/signaler.html:41
 msgid "Detailed description"
-msgstr "Detailed description"
+msgstr ""
 
 #: app/templates/signaler.html:42
 msgid "Describe precisely the problem encountered..."
@@ -1062,23 +1019,20 @@ msgstr ""
 
 #: app/templates/signaler.html:58 app/templates/signaler_success.html:83
 #: app/templates/wizard_step5.html:77
-#, fuzzy
 msgid "Terms and Conditions"
-msgstr "Terms & Conditions"
+msgstr ""
 
 #: app/templates/signaler.html:63
-#, fuzzy
 msgid "Send report"
-msgstr "Reason for report"
+msgstr ""
 
 #: app/templates/signaler.html:64
 msgid "Cancel"
 msgstr ""
 
 #: app/templates/signaler.html:69
-#, fuzzy
 msgid "Types of content to report"
-msgstr "Reason for report"
+msgstr ""
 
 #: app/templates/signaler.html:76
 msgid ""
@@ -1143,9 +1097,8 @@ msgid "Thank you for taking the time to report this content."
 msgstr ""
 
 #: app/templates/signaler_success.html:27
-#, fuzzy
 msgid "Receipt of your report"
-msgstr "Reason for report"
+msgstr ""
 
 #: app/templates/signaler_success.html:29
 msgid "Your report has been recorded and will be reviewed by our moderation team."
@@ -1172,9 +1125,8 @@ msgid ""
 msgstr ""
 
 #: app/templates/signaler_success.html:61
-#, fuzzy
 msgid "Important information"
-msgstr "Your contact information"
+msgstr ""
 
 #: app/templates/signaler_success.html:63
 msgid "Reports are processed in the order received"
@@ -1200,78 +1152,65 @@ msgid ""
 "operation of our platform:"
 msgstr ""
 
-# Wizard - Step 5
 #: app/templates/wizard_step5.html:4
 msgid "Post a listing - Step 5/5"
-msgstr "Post a listing - Step 5/5"
+msgstr ""
 
 #: app/templates/wizard_step5.html:5
 msgid "Review your information and add your contact details"
 msgstr ""
 
 #: app/templates/wizard_step5.html:10
-#, fuzzy
 msgid "Summary of your listing"
-msgstr "Create your listing"
+msgstr ""
 
 #: app/templates/wizard_step5.html:13
-#, fuzzy
 msgid "Title:"
-msgstr "Title"
+msgstr ""
 
 #: app/templates/wizard_step5.html:14
 msgid "Type:"
 msgstr ""
 
 #: app/templates/wizard_step5.html:15
-#, fuzzy
 msgid "Category:"
-msgstr "Category"
+msgstr ""
 
 #: app/templates/wizard_step5.html:16
-#, fuzzy
 msgid "Condition:"
-msgstr "Condition"
+msgstr ""
 
 #: app/templates/wizard_step5.html:18
-#, fuzzy
 msgid "Year:"
-msgstr "Year"
+msgstr ""
 
 #: app/templates/wizard_step5.html:21
-#, fuzzy
 msgid "Manufacturer:"
-msgstr "Manufacturer"
+msgstr ""
 
 #: app/templates/wizard_step5.html:23
-#, fuzzy
 msgid "Price:"
-msgstr "Price"
+msgstr ""
 
 #: app/templates/wizard_step5.html:24
-#, fuzzy
 msgid "Location:"
-msgstr "Location"
+msgstr ""
 
 #: app/templates/wizard_step5.html:29
-#, fuzzy
 msgid "Summary:"
-msgstr "Summary"
+msgstr ""
 
 #: app/templates/wizard_step5.html:34
-#, fuzzy
 msgid "Contact information"
-msgstr "Your contact information"
+msgstr ""
 
 #: app/templates/wizard_step5.html:40
-#, fuzzy
 msgid "your@email.com"
-msgstr "Your email"
+msgstr ""
 
 #: app/templates/wizard_step5.html:54
-#, fuzzy
 msgid "Publication payment"
-msgstr "Publication cost"
+msgstr ""
 
 #: app/templates/wizard_step5.html:57
 msgid "To publish your listing, a one-time payment of"
@@ -1300,9 +1239,8 @@ msgid "I acknowledge that I have read the"
 msgstr ""
 
 #: app/templates/wizard_step5.html:76
-#, fuzzy
 msgid "Privacy Policy"
-msgstr "Privacy policy"
+msgstr ""
 
 #: app/templates/wizard_step5.html:77
 msgid "and the"
@@ -1315,228 +1253,4 @@ msgstr ""
 #: app/templates/wizard_step5.html:84
 msgid "Proceed to payment"
 msgstr ""
-
-#~ msgid "Technical details"
-#~ msgstr "Technical details"
-
-#~ msgid "Contact the seller"
-#~ msgstr "Contact the seller"
-
-#~ msgid "Send inquiry"
-#~ msgstr "Send inquiry"
-
-#~ msgid "Similar listings"
-#~ msgstr "Similar listings"
-
-# Wizard - Step 1
-#~ msgid "Post a listing - Step 1/5"
-#~ msgstr "Post a listing - Step 1/5"
-
-#~ msgid "Type & Category"
-#~ msgstr "Type & Category"
-
-#~ msgid "What type of listing?"
-#~ msgstr "What type of listing?"
-
-#~ msgid "Equipment type"
-#~ msgstr "Equipment type"
-
-#~ msgid "Select a category"
-#~ msgstr "Select a category"
-
-#~ msgid "Listing title"
-#~ msgstr "Listing title"
-
-#~ msgid "Example: High-capacity biogas purification unit"
-#~ msgstr "Example: High-capacity biogas purification unit"
-
-#~ msgid "Continue"
-#~ msgstr "Continue"
-
-# Wizard - Step 2
-#~ msgid "Post a listing - Step 2/5"
-#~ msgstr "Post a listing - Step 2/5"
-
-#~ msgid "Equipment condition"
-#~ msgstr "Equipment condition"
-
-#~ msgid "Year of manufacture"
-#~ msgstr "Year of manufacture"
-
-#~ msgid "Manufacturer / Brand"
-#~ msgstr "Manufacturer / Brand"
-
-#~ msgid "Short summary"
-#~ msgstr "Short summary"
-
-#~ msgid "One sentence describing your equipment"
-#~ msgstr "One sentence describing your equipment"
-
-#~ msgid "Describe the equipment, its features, usage history, etc."
-#~ msgstr "Describe the equipment, its features, usage history, etc."
-
-#~ msgid "Previous"
-#~ msgstr "Previous"
-
-# Wizard - Step 3
-#~ msgid "Post a listing - Step 3/5"
-#~ msgstr "Post a listing - Step 3/5"
-
-#~ msgid "Photos & Documents"
-#~ msgstr "Photos & Documents"
-
-#~ msgid "Add photos of your equipment"
-#~ msgstr "Add photos of your equipment"
-
-#~ msgid "Select photos"
-#~ msgstr "Select photos"
-
-#~ msgid "Upload"
-#~ msgstr "Upload"
-
-#~ msgid "Uploaded photos"
-#~ msgstr "Uploaded photos"
-
-# Wizard - Step 4
-#~ msgid "Post a listing - Step 4/5"
-#~ msgstr "Post a listing - Step 4/5"
-
-#~ msgid "Price & Location"
-#~ msgstr "Price & Location"
-
-#~ msgid "Price type"
-#~ msgstr "Price type"
-
-#~ msgid "Fixed price"
-#~ msgstr "Fixed price"
-
-#~ msgid "On quote only"
-#~ msgstr "On quote only"
-
-#~ msgid "Price (EUR)"
-#~ msgstr "Price (EUR)"
-
-#~ msgid "Enter amount in euros"
-#~ msgstr "Enter amount in euros"
-
-#~ msgid "City or region"
-#~ msgstr "City or region"
-
-#~ msgid "Example: Lyon, Auvergne-Rhône-Alpes"
-#~ msgstr "Example: Lyon, Auvergne-Rhône-Alpes"
-
-#~ msgid "Contact & Summary"
-#~ msgstr "Contact & Summary"
-
-#~ msgid "Contact email"
-#~ msgstr "Contact email"
-
-#~ msgid "Contact phone"
-#~ msgstr "Contact phone"
-
-#~ msgid "I agree that my contact details will be publicly visible"
-#~ msgstr "I agree that my contact details will be publicly visible"
-
-#~ msgid "Listing summary"
-#~ msgstr "Listing summary"
-
-#~ msgid "Pay and publish"
-#~ msgstr "Pay and publish"
-
-# Payment
-#~ msgid "Payment successful!"
-#~ msgstr "Payment successful!"
-
-#~ msgid "Try again"
-#~ msgstr "Try again"
-
-#~ msgid "Have a question or need assistance? We're here to help!"
-#~ msgstr "Have a question or need assistance? We're here to help!"
-
-#~ msgid "Your message has been sent!"
-#~ msgstr "Your message has been sent!"
-
-#~ msgid "An error occurred"
-#~ msgstr "An error occurred"
-
-#~ msgid "Please try again"
-#~ msgstr "Please try again"
-
-# Forms
-#~ msgid "Required field"
-#~ msgstr "Required field"
-
-#~ msgid "Invalid email"
-#~ msgstr "Invalid email"
-
-#~ msgid "Invalid phone number"
-#~ msgstr "Invalid phone number"
-
-#~ msgid "File too large"
-#~ msgstr "File too large"
-
-#~ msgid "Invalid file type"
-#~ msgstr "Invalid file type"
-
-# How it works
-#~ msgid "How does it work?"
-#~ msgstr "How does it work?"
-
-#~ msgid "For sellers"
-#~ msgstr "For sellers"
-
-#~ msgid "Fill out the 5-step form with details about your equipment"
-#~ msgstr "Fill out the 5-step form with details about your equipment"
-
-#~ msgid "Your listing will be published immediately after payment"
-#~ msgstr "Your listing will be published immediately after payment"
-
-#~ msgid "Receive inquiries"
-#~ msgstr "Receive inquiries"
-
-#~ msgid "Buyers contact you directly through the platform"
-#~ msgstr "Buyers contact you directly through the platform"
-
-#~ msgid "For buyers"
-#~ msgstr "For buyers"
-
-#~ msgid "Browse listings"
-#~ msgstr "Browse listings"
-
-#~ msgid "Use filters to find what you need"
-#~ msgstr "Use filters to find what you need"
-
-#~ msgid "Contact sellers"
-#~ msgstr "Contact sellers"
-
-#~ msgid "Send inquiries directly through the platform"
-#~ msgstr "Send inquiries directly through the platform"
-
-#~ msgid "Negotiate"
-#~ msgstr "Negotiate"
-
-#~ msgid "Discuss details and finalize your purchase"
-#~ msgstr "Discuss details and finalize your purchase"
-
-#~ msgid "Listing ID"
-#~ msgstr "Listing ID"
-
-#~ msgid "Submit report"
-#~ msgstr "Submit report"
-
-#~ msgid "Report submitted successfully"
-#~ msgstr "Report submitted successfully"
-
-#~ msgid "Thank you for your report. We will review it shortly."
-#~ msgstr "Thank you for your report. We will review it shortly."
-
-# Language selector
-#~ msgid "Language"
-#~ msgstr "Language"
-
-#~ msgid "French"
-#~ msgstr "French"
-
-#~ msgid "English"
-#~ msgstr "English"
 

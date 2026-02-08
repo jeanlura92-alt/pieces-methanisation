@@ -121,6 +121,9 @@ def home(request: Request):
 @app.get("/annonces", response_class=HTMLResponse)
 def listings(request: Request):
     """List all published listings"""
+    locale = request.state.locale
+    _ = request.state._
+    
     all_listings = db.get_published_listings(limit=100)
     
     # Add image URLs for listings
@@ -133,16 +136,24 @@ def listings(request: Request):
     
     return templates.TemplateResponse(
         "listing.html",
-        {"request": request, "listings": all_listings},
+        {
+            "request": request,
+            "listings": all_listings,
+            "locale": locale,
+            "_": _,
+        },
     )
 
 
 @app.get("/annonces/{listing_id}", response_class=HTMLResponse)
 def listing_detail(request: Request, listing_id: str):
     """Listing detail page"""
+    locale = request.state.locale
+    _ = request.state._
+    
     listing = db.get_listing(listing_id)
     if not listing or listing["status"] != "published":
-        raise HTTPException(status_code=404, detail="Annonce introuvable")
+        raise HTTPException(status_code=404, detail=_("Listing not found"))
     
     # Get media
     media = db.get_listing_media(listing_id)
@@ -165,7 +176,7 @@ def listing_detail(request: Request, listing_id: str):
     
     return templates.TemplateResponse(
         "detail.html",
-        {"request": request, "listing": listing, "listings": similar},
+        {"request": request, "listing": listing, "listings": similar, "locale": locale, "_": _},
     )
 
 
@@ -180,6 +191,9 @@ async def deposer_redirect():
 @app.get("/deposer/step1", response_class=HTMLResponse)
 def wizard_step1(request: Request, listing_id: Optional[str] = None):
     """Wizard step 1: Type & Category"""
+    locale = request.state.locale
+    _ = request.state._
+    
     draft = None
     if listing_id:
         draft = db.get_listing(listing_id)
@@ -192,6 +206,8 @@ def wizard_step1(request: Request, listing_id: Optional[str] = None):
             "draft": draft,
             "listing_types": config.LISTING_TYPES,
             "categories": config.CATEGORIES,
+            "locale": locale,
+            "_": _,
         },
     )
 
@@ -234,6 +250,9 @@ async def wizard_step1_post(
 @app.get("/deposer/step2", response_class=HTMLResponse)
 def wizard_step2(request: Request, listing_id: str):
     """Wizard step 2: Technical Details"""
+    locale = request.state.locale
+    _ = request.state._
+    
     draft = db.get_listing(listing_id)
     if not draft:
         return RedirectResponse(url="/deposer/step1", status_code=302)
@@ -245,6 +264,8 @@ def wizard_step2(request: Request, listing_id: str):
             "current_step": 2,
             "draft": draft,
             "conditions": config.CONDITIONS,
+            "locale": locale,
+            "_": _,
         },
     )
 
@@ -276,6 +297,9 @@ async def wizard_step2_post(
 @app.get("/deposer/step3", response_class=HTMLResponse)
 def wizard_step3(request: Request, listing_id: str):
     """Wizard step 3: Media"""
+    locale = request.state.locale
+    _ = request.state._
+    
     draft = db.get_listing(listing_id)
     if not draft:
         return RedirectResponse(url="/deposer/step1", status_code=302)
@@ -290,6 +314,8 @@ def wizard_step3(request: Request, listing_id: str):
             "request": request,
             "current_step": 3,
             "draft": draft,
+            "locale": locale,
+            "_": _,
         },
     )
 
@@ -301,19 +327,20 @@ async def wizard_step3_post(
     photos: List[UploadFile] = File(...),
 ):
     """Save step 3 (upload photos) and redirect to step 4"""
+    _ = request.state._
     
     # Server-side validation: max 3 photos
     if len(photos) > config.MAX_PHOTOS_PER_LISTING:
         raise HTTPException(
             status_code=400, 
-            detail=f"Vous ne pouvez télécharger que {config.MAX_PHOTOS_PER_LISTING} photos maximum."
+            detail=_("You can only upload up to {} photos.").format(config.MAX_PHOTOS_PER_LISTING)
         )
     
     # Server-side validation: at least 1 photo
     if len(photos) == 0:
         raise HTTPException(
             status_code=400,
-            detail="Veuillez télécharger au moins une photo."
+            detail=_("Please upload at least one photo.")
         )
     
     # Validate file types
@@ -321,7 +348,7 @@ async def wizard_step3_post(
         if photo.content_type not in config.ALLOWED_PHOTO_TYPES:
             raise HTTPException(
                 status_code=400,
-                detail=f"Type de fichier non autorisé: {photo.content_type}. Utilisez JPG, PNG, WEBP ou GIF."
+                detail=_("File type not allowed: {}. Use JPG, PNG, WEBP or GIF.").format(photo.content_type)
             )
     
     # Check if Supabase is configured
@@ -378,7 +405,7 @@ async def wizard_step3_post(
                 logger.error(f"Failed to upload photo: {photo.filename}")
                 raise HTTPException(
                     status_code=500,
-                    detail=f"Échec du téléchargement de la photo: {photo.filename}"
+                    detail=_("Photo upload failed: {}").format(photo.filename)
                 )
         
         logger.info(f"Successfully uploaded {uploaded_count} photos for listing {listing_id}")
@@ -389,7 +416,7 @@ async def wizard_step3_post(
         logger.error(f"Error uploading photos: {e}")
         raise HTTPException(
             status_code=500,
-            detail="Erreur lors du téléchargement des photos. Veuillez réessayer."
+            detail=_("Error uploading photos. Please try again.")
         )
     
     return RedirectResponse(url=f"/deposer/step4?listing_id={listing_id}", status_code=303)
@@ -398,6 +425,9 @@ async def wizard_step3_post(
 @app.get("/deposer/step4", response_class=HTMLResponse)
 def wizard_step4(request: Request, listing_id: str):
     """Wizard step 4: Price & Location"""
+    locale = request.state.locale
+    _ = request.state._
+    
     draft = db.get_listing(listing_id)
     if not draft:
         return RedirectResponse(url="/deposer/step1", status_code=302)
@@ -408,6 +438,8 @@ def wizard_step4(request: Request, listing_id: str):
             "request": request,
             "current_step": 4,
             "draft": draft,
+            "locale": locale,
+            "_": _,
         },
     )
 
@@ -448,6 +480,9 @@ async def wizard_step4_post(
 @app.get("/deposer/step5", response_class=HTMLResponse)
 def wizard_step5(request: Request, listing_id: str):
     """Wizard step 5: Contact & Recap"""
+    locale = request.state.locale
+    _ = request.state._
+    
     draft = db.get_listing(listing_id)
     if not draft:
         return RedirectResponse(url="/deposer/step1", status_code=302)
@@ -459,6 +494,8 @@ def wizard_step5(request: Request, listing_id: str):
             "current_step": 5,
             "draft": draft,
             "listing_price": config.LISTING_PRICE_AMOUNT / 100,
+            "locale": locale,
+            "_": _,
         },
     )
 
@@ -472,6 +509,8 @@ async def wizard_step5_post(
     consent_public_contact: Optional[str] = Form(None),
 ):
     """Save step 5 and create Stripe checkout session"""
+    locale = request.state.locale
+    _ = request.state._
     
     # GDPR consent validation
     if not consent_public_contact:
@@ -483,7 +522,9 @@ async def wizard_step5_post(
                 "current_step": 5,
                 "draft": draft,
                 "listing_price": config.LISTING_PRICE_AMOUNT / 100,
-                "error": "Vous devez accepter que vos coordonnées soient publiquement visibles."
+                "error": _("You must agree to make your contact details publicly visible."),
+                "locale": locale,
+                "_": _,
             }
         )
     
@@ -538,7 +579,7 @@ async def wizard_step5_post(
     
     except Exception as e:
         logger.error(f"Stripe error: {e}")
-        raise HTTPException(status_code=500, detail="Erreur lors de la création de la session de paiement")
+        raise HTTPException(status_code=500, detail=_("Error creating payment session"))
 
 
 # ==================== Payment ====================
@@ -546,11 +587,14 @@ async def wizard_step5_post(
 @app.get("/payment/success", response_class=HTMLResponse)
 def payment_success(request: Request, session_id: str, listing_id: Optional[str] = None):
     """Payment success page"""
+    locale = request.state.locale
+    _ = request.state._
+    
     # In mock mode, listing_id is passed directly
     if session_id == "mock" and listing_id:
         return templates.TemplateResponse(
             "payment_success.html",
-            {"request": request, "listing_id": listing_id},
+            {"request": request, "listing_id": listing_id, "locale": locale, "_": _},
         )
     
     # Get payment and publish listing
@@ -566,16 +610,19 @@ def payment_success(request: Request, session_id: str, listing_id: Optional[str]
     
     return templates.TemplateResponse(
         "payment_success.html",
-        {"request": request, "listing_id": listing_id},
+        {"request": request, "listing_id": listing_id, "locale": locale, "_": _},
     )
 
 
 @app.get("/payment/cancel", response_class=HTMLResponse)
 def payment_cancel(request: Request, listing_id: str):
     """Payment cancelled page"""
+    locale = request.state.locale
+    _ = request.state._
+    
     return templates.TemplateResponse(
         "payment_cancel.html",
-        {"request": request, "listing_id": listing_id},
+        {"request": request, "listing_id": listing_id, "locale": locale, "_": _},
     )
 
 
@@ -622,9 +669,12 @@ async def stripe_webhook(request: Request):
 @app.get("/contact", response_class=HTMLResponse)
 def contact(request: Request):
     """Contact page"""
+    locale = request.state.locale
+    _ = request.state._
+    
     return templates.TemplateResponse(
         "contact.html",
-        {"request": request},
+        {"request": request, "locale": locale, "_": _},
     )
 
 
@@ -633,25 +683,37 @@ def contact(request: Request):
 @app.get("/mentions-legales", response_class=HTMLResponse)
 async def mentions_legales(request: Request):
     """Legal notices page (LCEN compliance)"""
-    return templates.TemplateResponse("mentions_legales.html", {"request": request})
+    locale = request.state.locale
+    _ = request.state._
+    
+    return templates.TemplateResponse("mentions_legales.html", {"request": request, "locale": locale, "_": _})
 
 
 @app.get("/cgv", response_class=HTMLResponse)
 async def cgv(request: Request):
     """Terms and conditions page (Code de Commerce B2B compliance)"""
-    return templates.TemplateResponse("cgv.html", {"request": request})
+    locale = request.state.locale
+    _ = request.state._
+    
+    return templates.TemplateResponse("cgv.html", {"request": request, "locale": locale, "_": _})
 
 
 @app.get("/politique-confidentialite", response_class=HTMLResponse)
 async def politique_confidentialite(request: Request):
     """Privacy policy page (RGPD/GDPR compliance)"""
-    return templates.TemplateResponse("politique_confidentialite.html", {"request": request})
+    locale = request.state.locale
+    _ = request.state._
+    
+    return templates.TemplateResponse("politique_confidentialite.html", {"request": request, "locale": locale, "_": _})
 
 
 @app.get("/cookies", response_class=HTMLResponse)
 async def cookies(request: Request):
     """Cookie management page (ePrivacy compliance)"""
-    return templates.TemplateResponse("cookies.html", {"request": request})
+    locale = request.state.locale
+    _ = request.state._
+    
+    return templates.TemplateResponse("cookies.html", {"request": request, "locale": locale, "_": _})
 
 
 # ==================== DSA Compliance Pages ====================
@@ -659,13 +721,19 @@ async def cookies(request: Request):
 @app.get("/comment-ca-marche", response_class=HTMLResponse)
 async def comment_ca_marche(request: Request):
     """Transparency page - How the platform works (DSA compliance)"""
-    return templates.TemplateResponse("comment_ca_marche.html", {"request": request})
+    locale = request.state.locale
+    _ = request.state._
+    
+    return templates.TemplateResponse("comment_ca_marche.html", {"request": request, "locale": locale, "_": _})
 
 
 @app.get("/signaler", response_class=HTMLResponse)
 async def signaler(request: Request):
     """Report form page (DSA compliance)"""
-    return templates.TemplateResponse("signaler.html", {"request": request})
+    locale = request.state.locale
+    _ = request.state._
+    
+    return templates.TemplateResponse("signaler.html", {"request": request, "locale": locale, "_": _})
 
 
 @app.post("/signaler")
@@ -698,9 +766,12 @@ async def signaler_post(
     if report:
         logger.info(f"New report created: {report.get('id')} for listing: {listing_url}")
     
+    locale = request.state.locale
+    _ = request.state._
+    
     return templates.TemplateResponse(
         "signaler_success.html",
-        {"request": request}
+        {"request": request, "locale": locale, "_": _}
     )
 
 
@@ -709,6 +780,9 @@ async def signaler_post(
 @app.get("/admin/reports", response_class=HTMLResponse)
 async def admin_reports(request: Request, status: Optional[str] = None):
     """Admin dashboard for managing reports (DSA compliance)"""
+    locale = request.state.locale
+    _ = request.state._
+    
     # TODO: Add authentication for admin access
     # For now, this is accessible without auth (should be protected in production)
     
@@ -729,7 +803,9 @@ async def admin_reports(request: Request, status: Optional[str] = None):
             "request": request,
             "reports": reports,
             "status_counts": status_counts,
-            "current_filter": status
+            "current_filter": status,
+            "locale": locale,
+            "_": _,
         }
     )
 

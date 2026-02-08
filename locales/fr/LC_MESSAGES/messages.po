@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pieces-methanisation 1.0\n"
 "Report-Msgid-Bugs-To: contact@pieces-methanisation.fr\n"
-"POT-Creation-Date: 2026-02-08 14:09+0000\n"
+"POT-Creation-Date: 2026-02-08 14:28+0000\n"
 "PO-Revision-Date: 2026-02-08 13:51+0000\n"
 "Last-Translator: \n"
 "Language: fr\n"
@@ -20,37 +20,37 @@ msgstr ""
 "Generated-By: Babel 2.10.3\n"
 
 # Error messages
-#: app/main.py:156
+#: app/main.py:161
 msgid "Listing not found"
 msgstr "Annonce introuvable"
 
-#: app/main.py:336
+#: app/main.py:341
 msgid "You can only upload up to {} photos."
 msgstr ""
 
-#: app/main.py:343
+#: app/main.py:348
 msgid "Please upload at least one photo."
 msgstr ""
 
-#: app/main.py:351
+#: app/main.py:356
 msgid "File type not allowed: {}. Use JPG, PNG, WEBP or GIF."
 msgstr ""
 
-#: app/main.py:408
+#: app/main.py:413
 #, fuzzy
 msgid "Photo upload failed: {}"
 msgstr "Aucune photo téléchargée pour le moment"
 
-#: app/main.py:419
+#: app/main.py:424
 msgid "Error uploading photos. Please try again."
 msgstr ""
 
-#: app/main.py:525
+#: app/main.py:530
 #, fuzzy
 msgid "You must agree to make your contact details publicly visible."
 msgstr "Vous devez accepter que vos coordonnées soient publiquement visibles."
 
-#: app/main.py:582
+#: app/main.py:587
 msgid "Error creating payment session"
 msgstr ""
 
@@ -244,50 +244,558 @@ msgstr "Confidentialité"
 msgid "Cookie policy"
 msgstr "Cookies"
 
+#: app/templates/cgv.html:6 app/templates/mentions_legales.html:128
+msgid "Terms and Conditions of Sale and Use (CGV/CGU)"
+msgstr ""
+
+#: app/templates/cgv.html:7
+msgid "B2B platform for buying and selling biogas equipment"
+msgstr "Plateforme B2B d'achat et vente d'équipements de méthanisation"
+
+#: app/templates/cgv.html:13
+msgid "Article 1: Object and Acceptance"
+msgstr "Article 1 : Objet et acceptation"
+
+#: app/templates/cgv.html:18
+msgid ""
+"The website pieces-methanisation.onrender.com (hereinafter 'the "
+"Platform') is a <strong>B2B marketplace</strong> allowing professionals "
+"to publish and consult ads for biogas and methanation equipment and spare"
+" parts."
+msgstr ""
+
+#: app/templates/cgv.html:21
+msgid ""
+"These Terms and Conditions of Sale and Use (CGV/CGU) govern the "
+"relationships between:"
+msgstr ""
+
+#: app/templates/cgv.html:24
+msgid ""
+"<strong>[NOM DE LA SOCIÉTÉ]</strong>, publisher of the Platform "
+"(hereinafter 'the Publisher')"
+msgstr ""
+
+#: app/templates/cgv.html:25
+msgid "Professional users who publish ads (hereinafter 'the Sellers')"
+msgstr "Les utilisateurs professionnels qui publient des annonces (ci-après 'les Vendeurs')"
+
+#: app/templates/cgv.html:26
+msgid "Professional users who view and contact sellers (hereinafter 'the Buyers')"
+msgstr "Les utilisateurs professionnels qui consultent et contactent les vendeurs (ci-après 'les Acheteurs')"
+
+#: app/templates/cgv.html:29
+msgid ""
+"<strong>Using the Platform implies full acceptance of these "
+"CGV/CGU.</strong> If you do not accept these conditions, you must "
+"immediately cease using the site."
+msgstr ""
+
+#: app/templates/cgv.html:36
+msgid "Article 2: Publishing Ads"
+msgstr "Article 2 : Publication d'annonces"
+
+#: app/templates/cgv.html:40
+msgid "2.1. Pricing"
+msgstr "2.1. Tarification"
+
+#: app/templates/cgv.html:42
+msgid ""
+"Publishing an ad on the Platform is paid. The applicable rate is "
+"<strong>€49 including tax per ad</strong>."
+msgstr ""
+
+#: app/templates/cgv.html:45
+msgid "2.2. Validity Period"
+msgstr "2.2. Durée de validité"
+
+#: app/templates/cgv.html:47
+msgid ""
+"Each published ad remains active for a period of <strong>30 calendar "
+"days</strong> from the publication date. After this period, the ad is "
+"automatically removed from the Platform."
+msgstr "Chaque annonce publiée reste active pour une durée de <strong>30 jours calendaires</strong> à compter de la date de publication. Passé ce délai, l'annonce est automatiquement retirée de la Plateforme."
+
+#: app/templates/cgv.html:50
+msgid "2.3. Content Limitation"
+msgstr "2.3. Limitation du contenu"
+
+#: app/templates/cgv.html:52
+msgid ""
+"Each ad can include <strong>a maximum of 1 photo</strong>. Photos must be"
+" of professional quality and faithfully represent the equipment offered."
+msgstr "Chaque annonce peut comporter <strong>au maximum 1 photo</strong>. Les photos doivent être de qualité professionnelle et représenter fidèlement l'équipement proposé."
+
+#: app/templates/cgv.html:55
+msgid "2.4. Publication Process"
+msgstr "2.4. Processus de publication"
+
+#: app/templates/cgv.html:57
+msgid ""
+"Publishing an ad takes place in <strong>5 steps</strong> via an "
+"interactive wizard:"
+msgstr ""
+
+#: app/templates/cgv.html:60
+msgid ""
+"<strong>Step 1:</strong> Ad type and category (Agitation, Pumping, "
+"Purification, etc.)"
+msgstr ""
+
+#: app/templates/cgv.html:61
+msgid ""
+"<strong>Step 2:</strong> Technical characteristics (condition, year, "
+"manufacturer, detailed description)"
+msgstr ""
+
+#: app/templates/cgv.html:62
+msgid "<strong>Step 3:</strong> Photo upload (1 photo maximum)"
+msgstr "<strong>Étape 3 :</strong> Upload de photo (1 photo maximum)"
+
+#: app/templates/cgv.html:63
+msgid "<strong>Step 4:</strong> Price and location"
+msgstr "<strong>Étape 4 :</strong> Prix et localisation"
+
+#: app/templates/cgv.html:64
+msgid "<strong>Step 5:</strong> Contact details and summary"
+msgstr "<strong>Étape 5 :</strong> Coordonnées et récapitulatif"
+
+#: app/templates/cgv.html:67
+msgid ""
+"After validating the summary, the Seller is redirected to a "
+"<strong>secure Stripe payment</strong> page. The ad is published "
+"<strong>immediately after payment confirmation</strong>."
+msgstr "Après validation du récapitulatif, le Vendeur est redirigé vers une page de <strong>paiement sécurisé Stripe</strong>. L'annonce est publiée <strong>immédiatement après confirmation du paiement</strong>."
+
+#: app/templates/cgv.html:70
+msgid "2.5. Required Data"
+msgstr "2.5. Données requises"
+
+#: app/templates/cgv.html:72
+msgid "To publish an ad, the Seller must provide:"
+msgstr "Pour publier une annonce, le Vendeur doit fournir :"
+
+#: app/templates/cgv.html:75
+msgid "A clear and descriptive title"
+msgstr "Un titre clair et descriptif"
+
+#: app/templates/cgv.html:76
+msgid "An equipment category"
+msgstr "Une catégorie d'équipement"
+
+#: app/templates/cgv.html:77
+msgid "A detailed description of the equipment"
+msgstr "Une description détaillée de l'équipement"
+
+#: app/templates/cgv.html:78
+msgid "A photo of the equipment"
+msgstr "Une photo de l'équipement"
+
+#: app/templates/cgv.html:79
+msgid "A price (or 'Quote on request')"
+msgstr "Un prix (ou 'Devis sur demande')"
+
+#: app/templates/cgv.html:80
+msgid "A geographic location"
+msgstr "Une localisation géographique"
+
+#: app/templates/cgv.html:81
+msgid "Valid contact details (email and phone)"
+msgstr "Des coordonnées valides (email et téléphone)"
+
+#: app/templates/cgv.html:84
+msgid ""
+"<strong>⚠️ Important:</strong> The contact details provided will be "
+"<strong>published publicly</strong> on the ad. The Seller must give "
+"<strong>explicit consent</strong> to this publication (in accordance with"
+" GDPR)."
+msgstr "<strong>⚠️ Important :</strong> Les coordonnées fournies seront <strong>publiées publiquement</strong> sur l'annonce. Le Vendeur doit donner son <strong>consentement explicite</strong> à cette publication (conformément au RGPD)."
+
+#: app/templates/cgv.html:91
+msgid "Article 3: Payment"
+msgstr "Article 3 : Paiement"
+
+#: app/templates/cgv.html:95
+msgid "3.1. Payment Terms"
+msgstr "3.1. Modalités de paiement"
+
+#: app/templates/cgv.html:97
+msgid ""
+"Payment for ad publication is made exclusively online via the secure "
+"payment system <strong>Stripe Checkout</strong>. Accepted payment methods"
+" are: credit card (Visa, Mastercard, American Express)."
+msgstr "Le paiement de la publication d'annonce s'effectue exclusivement en ligne via le système de paiement sécurisé <strong>Stripe Checkout</strong>. Les moyens de paiement acceptés sont : carte bancaire (Visa, Mastercard, American Express)."
+
+#: app/templates/cgv.html:100
+msgid "3.2. Refund Policy"
+msgstr "3.2. Politique de remboursement"
+
+#: app/templates/cgv.html:102
+msgid ""
+"<strong>No refund is possible after the ad has been published.</strong> "
+"The Seller is advised to carefully check all information before "
+"proceeding with payment."
+msgstr "<strong>Aucun remboursement n'est possible après publication de l'annonce.</strong> Le Vendeur est invité à vérifier attentivement toutes les informations avant de procéder au paiement."
+
+#: app/templates/cgv.html:105
+msgid ""
+"In the event of a technical error preventing the publication of the ad "
+"despite a validated payment, the Publisher undertakes to resolve the "
+"problem or to proceed with a full refund within 14 days."
+msgstr "En cas d'erreur technique empêchant la publication de l'annonce malgré un paiement validé, l'Éditeur s'engage à résoudre le problème ou à procéder à un remboursement intégral sous 14 jours."
+
+#: app/templates/cgv.html:108
+msgid "3.3. Invoicing"
+msgstr "3.3. Facturation"
+
+#: app/templates/cgv.html:110
+msgid ""
+"An invoice is automatically generated and sent by email to the Seller "
+"after payment validation. Invoices are kept in accordance with legal "
+"accounting obligations (10 years)."
+msgstr "Une facture est générée automatiquement et envoyée par email au Vendeur après validation du paiement. Les factures sont conservées conformément aux obligations légales comptables (10 ans)."
+
+#: app/templates/cgv.html:117
+msgid "Article 4: Responsibilities"
+msgstr "Article 4 : Responsabilités"
+
+#: app/templates/cgv.html:121
+msgid "4.1. Role of the Platform"
+msgstr "4.1. Rôle de la Plateforme"
+
+#: app/templates/cgv.html:123
+msgid ""
+"The Platform acts as a <strong>simple intermediary</strong> between "
+"Sellers and Buyers. The Publisher provides a space for publishing ads but"
+" <strong>does not participate in any way in transactions</strong> between"
+" professionals."
+msgstr "La Plateforme agit en tant que <strong>simple intermédiaire</strong> entre Vendeurs et Acheteurs. L'Éditeur met à disposition un espace de publication d'annonces mais <strong>ne participe en aucune manière aux transactions</strong> entre professionnels."
+
+#: app/templates/cgv.html:126
+msgid "4.2. Sellers' Responsibility"
+msgstr "4.2. Responsabilité des Vendeurs"
+
+#: app/templates/cgv.html:128
+msgid "Sellers are <strong>solely responsible</strong> for:"
+msgstr "Les Vendeurs sont <strong>seuls responsables</strong> :"
+
+#: app/templates/cgv.html:131
+msgid "The accuracy of the information provided in their ads"
+msgstr "De l'exactitude des informations fournies dans leurs annonces"
+
+#: app/templates/cgv.html:132
+msgid "The quality and compliance of the equipment offered"
+msgstr "De la qualité et de la conformité des équipements proposés"
+
+#: app/templates/cgv.html:133
+msgid "Compliance with legislation applicable to the sale of their products"
+msgstr "Du respect de la législation applicable à la vente de leurs produits"
+
+#: app/templates/cgv.html:134
+msgid "Disputes that may arise with Buyers"
+msgstr "Des litiges pouvant survenir avec les Acheteurs"
+
+#: app/templates/cgv.html:135
+msgid "Respect for intellectual property rights on published photos and content"
+msgstr "Du respect des droits de propriété intellectuelle sur les photos et contenus publiés"
+
+#: app/templates/cgv.html:138
+msgid "4.3. Buyers' Responsibility"
+msgstr "4.3. Responsabilité des Acheteurs"
+
+#: app/templates/cgv.html:140
+msgid "Buyers are <strong>solely responsible</strong> for:"
+msgstr "Les Acheteurs sont <strong>seuls responsables</strong> :"
+
+#: app/templates/cgv.html:143
+msgid "Verifying the compliance of equipment before purchase"
+msgstr "De la vérification de la conformité des équipements avant achat"
+
+#: app/templates/cgv.html:144
+msgid "Negotiating the terms of sale with Sellers"
+msgstr "De la négociation des conditions de vente avec les Vendeurs"
+
+#: app/templates/cgv.html:145
+msgid "Payment and transport of purchased equipment"
+msgstr "Du paiement et du transport des équipements achetés"
+
+#: app/templates/cgv.html:148
+msgid "4.4. Platform Liability Limitation"
+msgstr "4.4. Limitation de responsabilité de la Plateforme"
+
+#: app/templates/cgv.html:150
+msgid "The Publisher cannot be held responsible for:"
+msgstr "L'Éditeur ne peut être tenu responsable :"
+
+#: app/templates/cgv.html:153
+msgid "The quality, compliance or legality of the equipment offered"
+msgstr "De la qualité, de la conformité ou de la légalité des équipements proposés"
+
+#: app/templates/cgv.html:154
+msgid "Transactions concluded between Sellers and Buyers"
+msgstr "Des transactions conclues entre Vendeurs et Acheteurs"
+
+#: app/templates/cgv.html:155
+msgid "Contractual or commercial disputes between users"
+msgstr "Des litiges contractuels ou commerciaux entre utilisateurs"
+
+#: app/templates/cgv.html:156
+msgid "Temporary service interruptions for maintenance"
+msgstr "Des interruptions temporaires de service pour maintenance"
+
+#: app/templates/cgv.html:157
+msgid "Data loss in the event of a technical failure beyond its control"
+msgstr "De la perte de données en cas de défaillance technique hors de son contrôle"
+
+#: app/templates/cgv.html:160
+msgid "4.5. No Warranty"
+msgstr "4.5. Absence de garantie"
+
+#: app/templates/cgv.html:162
+msgid ""
+"The Publisher <strong>provides no warranty</strong> on the equipment "
+"offered for sale. Commercial or legal warranties are exclusively the "
+"responsibility of the Sellers."
+msgstr "L'Éditeur <strong>n'accorde aucune garantie</strong> sur les équipements proposés à la vente. Les garanties commerciales ou légales sont exclusivement à la charge des Vendeurs."
+
+#: app/templates/cgv.html:169
+msgid "Article 5: Personal Data Protection"
+msgstr "Article 5 : Protection des données personnelles"
+
+#: app/templates/cgv.html:174
+msgid ""
+"The collection and processing of users' personal data is governed by our "
+"<a href='/politique-confidentialite' style='color: var(--primary-color); "
+"text-decoration: underline; font-weight: 600;'>Privacy Policy</a>, in "
+"compliance with the General Data Protection Regulation (GDPR)."
+msgstr "La collecte et le traitement des données personnelles des utilisateurs sont régis par notre <a href='/politique-confidentialite' style='color: var(--primary-color); text-decoration: underline; font-weight: 600;'>Politique de Confidentialité</a>, conformément au Règlement Général sur la Protection des Données (RGPD)."
+
+#: app/templates/cgv.html:177
+msgid ""
+"<strong>⚠️ Important warning:</strong> Sellers' contact details (email "
+"and phone) are <strong>published publicly</strong> on ads to allow Buyers"
+" to contact them directly. By publishing an ad, the Seller expressly "
+"consents to this publication."
+msgstr "<strong>⚠️ Avertissement important :</strong> Les coordonnées des Vendeurs (email et téléphone) sont <strong>publiées publiquement</strong> sur les annonces pour permettre aux Acheteurs de les contacter directement. En publiant une annonce, le Vendeur consent expressément à cette publication."
+
+#: app/templates/cgv.html:180
+msgid ""
+"To exercise your GDPR rights (access, rectification, deletion, "
+"opposition), contact: <strong>privacy@pieces-methanisation.fr</strong>"
+msgstr "Pour exercer vos droits RGPD (accès, rectification, suppression, opposition), contactez : <strong>privacy@pieces-methanisation.fr</strong>"
+
+#: app/templates/cgv.html:187
+msgid "Article 6: Intellectual Property"
+msgstr "Article 6 : Propriété intellectuelle"
+
+#: app/templates/cgv.html:191
+msgid "6.1. Rights on the Platform"
+msgstr "6.1. Droits sur la Plateforme"
+
+#: app/templates/cgv.html:193
+msgid ""
+"All constituent elements of the Platform (structure, design, texts, "
+"graphics, logos, functionalities) are the exclusive property of the "
+"Publisher and are protected by the Intellectual Property Code."
+msgstr "Tous les éléments constitutifs de la Plateforme (structure, design, textes, graphiques, logos, fonctionnalités) sont la propriété exclusive de l'Éditeur et sont protégés par le Code de la propriété intellectuelle."
+
+#: app/templates/cgv.html:196
+msgid "6.2. Rights on Published Content"
+msgstr "6.2. Droits sur les contenus publiés"
+
+#: app/templates/cgv.html:198
+msgid ""
+"Sellers retain full intellectual property of the content (photos, "
+"descriptions) they publish on the Platform."
+msgstr "Les Vendeurs conservent la pleine propriété intellectuelle des contenus (photos, descriptions) qu'ils publient sur la Plateforme."
+
+#: app/templates/cgv.html:201
+msgid ""
+"By publishing content, Sellers grant the Publisher a <strong>non-"
+"exclusive, free and worldwide license</strong> to use, reproduce and "
+"represent this content, solely for the operation of the Platform and for "
+"the duration of the ad's publication."
+msgstr "En publiant du contenu, les Vendeurs accordent à l'Éditeur une <strong>licence non-exclusive, gratuite et mondiale</strong> d'utilisation, de reproduction et de représentation de ce contenu, uniquement pour le fonctionnement de la Plateforme et pendant la durée de publication de l'annonce."
+
+#: app/templates/cgv.html:208
+msgid "Article 7: Reporting and Moderation"
+msgstr "Article 7 : Signalement et modération"
+
+#: app/templates/cgv.html:212
+msgid "7.1. Reporting Procedure"
+msgstr "7.1. Procédure de signalement"
+
+#: app/templates/cgv.html:214
+msgid ""
+"In accordance with the Digital Services Act (DSA), any user can report "
+"content they consider illegal, fraudulent or contrary to these CGV/CGU "
+"via the form accessible at <a href='/signaler' style='color: var"
+"(--primary-color); text-decoration: underline; font-weight: "
+"600;'>/signaler</a>."
+msgstr "Conformément au Digital Services Act (DSA), tout utilisateur peut signaler un contenu qu'il juge illégal, frauduleux ou contraire à ces CGV/CGU via le formulaire accessible sur <a href='/signaler' style='color: var(--primary-color); text-decoration: underline; font-weight: 600;'>/signaler</a>."
+
+#: app/templates/cgv.html:217
+msgid "7.2. Right of Withdrawal"
+msgstr "7.2. Droit de retrait"
+
+#: app/templates/cgv.html:219
+msgid ""
+"The Publisher reserves the right to <strong>remove without "
+"notice</strong> any ad that:"
+msgstr ""
+
+#: app/templates/cgv.html:222
+msgid "Contains false, misleading or fraudulent information"
+msgstr "Contient des informations fausses, trompeuses ou frauduleuses"
+
+#: app/templates/cgv.html:223
+msgid "Violates the intellectual property rights of third parties"
+msgstr "Porte atteinte aux droits de propriété intellectuelle de tiers"
+
+#: app/templates/cgv.html:224
+msgid "Contains illegal, defamatory content or harms public order"
+msgstr "Contient des contenus illégaux, diffamatoires ou portant atteinte à l'ordre public"
+
+#: app/templates/cgv.html:225
+msgid "Does not comply with these CGV/CGU"
+msgstr "Ne respecte pas ces CGV/CGU"
+
+#: app/templates/cgv.html:232
+msgid "Article 8: Termination and Account Deletion"
+msgstr "Article 8 : Résiliation et suppression de compte"
+
+#: app/templates/cgv.html:237
+msgid ""
+"In accordance with GDPR, users have a <strong>right to erasure</strong> "
+"('right to be forgotten') of their personal data."
+msgstr "Conformément au RGPD, les utilisateurs disposent d'un <strong>droit à l'effacement</strong> ('droit à l'oubli') de leurs données personnelles."
+
+#: app/templates/cgv.html:240
+msgid ""
+"To request the deletion of your data, contact: <strong>privacy@pieces-"
+"methanisation.fr</strong>. Deletion will be carried out within 30 days, "
+"except for legal retention obligations (for example: accounting data for "
+"invoices)."
+msgstr "Pour demander la suppression de vos données, contactez : <strong>privacy@pieces-methanisation.fr</strong>. La suppression sera effectuée sous 30 jours, sauf obligations légales de conservation (exemple : données comptables pour les factures)."
+
+#: app/templates/cgv.html:247
+msgid "Article 9: Modification of CGV/CGU"
+msgstr "Article 9 : Modification des CGV/CGU"
+
+#: app/templates/cgv.html:252
+msgid ""
+"The Publisher reserves the right to modify these CGV/CGU at any time to "
+"adapt to legal, regulatory or technical changes."
+msgstr "L'Éditeur se réserve le droit de modifier ces CGV/CGU à tout moment pour s'adapter aux évolutions légales, réglementaires ou techniques."
+
+#: app/templates/cgv.html:255
+msgid ""
+"Users will be informed of modifications <strong>at least 15 days before "
+"they take effect</strong> via email and/or a notification on the "
+"Platform. Continued use of the site after the new CGV/CGU take effect "
+"constitutes acceptance of them."
+msgstr "Les utilisateurs seront informés des modifications <strong>au moins 15 jours avant leur entrée en vigueur</strong> par email et/ou notification sur la Plateforme. La poursuite de l'utilisation du site après l'entrée en vigueur des nouvelles CGV/CGU vaut acceptation de celles-ci."
+
+#: app/templates/cgv.html:262
+msgid "Article 10: Disputes and Jurisdiction"
+msgstr "Article 10 : Litiges et juridiction compétente"
+
+#: app/templates/cgv.html:266
+msgid "10.1. Applicable Law"
+msgstr "10.1. Loi applicable"
+
+#: app/templates/cgv.html:268
+msgid "These CGV/CGU are subject to <strong>French law</strong>."
+msgstr "Ces CGV/CGU sont soumises au <strong>droit français</strong>."
+
+#: app/templates/cgv.html:271
+msgid "10.2. Competent Jurisdiction"
+msgstr "10.2. Juridiction compétente"
+
+#: app/templates/cgv.html:273
+msgid ""
+"In the event of a dispute relating to the interpretation or execution of "
+"these CGV/CGU, and failing an amicable resolution, the <strong>French "
+"courts</strong> will have sole jurisdiction."
+msgstr "En cas de litige relatif à l'interprétation ou à l'exécution de ces CGV/CGU, et à défaut de résolution amiable, les <strong>tribunaux français</strong> seront seuls compétents."
+
+#: app/templates/cgv.html:276
+msgid "10.3. Consumer Mediation"
+msgstr "10.3. Médiation de la consommation"
+
+#: app/templates/cgv.html:278
+msgid ""
+"Although the Platform is exclusively intended for professionals (B2B), "
+"the Publisher is committed to favoring an amicable resolution of "
+"disputes. If the Platform were to open to consumers (B2C) in the future, "
+"a consumer mediation system will be put in place in accordance with "
+"applicable legislation."
+msgstr "Bien que la Plateforme soit exclusivement destinée aux professionnels (B2B), l'Éditeur s'engage à favoriser la résolution amiable des litiges. Si la Plateforme venait à s'ouvrir aux consommateurs (B2C) à l'avenir, un dispositif de médiation de la consommation sera mis en place conformément à la législation applicable."
+
+#: app/templates/cgv.html:285
+msgid ""
+"<strong>📌 Important note:</strong> By using the Platform, you confirm "
+"that you have read, understood and accepted these CGV/CGU in their "
+"entirety. If you have any questions, please contact us at: <strong>legal"
+"@pieces-methanisation.fr</strong>"
+msgstr "<strong>📌 Note importante :</strong> En utilisant la Plateforme, vous confirmez avoir lu, compris et accepté ces CGV/CGU dans leur intégralité. Pour toute question, contactez-nous à : <strong>legal@pieces-methanisation.fr</strong>"
+
+#: app/templates/cgv.html:291 app/templates/comment_ca_marche.html:220
+#: app/templates/cookies.html:274 app/templates/mentions_legales.html:141
+#: app/templates/politique_confidentialite.html:523
+msgid "Last updated: February 2026"
+msgstr "Dernière mise à jour : Février 2026"
+
+#: app/templates/cgv.html:298 app/templates/comment_ca_marche.html:228
+#: app/templates/cookies.html:281 app/templates/mentions_legales.html:148
+#: app/templates/politique_confidentialite.html:531
+msgid "← Back to home"
+msgstr "← Retour à l'accueil"
+
 #: app/templates/comment_ca_marche.html:7
 msgid "Transparency on the operation of our B2B marketplace"
-msgstr ""
+msgstr "Transparence sur le fonctionnement de notre place de marché B2B"
 
 #: app/templates/comment_ca_marche.html:13
 msgid "1. Our role as intermediary"
-msgstr ""
+msgstr "1. Notre rôle d'intermédiaire"
 
 #: app/templates/comment_ca_marche.html:18
 msgid ""
 "<strong>Pièces Méthanisation Pro</strong> is a <strong>B2B (Business-to-"
 "Business) platform</strong> dedicated to buying and selling equipment and"
 " spare parts for biogas and methanation installations."
-msgstr ""
+msgstr "<strong>Pièces Méthanisation Pro</strong> est une <strong>plateforme B2B (Business-to-Business)</strong> dédiée à l'achat et à la vente d'équipements et de pièces détachées pour les installations de biogaz et de méthanisation."
 
 #: app/templates/comment_ca_marche.html:21
 msgid "Our role is that of a <strong>technical intermediary</strong> between:"
-msgstr ""
+msgstr "Notre rôle est celui d'un <strong>intermédiaire technique</strong> entre :"
 
 #: app/templates/comment_ca_marche.html:24
 msgid "<strong>Sellers</strong>: professionals who offer equipment for sale"
-msgstr ""
+msgstr "<strong>Les vendeurs</strong> : professionnels qui proposent des équipements à la vente"
 
 #: app/templates/comment_ca_marche.html:25
 msgid "<strong>Buyers</strong>: professionals who are looking for equipment"
-msgstr ""
+msgstr "<strong>Les acheteurs</strong> : professionnels qui recherchent des équipements"
 
 #: app/templates/comment_ca_marche.html:28
 msgid ""
 "<strong>⚠️ Important:</strong> We only provide a space for publishing and"
 " viewing listings. We <strong>do not participate in commercial "
 "transactions</strong> between sellers and buyers."
-msgstr ""
+msgstr "<strong>⚠️ Important :</strong> Nous ne faisons que mettre à disposition un espace de publication et de consultation d'annonces. Nous <strong>ne participons pas aux transactions commerciales</strong> entre vendeurs et acheteurs."
 
 #: app/templates/comment_ca_marche.html:31
 msgid ""
 "Negotiations, payment for equipment, delivery and after-sales service are"
 " handled <strong>directly between the parties</strong>, without our "
 "involvement."
-msgstr ""
+msgstr "Les négociations, le paiement des équipements, la livraison et le service après-vente se font <strong>directement entre les parties</strong>, sans notre intervention."
 
 #: app/templates/comment_ca_marche.html:38
 msgid "2. Listing ranking and display"
-msgstr ""
+msgstr "2. Classement et affichage des annonces"
 
 #: app/templates/comment_ca_marche.html:42
 msgid "2.1. Main ranking criterion"
@@ -603,14 +1111,6 @@ msgid ""
 "informed of any significant changes."
 msgstr ""
 
-#: app/templates/comment_ca_marche.html:220
-msgid "Last updated: February 2026"
-msgstr ""
-
-#: app/templates/comment_ca_marche.html:228
-msgid "← Back to home"
-msgstr ""
-
 # Contact page
 #: app/templates/contact.html:6 app/templates/signaler_success.html:81
 msgid "Contact us"
@@ -830,6 +1330,306 @@ msgid ""
 "etc.). Sellers and buyers can be located anywhere in Europe."
 msgstr ""
 
+#: app/templates/cookies.html:6
+msgid "Cookie Management Policy"
+msgstr "Politique de Gestion des Cookies"
+
+#: app/templates/cookies.html:7
+msgid "ePrivacy Compliance - Cookie information and management"
+msgstr "Conformité ePrivacy - Information et gestion des cookies"
+
+#: app/templates/cookies.html:13
+msgid "1. What is a cookie?"
+msgstr "1. Qu'est-ce qu'un cookie ?"
+
+#: app/templates/cookies.html:18
+msgid ""
+"A cookie is a <strong>small text file</strong> stored on your device "
+"(computer, tablet, smartphone) when you visit our website. It stores "
+"information about your browsing and improves your user experience."
+msgstr "Un cookie est un <strong>petit fichier texte</strong> stocké sur votre appareil (ordinateur, tablette, smartphone) lors de votre visite sur notre site web. Il permet de mémoriser des informations sur votre navigation et d'améliorer votre expérience utilisateur."
+
+#: app/templates/cookies.html:21
+msgid ""
+"Cookies can be set by our site (<strong>internal cookies</strong>) or by "
+"third-party services we use (<strong>third-party cookies</strong>, such "
+"as Stripe for payments)."
+msgstr "Les cookies peuvent être déposés par notre site (<strong>cookies internes</strong>) ou par des services tiers que nous utilisons (<strong>cookies tiers</strong>, comme Stripe pour les paiements)."
+
+#: app/templates/cookies.html:24
+msgid ""
+"In accordance with the <strong>ePrivacy Directive (2002/58/EC)</strong> "
+"and its application in French law (article 82 of the Data Protection "
+"Act), we are required to inform you about the use of cookies and obtain "
+"your consent for some of them."
+msgstr "Conformément à la <strong>directive ePrivacy (2002/58/CE)</strong> et à son application en droit français (article 82 de la loi Informatique et Libertés), nous devons vous informer de l'utilisation des cookies et obtenir votre consentement pour certains d'entre eux."
+
+#: app/templates/cookies.html:31
+msgid "2. Strictly necessary cookies (without consent)"
+msgstr "2. Cookies strictement nécessaires (sans consentement)"
+
+#: app/templates/cookies.html:36
+msgid ""
+"These cookies are <strong>essential for the site to function</strong> and"
+" cannot be disabled. They do <strong>not require prior consent</strong> "
+"in accordance with CNIL recommendations."
+msgstr "Ces cookies sont <strong>indispensables au fonctionnement du site</strong> et ne peuvent pas être désactivés. Ils <strong>ne nécessitent pas de consentement préalable</strong> conformément aux recommandations de la CNIL."
+
+#: app/templates/cookies.html:43
+msgid "Cookie name"
+msgstr "Nom du cookie"
+
+#: app/templates/cookies.html:44 app/templates/cookies.html:91
+#: app/templates/cookies.html:130
+msgid "Purpose"
+msgstr "Finalité"
+
+#: app/templates/cookies.html:45 app/templates/cookies.html:92
+#: app/templates/cookies.html:131
+msgid "Duration"
+msgstr "Durée"
+
+#: app/templates/cookies.html:52
+msgid ""
+"Flask session cookie to maintain your active session while browsing "
+"(e.g., multi-step form)"
+msgstr "Cookie de session Flask pour maintenir votre session active lors de la navigation (ex : formulaire en plusieurs étapes)"
+
+#: app/templates/cookies.html:54
+msgid "Session (deleted when browser is closed)"
+msgstr "Session (supprimé à la fermeture du navigateur)"
+
+#: app/templates/cookies.html:59
+msgid ""
+"Protection against CSRF (Cross-Site Request Forgery) attacks to secure "
+"your forms"
+msgstr "Protection contre les attaques CSRF (Cross-Site Request Forgery) pour sécuriser vos formulaires."
+
+#: app/templates/cookies.html:61
+msgid "Session"
+msgstr "Session"
+
+#: app/templates/cookies.html:66
+msgid "Storage of your cookie preferences (acceptance/refusal)"
+msgstr "Mémorisation de vos préférences cookies (acceptation/refus)"
+
+#: app/templates/cookies.html:68
+msgid "13 months"
+msgstr "13 mois"
+
+#: app/templates/cookies.html:78
+msgid "3. Analytical cookies (consent required)"
+msgstr "3. Cookies analytiques (consentement requis)"
+
+#: app/templates/cookies.html:83
+msgid ""
+"These cookies allow us to analyze site usage and improve our services. "
+"<strong>Your consent is required</strong> before they are activated."
+msgstr "Ces cookies nous permettent d'analyser l'utilisation du site et d'améliorer nos services. <strong>Votre consentement est requis</strong> avant qu'ils ne soient activés."
+
+#: app/templates/cookies.html:90 app/templates/cookies.html:129
+msgid "Service"
+msgstr "Service"
+
+#: app/templates/cookies.html:97
+msgid "Google Analytics"
+msgstr "Google Analytics"
+
+#: app/templates/cookies.html:97
+msgid "(if enabled)"
+msgstr "(si activé)"
+
+#: app/templates/cookies.html:99
+msgid ""
+"Audience measurement: page views, visit duration, geographic origin "
+"(anonymized data)"
+msgstr ""
+
+#: app/templates/cookies.html:101
+msgid "26 months"
+msgstr "26 mois"
+
+#: app/templates/cookies.html:109
+msgid ""
+"ℹ️ <strong>Currently, no analytical cookies are enabled on this "
+"site.</strong> If we decide to use them in the future, you will be "
+"informed and can manage your preferences via the cookie banner."
+msgstr "ℹ️ <strong>Actuellement, aucun cookie analytique n'est activé sur ce site.</strong> Si nous décidons d'en utiliser à l'avenir, vous serez informé et pourrez gérer vos préférences via le bandeau cookies."
+
+#: app/templates/cookies.html:117
+msgid "4. Third-party cookies - Stripe (consent required)"
+msgstr "4. Cookies tiers - Stripe (consentement requis)"
+
+#: app/templates/cookies.html:122
+msgid ""
+"Our site uses <strong>Stripe</strong> for secure online payment "
+"processing. Stripe may set cookies on your device to prevent fraud and "
+"secure transactions."
+msgstr "Notre site utilise <strong>Stripe</strong> pour le traitement sécurisé des paiements en ligne. Stripe peut déposer des cookies sur votre appareil afin de prévenir la fraude et de sécuriser les transactions."
+
+#: app/templates/cookies.html:136
+msgid "Stripe Checkout"
+msgstr "Stripe Checkout"
+
+#: app/templates/cookies.html:138
+msgid ""
+"Payment processing, fraud detection, storing payment information (with "
+"your agreement)"
+msgstr ""
+
+#: app/templates/cookies.html:140
+msgid "Variable (1 to 12 months depending on cookie type)"
+msgstr "Variable (1 à 12 mois selon le type de cookie)"
+
+#: app/templates/cookies.html:148
+msgid ""
+"⚠️ <strong>Important:</strong> If you refuse Stripe cookies, you will not"
+" be able to make payments on our platform. Stripe cookies are necessary "
+"for the secure payment process to function properly."
+msgstr "⚠️ <strong>Important :</strong> Si vous refusez les cookies Stripe, vous ne pourrez pas effectuer de paiements sur notre plateforme. Les cookies Stripe sont nécessaires au bon fonctionnement du processus de paiement sécurisé."
+
+#: app/templates/cookies.html:153
+msgid "To learn more about Stripe's privacy policy:"
+msgstr "Pour en savoir plus sur la politique de confidentialité de Stripe :"
+
+#: app/templates/cookies.html:163
+msgid "5. How to manage your cookie preferences?"
+msgstr "5. Comment gérer vos préférences de cookies ?"
+
+#: app/templates/cookies.html:167
+msgid "5.1. Via our consent banner"
+msgstr "5.1. Via notre bandeau de consentement"
+
+#: app/templates/cookies.html:169
+msgid ""
+"On your first visit, a consent banner appears at the bottom of the page. "
+"You can:"
+msgstr ""
+
+#: app/templates/cookies.html:172
+msgid ""
+"<strong>Accept all cookies</strong>: Activates all cookies (essential + "
+"analytical + third-party)"
+msgstr ""
+
+#: app/templates/cookies.html:173
+msgid ""
+"<strong>Refuse all non-essential cookies</strong>: Only strictly "
+"necessary cookies are activated"
+msgstr ""
+
+#: app/templates/cookies.html:174
+msgid ""
+"<strong>Customize your preferences</strong>: Choose category by category "
+"which cookies you accept"
+msgstr ""
+
+#: app/templates/cookies.html:177
+msgid ""
+"You can change your preferences at any time by clicking on the 'Manage "
+"cookies' link at the bottom of each page."
+msgstr "Vous pouvez modifier vos préférences à tout moment en cliquant sur le lien 'Gérer les cookies' présent en bas de chaque page."
+
+#: app/templates/cookies.html:180
+msgid "5.2. Via your browser settings"
+msgstr "5.2. Via les paramètres de votre navigateur"
+
+#: app/templates/cookies.html:182
+msgid ""
+"You can also configure your browser to automatically refuse cookies or be"
+" alerted when a cookie is set. Here are links to configuration guides for"
+" major browsers:"
+msgstr "Vous pouvez également configurer votre navigateur pour refuser automatiquement les cookies ou être alerté lorsqu'un cookie est déposé. Voici les liens vers les guides de configuration des principaux navigateurs :"
+
+#: app/templates/cookies.html:187
+msgid "Google Chrome:"
+msgstr "Google Chrome :"
+
+#: app/templates/cookies.html:193
+msgid "Mozilla Firefox:"
+msgstr "Mozilla Firefox :"
+
+#: app/templates/cookies.html:199
+msgid "Microsoft Edge:"
+msgstr "Microsoft Edge :"
+
+#: app/templates/cookies.html:205
+msgid "Safari:"
+msgstr "Safari :"
+
+#: app/templates/cookies.html:214
+msgid ""
+"⚠️ <strong>Warning:</strong> Disabling certain cookies may impact your "
+"browsing experience and limit access to certain site features (for "
+"example: inability to complete payment if Stripe cookies are blocked)."
+msgstr "⚠️ <strong>Attention :</strong> La désactivation de certains cookies peut impacter votre expérience de navigation et limiter l'accès à certaines fonctionnalités du site (exemple : impossibilité de finaliser un paiement si les cookies Stripe sont bloqués)."
+
+#: app/templates/cookies.html:222
+msgid "6. Cookie retention period"
+msgstr "6. Durée de conservation des cookies"
+
+#: app/templates/cookies.html:227
+msgid ""
+"In accordance with CNIL recommendations, the validity period of your "
+"consent (or refusal) is <strong>13 months maximum</strong>. After this "
+"period, your consent will be requested again."
+msgstr "Conformément aux recommandations de la CNIL, la durée de validité de votre consentement (ou refus) est de <strong>13 mois maximum</strong>. Au-delà de cette période, votre consentement vous sera redemandé."
+
+#: app/templates/cookies.html:230
+msgid ""
+"Cookies set with your consent have a variable lifespan depending on their"
+" purpose, but cannot exceed <strong>13 months</strong> for audience "
+"measurement cookies."
+msgstr "Les cookies déposés avec votre consentement ont une durée de vie variable selon leur finalité, mais ne peuvent excéder <strong>13 mois</strong> pour les cookies de mesure d'audience."
+
+#: app/templates/cookies.html:237
+msgid "7. Contact and complaints"
+msgstr "7. Contact et réclamations"
+
+#: app/templates/cookies.html:242
+msgid "For any questions regarding our cookie policy, you can contact us at:"
+msgstr "Pour toute question concernant notre politique de cookies, vous pouvez nous contacter à :"
+
+#: app/templates/cookies.html:245 app/templates/mentions_legales.html:25
+#: app/templates/mentions_legales.html:38
+#: app/templates/mentions_legales.html:62
+#: app/templates/politique_confidentialite.html:22
+msgid "Email:"
+msgstr "Email :"
+
+#: app/templates/cookies.html:246
+#: app/templates/cookies.html:246
+msgid "Contact form:"
+msgstr "Formulaire de contact :"
+
+#: app/templates/cookies.html:250
+msgid ""
+"If you believe your rights are not being respected, you can also file a "
+"complaint with the <strong>CNIL</strong> (Commission Nationale de "
+"l'Informatique et des Libertés):"
+msgstr ""
+
+#: app/templates/cookies.html:254
+msgid "Online:"
+msgstr "En ligne :"
+
+#: app/templates/cookies.html:260
+#, fuzzy
+msgid "By mail:"
+msgstr "Votre email"
+
+#: app/templates/cookies.html:260
+msgid "CNIL - 3 Place de Fontenoy - TSA 80715 - 75334 PARIS CEDEX 07"
+msgstr ""
+
+#: app/templates/cookies.html:268
+msgid ""
+"<strong>📌 Summary:</strong> We primarily use cookies strictly necessary "
+"for the site to function. Third-party cookies (Stripe) are only set "
+"during the payment process. You maintain full control over your cookie "
+"preferences and can change them at any time."
+msgstr ""
+
 # Homepage
 #: app/templates/index.html:6
 msgid "The professional marketplace for methanization & biogas parts"
@@ -878,6 +1678,209 @@ msgstr "Vous avez du matériel à vendre ?"
 #: app/templates/index.html:77
 msgid "Post a listing in a few minutes."
 msgstr "Publiez une annonce en quelques minutes."
+
+#: app/templates/mentions_legales.html:6
+#, fuzzy
+msgid "Legal Notice"
+msgstr "Mentions légales"
+
+#: app/templates/mentions_legales.html:7
+msgid ""
+"In accordance with law no. 2004-575 of June 21, 2004 for Confidence in "
+"the Digital Economy (LCEN)"
+msgstr ""
+
+#: app/templates/mentions_legales.html:13
+msgid "1. Publisher Identification"
+msgstr ""
+
+#: app/templates/mentions_legales.html:17
+#: app/templates/politique_confidentialite.html:20
+msgid "Company name:"
+msgstr ""
+
+#: app/templates/mentions_legales.html:18
+msgid "Legal form:"
+msgstr ""
+
+#: app/templates/mentions_legales.html:19
+msgid "Registered office address:"
+msgstr ""
+
+#: app/templates/mentions_legales.html:20
+msgid "SIRET number:"
+msgstr ""
+
+#: app/templates/mentions_legales.html:21
+msgid "SIREN number:"
+msgstr ""
+
+#: app/templates/mentions_legales.html:22
+#, fuzzy
+msgid "RCS:"
+msgstr "Prix"
+
+#: app/templates/mentions_legales.html:23
+msgid "Intra-community VAT:"
+msgstr ""
+
+#: app/templates/mentions_legales.html:24
+msgid "Share capital:"
+msgstr ""
+
+#: app/templates/mentions_legales.html:26
+#: app/templates/politique_confidentialite.html:382
+#: app/templates/politique_confidentialite.html:382
+msgid "Phone:"
+msgstr "Téléphone :"
+
+#: app/templates/mentions_legales.html:32
+#, fuzzy
+msgid "2. Publication Director"
+msgstr "Coût de publication"
+
+#: app/templates/mentions_legales.html:36
+msgid "Name:"
+msgstr ""
+
+#: app/templates/mentions_legales.html:37 app/templates/wizard_step5.html:13
+#, fuzzy
+msgid "Title:"
+msgstr "Titre"
+
+#: app/templates/mentions_legales.html:44
+msgid "3. Site Hosting"
+msgstr ""
+
+#: app/templates/mentions_legales.html:48
+#, fuzzy
+msgid "Host:"
+msgstr "Déposer"
+
+#: app/templates/mentions_legales.html:49
+#: app/templates/politique_confidentialite.html:21
+msgid "Address:"
+msgstr ""
+
+#: app/templates/mentions_legales.html:50
+#: app/templates/politique_confidentialite.html:384
+msgid "Website:"
+msgstr ""
+
+#: app/templates/mentions_legales.html:51
+#, fuzzy
+msgid "Contact email:"
+msgstr "Détails supplémentaires"
+
+#: app/templates/mentions_legales.html:57
+msgid "4. Legal Contact"
+msgstr ""
+
+#: app/templates/mentions_legales.html:61
+msgid "For any legal questions concerning the site:"
+msgstr ""
+
+#: app/templates/mentions_legales.html:63
+msgid "Postal address:"
+msgstr ""
+
+#: app/templates/mentions_legales.html:69
+msgid "5. Intellectual Property"
+msgstr ""
+
+#: app/templates/mentions_legales.html:74
+msgid ""
+"The website pieces-methanisation.onrender.com, its structure, design, "
+"content and functionalities are the exclusive property of [NOM DE LA "
+"SOCIÉTÉ]. Any reproduction, distribution, modification, adaptation, "
+"retransmission or publication, even partial, of these elements is "
+"strictly prohibited without the express written consent of the publisher."
+msgstr ""
+
+#: app/templates/mentions_legales.html:77
+msgid ""
+"The trademarks, logos, signs and any other content on the site are "
+"protected by the Intellectual Property Code, particularly by copyright "
+"law."
+msgstr ""
+
+#: app/templates/mentions_legales.html:80
+msgid ""
+"Users who publish listings on the platform retain full ownership of the "
+"content (photos, descriptions) they submit, but grant [NOM DE LA SOCIÉTÉ]"
+" a non-exclusive license to display it on the site."
+msgstr ""
+
+#: app/templates/mentions_legales.html:87
+msgid "6. Personal Data Protection"
+msgstr ""
+
+#: app/templates/mentions_legales.html:92
+msgid ""
+"In accordance with the General Data Protection Regulation (GDPR) and the "
+"Data Protection Act, you have rights regarding your personal data."
+msgstr ""
+
+#: app/templates/mentions_legales.html:95
+msgid ""
+"For more information on the collection and processing of your personal "
+"data, please consult our"
+msgstr ""
+
+#: app/templates/mentions_legales.html:96
+#: app/templates/politique_confidentialite.html:6
+#: app/templates/wizard_step5.html:76
+#, fuzzy
+msgid "Privacy Policy"
+msgstr "Confidentialité"
+
+#: app/templates/mentions_legales.html:99
+msgid "To exercise your rights, contact us at:"
+msgstr ""
+
+#: app/templates/mentions_legales.html:106
+msgid "7. Cookies"
+msgstr ""
+
+#: app/templates/mentions_legales.html:111
+msgid ""
+"The site uses cookies to improve user experience and ensure the proper "
+"functioning of certain features."
+msgstr ""
+
+#: app/templates/mentions_legales.html:114
+msgid "To learn more, see our"
+msgstr ""
+
+#: app/templates/mentions_legales.html:115
+msgid "Cookie Management"
+msgstr ""
+
+#: app/templates/mentions_legales.html:115 app/templates/signaler.html:121
+msgid "page."
+msgstr ""
+
+#: app/templates/mentions_legales.html:122
+msgid "8. General Terms of Use"
+msgstr ""
+
+#: app/templates/mentions_legales.html:127
+msgid ""
+"Use of the website pieces-methanisation.onrender.com implies full "
+"acceptance of the"
+msgstr ""
+
+#: app/templates/mentions_legales.html:135
+#, fuzzy
+msgid "📌 Important note:"
+msgstr "Vos coordonnées"
+
+#: app/templates/mentions_legales.html:135
+msgid ""
+"Information marked [IN BRACKETS] must be replaced with your company's "
+"actual information. This legal notice must be updated in case of changes "
+"to legal status, address or hosting provider."
+msgstr ""
 
 #: app/templates/payment_cancel.html:7
 msgid "Payment cancelled"
@@ -948,6 +1951,920 @@ msgstr ""
 #: app/templates/payment_success.html:24
 msgid "View my listing"
 msgstr "Voir mon annonce"
+
+#: app/templates/politique_confidentialite.html:7
+msgid "In accordance with the General Data Protection Regulation (GDPR)"
+msgstr "Conformément au Règlement Général sur la Protection des Données (RGPD)"
+
+#: app/templates/politique_confidentialite.html:13
+msgid "1. Data Controller"
+msgstr "1. Responsable du traitement des données"
+
+#: app/templates/politique_confidentialite.html:18
+msgid ""
+"The data controller for personal data collected on the platform pieces-"
+"methanisation.onrender.com is:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:23
+msgid "Data Protection Officer (DPO):"
+msgstr "Délégué à la Protection des Données (DPO) :"
+
+#: app/templates/politique_confidentialite.html:25
+msgid ""
+"For any questions regarding the protection of your personal data or to "
+"exercise your rights, you can contact us at:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:32
+msgid "2. Personal Data Collected"
+msgstr "2. Données personnelles collectées"
+
+#: app/templates/politique_confidentialite.html:37
+msgid ""
+"The collection of personal data varies depending on your use of the "
+"platform:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:40
+msgid "2.1. For sellers (users who post listings)"
+msgstr "2.1. Pour les vendeurs (utilisateurs qui publient des annonces)"
+
+#: app/templates/politique_confidentialite.html:42
+msgid "When posting a listing, we collect the following data:"
+msgstr "Lors de la publication d'une annonce, nous collectons les données suivantes :"
+
+#: app/templates/politique_confidentialite.html:45
+msgid "Identification data:"
+msgstr "Données d'identification :"
+
+#: app/templates/politique_confidentialite.html:45
+msgid "Company name, contact first and last name"
+msgstr "Nom de l'entreprise, nom et prénom du contact"
+
+#: app/templates/politique_confidentialite.html:46
+#: app/templates/politique_confidentialite.html:46
+msgid "Contact information:"
+msgstr "Coordonnées :"
+
+#: app/templates/politique_confidentialite.html:46
+msgid "Email address, phone number, postal address (equipment location)"
+msgstr "Adresse email, numéro de téléphone, adresse postale (localisation de l'équipement)"
+
+#: app/templates/politique_confidentialite.html:47
+#: app/templates/politique_confidentialite.html:47
+msgid "Billing information:"
+msgstr "Informations de facturation :"
+
+#: app/templates/politique_confidentialite.html:47
+msgid ""
+"Payment information processed by Stripe (credit card number, cardholder "
+"name)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:48
+msgid "Listing technical data:"
+msgstr "Données techniques de l'annonce :"
+
+#: app/templates/politique_confidentialite.html:48
+msgid "Photos, descriptions, equipment technical specifications, price"
+msgstr "Photos, descriptions, caractéristiques techniques de l'équipement, prix"
+
+#: app/templates/politique_confidentialite.html:49
+#: app/templates/politique_confidentialite.html:57
+msgid "Connection data:"
+msgstr "Données de connexion :"
+
+#: app/templates/politique_confidentialite.html:49
+#: app/templates/politique_confidentialite.html:57
+msgid "IP address, browsing data (via cookies)"
+msgstr "Adresse IP, données de navigation (via cookies)"
+
+#: app/templates/politique_confidentialite.html:52
+#: app/templates/politique_confidentialite.html:52
+msgid "⚠️ Important information:"
+msgstr "⚠️ Information importante :"
+
+#: app/templates/politique_confidentialite.html:52
+msgid ""
+"Your contact details (email and phone) will be <strong>published "
+"publicly</strong> on your listing to allow buyers to contact you "
+"directly. By posting a listing, you expressly consent to this publication"
+" in accordance with Article 6.1.a of the GDPR."
+msgstr "Vos coordonnées (email et téléphone) seront <strong>publiées publiquement</strong> sur votre annonce pour permettre aux acheteurs de vous contacter directement. En publiant une annonce, vous consentez expressément à cette publication conformément à l'article 6.1.a du RGPD."
+
+#: app/templates/politique_confidentialite.html:55
+msgid "2.2. For buyers (visitors browsing listings)"
+msgstr "2.2. Pour les acheteurs (visiteurs consultant les annonces)"
+
+#: app/templates/politique_confidentialite.html:58
+msgid "Contact information (if you use the form):"
+msgstr "Coordonnées (si vous utilisez le formulaire) :"
+
+#: app/templates/politique_confidentialite.html:58
+msgid "First name, last name, email, phone, message"
+msgstr "Prénom, nom, email, téléphone, message"
+
+#: app/templates/politique_confidentialite.html:61
+msgid "2.3. For all visitors (anonymous browsing)"
+msgstr "2.3. Pour tous les visiteurs (navigation anonyme)"
+
+#: app/templates/politique_confidentialite.html:63
+msgid "Technical cookies:"
+msgstr "Cookies techniques :"
+
+#: app/templates/politique_confidentialite.html:63
+msgid "Session cookies for platform functionality"
+msgstr "Cookies de session pour le fonctionnement de la plateforme"
+
+#: app/templates/politique_confidentialite.html:64
+msgid "Browsing data:"
+msgstr "Données de navigation :"
+
+#: app/templates/politique_confidentialite.html:64
+msgid "IP address, pages visited, session duration, browser type"
+msgstr "Adresse IP, pages visitées, durée de session, type de navigateur"
+
+#: app/templates/politique_confidentialite.html:71
+msgid "3. Purpose of Data Processing"
+msgstr "3. Finalités du traitement des données"
+
+#: app/templates/politique_confidentialite.html:76
+msgid "Your personal data is collected and processed for the following purposes:"
+msgstr "Vos données personnelles sont collectées et traitées pour les finalités suivantes :"
+
+#: app/templates/politique_confidentialite.html:80
+msgid "Listing publication and management:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:80
+msgid ""
+"Allow the creation, publication, and distribution of equipment listings "
+"on the platform"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:83
+msgid "B2B matchmaking:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:83
+msgid "Facilitate contact between professional sellers and buyers"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:86
+msgid "Payment processing:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:86
+msgid "Manage secure payments for listing publication (via Stripe)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:89
+msgid "Billing and accounting:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:89
+msgid "Issue and retain invoices in compliance with legal obligations"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:92
+msgid "Customer support:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:92
+msgid "Respond to contact requests and technical assistance"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:95
+msgid "Service improvement:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:95
+msgid "Analyze platform usage to improve user experience"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:98
+msgid "Legal compliance:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:98
+msgid ""
+"Compliance with legal and regulatory obligations (GDPR, accounting "
+"obligations, fraud prevention)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:101
+msgid "Security:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:101
+msgid "Fraud prevention, detection of abusive behavior, platform protection"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:109
+msgid "4. Legal Basis for Processing"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:114
+msgid ""
+"In accordance with Article 6 of the GDPR, our data processing is based on"
+" the following legal bases:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:118
+msgid "Consent (Article 6.1.a of the GDPR):"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:118
+msgid "Public publication of your contact details on listings"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:121
+msgid "Contract performance (Article 6.1.b of the GDPR):"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:121
+msgid "Listing publication, payment processing, platform service provision"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:124
+msgid "Legal obligation (Article 6.1.c of the GDPR):"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:124
+msgid ""
+"Invoice retention (10 years), compliance with accounting and tax "
+"obligations"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:127
+msgid "Legitimate interests (Article 6.1.f of the GDPR):"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:127
+msgid "Platform security, fraud prevention, service improvement"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:135
+msgid "5. Data Recipients"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:140
+msgid "Your personal data is intended for the following categories of recipients:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:143
+msgid "5.1. Internal Staff"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:145
+msgid ""
+"Authorized employees of [NOM DE LA SOCIÉTÉ] have access to your data "
+"strictly within the scope of their duties (customer support, moderation, "
+"administration)."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:148
+msgid "5.2. Subcontractors and Technical Service Providers"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:150
+msgid ""
+"We use service providers for hosting and processing your data. These "
+"providers are subject to strict contractual confidentiality and security "
+"obligations:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:154
+msgid "Supabase (database hosting):"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:154
+msgid "Storage of user data and listings"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:155
+msgid ""
+"Servers located in the United States with appropriate protection "
+"guarantees (EU standard contractual clauses)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:158
+msgid "Stripe (payment processing):"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:158
+msgid "Secure online payment management"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:159
+msgid ""
+"PCI-DSS Level 1 compliant. Payment data processed directly by Stripe, we "
+"do not store any banking data"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:162
+msgid "Render.com (application hosting):"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:162
+msgid "Web application hosting"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:167
+msgid "5.3. Platform Users"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:169
+msgid "⚠️ Important:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:169
+msgid ""
+"Seller contact details (email and phone) are <strong>made public</strong>"
+" on listings. Any platform visitor can therefore view this information."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:172
+msgid "5.4. Legal Authorities"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:174
+msgid ""
+"In the event of a legal request, your data may be communicated to the "
+"competent authorities (police, justice, CNIL) as part of an investigation"
+" or legal obligation."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:181
+msgid "6. Data Transfers Outside the European Union"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:186
+msgid ""
+"Some of our technical service providers are located outside the European "
+"Union, particularly in the <strong>United States</strong>:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:189
+msgid "Supabase:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:189
+#: app/templates/politique_confidentialite.html:191
+msgid "Servers in the United States"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:190
+#, fuzzy
+msgid "Stripe:"
+msgstr "Prix"
+
+#: app/templates/politique_confidentialite.html:190
+msgid "American company (GDPR compliant)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:191
+msgid "Render.com:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:194
+msgid ""
+"These transfers are governed by <strong>appropriate guarantees</strong> "
+"in accordance with Articles 44 to 50 of the GDPR:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:198
+msgid "European Union Standard Contractual Clauses (SCC):"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:198
+msgid "Standardized contracts approved by the European Commission"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:201
+msgid "Additional technical measures:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:201
+msgid "Encryption of data in transit (HTTPS/TLS) and at rest"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:204
+#, fuzzy
+msgid "Security certifications:"
+msgstr "Localisation"
+
+#: app/templates/politique_confidentialite.html:204
+msgid "Our providers have recognized certifications (SOC 2, ISO 27001, PCI-DSS)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:208
+msgid "For more information about the guarantees in place, contact us at:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:215
+msgid "7. Data Retention Period"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:220
+msgid ""
+"Your personal data is retained for different periods depending on its "
+"nature and purpose:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:226
+msgid "Data Type"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:227
+msgid "Retention Period"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:228
+msgid "Legal Basis"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:233
+msgid "Published listings (active)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:234
+msgid "30 days"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:235
+#, fuzzy
+msgid "Contract performance"
+msgstr "Vos coordonnées"
+
+#: app/templates/politique_confidentialite.html:238
+#, fuzzy
+msgid "Expired listings"
+msgstr "Voir les annonces"
+
+#: app/templates/politique_confidentialite.html:239
+msgid "Immediate deletion after expiration"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:243
+msgid "Invoices and accounting data"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:244
+msgid "10 years"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:245
+msgid "Legal obligation (Commercial Code art. L123-22)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:248
+msgid "Contact requests (form)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:249
+msgid "3 years"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:250
+msgid "Legitimate interest (customer support)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:253
+msgid "Connection logs and IP addresses"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:254
+msgid "12 months"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:255
+msgid "Legal obligation (security and fraud prevention)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:258
+msgid "Session cookies"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:259
+msgid "End of browsing session"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:260
+msgid "Technical functionality"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:266
+#, fuzzy
+msgid "💡 Note:"
+msgstr "Sur devis"
+
+#: app/templates/politique_confidentialite.html:266
+msgid ""
+"At the expiration of these periods, your data is <strong>permanently "
+"deleted</strong> or irreversibly anonymized, unless a legal obligation "
+"requires longer retention."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:273
+msgid "8. Your GDPR Rights"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:278
+msgid ""
+"In accordance with the General Data Protection Regulation (GDPR), you "
+"have the following rights regarding your personal data:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:283
+msgid "🔍 Right of access (Article 15 of the GDPR)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:286
+msgid ""
+"You can obtain a copy of all the personal data we hold about you, as well"
+" as information about their processing."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:290
+msgid "✏️ Right of rectification (Article 16 of the GDPR)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:293
+msgid ""
+"You can request the correction of inaccurate or incomplete data "
+"concerning you."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:297
+msgid "🗑️ Right to erasure / \"Right to be forgotten\" (Article 17 of the GDPR)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:300
+msgid ""
+"You can request the deletion of your personal data, unless a legal "
+"obligation requires us to retain it (for example: invoices that must be "
+"kept for 10 years)."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:304
+msgid "⏸️ Right to restriction of processing (Article 18 of the GDPR)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:307
+msgid ""
+"You can request the temporary suspension of processing your data in "
+"certain situations (for example: in case of contestation of data "
+"accuracy)."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:311
+msgid "📦 Right to data portability (Article 20 of the GDPR)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:314
+msgid ""
+"You can retrieve your data in a structured, commonly used, and machine-"
+"readable format, and transmit it to another data controller."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:318
+msgid "⛔ Right to object (Article 21 of the GDPR)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:321
+msgid ""
+"You can object at any time to the processing of your data for reasons "
+"relating to your particular situation, especially when the processing is "
+"based on our legitimate interest."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:325
+msgid "🔄 Right to withdraw your consent (Article 7 of the GDPR)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:328
+msgid ""
+"When processing is based on your consent (for example: public publication"
+" of your contact details), you can withdraw it at any time. This will "
+"result in the deletion of your listing."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:332
+msgid ""
+"🤖 Right not to be subject to automated decision-making (Article 22 of the"
+" GDPR)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:335
+msgid ""
+"You have the right not to be subject to a decision based solely on "
+"automated processing that produces legal effects concerning you."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:341
+msgid "📧 How to exercise your rights?"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:344
+msgid ""
+"To exercise any of these rights, contact us by email at the following "
+"address:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:350
+msgid "Please specify in your request:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:353
+msgid "Your identity (first name, last name, email used on the platform)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:354
+msgid "The right you wish to exercise"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:355
+msgid "A copy of an identity document (to prevent identity theft)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:358
+msgid "Response time:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:358
+msgid ""
+"We commit to responding to you within a maximum of <strong>1 "
+"month</strong> from receipt of your request (period that can be extended "
+"by 2 months in case of complex request, with prior notification)."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:366
+msgid "9. Right to Complaint to the CNIL"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:371
+msgid ""
+"If you believe that the processing of your personal data constitutes a "
+"violation of the GDPR, you have the right to file a <strong>complaint "
+"with the Commission Nationale de l'Informatique et des Libertés "
+"(CNIL)</strong>, the French supervisory authority for personal data "
+"protection."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:376
+#, fuzzy
+msgid "📍 CNIL Contact Information"
+msgstr "Vos coordonnées"
+
+#: app/templates/politique_confidentialite.html:378
+msgid "Commission Nationale de l'Informatique et des Libertés (CNIL)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:388
+msgid "You can file a complaint online on the CNIL website:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:394
+msgid "💬 Amicable resolution:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:394
+msgid ""
+"Before contacting the CNIL, we encourage you to contact us directly at "
+"<strong>privacy@pieces-methanisation.fr</strong> so that we can resolve "
+"any issues together."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:401
+msgid "10. Data Security"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:406
+msgid ""
+"We implement appropriate technical and organizational measures to ensure "
+"a level of security appropriate to the risks, in accordance with Article "
+"32 of the GDPR."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:409
+msgid "10.1. Technical Security Measures"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:412
+msgid "Communications encryption:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:412
+msgid ""
+"All data exchanged between your browser and our server is encrypted via "
+"the HTTPS/TLS protocol"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:415
+msgid "Data encryption at rest:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:415
+msgid "Data stored in our databases (Supabase) is encrypted"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:418
+msgid "Payment security:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:418
+msgid ""
+"Payment data is processed directly by Stripe (PCI-DSS Level 1 certified)."
+" We do not store any banking data on our servers."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:421
+msgid "Secure authentication:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:421
+msgid "User session management with secure tokens"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:424
+msgid "Protection against attacks:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:424
+msgid "Application firewall, CSRF protection, user input validation"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:427
+msgid "Regular backups:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:427
+msgid "Automatic daily data backups"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:431
+msgid "10.2. Organizational Measures"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:434
+msgid "Restricted access:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:434
+msgid ""
+"Only authorized personnel have access to personal data, strictly within "
+"the scope of their duties"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:437
+msgid "Confidentiality clauses:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:437
+msgid ""
+"All our employees and service providers are subject to confidentiality "
+"obligations"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:440
+msgid "Monitoring and logs:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:440
+msgid "Traceability of data access and monitoring of suspicious activities"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:443
+msgid "Incident management:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:443
+msgid ""
+"Data breach response procedures compliant with GDPR (notification within "
+"72 hours to CNIL if necessary)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:448
+msgid "⚠️ Breach notification:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:448
+msgid ""
+"In the event of a data breach likely to result in a high risk to your "
+"rights and freedoms, we will inform you as soon as possible, in "
+"accordance with Article 34 of the GDPR."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:455
+msgid "11. Cookies and Similar Technologies"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:460
+msgid ""
+"Our platform uses cookies and similar technologies to improve your "
+"browsing experience and ensure proper site functionality."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:463
+msgid "11.1. What is a cookie?"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:465
+msgid ""
+"A cookie is a small text file placed on your device (computer, "
+"smartphone, tablet) during your visit to our site. It allows us to "
+"remember information about your browsing."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:468
+msgid "11.2. Types of cookies used"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:471
+msgid "Strictly necessary cookies:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:471
+msgid ""
+"Essential for site functionality (session management, cart, security). "
+"These cookies do not require consent."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:474
+msgid "Performance and analytics cookies:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:474
+msgid ""
+"Allow us to measure audience and improve service (subject to prior "
+"consent)."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:478
+msgid "11.3. Managing your preferences"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:480
+msgid ""
+"To learn more about the cookies used and manage your preferences, visit "
+"our dedicated page:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:484
+msgid "🍪 Manage my cookie preferences"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:488
+msgid ""
+"You can also configure your browser to refuse cookies. Warning: some site"
+" features may no longer work properly."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:495
+msgid "12. Privacy Policy Modifications"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:500
+msgid ""
+"We reserve the right to modify this Privacy Policy at any time to reflect"
+" legal, regulatory, or technical developments of our platform."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:503
+msgid "In the event of substantial modifications, we will inform you by:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:506
+msgid "Email notification (if you are a registered user)"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:507
+#, fuzzy
+msgid "An information banner visible on the platform"
+msgstr "Votre annonce a été publiée et est maintenant visible sur la plateforme."
+
+#: app/templates/politique_confidentialite.html:510
+msgid ""
+"We invite you to regularly consult this page to be informed of any "
+"changes. The date of last update is indicated at the bottom of this page."
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:517
+#, fuzzy
+msgid "📌 Contact:"
+msgstr "Contact"
+
+#: app/templates/politique_confidentialite.html:517
+msgid ""
+"For any questions regarding this Privacy Policy or to exercise your "
+"rights, contact our Data Protection Officer at:"
+msgstr ""
+
+#: app/templates/politique_confidentialite.html:530
+msgid "🍪 Cookie Management"
+msgstr ""
 
 #: app/templates/signaler.html:7
 msgid "Report any problematic, fraudulent or non-compliant content"
@@ -1131,10 +3048,6 @@ msgid ""
 "processes, consult our"
 msgstr ""
 
-#: app/templates/signaler.html:121
-msgid "page."
-msgstr ""
-
 #: app/templates/signaler_success.html:13
 msgid "Report sent!"
 msgstr ""
@@ -1215,11 +3128,6 @@ msgstr ""
 msgid "Summary of your listing"
 msgstr "Créez votre annonce"
 
-#: app/templates/wizard_step5.html:13
-#, fuzzy
-msgid "Title:"
-msgstr "Titre"
-
 #: app/templates/wizard_step5.html:14
 msgid "Type:"
 msgstr ""
@@ -1299,11 +3207,6 @@ msgstr ""
 #: app/templates/wizard_step5.html:75
 msgid "I acknowledge that I have read the"
 msgstr ""
-
-#: app/templates/wizard_step5.html:76
-#, fuzzy
-msgid "Privacy Policy"
-msgstr "Confidentialité"
 
 #: app/templates/wizard_step5.html:77
 msgid "and the"

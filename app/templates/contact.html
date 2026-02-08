@@ -3,22 +3,22 @@
 {% block content %}
 <section class="form-page">
   <div class="form-container">
-    <h1>Contactez-nous</h1>
-    <p class="subtitle">Une question sur une annonce ou sur nos services ? Notre équipe vous répond rapidement.</p>
+    <h1>{{ _("Contact us") }}</h1>
+    <p class="subtitle">{{ _("Have a question about a listing or our services? Our team responds quickly.") }}</p>
 
     <div style="background: var(--bg-light); padding: 24px; border-radius: var(--radius-lg); margin-bottom: 32px;">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
         <div>
-          <h4 style="font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px;">📧 Email</h4>
+          <h4 style="font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px;">📧 {{ _("Email") }}</h4>
           <p style="font-size: 15px; color: var(--text-gray);">contact@pieces-methanisation.fr</p>
         </div>
         <div>
-          <h4 style="font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px;">📞 Téléphone</h4>
+          <h4 style="font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px;">📞 {{ _("Phone") }}</h4>
           <p style="font-size: 15px; color: var(--text-gray);">+33 X XX XX XX XX</p>
         </div>
         <div>
-          <h4 style="font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px;">⏰ Horaires</h4>
-          <p style="font-size: 15px; color: var(--text-gray);">Lun-Ven 9h-18h</p>
+          <h4 style="font-size: 14px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px;">⏰ {{ _("Hours") }}</h4>
+          <p style="font-size: 15px; color: var(--text-gray);">{{ _("Mon-Fri 9am-6pm") }}</p>
         </div>
       </div>
     </div>
@@ -26,59 +26,59 @@
     <form method="post" action="/contact">
       <div class="form-grid">
         <div class="form-group">
-          <label for="name">Nom complet *</label>
-          <input type="text" id="name" name="name" required placeholder="Jean Dupont" />
+          <label for="name">{{ _("Full name") }} *</label>
+          <input type="text" id="name" name="name" required placeholder="{{ _('John Doe') }}" />
         </div>
 
         <div class="form-group">
-          <label for="company">Société</label>
-          <input type="text" id="company" name="company" placeholder="Votre société" />
+          <label for="company">{{ _("Company") }}</label>
+          <input type="text" id="company" name="company" placeholder="{{ _('Your company') }}" />
         </div>
       </div>
 
       <div class="form-grid">
         <div class="form-group">
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required placeholder="jean.dupont@exemple.fr" />
+          <label for="email">{{ _("Email") }} *</label>
+          <input type="email" id="email" name="email" required placeholder="{{ _('john.doe@example.com') }}" />
         </div>
 
         <div class="form-group">
-          <label for="phone">Téléphone</label>
-          <input type="tel" id="phone" name="phone" placeholder="+33 X XX XX XX XX" />
+          <label for="phone">{{ _("Phone") }}</label>
+          <input type="tel" id="phone" name="phone" placeholder="{{ _('+33 X XX XX XX XX') }}" />
         </div>
       </div>
 
       <div class="form-group">
-        <label for="subject">Sujet *</label>
+        <label for="subject">{{ _("Subject") }} *</label>
         <select id="subject" name="subject" required>
-          <option value="">Sélectionnez un sujet...</option>
-          <option value="question-annonce">Question sur une annonce</option>
-          <option value="deposer-annonce">Déposer une annonce</option>
-          <option value="info-generale">Information générale</option>
-          <option value="partenariat">Partenariat</option>
-          <option value="support">Support technique</option>
-          <option value="rgpd">Demande RGPD (accès, suppression, rectification)</option>
-          <option value="autre">Autre</option>
+          <option value="">{{ _("Select a subject...") }}</option>
+          <option value="question-annonce">{{ _("Question about a listing") }}</option>
+          <option value="deposer-annonce">{{ _("Post a listing") }}</option>
+          <option value="info-generale">{{ _("General information") }}</option>
+          <option value="partenariat">{{ _("Partnership") }}</option>
+          <option value="support">{{ _("Technical support") }}</option>
+          <option value="rgpd">{{ _("GDPR request (access, deletion, rectification)") }}</option>
+          <option value="autre">{{ _("Other") }}</option>
         </select>
       </div>
 
       <div id="rgpd-notice" style="display: none; margin-top: 16px; padding: 20px; background: #eff6ff; border-radius: var(--radius); border-left: 4px solid var(--primary-color);">
         <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; color: var(--primary-color);">
-          ℹ️ Demande RGPD
+          ℹ️ {{ _("GDPR request") }}
         </h4>
         <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin-bottom: 12px;">
-          Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :
+          {{ _("In accordance with the General Data Protection Regulation (GDPR), you have the following rights:") }}
         </p>
         <ul style="margin-left: 24px; font-size: 14px; color: var(--text-gray); line-height: 1.8;">
-          <li><strong>Droit d'accès</strong> : Obtenir une copie de vos données personnelles</li>
-          <li><strong>Droit de rectification</strong> : Corriger des données inexactes</li>
-          <li><strong>Droit à l'effacement</strong> : Supprimer vos données ("droit à l'oubli")</li>
-          <li><strong>Droit d'opposition</strong> : S'opposer au traitement de vos données</li>
-          <li><strong>Droit à la portabilité</strong> : Recevoir vos données dans un format structuré</li>
+          <li><strong>{{ _("Right of access") }}</strong> : {{ _("Obtain a copy of your personal data") }}</li>
+          <li><strong>{{ _("Right to rectification") }}</strong> : {{ _("Correct inaccurate data") }}</li>
+          <li><strong>{{ _("Right to erasure") }}</strong> : {{ _('Delete your data ("right to be forgotten")') }}</li>
+          <li><strong>{{ _("Right to object") }}</strong> : {{ _("Object to the processing of your data") }}</li>
+          <li><strong>{{ _("Right to data portability") }}</strong> : {{ _("Receive your data in a structured format") }}</li>
         </ul>
         <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin-top: 12px; margin-bottom: 0;">
-          Pour exercer ces droits, précisez votre demande dans le message ci-dessous. Nous vous répondrons sous 30 jours.
-          <br>Vous pouvez aussi nous contacter directement à : <strong>privacy@pieces-methanisation.fr</strong>
+          {{ _("To exercise these rights, specify your request in the message below. We will respond within 30 days.") }}
+          <br>{{ _("You can also contact us directly at:") }} <strong>privacy@pieces-methanisation.fr</strong>
         </p>
       </div>
 
@@ -94,57 +94,57 @@
       </script>
 
       <div class="form-group">
-        <label for="reference">Référence d'annonce (si applicable)</label>
+        <label for="reference">{{ _("Listing reference (if applicable)") }}</label>
         <input type="text" id="reference" name="reference" placeholder="#123" />
-        <small>Si votre question concerne une annonce spécifique</small>
+        <small>{{ _("If your question concerns a specific listing") }}</small>
       </div>
 
       <div class="form-group">
-        <label for="message">Message *</label>
-        <textarea id="message" name="message" required placeholder="Votre message..." style="min-height: 180px;"></textarea>
+        <label for="message">{{ _("Message") }} *</label>
+        <textarea id="message" name="message" required placeholder="{{ _('Your message...') }}" style="min-height: 180px;"></textarea>
       </div>
 
       <div style="margin-top: 32px; padding: 20px; background: var(--bg-light); border-radius: var(--radius); border-left: 4px solid var(--primary-color);">
         <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6;">
-          <strong>Note :</strong> Cette démo ne sauvegarde pas les données. Dans une version complète, votre message serait envoyé et vous recevriez une réponse sous 24h.
+          <strong>{{ _("Note:") }}</strong> {{ _("This demo does not save data. In a complete version, your message would be sent and you would receive a response within 24 hours.") }}
         </p>
       </div>
 
       <div style="margin-top: 32px; display: flex; gap: 16px;">
-        <button type="submit" class="btn-primary" style="flex: 1;">Envoyer le message</button>
-        <a href="/" class="btn-secondary" style="flex: 1; text-align: center;">Retour à l'accueil</a>
+        <button type="submit" class="btn-primary" style="flex: 1;">{{ _("Send message") }}</button>
+        <a href="/" class="btn-secondary" style="flex: 1; text-align: center;">{{ _("Back to home") }}</a>
       </div>
     </form>
 
     <div style="margin-top: 60px; padding-top: 40px; border-top: 1px solid var(--border-color);">
-      <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; text-align: center;">Questions fréquentes</h2>
+      <h2 style="font-size: 24px; font-weight: 700; margin-bottom: 16px; text-align: center;">{{ _("Frequently asked questions") }}</h2>
       
       <div style="margin-top: 32px;">
         <details style="margin-bottom: 16px; padding: 20px; background: var(--bg-white); border-radius: var(--radius); border: 1px solid var(--border-color);">
-          <summary style="font-weight: 600; color: var(--text-dark); cursor: pointer;">Comment publier une annonce ?</summary>
+          <summary style="font-weight: 600; color: var(--text-dark); cursor: pointer;">{{ _("How to publish a listing?") }}</summary>
           <p style="margin-top: 12px; color: var(--text-gray); line-height: 1.6;">
-            Rendez-vous sur la page "Déposer une annonce", remplissez le formulaire avec les détails de votre équipement. Votre annonce sera validée et publiée sous 24h.
+            {{ _("Go to the \"Post a listing\" page, fill in the form with your equipment details. Your listing will be validated and published within 24 hours.") }}
           </p>
         </details>
 
         <details style="margin-bottom: 16px; padding: 20px; background: var(--bg-white); border-radius: var(--radius); border: 1px solid var(--border-color);">
-          <summary style="font-weight: 600; color: var(--text-dark); cursor: pointer;">Les annonces sont-elles gratuites ?</summary>
+          <summary style="font-weight: 600; color: var(--text-dark); cursor: pointer;">{{ _("Are listings free?") }}</summary>
           <p style="margin-top: 12px; color: var(--text-gray); line-height: 1.6;">
-            Oui, la publication et la consultation des annonces sont entièrement gratuites pour favoriser les échanges entre professionnels.
+            {{ _("Yes, publishing and browsing listings are completely free to encourage exchanges between professionals.") }}
           </p>
         </details>
 
         <details style="margin-bottom: 16px; padding: 20px; background: var(--bg-white); border-radius: var(--radius); border: 1px solid var(--border-color);">
-          <summary style="font-weight: 600; color: var(--text-dark); cursor: pointer;">Quels équipements puis-je trouver ?</summary>
+          <summary style="font-weight: 600; color: var(--text-dark); cursor: pointer;">{{ _("What equipment can I find?") }}</summary>
           <p style="margin-top: 12px; color: var(--text-gray); line-height: 1.6;">
-            Tous types d'équipements pour méthanisation et biogaz : agitation, pompage, épuration, cogénération, automatisme, instrumentation, etc.
+            {{ _("All types of equipment for methanization and biogas: agitation, pumping, purification, cogeneration, automation, instrumentation, etc.") }}
           </p>
         </details>
 
         <details style="padding: 20px; background: var(--bg-white); border-radius: var(--radius); border: 1px solid var(--border-color);">
-          <summary style="font-weight: 600; color: var(--text-dark); cursor: pointer;">Couvrez-vous toute l'Europe ?</summary>
+          <summary style="font-weight: 600; color: var(--text-dark); cursor: pointer;">{{ _("Do you cover all of Europe?") }}</summary>
           <p style="margin-top: 12px; color: var(--text-gray); line-height: 1.6;">
-            Oui, notre plateforme couvre la France et l'ensemble de l'Europe (Belgique, Allemagne, etc.). Les vendeurs et acheteurs peuvent être situés partout en Europe.
+            {{ _("Yes, our platform covers France and all of Europe (Belgium, Germany, etc.). Sellers and buyers can be located anywhere in Europe.") }}
           </p>
         </details>
       </div>

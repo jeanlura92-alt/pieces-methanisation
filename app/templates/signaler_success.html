@@ -10,12 +10,12 @@
       </div>
     </div>
 
-    <h1 style="font-size: 32px; margin-bottom: 16px;">Signalement envoyé !</h1>
-    <p class="subtitle" style="font-size: 18px; margin-bottom: 40px;">Merci d'avoir pris le temps de nous signaler ce contenu.</p>
+    <h1 style="font-size: 32px; margin-bottom: 16px;">{{ _("Report sent!") }}</h1>
+    <p class="subtitle" style="font-size: 18px; margin-bottom: 40px;">{{ _("Thank you for taking the time to report this content.") }}</p>
 
     <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); text-align: left; margin-bottom: 32px;">
       <h2 style="font-size: 20px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; text-align: center;">
-        📋 Prochaines étapes
+        📋 {{ _("Next steps") }}
       </h2>
       
       <div style="line-height: 1.8; color: var(--text-dark);">
@@ -24,9 +24,9 @@
             <span style="font-size: 20px; color: white; font-weight: 700;">1</span>
           </div>
           <div>
-            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Réception de votre signalement</h4>
+            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">{{ _("Receipt of your report") }}</h4>
             <p style="font-size: 15px; color: var(--text-gray); margin: 0;">
-              Votre signalement a été enregistré et sera examiné par notre équipe de modération.
+              {{ _("Your report has been recorded and will be reviewed by our moderation team.") }}
             </p>
           </div>
         </div>
@@ -36,9 +36,9 @@
             <span style="font-size: 20px; color: white; font-weight: 700;">2</span>
           </div>
           <div>
-            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Examen sous 48 à 72 heures</h4>
+            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">{{ _("Review within 48 to 72 hours") }}</h4>
             <p style="font-size: 15px; color: var(--text-gray); margin: 0;">
-              Notre équipe analysera le contenu signalé et vérifiera s'il enfreint nos conditions d'utilisation ou la législation en vigueur.
+              {{ _("Our team will analyze the reported content and verify if it violates our terms of use or applicable legislation.") }}
             </p>
           </div>
         </div>
@@ -48,9 +48,9 @@
             <span style="font-size: 20px; color: white; font-weight: 700;">3</span>
           </div>
           <div>
-            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">Décision et notification</h4>
+            <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 8px;">{{ _("Decision and notification") }}</h4>
             <p style="font-size: 15px; color: var(--text-gray); margin: 0;">
-              Si l'annonce est jugée non conforme, elle sera retirée. Si vous avez fourni votre email, nous vous informerons de la décision prise.
+              {{ _("If the listing is found non-compliant, it will be removed. If you provided your email, we will inform you of the decision made.") }}
             </p>
           </div>
         </div>
@@ -58,29 +58,29 @@
     </div>
 
     <div style="background: var(--bg-light); padding: 24px; border-radius: var(--radius); border-left: 4px solid var(--secondary-color); text-align: left; margin-bottom: 40px;">
-      <h4 style="font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 12px;">ℹ️ Informations importantes</h4>
+      <h4 style="font-size: 15px; font-weight: 700; color: var(--text-dark); margin-bottom: 12px;">ℹ️ {{ _("Important information") }}</h4>
       <ul style="font-size: 14px; color: var(--text-gray); line-height: 1.7; margin-left: 20px; text-align: left;">
-        <li style="margin-bottom: 8px;">Les signalements sont traités dans l'ordre de réception</li>
-        <li style="margin-bottom: 8px;">En cas de forte affluence, le délai peut être légèrement supérieur à 72 heures</li>
-        <li style="margin-bottom: 8px;">Les signalements abusifs ou répétés peuvent entraîner des sanctions</li>
-        <li>Votre contribution aide à maintenir une plateforme sûre et fiable pour tous les professionnels</li>
+        <li style="margin-bottom: 8px;">{{ _("Reports are processed in the order received") }}</li>
+        <li style="margin-bottom: 8px;">{{ _("In case of high volume, the delay may be slightly longer than 72 hours") }}</li>
+        <li style="margin-bottom: 8px;">{{ _("Abusive or repeated reports may result in sanctions") }}</li>
+        <li>{{ _("Your contribution helps maintain a safe and reliable platform for all professionals") }}</li>
       </ul>
     </div>
 
     <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 16px; align-items: center;">
-      <a href="/" class="btn-primary" style="display: inline-block; padding: 14px 32px; text-decoration: none; min-width: 250px;">🏠 Retour à l'accueil</a>
-      <a href="/annonces" class="btn-secondary" style="display: inline-block; padding: 14px 32px; text-decoration: none; min-width: 250px;">📋 Voir les annonces</a>
+      <a href="/" class="btn-primary" style="display: inline-block; padding: 14px 32px; text-decoration: none; min-width: 250px;">🏠 {{ _("Back to home") }}</a>
+      <a href="/annonces" class="btn-secondary" style="display: inline-block; padding: 14px 32px; text-decoration: none; min-width: 250px;">📋 {{ _("View listings") }}</a>
     </div>
 
     <div style="margin-top: 60px; padding-top: 32px; border-top: 1px solid var(--border-color);">
-      <h3 style="font-size: 18px; font-weight: 700; color: var(--text-dark); margin-bottom: 16px;">Besoin d'aide ?</h3>
+      <h3 style="font-size: 18px; font-weight: 700; color: var(--text-dark); margin-bottom: 16px;">{{ _("Need help?") }}</h3>
       <p style="font-size: 15px; color: var(--text-gray); line-height: 1.7; margin-bottom: 16px;">
-        Si vous avez des questions concernant le traitement de votre signalement ou le fonctionnement de notre plateforme :
+        {{ _("If you have questions about the processing of your report or the operation of our platform:") }}
       </p>
       <div style="display: flex; justify-content: center; gap: 24px; flex-wrap: wrap;">
-        <a href="/contact" style="color: var(--primary-color); text-decoration: underline; font-weight: 600; font-size: 15px;">📧 Nous contacter</a>
-        <a href="/comment-ca-marche" style="color: var(--primary-color); text-decoration: underline; font-weight: 600; font-size: 15px;">📖 Comment ça marche</a>
-        <a href="/cgv" style="color: var(--primary-color); text-decoration: underline; font-weight: 600; font-size: 15px;">📜 CGV/CGU</a>
+        <a href="/contact" style="color: var(--primary-color); text-decoration: underline; font-weight: 600; font-size: 15px;">📧 {{ _("Contact us") }}</a>
+        <a href="/comment-ca-marche" style="color: var(--primary-color); text-decoration: underline; font-weight: 600; font-size: 15px;">📖 {{ _("How it works") }}</a>
+        <a href="/cgv" style="color: var(--primary-color); text-decoration: underline; font-weight: 600; font-size: 15px;">📜 {{ _("Terms and Conditions") }}</a>
       </div>
     </div>
 

@@ -3,73 +3,69 @@
 {% block content %}
 <section class="form-page">
   <div class="form-container" style="max-width: 1000px;">
-    <h1>Politique de Gestion des Cookies</h1>
-    <p class="subtitle">Conformité ePrivacy - Information et gestion des cookies</p>
+    <h1>{{ _("Cookie Management Policy") }}</h1>
+    <p class="subtitle">{{ _("ePrivacy Compliance - Cookie information and management") }}</p>
 
     <div style="margin-top: 40px;">
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          1. Qu'est-ce qu'un cookie ?
+          {{ _("1. What is a cookie?") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Un cookie est un <strong>petit fichier texte</strong> déposé sur votre terminal (ordinateur, tablette, smartphone) lors de votre visite sur notre site web. 
-            Il permet de mémoriser des informations relatives à votre navigation et d'améliorer votre expérience utilisateur.
+            {{ _("A cookie is a <strong>small text file</strong> stored on your device (computer, tablet, smartphone) when you visit our website. It stores information about your browsing and improves your user experience.") }}
           </p>
           <p style="margin-bottom: 16px;">
-            Les cookies peuvent être déposés par notre site (<strong>cookies internes</strong>) ou par des services tiers que nous utilisons 
-            (<strong>cookies tiers</strong>, par exemple Stripe pour les paiements).
+            {{ _("Cookies can be set by our site (<strong>internal cookies</strong>) or by third-party services we use (<strong>third-party cookies</strong>, such as Stripe for payments).") }}
           </p>
           <p>
-            Conformément à la <strong>directive ePrivacy (2002/58/CE)</strong> et à son application en droit français (article 82 de la loi Informatique et Libertés), 
-            nous sommes tenus de vous informer de l'utilisation de cookies et de recueillir votre consentement pour certains d'entre eux.
+            {{ _("In accordance with the <strong>ePrivacy Directive (2002/58/EC)</strong> and its application in French law (article 82 of the Data Protection Act), we are required to inform you about the use of cookies and obtain your consent for some of them.") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          2. Cookies strictement nécessaires (sans consentement)
+          {{ _("2. Strictly necessary cookies (without consent)") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Ces cookies sont <strong>indispensables au fonctionnement du site</strong> et ne peuvent pas être désactivés. 
-            Ils ne nécessitent <strong>pas de consentement préalable</strong> conformément aux recommandations de la CNIL.
+            {{ _("These cookies are <strong>essential for the site to function</strong> and cannot be disabled. They do <strong>not require prior consent</strong> in accordance with CNIL recommendations.") }}
           </p>
           
           <div style="overflow-x: auto; margin-top: 20px;">
             <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
               <thead>
                 <tr style="background: var(--bg-light); border-bottom: 2px solid var(--border-color);">
-                  <th style="padding: 12px; text-align: left; font-weight: 700;">Nom du cookie</th>
-                  <th style="padding: 12px; text-align: left; font-weight: 700;">Finalité</th>
-                  <th style="padding: 12px; text-align: left; font-weight: 700;">Durée</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">{{ _("Cookie name") }}</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">{{ _("Purpose") }}</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">{{ _("Duration") }}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr style="border-bottom: 1px solid var(--border-color);">
                   <td style="padding: 12px;"><code>session</code></td>
                   <td style="padding: 12px;">
-                    Cookie de session Flask permettant de maintenir votre session active pendant la navigation (ex : formulaire multi-étapes)
+                    {{ _("Flask session cookie to maintain your active session while browsing (e.g., multi-step form)") }}
                   </td>
-                  <td style="padding: 12px;">Session (supprimé à la fermeture du navigateur)</td>
+                  <td style="padding: 12px;">{{ _("Session (deleted when browser is closed)") }}</td>
                 </tr>
                 <tr style="border-bottom: 1px solid var(--border-color);">
                   <td style="padding: 12px;"><code>csrf_token</code></td>
                   <td style="padding: 12px;">
-                    Protection contre les attaques CSRF (Cross-Site Request Forgery) pour sécuriser vos formulaires
+                    {{ _("Protection against CSRF (Cross-Site Request Forgery) attacks to secure your forms") }}
                   </td>
-                  <td style="padding: 12px;">Session</td>
+                  <td style="padding: 12px;">{{ _("Session") }}</td>
                 </tr>
                 <tr>
                   <td style="padding: 12px;"><code>cookie_consent</code></td>
                   <td style="padding: 12px;">
-                    Mémorisation de vos préférences en matière de cookies (acceptation/refus)
+                    {{ _("Storage of your cookie preferences (acceptance/refusal)") }}
                   </td>
-                  <td style="padding: 12px;">13 mois</td>
+                  <td style="padding: 12px;">{{ _("13 months") }}</td>
                 </tr>
               </tbody>
             </table>
@@ -79,31 +75,30 @@
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          3. Cookies analytiques (consentement requis)
+          {{ _("3. Analytical cookies (consent required)") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Ces cookies nous permettent d'analyser l'utilisation du site et d'améliorer nos services. 
-            <strong>Votre consentement est requis</strong> avant leur activation.
+            {{ _("These cookies allow us to analyze site usage and improve our services. <strong>Your consent is required</strong> before they are activated.") }}
           </p>
           
           <div style="overflow-x: auto; margin-top: 20px;">
             <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
               <thead>
                 <tr style="background: var(--bg-light); border-bottom: 2px solid var(--border-color);">
-                  <th style="padding: 12px; text-align: left; font-weight: 700;">Service</th>
-                  <th style="padding: 12px; text-align: left; font-weight: 700;">Finalité</th>
-                  <th style="padding: 12px; text-align: left; font-weight: 700;">Durée</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">{{ _("Service") }}</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">{{ _("Purpose") }}</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">{{ _("Duration") }}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td style="padding: 12px;"><strong>Google Analytics</strong> (si activé)</td>
+                  <td style="padding: 12px;"><strong>{{ _("Google Analytics") }}</strong> {{ _("(if enabled)") }}</td>
                   <td style="padding: 12px;">
-                    Mesure d'audience : pages vues, durée de visite, provenance géographique (données anonymisées)
+                    {{ _("Audience measurement: page views, visit duration, geographic origin (anonymized data)") }}
                   </td>
-                  <td style="padding: 12px;">26 mois</td>
+                  <td style="padding: 12px;">{{ _("26 months") }}</td>
                 </tr>
               </tbody>
             </table>
@@ -111,8 +106,7 @@
           
           <div style="margin-top: 20px; padding: 16px; background: var(--bg-light); border-radius: var(--radius); border-left: 4px solid var(--primary-color);">
             <p style="font-size: 14px; color: var(--text-dark); margin: 0;">
-              ℹ️ <strong>Actuellement, aucun cookie analytique n'est activé sur ce site.</strong> 
-              Si nous décidons d'en utiliser à l'avenir, vous serez informé et pourrez gérer vos préférences via le bandeau de cookies.
+              {{ _("ℹ️ <strong>Currently, no analytical cookies are enabled on this site.</strong> If we decide to use them in the future, you will be informed and can manage your preferences via the cookie banner.") }}
             </p>
           </div>
         </div>
@@ -120,31 +114,30 @@
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          4. Cookies tiers - Stripe (consentement requis)
+          {{ _("4. Third-party cookies - Stripe (consent required)") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Notre site utilise <strong>Stripe</strong> pour le traitement sécurisé des paiements en ligne. 
-            Stripe peut déposer des cookies sur votre terminal pour prévenir la fraude et sécuriser les transactions.
+            {{ _("Our site uses <strong>Stripe</strong> for secure online payment processing. Stripe may set cookies on your device to prevent fraud and secure transactions.") }}
           </p>
           
           <div style="overflow-x: auto; margin-top: 20px;">
             <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
               <thead>
                 <tr style="background: var(--bg-light); border-bottom: 2px solid var(--border-color);">
-                  <th style="padding: 12px; text-align: left; font-weight: 700;">Service</th>
-                  <th style="padding: 12px; text-align: left; font-weight: 700;">Finalité</th>
-                  <th style="padding: 12px; text-align: left; font-weight: 700;">Durée</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">{{ _("Service") }}</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">{{ _("Purpose") }}</th>
+                  <th style="padding: 12px; text-align: left; font-weight: 700;">{{ _("Duration") }}</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td style="padding: 12px;"><strong>Stripe Checkout</strong></td>
+                  <td style="padding: 12px;"><strong>{{ _("Stripe Checkout") }}</strong></td>
                   <td style="padding: 12px;">
-                    Traitement des paiements, détection de fraude, mémorisation des informations de paiement (avec votre accord)
+                    {{ _("Payment processing, fraud detection, storing payment information (with your agreement)") }}
                   </td>
-                  <td style="padding: 12px;">Variable (1 à 12 mois selon le type de cookie)</td>
+                  <td style="padding: 12px;">{{ _("Variable (1 to 12 months depending on cookie type)") }}</td>
                 </tr>
               </tbody>
             </table>
@@ -152,13 +145,12 @@
           
           <div style="margin-top: 20px; padding: 16px; background: #FFF9E5; border-radius: var(--radius); border-left: 4px solid #FFA500;">
             <p style="font-size: 14px; color: var(--text-dark); margin: 0;">
-              ⚠️ <strong>Important :</strong> Si vous refusez les cookies Stripe, vous ne pourrez pas effectuer de paiement sur notre plateforme. 
-              Les cookies Stripe sont nécessaires au bon fonctionnement du processus de paiement sécurisé.
+              {{ _("⚠️ <strong>Important:</strong> If you refuse Stripe cookies, you will not be able to make payments on our platform. Stripe cookies are necessary for the secure payment process to function properly.") }}
             </p>
           </div>
           
           <p style="margin-top: 20px; margin-bottom: 0;">
-            Pour en savoir plus sur la politique de confidentialité de Stripe : 
+            {{ _("To learn more about Stripe's privacy policy:") }} 
             <a href="https://stripe.com/fr/privacy" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline; font-weight: 600;">
               https://stripe.com/fr/privacy ↗
             </a>
@@ -168,50 +160,49 @@
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          5. Comment gérer vos préférences de cookies ?
+          {{ _("5. How to manage your cookie preferences?") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">5.1. Via notre bandeau de consentement</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("5.1. Via our consent banner") }}</h3>
           <p style="margin-bottom: 16px;">
-            Lors de votre première visite, un bandeau de consentement s'affiche en bas de page. Vous pouvez :
+            {{ _("On your first visit, a consent banner appears at the bottom of the page. You can:") }}
           </p>
           <ul style="margin-left: 24px; margin-bottom: 20px;">
-            <li style="margin-bottom: 8px;"><strong>Accepter tous les cookies</strong> : Active tous les cookies (essentiels + analytiques + tiers)</li>
-            <li style="margin-bottom: 8px;"><strong>Refuser tous les cookies non essentiels</strong> : Seuls les cookies strictement nécessaires sont activés</li>
-            <li><strong>Personnaliser vos préférences</strong> : Choisissez catégorie par catégorie les cookies que vous acceptez</li>
+            <li style="margin-bottom: 8px;">{{ _("<strong>Accept all cookies</strong>: Activates all cookies (essential + analytical + third-party)") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("<strong>Refuse all non-essential cookies</strong>: Only strictly necessary cookies are activated") }}</li>
+            <li>{{ _("<strong>Customize your preferences</strong>: Choose category by category which cookies you accept") }}</li>
           </ul>
           <p style="margin-bottom: 20px;">
-            Vous pouvez modifier vos préférences à tout moment en cliquant sur le lien "Gérer les cookies" présent en bas de chaque page.
+            {{ _("You can change your preferences at any time by clicking on the 'Manage cookies' link at the bottom of each page.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">5.2. Via les paramètres de votre navigateur</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("5.2. Via your browser settings") }}</h3>
           <p style="margin-bottom: 16px;">
-            Vous pouvez également configurer votre navigateur pour refuser automatiquement les cookies ou être alerté lorsqu'un cookie est déposé. 
-            Voici les liens vers les guides de configuration des principaux navigateurs :
+            {{ _("You can also configure your browser to automatically refuse cookies or be alerted when a cookie is set. Here are links to configuration guides for major browsers:") }}
           </p>
           
           <ul style="margin-left: 24px; margin-bottom: 20px;">
             <li style="margin-bottom: 8px;">
-              <strong>Google Chrome :</strong> 
+              <strong>{{ _("Google Chrome:") }}</strong> 
               <a href="https://support.google.com/chrome/answer/95647?hl=fr" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">
                 support.google.com/chrome/answer/95647 ↗
               </a>
             </li>
             <li style="margin-bottom: 8px;">
-              <strong>Mozilla Firefox :</strong> 
+              <strong>{{ _("Mozilla Firefox:") }}</strong> 
               <a href="https://support.mozilla.org/fr/kb/activer-desactiver-cookies" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">
                 support.mozilla.org/fr/kb/activer-desactiver-cookies ↗
               </a>
             </li>
             <li style="margin-bottom: 8px;">
-              <strong>Microsoft Edge :</strong> 
+              <strong>{{ _("Microsoft Edge:") }}</strong> 
               <a href="https://support.microsoft.com/fr-fr/microsoft-edge/supprimer-les-cookies-dans-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">
                 support.microsoft.com/fr-fr/microsoft-edge ↗
               </a>
             </li>
             <li style="margin-bottom: 8px;">
-              <strong>Safari :</strong> 
+              <strong>{{ _("Safari:") }}</strong> 
               <a href="https://support.apple.com/fr-fr/guide/safari/sfri11471/mac" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">
                 support.apple.com/fr-fr/guide/safari ↗
               </a>
@@ -220,8 +211,7 @@
 
           <div style="padding: 16px; background: #FFE5E5; border-radius: var(--radius); border-left: 4px solid #FF0000;">
             <p style="font-size: 14px; color: var(--text-dark); margin: 0;">
-              ⚠️ <strong>Attention :</strong> La désactivation de certains cookies peut impacter votre expérience de navigation et limiter l'accès à certaines fonctionnalités du site 
-              (par exemple : impossibilité de finaliser un paiement si les cookies Stripe sont bloqués).
+              {{ _("⚠️ <strong>Warning:</strong> Disabling certain cookies may impact your browsing experience and limit access to certain site features (for example: inability to complete payment if Stripe cookies are blocked).") }}
             </p>
           </div>
         </div>
@@ -229,47 +219,45 @@
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          6. Durée de conservation des cookies
+          {{ _("6. Cookie retention period") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Conformément aux recommandations de la CNIL, la durée de validité de votre consentement (ou refus) est de <strong>13 mois maximum</strong>. 
-            Au-delà de cette durée, votre consentement vous sera redemandé.
+            {{ _("In accordance with CNIL recommendations, the validity period of your consent (or refusal) is <strong>13 months maximum</strong>. After this period, your consent will be requested again.") }}
           </p>
           <p>
-            Les cookies déposés avec votre consentement ont une durée de vie variable selon leur finalité, 
-            mais ne peuvent excéder <strong>13 mois</strong> pour les cookies de mesure d'audience.
+            {{ _("Cookies set with your consent have a variable lifespan depending on their purpose, but cannot exceed <strong>13 months</strong> for audience measurement cookies.") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          7. Contact et réclamation
+          {{ _("7. Contact and complaints") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Pour toute question concernant notre politique de cookies, vous pouvez nous contacter à :
+            {{ _("For any questions regarding our cookie policy, you can contact us at:") }}
           </p>
           <ul style="margin-left: 24px; margin-bottom: 20px;">
-            <li style="margin-bottom: 8px;"><strong>Email :</strong> privacy@pieces-methanisation.fr</li>
-            <li><strong>Formulaire de contact :</strong> <a href="/contact" style="color: var(--primary-color); text-decoration: underline; font-weight: 600;">/contact</a></li>
+            <li style="margin-bottom: 8px;"><strong>{{ _("Email:") }}</strong> privacy@pieces-methanisation.fr</li>
+            <li><strong>{{ _("Contact form:") }}</strong> <a href="/contact" style="color: var(--primary-color); text-decoration: underline; font-weight: 600;">/contact</a></li>
           </ul>
           
           <p style="margin-bottom: 16px;">
-            Si vous estimez que vos droits ne sont pas respectés, vous pouvez également introduire une réclamation auprès de la <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés) :
+            {{ _("If you believe your rights are not being respected, you can also file a complaint with the <strong>CNIL</strong> (Commission Nationale de l'Informatique et des Libertés):") }}
           </p>
           <ul style="margin-left: 24px;">
             <li style="margin-bottom: 8px;">
-              <strong>En ligne :</strong> 
+              <strong>{{ _("Online:") }}</strong> 
               <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">
                 www.cnil.fr/fr/plaintes ↗
               </a>
             </li>
             <li>
-              <strong>Par courrier :</strong> CNIL - 3 Place de Fontenoy - TSA 80715 - 75334 PARIS CEDEX 07
+              <strong>{{ _("By mail:") }}</strong> {{ _("CNIL - 3 Place de Fontenoy - TSA 80715 - 75334 PARIS CEDEX 07") }}
             </li>
           </ul>
         </div>
@@ -277,22 +265,20 @@
 
       <div style="margin-top: 40px; padding: 24px; background: var(--bg-light); border-radius: var(--radius); border-left: 4px solid var(--secondary-color);">
         <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin: 0;">
-          <strong>📌 Résumé :</strong> Nous utilisons principalement des cookies strictement nécessaires au fonctionnement du site. 
-          Les cookies tiers (Stripe) ne sont déposés que lors du processus de paiement. Vous gardez le contrôle total sur vos préférences de cookies 
-          et pouvez les modifier à tout moment.
+          {{ _("<strong>📌 Summary:</strong> We primarily use cookies strictly necessary for the site to function. Third-party cookies (Stripe) are only set during the payment process. You maintain full control over your cookie preferences and can change them at any time.") }}
         </p>
       </div>
 
       <div style="margin-top: 32px; text-align: center;">
         <p style="font-size: 13px; color: var(--text-light);">
-          Dernière mise à jour : Février 2026
+          {{ _("Last updated: February 2026") }}
         </p>
       </div>
 
     </div>
 
     <div style="margin-top: 40px; display: flex; justify-content: center;">
-      <a href="/" class="btn-secondary">← Retour à l'accueil</a>
+      <a href="/" class="btn-secondary">{{ _("← Back to home") }}</a>
     </div>
   </div>
 </section>

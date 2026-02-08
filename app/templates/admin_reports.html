@@ -4,13 +4,12 @@
 <section class="form-page">
   <div class="container-wide" style="max-width: 1400px;">
     <div style="margin-bottom: 40px;">
-      <h1>Dashboard Admin - Gestion des Signalements</h1>
-      <p class="subtitle">Gestion des signalements conformément au Digital Services Act (DSA)</p>
+      <h1>{{ _("Admin Dashboard - Report Management") }}</h1>
+      <p class="subtitle">{{ _("Report management in compliance with the Digital Services Act (DSA)") }}</p>
       
       <div style="margin-top: 24px; padding: 20px; background: #fffbeb; border-radius: var(--radius); border-left: 4px solid #f59e0b;">
         <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin: 0;">
-          <strong>⚠️ Note :</strong> Cette page devrait être protégée par une authentification administrateur en production. 
-          Actuellement accessible sans authentification pour les besoins de démonstration.
+          <strong>⚠️ {{ _("Note:") }}</strong> {{ _("This page should be protected by administrator authentication in production. Currently accessible without authentication for demonstration purposes.") }}
         </p>
       </div>
     </div>
@@ -19,19 +18,19 @@
     <div class="stats" style="margin-bottom: 40px;">
       <div class="stat-card">
         <span class="stat-number">{{ status_counts.total }}</span>
-        <span class="stat-label">Total</span>
+        <span class="stat-label">{{ _("Total") }}</span>
       </div>
       <div class="stat-card">
         <span class="stat-number" style="color: #f59e0b;">{{ status_counts.new }}</span>
-        <span class="stat-label">Nouveaux</span>
+        <span class="stat-label">{{ _("New") }}</span>
       </div>
       <div class="stat-card">
         <span class="stat-number" style="color: #3b82f6;">{{ status_counts.reviewed }}</span>
-        <span class="stat-label">En cours</span>
+        <span class="stat-label">{{ _("In progress") }}</span>
       </div>
       <div class="stat-card">
         <span class="stat-number" style="color: #10b981;">{{ status_counts.resolved }}</span>
-        <span class="stat-label">Résolus</span>
+        <span class="stat-label">{{ _("Resolved") }}</span>
       </div>
     </div>
 
@@ -39,7 +38,7 @@
     <div style="margin-bottom: 32px; display: flex; gap: 12px; flex-wrap: wrap;">
       <a href="/admin/reports" class="btn-secondary {% if not current_filter %}btn-primary{% endif %}" 
          style="{% if not current_filter %}background: var(--primary-color); color: white;{% endif %}">
-        Tous
+        {{ _("All") }}
       </a>
       <a href="/admin/reports?status=new" class="btn-secondary {% if current_filter == 'new' %}btn-primary{% endif %}"
          style="{% if current_filter == 'new' %}background: #f59e0b; color: white;{% endif %}">
@@ -61,13 +60,13 @@
       <table style="width: 100%; border-collapse: collapse;">
         <thead style="background: var(--bg-light); border-bottom: 2px solid var(--border-color);">
           <tr>
-            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">Date</th>
-            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">URL signalée</th>
-            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">Motif</th>
-            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">Description</th>
-            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">Email</th>
-            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">Statut</th>
-            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">Actions</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">{{ _("Date") }}</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">{{ _("Reported URL") }}</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">{{ _("Reason") }}</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">{{ _("Description") }}</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">{{ _("Email") }}</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">{{ _("Status") }}</th>
+            <th style="padding: 16px; text-align: left; font-weight: 600; font-size: 14px; color: var(--text-dark);">{{ _("Actions") }}</th>
           </tr>
         </thead>
         <tbody>
@@ -93,15 +92,15 @@
               </div>
             </td>
             <td style="padding: 16px; font-size: 14px; color: var(--text-gray);">
-              {{ report.reporter_email if report.reporter_email else 'Anonyme' }}
+              {{ report.reporter_email if report.reporter_email else _('Anonymous') }}
             </td>
             <td style="padding: 16px;">
               {% if report.status == 'new' %}
-              <span class="badge" style="background: #fef3c7; color: #92400e;">Nouveau</span>
+              <span class="badge" style="background: #fef3c7; color: #92400e;">{{ _("New") }}</span>
               {% elif report.status == 'reviewed' %}
-              <span class="badge" style="background: #dbeafe; color: #1e40af;">En cours</span>
+              <span class="badge" style="background: #dbeafe; color: #1e40af;">{{ _("In progress") }}</span>
               {% elif report.status == 'resolved' %}
-              <span class="badge" style="background: #d1fae5; color: #065f46;">Résolu</span>
+              <span class="badge" style="background: #d1fae5; color: #065f46;">{{ _("Resolved") }}</span>
               {% else %}
               <span class="badge">{{ report.status }}</span>
               {% endif %}
@@ -110,10 +109,10 @@
               <form method="post" action="/admin/reports/{{ report.id }}/update-status" style="display: inline-block;">
                 <select name="status" onchange="this.form.submit()" 
                         style="padding: 6px 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 13px;">
-                  <option value="">Changer...</option>
-                  <option value="new" {% if report.status == 'new' %}disabled{% endif %}>Nouveau</option>
-                  <option value="reviewed" {% if report.status == 'reviewed' %}disabled{% endif %}>En cours</option>
-                  <option value="resolved" {% if report.status == 'resolved' %}disabled{% endif %}>Résolu</option>
+                  <option value="">{{ _("Change...") }}</option>
+                  <option value="new" {% if report.status == 'new' %}disabled{% endif %}>{{ _("New") }}</option>
+                  <option value="reviewed" {% if report.status == 'reviewed' %}disabled{% endif %}>{{ _("In progress") }}</option>
+                  <option value="resolved" {% if report.status == 'resolved' %}disabled{% endif %}>{{ _("Resolved") }}</option>
                 </select>
               </form>
             </td>
@@ -126,19 +125,19 @@
     <div style="text-align: center; padding: 60px 20px; background: var(--bg-white); border-radius: var(--radius-lg); box-shadow: var(--shadow);">
       <p style="font-size: 18px; color: var(--text-gray); margin-bottom: 16px;">
         {% if current_filter %}
-        Aucun signalement avec le statut "{{ current_filter }}"
+        {{ _("No reports with status") }} "{{ current_filter }}"
         {% else %}
-        Aucun signalement pour le moment
+        {{ _("No reports at the moment") }}
         {% endif %}
       </p>
       <p style="font-size: 14px; color: var(--text-light);">
-        Les utilisateurs peuvent signaler des annonces via la page <a href="/signaler" style="color: var(--primary-color); text-decoration: underline;">/signaler</a>
+        {{ _("Users can report listings via the") }} <a href="/signaler" style="color: var(--primary-color); text-decoration: underline;">/signaler</a> {{ _("page") }}
       </p>
     </div>
     {% endif %}
 
     <div style="margin-top: 40px; display: flex; justify-content: center;">
-      <a href="/" class="btn-secondary">← Retour à l'accueil</a>
+      <a href="/" class="btn-secondary">← {{ _("Back to home") }}</a>
     </div>
 
   </div>

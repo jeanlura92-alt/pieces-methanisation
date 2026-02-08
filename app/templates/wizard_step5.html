@@ -1,62 +1,60 @@
 {% extends "wizard_base.html" %}
 
 {% block wizard_content %}
-<h1>Déposer une annonce - Étape 5/5</h1>
-<p class="subtitle">Vérifiez vos informations et ajoutez vos coordonnées</p>
+<h1>{{ _("Post a listing - Step 5/5") }}</h1>
+<p class="subtitle">{{ _("Review your information and add your contact details") }}</p>
 
 <form method="post" action="/deposer/step5">
   <input type="hidden" name="listing_id" value="{{ draft.id }}" />
   <div style="background: var(--bg-light); padding: 24px; border-radius: var(--radius); margin-bottom: 32px;">
-    <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 16px;">Récapitulatif de votre annonce</h3>
+    <h3 style="font-size: 18px; font-weight: 700; margin-bottom: 16px;">{{ _("Summary of your listing") }}</h3>
     
     <div style="display: grid; gap: 12px;">
-      <div><strong>Titre :</strong> {{ draft.title }}</div>
-      <div><strong>Type :</strong> {{ draft.listing_type }}</div>
-      <div><strong>Catégorie :</strong> {{ draft.category }}</div>
-      <div><strong>État :</strong> {{ draft.condition }}</div>
+      <div><strong>{{ _("Title:") }}</strong> {{ draft.title }}</div>
+      <div><strong>{{ _("Type:") }}</strong> {{ draft.listing_type }}</div>
+      <div><strong>{{ _("Category:") }}</strong> {{ draft.category }}</div>
+      <div><strong>{{ _("Condition:") }}</strong> {{ draft.condition }}</div>
       {% if draft.year %}
-      <div><strong>Année :</strong> {{ draft.year }}</div>
+      <div><strong>{{ _("Year:") }}</strong> {{ draft.year }}</div>
       {% endif %}
       {% if draft.manufacturer %}
-      <div><strong>Fabricant :</strong> {{ draft.manufacturer }}</div>
+      <div><strong>{{ _("Manufacturer:") }}</strong> {{ draft.manufacturer }}</div>
       {% endif %}
-      <div><strong>Prix :</strong> {{ draft.price_display }}</div>
-      <div><strong>Localisation :</strong> {{ draft.location }}</div>
+      <div><strong>{{ _("Price:") }}</strong> {{ draft.price_display }}</div>
+      <div><strong>{{ _("Location:") }}</strong> {{ draft.location }}</div>
     </div>
     
     <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-color);">
       <p style="font-size: 14px; color: var(--text-gray); margin: 0;">
-        <strong>Résumé :</strong> {{ draft.summary }}
+        <strong>{{ _("Summary:") }}</strong> {{ draft.summary }}
       </p>
     </div>
   </div>
 
-  <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">Informations de contact</h3>
+  <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 20px;">{{ _("Contact information") }}</h3>
   
   <div class="form-grid">
     <div class="form-group">
-      <label for="contact_email">Email *</label>
+      <label for="contact_email">{{ _("Email") }} *</label>
       <input type="email" id="contact_email" name="contact_email" required 
-             placeholder="votre@email.fr"
+             placeholder="{{ _('your@email.com') }}"
              value="{{ draft.contact_email if draft and draft.contact_email else '' }}" />
     </div>
 
     <div class="form-group">
-      <label for="contact_phone">Téléphone *</label>
+      <label for="contact_phone">{{ _("Phone") }} *</label>
       <input type="tel" id="contact_phone" name="contact_phone" required 
-             placeholder="+33 X XX XX XX XX"
+             placeholder="{{ _('+33 X XX XX XX XX') }}"
              value="{{ draft.contact_phone if draft and draft.contact_phone else '' }}" />
     </div>
   </div>
 
   <div style="margin-top: 32px; padding: 20px; background: var(--secondary-color); background: rgba(16, 185, 129, 0.1); border-radius: var(--radius); border-left: 4px solid var(--secondary-color);">
     <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 12px; color: var(--text-dark);">
-      💳 Paiement de la publication
+      💳 {{ _("Publication payment") }}
     </h4>
     <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin: 0;">
-      Pour publier votre annonce, un paiement unique de <strong>{{ listing_price }} €</strong> est requis. 
-      Vous serez redirigé vers une page de paiement sécurisée Stripe. Votre annonce sera publiée 
-      immédiatement après la confirmation du paiement.
+      {{ _("To publish your listing, a one-time payment of") }} <strong>{{ listing_price }} €</strong> {{ _("is required. You will be redirected to a secure Stripe payment page. Your listing will be published immediately after payment confirmation.") }}
     </p>
   </div>
 
@@ -72,21 +70,18 @@
     <label style="display: flex; align-items: start; gap: 12px; cursor: pointer;">
       <input type="checkbox" name="consent_public_contact" required style="margin-top: 4px; min-width: 20px; min-height: 20px;" />
       <span style="font-size: 14px; line-height: 1.6; color: var(--text-dark);">
-        <strong style="color: #d97706; font-size: 16px;">⚠️ Consentement obligatoire (RGPD)</strong><br><br>
-        Je comprends et j'accepte expressément que mes <strong>coordonnées de contact (email et téléphone)</strong> 
-        seront <strong style="text-decoration: underline;">publiées publiquement et visibles par tous</strong> 
-        sur mon annonce une fois celle-ci validée et payée. Ces informations permettront aux acheteurs 
-        potentiels de me contacter directement.<br><br>
-        Je reconnais avoir pris connaissance de la 
-        <a href="/politique-confidentialite" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Politique de Confidentialité</a> 
-        et des <a href="/cgv" target="_blank" style="color: var(--primary-color); text-decoration: underline;">Conditions Générales</a>.
+        <strong style="color: #d97706; font-size: 16px;">⚠️ {{ _("Mandatory consent (GDPR)") }}</strong><br><br>
+        {{ _("I understand and expressly agree that my contact details (email and phone) will be published publicly and visible to all on my listing once validated and paid. This information will allow potential buyers to contact me directly.") }}<br><br>
+        {{ _("I acknowledge that I have read the") }} 
+        <a href="/politique-confidentialite" target="_blank" style="color: var(--primary-color); text-decoration: underline;">{{ _("Privacy Policy") }}</a> 
+        {{ _("and the") }} <a href="/cgv" target="_blank" style="color: var(--primary-color); text-decoration: underline;">{{ _("Terms and Conditions") }}</a>.
       </span>
     </label>
   </div>
 
   <div style="margin-top: 32px; display: flex; gap: 16px; justify-content: space-between;">
-    <a href="/deposer/step4" class="btn-secondary">← Retour</a>
-    <button type="submit" class="btn-primary">Procéder au paiement →</button>
+    <a href="/deposer/step4" class="btn-secondary">← {{ _("Back") }}</a>
+    <button type="submit" class="btn-primary">{{ _("Proceed to payment") }} →</button>
   </div>
 </form>
 {% endblock %}

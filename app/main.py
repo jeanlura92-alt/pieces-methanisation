@@ -589,15 +589,17 @@ async def contact_post(
 ):
     """Handle contact form submission"""
     try:
-        # Logger les données
+        # Logger les données (note: sanitize sensitive data in production logs)
         logger.info(f"Contact form submitted by {name} ({email})")
         logger.info(f"Subject: {subject}, Message: {message[:100]}...")
         
         # Sauvegarder dans la base de données (optionnel mais recommandé)
         # TODO: Ajouter une table 'contact_messages' si nécessaire
         
-        # Envoyer un email (voir point 2)
-        # await send_contact_email(name, email, phone, company, subject, reference, message)
+        # Envoyer un email - Currently in mock mode (logs only) when SMTP not configured
+        # Uncomment to enable email sending when SMTP is configured:
+        # from . import email
+        # await email.send_contact_email(name, email, phone, company, subject, reference, message)
         
         # Rediriger avec message de succès
         return templates.TemplateResponse(

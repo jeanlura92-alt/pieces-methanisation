@@ -3,11 +3,12 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from typing import Optional
 import logging
+import asyncio
 from . import config
 
 logger = logging.getLogger(__name__)
 
-async def send_contact_email(
+def _send_email_sync(
     name: str,
     email: str,
     phone: Optional[str],
@@ -16,17 +17,12 @@ async def send_contact_email(
     reference: Optional[str],
     message: str
 ) -> bool:
-    """Send contact form email notification"""
+    """Synchronous email sending helper"""
     try:
-        # Vérifier si SMTP est configuré
-        if not hasattr(config, 'SMTP_HOST') or not config.SMTP_HOST:
-            logger.warning("SMTP not configured - skipping email send")
-            return True  # Mode mock
-        
         # Créer le message
         msg = MIMEMultipart()
         msg['From'] = config.SMTP_USER
-        msg['To'] = config.CONTACT_EMAIL or "contact@pieces-methanisation.fr"
+        msg['To'] = config.CONTACT_EMAIL
         msg['Subject'] = f"Contact: {subject}"
         
         # Corps du message
@@ -58,3 +54,24 @@ Message:
     except Exception as e:
         logger.error(f"Failed to send contact email: {e}")
         return False
+
+async def send_contact_email(
+    name: str,
+    email: str,
+    phone: Optional[str],
+    company: Optional[str],
+    subject: str,
+    reference: Optional[str],
+    message: str
+) -> bool:
+    """Send contact form email notification"""
+    # Vérifier si SMTP est configuré
+    if not hasattr(config, 'SMTP_HOST') or not config.SMTP_HOST:
+        logger.warning("SMTP not configured - skipping email send")
+        return True  # Mode mock
+    
+    # Run blocking SMTP in thread pool to avoid blocking event loop
+    return await asyncio.to_thread(
+        _send_email_sync, name, email, phone, company, subject, reference, message
+    )
+

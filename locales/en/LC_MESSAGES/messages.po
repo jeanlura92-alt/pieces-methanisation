@@ -1,0 +1,422 @@
+# English translations for pieces-methanisation project.
+# Copyright (C) 2026
+# This file is distributed under the same license as the pieces-methanisation project.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pieces-methanisation 1.0\n"
+"Report-Msgid-Bugs-To: contact@pieces-methanisation.fr\n"
+"POT-Creation-Date: 2026-02-08 13:51\n"
+"PO-Revision-Date: 2026-02-08 13:51\n"
+"Last-Translator: \n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# Navigation
+msgid "Listings"
+msgstr "Listings"
+
+msgid "Post"
+msgstr "Post"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Post a listing"
+msgstr "Post a listing"
+
+# Homepage
+msgid "The professional marketplace for methanization & biogas parts"
+msgstr "The professional marketplace for methanization & biogas parts"
+
+msgid "Buy, sell and quickly find reliable equipment for your methanization units."
+msgstr "Buy, sell and quickly find reliable equipment for your methanization units."
+
+msgid "View listings"
+msgstr "View listings"
+
+msgid "listings online"
+msgstr "listings online"
+
+msgid "France & Europe"
+msgstr "France & Europe"
+
+msgid "coverage"
+msgstr "coverage"
+
+msgid "Latest listings"
+msgstr "Latest listings"
+
+msgid "Featured categories"
+msgstr "Featured categories"
+
+msgid "Do you have equipment to sell?"
+msgstr "Do you have equipment to sell?"
+
+msgid "Post a listing in a few minutes."
+msgstr "Post a listing in a few minutes."
+
+msgid "View listing"
+msgstr "View listing"
+
+# Listing detail
+msgid "Description"
+msgstr "Description"
+
+msgid "Technical details"
+msgstr "Technical details"
+
+msgid "Category"
+msgstr "Category"
+
+msgid "Condition"
+msgstr "Condition"
+
+msgid "Year"
+msgstr "Year"
+
+msgid "Manufacturer"
+msgstr "Manufacturer"
+
+msgid "Location"
+msgstr "Location"
+
+msgid "Price"
+msgstr "Price"
+
+msgid "On quote"
+msgstr "On quote"
+
+msgid "Contact the seller"
+msgstr "Contact the seller"
+
+msgid "Your name"
+msgstr "Your name"
+
+msgid "Your email"
+msgstr "Your email"
+
+msgid "Your phone"
+msgstr "Your phone"
+
+msgid "Your message"
+msgstr "Your message"
+
+msgid "Send inquiry"
+msgstr "Send inquiry"
+
+msgid "Similar listings"
+msgstr "Similar listings"
+
+# Wizard - Step 1
+msgid "Post a listing - Step 1/5"
+msgstr "Post a listing - Step 1/5"
+
+msgid "Type & Category"
+msgstr "Type & Category"
+
+msgid "What type of listing?"
+msgstr "What type of listing?"
+
+msgid "Equipment type"
+msgstr "Equipment type"
+
+msgid "Select a category"
+msgstr "Select a category"
+
+msgid "Listing title"
+msgstr "Listing title"
+
+msgid "Example: High-capacity biogas purification unit"
+msgstr "Example: High-capacity biogas purification unit"
+
+msgid "Continue"
+msgstr "Continue"
+
+# Wizard - Step 2
+msgid "Post a listing - Step 2/5"
+msgstr "Post a listing - Step 2/5"
+
+msgid "Equipment condition"
+msgstr "Equipment condition"
+
+msgid "Year of manufacture"
+msgstr "Year of manufacture"
+
+msgid "Optional"
+msgstr "Optional"
+
+msgid "Manufacturer / Brand"
+msgstr "Manufacturer / Brand"
+
+msgid "Short summary"
+msgstr "Short summary"
+
+msgid "One sentence describing your equipment"
+msgstr "One sentence describing your equipment"
+
+msgid "Detailed description"
+msgstr "Detailed description"
+
+msgid "Describe the equipment, its features, usage history, etc."
+msgstr "Describe the equipment, its features, usage history, etc."
+
+msgid "Previous"
+msgstr "Previous"
+
+# Wizard - Step 3
+msgid "Post a listing - Step 3/5"
+msgstr "Post a listing - Step 3/5"
+
+msgid "Photos & Documents"
+msgstr "Photos & Documents"
+
+msgid "Add photos of your equipment"
+msgstr "Add photos of your equipment"
+
+msgid "Select photos"
+msgstr "Select photos"
+
+msgid "Upload"
+msgstr "Upload"
+
+msgid "Uploaded photos"
+msgstr "Uploaded photos"
+
+msgid "No photos uploaded yet"
+msgstr "No photos uploaded yet"
+
+# Wizard - Step 4
+msgid "Post a listing - Step 4/5"
+msgstr "Post a listing - Step 4/5"
+
+msgid "Price & Location"
+msgstr "Price & Location"
+
+msgid "Price type"
+msgstr "Price type"
+
+msgid "Fixed price"
+msgstr "Fixed price"
+
+msgid "On quote only"
+msgstr "On quote only"
+
+msgid "Price (EUR)"
+msgstr "Price (EUR)"
+
+msgid "Enter amount in euros"
+msgstr "Enter amount in euros"
+
+msgid "City or region"
+msgstr "City or region"
+
+msgid "Example: Lyon, Auvergne-Rhône-Alpes"
+msgstr "Example: Lyon, Auvergne-Rhône-Alpes"
+
+# Wizard - Step 5
+msgid "Post a listing - Step 5/5"
+msgstr "Post a listing - Step 5/5"
+
+msgid "Contact & Summary"
+msgstr "Contact & Summary"
+
+msgid "Your contact information"
+msgstr "Your contact information"
+
+msgid "Contact email"
+msgstr "Contact email"
+
+msgid "Contact phone"
+msgstr "Contact phone"
+
+msgid "I agree that my contact details will be publicly visible"
+msgstr "I agree that my contact details will be publicly visible"
+
+msgid "Listing summary"
+msgstr "Listing summary"
+
+msgid "Title"
+msgstr "Title"
+
+msgid "Summary"
+msgstr "Summary"
+
+msgid "Publication cost"
+msgstr "Publication cost"
+
+msgid "Pay and publish"
+msgstr "Pay and publish"
+
+msgid "You must accept that your contact details will be publicly visible."
+msgstr "You must accept that your contact details will be publicly visible."
+
+# Payment
+msgid "Payment successful!"
+msgstr "Payment successful!"
+
+msgid "Your listing has been published and is now visible on the platform."
+msgstr "Your listing has been published and is now visible on the platform."
+
+msgid "View my listing"
+msgstr "View my listing"
+
+msgid "Payment cancelled"
+msgstr "Payment cancelled"
+
+msgid "Your payment has been cancelled. Your listing has been saved as a draft."
+msgstr "Your payment has been cancelled. Your listing has been saved as a draft."
+
+msgid "Try again"
+msgstr "Try again"
+
+# Contact page
+msgid "Contact us"
+msgstr "Contact us"
+
+msgid "Have a question or need assistance? We're here to help!"
+msgstr "Have a question or need assistance? We're here to help!"
+
+msgid "Send message"
+msgstr "Send message"
+
+msgid "Your message has been sent!"
+msgstr "Your message has been sent!"
+
+# Footer
+msgid "About"
+msgstr "About"
+
+msgid "Professional platform dedicated to methanization & biogas equipment in France and Europe."
+msgstr "Professional platform dedicated to methanization & biogas equipment in France and Europe."
+
+msgid "How it works"
+msgstr "How it works"
+
+msgid "Categories"
+msgstr "Categories"
+
+msgid "Legal"
+msgstr "Legal"
+
+msgid "Legal notice"
+msgstr "Legal notice"
+
+msgid "Terms & Conditions"
+msgstr "Terms & Conditions"
+
+msgid "Privacy policy"
+msgstr "Privacy policy"
+
+msgid "Cookie policy"
+msgstr "Cookie policy"
+
+msgid "Report a listing"
+msgstr "Report a listing"
+
+# Error messages
+msgid "Listing not found"
+msgstr "Listing not found"
+
+msgid "An error occurred"
+msgstr "An error occurred"
+
+msgid "Please try again"
+msgstr "Please try again"
+
+# Forms
+msgid "Required field"
+msgstr "Required field"
+
+msgid "Invalid email"
+msgstr "Invalid email"
+
+msgid "Invalid phone number"
+msgstr "Invalid phone number"
+
+msgid "File too large"
+msgstr "File too large"
+
+msgid "Invalid file type"
+msgstr "Invalid file type"
+
+# How it works
+msgid "How does it work?"
+msgstr "How does it work?"
+
+msgid "For sellers"
+msgstr "For sellers"
+
+msgid "Create your listing"
+msgstr "Create your listing"
+
+msgid "Fill out the 5-step form with details about your equipment"
+msgstr "Fill out the 5-step form with details about your equipment"
+
+msgid "Pay and publish"
+msgstr "Pay and publish"
+
+msgid "Your listing will be published immediately after payment"
+msgstr "Your listing will be published immediately after payment"
+
+msgid "Receive inquiries"
+msgstr "Receive inquiries"
+
+msgid "Buyers contact you directly through the platform"
+msgstr "Buyers contact you directly through the platform"
+
+msgid "For buyers"
+msgstr "For buyers"
+
+msgid "Browse listings"
+msgstr "Browse listings"
+
+msgid "Use filters to find what you need"
+msgstr "Use filters to find what you need"
+
+msgid "Contact sellers"
+msgstr "Contact sellers"
+
+msgid "Send inquiries directly through the platform"
+msgstr "Send inquiries directly through the platform"
+
+msgid "Negotiate"
+msgstr "Negotiate"
+
+msgid "Discuss details and finalize your purchase"
+msgstr "Discuss details and finalize your purchase"
+
+# Report
+msgid "Report a listing"
+msgstr "Report a listing"
+
+msgid "Listing ID"
+msgstr "Listing ID"
+
+msgid "Reason for report"
+msgstr "Reason for report"
+
+msgid "Additional details"
+msgstr "Additional details"
+
+msgid "Submit report"
+msgstr "Submit report"
+
+msgid "Report submitted successfully"
+msgstr "Report submitted successfully"
+
+msgid "Thank you for your report. We will review it shortly."
+msgstr "Thank you for your report. We will review it shortly."
+
+# Language selector
+msgid "Language"
+msgstr "Language"
+
+msgid "French"
+msgstr "French"
+
+msgid "English"
+msgstr "English"

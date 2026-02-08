@@ -1,21 +1,35 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ locale if locale else 'fr' }}">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pieces Methanisation Pro</title>
+    <title>{% block title %}Pieces Methanisation Pro{% endblock %}</title>
     <link rel="stylesheet" href="/static/css/styles.css" />
+    
+    <!-- SEO: hreflang tags for bilingual content -->
+    <link rel="alternate" hreflang="fr" href="{{ request.url._url.replace('?lang=en', '').replace('?lang=fr', '') }}" />
+    <link rel="alternate" hreflang="en" href="{{ request.url._url }}{% if '?' in request.url._url %}{% if 'lang=' not in request.url._url %}&lang=en{% endif %}{% else %}?lang=en{% endif %}" />
+    <link rel="alternate" hreflang="x-default" href="{{ request.url._url.replace('?lang=en', '').replace('?lang=fr', '') }}" />
   </head>
   <body>
     <header class="site-header">
       <div class="container header-inner">
         <a class="logo" href="/">Pièces Méthanisation Pro</a>
         <nav class="nav">
-          <a href="/annonces">Annonces</a>
-          <a href="/deposer">Déposer</a>
-          <a href="/contact">Contact</a>
+          <a href="/annonces">{{ _("Listings") }}</a>
+          <a href="/deposer">{{ _("Post") }}</a>
+          <a href="/contact">{{ _("Contact") }}</a>
+          
+          <!-- Language selector -->
+          <div class="language-selector" style="display: inline-block; margin-left: 10px;">
+            {% if locale == 'en' %}
+              <a href="/set-language/fr" style="padding: 6px 12px; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; font-size: 14px;">🇫🇷 FR</a>
+            {% else %}
+              <a href="/set-language/en" style="padding: 6px 12px; border: 1px solid #ddd; border-radius: 4px; text-decoration: none; font-size: 14px;">🇬🇧 EN</a>
+            {% endif %}
+          </div>
         </nav>
-        <a href="/deposer" class="cta">Déposer une annonce</a>
+        <a href="/deposer" class="cta">{{ _("Post a listing") }}</a>
       </div>
     </header>
 
@@ -26,38 +40,37 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
-          <h4>À propos</h4>
+          <h4>{{ _("About") }}</h4>
           <p>
-            Plateforme professionnelle dédiée aux équipements de
-            méthanisation & biogaz en France et en Europe.
+            {{ _("Professional platform dedicated to methanization & biogas equipment in France and Europe.") }}
           </p>
           <p style="margin-top: 12px;">
-            <a href="/comment-ca-marche" style="color: var(--text-light); text-decoration: underline;">Comment ça marche</a>
+            <a href="/comment-ca-marche" style="color: var(--text-light); text-decoration: underline;">{{ _("How it works") }}</a>
           </p>
         </div>
         <div>
-          <h4>Catégories</h4>
+          <h4>{{ _("Categories") }}</h4>
           <ul>
-            <li>Agitation</li>
-            <li>Pompage</li>
-            <li>Épuration</li>
-            <li>Automatisme</li>
+            <li>{{ _("Agitation") if locale == 'en' else "Agitation" }}</li>
+            <li>{{ _("Pumping") if locale == 'en' else "Pompage" }}</li>
+            <li>{{ _("Purification") if locale == 'en' else "Épuration" }}</li>
+            <li>{{ _("Automation") if locale == 'en' else "Automatisme" }}</li>
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4>{{ _("Contact") }}</h4>
           <p>contact@pieces-methanisation.fr</p>
           <p style="margin-top: 12px;">
-            <a href="/signaler" style="color: var(--text-light); text-decoration: underline;">🚨 Signaler une annonce</a>
+            <a href="/signaler" style="color: var(--text-light); text-decoration: underline;">🚨 {{ _("Report a listing") }}</a>
           </p>
         </div>
         <div>
-          <h4>Légal</h4>
+          <h4>{{ _("Legal") }}</h4>
           <ul>
-            <li><a href="/mentions-legales" style="color: var(--text-light); text-decoration: underline;">Mentions légales</a></li>
-            <li><a href="/cgv" style="color: var(--text-light); text-decoration: underline;">CGV/CGU</a></li>
-            <li><a href="/politique-confidentialite" style="color: var(--text-light); text-decoration: underline;">Confidentialité</a></li>
-            <li><a href="/cookies" style="color: var(--text-light); text-decoration: underline;">Cookies</a></li>
+            <li><a href="/mentions-legales" style="color: var(--text-light); text-decoration: underline;">{{ _("Legal notice") }}</a></li>
+            <li><a href="/cgv" style="color: var(--text-light); text-decoration: underline;">{{ _("Terms & Conditions") }}</a></li>
+            <li><a href="/politique-confidentialite" style="color: var(--text-light); text-decoration: underline;">{{ _("Privacy policy") }}</a></li>
+            <li><a href="/cookies" style="color: var(--text-light); text-decoration: underline;">{{ _("Cookie policy") }}</a></li>
           </ul>
         </div>
       </div>

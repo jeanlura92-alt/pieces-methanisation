@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request, HTTPException, Form, Cookie, UploadFile, File
-from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.responses import HTMLResponse, RedirectResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from typing import Optional, List
@@ -10,6 +10,7 @@ import logging
 from . import db
 from . import config
 from . import storage
+from . import i18n
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -23,6 +24,18 @@ if config.STRIPE_SECRET_KEY:
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 templates = Jinja2Templates(directory="app/templates")
 
+# Custom context processor to add i18n to all templates
+@app.middleware("http")
+async def add_i18n_to_templates(request: Request, call_next):
+    """Add locale and translation function to request state"""
+    locale = i18n.get_locale_from_request(request)
+    request.state.locale = locale
+    request.state._ = i18n.get_translator(locale)
+    request.state.localized_config = i18n.get_localized_config(locale)
+    
+    response = await call_next(request)
+    return response
+
 
 # ==================== Helper Functions ====================
 
@@ -33,11 +46,41 @@ def get_draft_from_cookie(draft_id: Optional[str]) -> Optional[dict]:
     return db.get_listing(draft_id)
 
 
-def format_price_display(price_amount: Optional[int]) -> str:
+def format_price_display(price_amount: Optional[int], locale: str = "fr") -> str:
     """Format price amount (in cents) to display string"""
     if price_amount is None:
+        if locale == "en":
+            return "On quote"
         return "Sur devis"
-    return f"{price_amount // 100:,} €".replace(",", " ")
+    
+    amount = price_amount / 100
+    if locale == "en":
+        return f"€{amount:,.2f}"
+    else:
+        # French format: 49 000,00 €
+        return f"{amount:,.2f} €".replace(",", " ").replace(".", ",")
+
+
+# ==================== Language Switching ====================
+
+@app.get("/set-language/{lang}")
+async def set_language(lang: str, request: Request):
+    """Set user language preference"""
+    if lang not in i18n.SUPPORTED_LOCALES:
+        raise HTTPException(status_code=400, detail="Unsupported language")
+    
+    # Get the referer URL to redirect back
+    referer = request.headers.get("referer", "/")
+    
+    response = RedirectResponse(url=referer, status_code=303)
+    response.set_cookie(
+        key="locale",
+        value=lang,
+        max_age=365 * 24 * 60 * 60,  # 1 year
+        httponly=True,
+        samesite="lax"
+    )
+    return response
 
 
 # ==================== Home ====================
@@ -45,6 +88,9 @@ def format_price_display(price_amount: Optional[int]) -> str:
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
     """Home page with featured listings from database"""
+    locale = request.state.locale
+    _ = request.state._
+    
     featured = db.get_published_listings(limit=6)
     
     # Add image URLs for listings that have media
@@ -60,7 +106,13 @@ def home(request: Request):
     
     return templates.TemplateResponse(
         "index.html",
-        {"request": request, "featured": featured, "count": count},
+        {
+            "request": request, 
+            "featured": featured, 
+            "count": count,
+            "locale": locale,
+            "_": _,
+        },
     )
 
 

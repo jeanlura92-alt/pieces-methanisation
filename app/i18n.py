@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Optional
 import gettext
 from fastapi import Request
+from urllib.parse import urlencode, urlparse, parse_qs, urlunparse
 
 # Supported locales
 SUPPORTED_LOCALES = ["fr", "en"]
@@ -17,6 +18,41 @@ LOCALES_DIR = Path(__file__).parent.parent / "locales"
 
 # Cache for translation objects
 _translations = {}
+
+
+def get_hreflang_url(url: str, lang: Optional[str] = None) -> str:
+    """
+    Construct URL with proper language parameter.
+    
+    Args:
+        url: The current URL
+        lang: Language code to add (None for default/fr)
+    
+    Returns:
+        URL with proper lang parameter
+    """
+    parsed = urlparse(url)
+    query_params = parse_qs(parsed.query)
+    
+    # Remove existing lang parameter
+    query_params.pop('lang', None)
+    
+    # Add new lang parameter if not default
+    if lang and lang != DEFAULT_LOCALE:
+        query_params['lang'] = [lang]
+    
+    # Reconstruct query string
+    new_query = urlencode(query_params, doseq=True)
+    
+    # Reconstruct URL
+    return urlunparse((
+        parsed.scheme,
+        parsed.netloc,
+        parsed.path,
+        parsed.params,
+        new_query,
+        parsed.fragment
+    ))
 
 
 def get_translation(locale: str):
@@ -80,11 +116,19 @@ def format_currency(amount_cents: Optional[int], locale: str = "fr") -> str:
     
     amount = amount_cents / 100
     if locale == "en":
-        # English format: €49,000.00 or EUR 49,000.00
-        return f"€{amount:,.2f}".replace(",", "_").replace(".", ",").replace("_", ".")
+        # English format: €49,000.00
+        # First format with thousands separator and 2 decimals
+        formatted = f"{amount:,.2f}"
+        # In English: thousands=comma, decimal=period (already correct)
+        return f"€{formatted}"
     else:
         # French format: 49 000,00 €
-        return f"{amount:,.2f} €".replace(",", " ").replace(".", ",")
+        # Format as integer part and decimal part separately
+        int_part = int(amount)
+        dec_part = int(round((amount - int_part) * 100))
+        # French uses space for thousands, comma for decimal
+        int_formatted = f"{int_part:,}".replace(",", " ")
+        return f"{int_formatted},{dec_part:02d} €"
 
 
 def format_date(date_str: str, locale: str = "fr") -> str:

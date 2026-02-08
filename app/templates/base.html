@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/static/css/styles.css" />
     
     <!-- SEO: hreflang tags for bilingual content -->
-    <link rel="alternate" hreflang="fr" href="{{ request.url._url.replace('?lang=en', '').replace('?lang=fr', '') }}" />
-    <link rel="alternate" hreflang="en" href="{{ request.url._url }}{% if '?' in request.url._url %}{% if 'lang=' not in request.url._url %}&lang=en{% endif %}{% else %}?lang=en{% endif %}" />
-    <link rel="alternate" hreflang="x-default" href="{{ request.url._url.replace('?lang=en', '').replace('?lang=fr', '') }}" />
+    <link rel="alternate" hreflang="fr" href="{{ get_hreflang_url(request.url._url) }}" />
+    <link rel="alternate" hreflang="en" href="{{ get_hreflang_url(request.url._url, 'en') }}" />
+    <link rel="alternate" hreflang="x-default" href="{{ get_hreflang_url(request.url._url) }}" />
   </head>
   <body>
     <header class="site-header">

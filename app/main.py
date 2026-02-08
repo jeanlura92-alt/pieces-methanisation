@@ -11,6 +11,7 @@ from . import db
 from . import config
 from . import storage
 from . import i18n
+from .i18n import get_hreflang_url
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -24,6 +25,9 @@ if config.STRIPE_SECRET_KEY:
 app.mount("/static", StaticFiles(directory="app/static"), name="static")
 templates = Jinja2Templates(directory="app/templates")
 
+# Add global functions to Jinja2 templates
+templates.env.globals["get_hreflang_url"] = get_hreflang_url
+
 # Custom context processor to add i18n to all templates
 @app.middleware("http")
 async def add_i18n_to_templates(request: Request, call_next):
@@ -32,6 +36,7 @@ async def add_i18n_to_templates(request: Request, call_next):
     request.state.locale = locale
     request.state._ = i18n.get_translator(locale)
     request.state.localized_config = i18n.get_localized_config(locale)
+    request.state.get_hreflang_url = get_hreflang_url
     
     response = await call_next(request)
     return response

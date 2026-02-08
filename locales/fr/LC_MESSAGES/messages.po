@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pieces-methanisation 1.0\n"
 "Report-Msgid-Bugs-To: contact@pieces-methanisation.fr\n"
-"POT-Creation-Date: 2026-02-08 14:28+0000\n"
+"POT-Creation-Date: 2026-02-08 14:41+0000\n"
 "PO-Revision-Date: 2026-02-08 13:51+0000\n"
 "Last-Translator: \n"
 "Language: fr\n"
@@ -278,11 +278,15 @@ msgstr ""
 
 #: app/templates/cgv.html:25
 msgid "Professional users who publish ads (hereinafter 'the Sellers')"
-msgstr "Les utilisateurs professionnels qui publient des annonces (ci-après 'les Vendeurs')"
+msgstr ""
+"Les utilisateurs professionnels qui publient des annonces (ci-après 'les "
+"Vendeurs')"
 
 #: app/templates/cgv.html:26
 msgid "Professional users who view and contact sellers (hereinafter 'the Buyers')"
-msgstr "Les utilisateurs professionnels qui consultent et contactent les vendeurs (ci-après 'les Acheteurs')"
+msgstr ""
+"Les utilisateurs professionnels qui consultent et contactent les vendeurs"
+" (ci-après 'les Acheteurs')"
 
 #: app/templates/cgv.html:29
 msgid ""
@@ -314,7 +318,10 @@ msgid ""
 "Each published ad remains active for a period of <strong>30 calendar "
 "days</strong> from the publication date. After this period, the ad is "
 "automatically removed from the Platform."
-msgstr "Chaque annonce publiée reste active pour une durée de <strong>30 jours calendaires</strong> à compter de la date de publication. Passé ce délai, l'annonce est automatiquement retirée de la Plateforme."
+msgstr ""
+"Chaque annonce publiée reste active pour une durée de <strong>30 jours "
+"calendaires</strong> à compter de la date de publication. Passé ce délai,"
+" l'annonce est automatiquement retirée de la Plateforme."
 
 #: app/templates/cgv.html:50
 msgid "2.3. Content Limitation"
@@ -324,7 +331,10 @@ msgstr "2.3. Limitation du contenu"
 msgid ""
 "Each ad can include <strong>a maximum of 1 photo</strong>. Photos must be"
 " of professional quality and faithfully represent the equipment offered."
-msgstr "Chaque annonce peut comporter <strong>au maximum 1 photo</strong>. Les photos doivent être de qualité professionnelle et représenter fidèlement l'équipement proposé."
+msgstr ""
+"Chaque annonce peut comporter <strong>au maximum 1 photo</strong>. Les "
+"photos doivent être de qualité professionnelle et représenter fidèlement "
+"l'équipement proposé."
 
 #: app/templates/cgv.html:55
 msgid "2.4. Publication Process"
@@ -365,7 +375,10 @@ msgid ""
 "After validating the summary, the Seller is redirected to a "
 "<strong>secure Stripe payment</strong> page. The ad is published "
 "<strong>immediately after payment confirmation</strong>."
-msgstr "Après validation du récapitulatif, le Vendeur est redirigé vers une page de <strong>paiement sécurisé Stripe</strong>. L'annonce est publiée <strong>immédiatement après confirmation du paiement</strong>."
+msgstr ""
+"Après validation du récapitulatif, le Vendeur est redirigé vers une page "
+"de <strong>paiement sécurisé Stripe</strong>. L'annonce est publiée "
+"<strong>immédiatement après confirmation du paiement</strong>."
 
 #: app/templates/cgv.html:70
 msgid "2.5. Required Data"
@@ -409,7 +422,11 @@ msgid ""
 "<strong>published publicly</strong> on the ad. The Seller must give "
 "<strong>explicit consent</strong> to this publication (in accordance with"
 " GDPR)."
-msgstr "<strong>⚠️ Important :</strong> Les coordonnées fournies seront <strong>publiées publiquement</strong> sur l'annonce. Le Vendeur doit donner son <strong>consentement explicite</strong> à cette publication (conformément au RGPD)."
+msgstr ""
+"<strong>⚠️ Important :</strong> Les coordonnées fournies seront "
+"<strong>publiées publiquement</strong> sur l'annonce. Le Vendeur doit "
+"donner son <strong>consentement explicite</strong> à cette publication "
+"(conformément au RGPD)."
 
 #: app/templates/cgv.html:91
 msgid "Article 3: Payment"
@@ -424,7 +441,11 @@ msgid ""
 "Payment for ad publication is made exclusively online via the secure "
 "payment system <strong>Stripe Checkout</strong>. Accepted payment methods"
 " are: credit card (Visa, Mastercard, American Express)."
-msgstr "Le paiement de la publication d'annonce s'effectue exclusivement en ligne via le système de paiement sécurisé <strong>Stripe Checkout</strong>. Les moyens de paiement acceptés sont : carte bancaire (Visa, Mastercard, American Express)."
+msgstr ""
+"Le paiement de la publication d'annonce s'effectue exclusivement en ligne"
+" via le système de paiement sécurisé <strong>Stripe Checkout</strong>. "
+"Les moyens de paiement acceptés sont : carte bancaire (Visa, Mastercard, "
+"American Express)."
 
 #: app/templates/cgv.html:100
 msgid "3.2. Refund Policy"
@@ -435,14 +456,20 @@ msgid ""
 "<strong>No refund is possible after the ad has been published.</strong> "
 "The Seller is advised to carefully check all information before "
 "proceeding with payment."
-msgstr "<strong>Aucun remboursement n'est possible après publication de l'annonce.</strong> Le Vendeur est invité à vérifier attentivement toutes les informations avant de procéder au paiement."
+msgstr ""
+"<strong>Aucun remboursement n'est possible après publication de "
+"l'annonce.</strong> Le Vendeur est invité à vérifier attentivement toutes"
+" les informations avant de procéder au paiement."
 
 #: app/templates/cgv.html:105
 msgid ""
 "In the event of a technical error preventing the publication of the ad "
 "despite a validated payment, the Publisher undertakes to resolve the "
 "problem or to proceed with a full refund within 14 days."
-msgstr "En cas d'erreur technique empêchant la publication de l'annonce malgré un paiement validé, l'Éditeur s'engage à résoudre le problème ou à procéder à un remboursement intégral sous 14 jours."
+msgstr ""
+"En cas d'erreur technique empêchant la publication de l'annonce malgré un"
+" paiement validé, l'Éditeur s'engage à résoudre le problème ou à procéder"
+" à un remboursement intégral sous 14 jours."
 
 #: app/templates/cgv.html:108
 msgid "3.3. Invoicing"
@@ -453,7 +480,10 @@ msgid ""
 "An invoice is automatically generated and sent by email to the Seller "
 "after payment validation. Invoices are kept in accordance with legal "
 "accounting obligations (10 years)."
-msgstr "Une facture est générée automatiquement et envoyée par email au Vendeur après validation du paiement. Les factures sont conservées conformément aux obligations légales comptables (10 ans)."
+msgstr ""
+"Une facture est générée automatiquement et envoyée par email au Vendeur "
+"après validation du paiement. Les factures sont conservées conformément "
+"aux obligations légales comptables (10 ans)."
 
 #: app/templates/cgv.html:117
 msgid "Article 4: Responsibilities"
@@ -469,7 +499,11 @@ msgid ""
 "Sellers and Buyers. The Publisher provides a space for publishing ads but"
 " <strong>does not participate in any way in transactions</strong> between"
 " professionals."
-msgstr "La Plateforme agit en tant que <strong>simple intermédiaire</strong> entre Vendeurs et Acheteurs. L'Éditeur met à disposition un espace de publication d'annonces mais <strong>ne participe en aucune manière aux transactions</strong> entre professionnels."
+msgstr ""
+"La Plateforme agit en tant que <strong>simple intermédiaire</strong> "
+"entre Vendeurs et Acheteurs. L'Éditeur met à disposition un espace de "
+"publication d'annonces mais <strong>ne participe en aucune manière aux "
+"transactions</strong> entre professionnels."
 
 #: app/templates/cgv.html:126
 msgid "4.2. Sellers' Responsibility"
@@ -497,7 +531,9 @@ msgstr "Des litiges pouvant survenir avec les Acheteurs"
 
 #: app/templates/cgv.html:135
 msgid "Respect for intellectual property rights on published photos and content"
-msgstr "Du respect des droits de propriété intellectuelle sur les photos et contenus publiés"
+msgstr ""
+"Du respect des droits de propriété intellectuelle sur les photos et "
+"contenus publiés"
 
 #: app/templates/cgv.html:138
 msgid "4.3. Buyers' Responsibility"
@@ -545,7 +581,9 @@ msgstr "Des interruptions temporaires de service pour maintenance"
 
 #: app/templates/cgv.html:157
 msgid "Data loss in the event of a technical failure beyond its control"
-msgstr "De la perte de données en cas de défaillance technique hors de son contrôle"
+msgstr ""
+"De la perte de données en cas de défaillance technique hors de son "
+"contrôle"
 
 #: app/templates/cgv.html:160
 msgid "4.5. No Warranty"
@@ -556,7 +594,10 @@ msgid ""
 "The Publisher <strong>provides no warranty</strong> on the equipment "
 "offered for sale. Commercial or legal warranties are exclusively the "
 "responsibility of the Sellers."
-msgstr "L'Éditeur <strong>n'accorde aucune garantie</strong> sur les équipements proposés à la vente. Les garanties commerciales ou légales sont exclusivement à la charge des Vendeurs."
+msgstr ""
+"L'Éditeur <strong>n'accorde aucune garantie</strong> sur les équipements "
+"proposés à la vente. Les garanties commerciales ou légales sont "
+"exclusivement à la charge des Vendeurs."
 
 #: app/templates/cgv.html:169
 msgid "Article 5: Personal Data Protection"
@@ -568,7 +609,12 @@ msgid ""
 "<a href='/politique-confidentialite' style='color: var(--primary-color); "
 "text-decoration: underline; font-weight: 600;'>Privacy Policy</a>, in "
 "compliance with the General Data Protection Regulation (GDPR)."
-msgstr "La collecte et le traitement des données personnelles des utilisateurs sont régis par notre <a href='/politique-confidentialite' style='color: var(--primary-color); text-decoration: underline; font-weight: 600;'>Politique de Confidentialité</a>, conformément au Règlement Général sur la Protection des Données (RGPD)."
+msgstr ""
+"La collecte et le traitement des données personnelles des utilisateurs "
+"sont régis par notre <a href='/politique-confidentialite' style='color: "
+"var(--primary-color); text-decoration: underline; font-weight: "
+"600;'>Politique de Confidentialité</a>, conformément au Règlement Général"
+" sur la Protection des Données (RGPD)."
 
 #: app/templates/cgv.html:177
 msgid ""
@@ -576,13 +622,20 @@ msgid ""
 "and phone) are <strong>published publicly</strong> on ads to allow Buyers"
 " to contact them directly. By publishing an ad, the Seller expressly "
 "consents to this publication."
-msgstr "<strong>⚠️ Avertissement important :</strong> Les coordonnées des Vendeurs (email et téléphone) sont <strong>publiées publiquement</strong> sur les annonces pour permettre aux Acheteurs de les contacter directement. En publiant une annonce, le Vendeur consent expressément à cette publication."
+msgstr ""
+"<strong>⚠️ Avertissement important :</strong> Les coordonnées des "
+"Vendeurs (email et téléphone) sont <strong>publiées publiquement</strong>"
+" sur les annonces pour permettre aux Acheteurs de les contacter "
+"directement. En publiant une annonce, le Vendeur consent expressément à "
+"cette publication."
 
 #: app/templates/cgv.html:180
 msgid ""
 "To exercise your GDPR rights (access, rectification, deletion, "
 "opposition), contact: <strong>privacy@pieces-methanisation.fr</strong>"
-msgstr "Pour exercer vos droits RGPD (accès, rectification, suppression, opposition), contactez : <strong>privacy@pieces-methanisation.fr</strong>"
+msgstr ""
+"Pour exercer vos droits RGPD (accès, rectification, suppression, "
+"opposition), contactez : <strong>privacy@pieces-methanisation.fr</strong>"
 
 #: app/templates/cgv.html:187
 msgid "Article 6: Intellectual Property"
@@ -597,7 +650,10 @@ msgid ""
 "All constituent elements of the Platform (structure, design, texts, "
 "graphics, logos, functionalities) are the exclusive property of the "
 "Publisher and are protected by the Intellectual Property Code."
-msgstr "Tous les éléments constitutifs de la Plateforme (structure, design, textes, graphiques, logos, fonctionnalités) sont la propriété exclusive de l'Éditeur et sont protégés par le Code de la propriété intellectuelle."
+msgstr ""
+"Tous les éléments constitutifs de la Plateforme (structure, design, "
+"textes, graphiques, logos, fonctionnalités) sont la propriété exclusive "
+"de l'Éditeur et sont protégés par le Code de la propriété intellectuelle."
 
 #: app/templates/cgv.html:196
 msgid "6.2. Rights on Published Content"
@@ -607,7 +663,9 @@ msgstr "6.2. Droits sur les contenus publiés"
 msgid ""
 "Sellers retain full intellectual property of the content (photos, "
 "descriptions) they publish on the Platform."
-msgstr "Les Vendeurs conservent la pleine propriété intellectuelle des contenus (photos, descriptions) qu'ils publient sur la Plateforme."
+msgstr ""
+"Les Vendeurs conservent la pleine propriété intellectuelle des contenus "
+"(photos, descriptions) qu'ils publient sur la Plateforme."
 
 #: app/templates/cgv.html:201
 msgid ""
@@ -615,7 +673,12 @@ msgid ""
 "exclusive, free and worldwide license</strong> to use, reproduce and "
 "represent this content, solely for the operation of the Platform and for "
 "the duration of the ad's publication."
-msgstr "En publiant du contenu, les Vendeurs accordent à l'Éditeur une <strong>licence non-exclusive, gratuite et mondiale</strong> d'utilisation, de reproduction et de représentation de ce contenu, uniquement pour le fonctionnement de la Plateforme et pendant la durée de publication de l'annonce."
+msgstr ""
+"En publiant du contenu, les Vendeurs accordent à l'Éditeur une "
+"<strong>licence non-exclusive, gratuite et mondiale</strong> "
+"d'utilisation, de reproduction et de représentation de ce contenu, "
+"uniquement pour le fonctionnement de la Plateforme et pendant la durée de"
+" publication de l'annonce."
 
 #: app/templates/cgv.html:208
 msgid "Article 7: Reporting and Moderation"
@@ -632,7 +695,12 @@ msgid ""
 "via the form accessible at <a href='/signaler' style='color: var"
 "(--primary-color); text-decoration: underline; font-weight: "
 "600;'>/signaler</a>."
-msgstr "Conformément au Digital Services Act (DSA), tout utilisateur peut signaler un contenu qu'il juge illégal, frauduleux ou contraire à ces CGV/CGU via le formulaire accessible sur <a href='/signaler' style='color: var(--primary-color); text-decoration: underline; font-weight: 600;'>/signaler</a>."
+msgstr ""
+"Conformément au Digital Services Act (DSA), tout utilisateur peut "
+"signaler un contenu qu'il juge illégal, frauduleux ou contraire à ces "
+"CGV/CGU via le formulaire accessible sur <a href='/signaler' "
+"style='color: var(--primary-color); text-decoration: underline; font-"
+"weight: 600;'>/signaler</a>."
 
 #: app/templates/cgv.html:217
 msgid "7.2. Right of Withdrawal"
@@ -654,7 +722,9 @@ msgstr "Porte atteinte aux droits de propriété intellectuelle de tiers"
 
 #: app/templates/cgv.html:224
 msgid "Contains illegal, defamatory content or harms public order"
-msgstr "Contient des contenus illégaux, diffamatoires ou portant atteinte à l'ordre public"
+msgstr ""
+"Contient des contenus illégaux, diffamatoires ou portant atteinte à "
+"l'ordre public"
 
 #: app/templates/cgv.html:225
 msgid "Does not comply with these CGV/CGU"
@@ -668,7 +738,9 @@ msgstr "Article 8 : Résiliation et suppression de compte"
 msgid ""
 "In accordance with GDPR, users have a <strong>right to erasure</strong> "
 "('right to be forgotten') of their personal data."
-msgstr "Conformément au RGPD, les utilisateurs disposent d'un <strong>droit à l'effacement</strong> ('droit à l'oubli') de leurs données personnelles."
+msgstr ""
+"Conformément au RGPD, les utilisateurs disposent d'un <strong>droit à "
+"l'effacement</strong> ('droit à l'oubli') de leurs données personnelles."
 
 #: app/templates/cgv.html:240
 msgid ""
@@ -676,7 +748,11 @@ msgid ""
 "methanisation.fr</strong>. Deletion will be carried out within 30 days, "
 "except for legal retention obligations (for example: accounting data for "
 "invoices)."
-msgstr "Pour demander la suppression de vos données, contactez : <strong>privacy@pieces-methanisation.fr</strong>. La suppression sera effectuée sous 30 jours, sauf obligations légales de conservation (exemple : données comptables pour les factures)."
+msgstr ""
+"Pour demander la suppression de vos données, contactez : <strong>privacy"
+"@pieces-methanisation.fr</strong>. La suppression sera effectuée sous 30 "
+"jours, sauf obligations légales de conservation (exemple : données "
+"comptables pour les factures)."
 
 #: app/templates/cgv.html:247
 msgid "Article 9: Modification of CGV/CGU"
@@ -686,7 +762,9 @@ msgstr "Article 9 : Modification des CGV/CGU"
 msgid ""
 "The Publisher reserves the right to modify these CGV/CGU at any time to "
 "adapt to legal, regulatory or technical changes."
-msgstr "L'Éditeur se réserve le droit de modifier ces CGV/CGU à tout moment pour s'adapter aux évolutions légales, réglementaires ou techniques."
+msgstr ""
+"L'Éditeur se réserve le droit de modifier ces CGV/CGU à tout moment pour "
+"s'adapter aux évolutions légales, réglementaires ou techniques."
 
 #: app/templates/cgv.html:255
 msgid ""
@@ -694,7 +772,11 @@ msgid ""
 "they take effect</strong> via email and/or a notification on the "
 "Platform. Continued use of the site after the new CGV/CGU take effect "
 "constitutes acceptance of them."
-msgstr "Les utilisateurs seront informés des modifications <strong>au moins 15 jours avant leur entrée en vigueur</strong> par email et/ou notification sur la Plateforme. La poursuite de l'utilisation du site après l'entrée en vigueur des nouvelles CGV/CGU vaut acceptation de celles-ci."
+msgstr ""
+"Les utilisateurs seront informés des modifications <strong>au moins 15 "
+"jours avant leur entrée en vigueur</strong> par email et/ou notification "
+"sur la Plateforme. La poursuite de l'utilisation du site après l'entrée "
+"en vigueur des nouvelles CGV/CGU vaut acceptation de celles-ci."
 
 #: app/templates/cgv.html:262
 msgid "Article 10: Disputes and Jurisdiction"
@@ -717,7 +799,10 @@ msgid ""
 "In the event of a dispute relating to the interpretation or execution of "
 "these CGV/CGU, and failing an amicable resolution, the <strong>French "
 "courts</strong> will have sole jurisdiction."
-msgstr "En cas de litige relatif à l'interprétation ou à l'exécution de ces CGV/CGU, et à défaut de résolution amiable, les <strong>tribunaux français</strong> seront seuls compétents."
+msgstr ""
+"En cas de litige relatif à l'interprétation ou à l'exécution de ces "
+"CGV/CGU, et à défaut de résolution amiable, les <strong>tribunaux "
+"français</strong> seront seuls compétents."
 
 #: app/templates/cgv.html:276
 msgid "10.3. Consumer Mediation"
@@ -730,7 +815,12 @@ msgid ""
 "disputes. If the Platform were to open to consumers (B2C) in the future, "
 "a consumer mediation system will be put in place in accordance with "
 "applicable legislation."
-msgstr "Bien que la Plateforme soit exclusivement destinée aux professionnels (B2B), l'Éditeur s'engage à favoriser la résolution amiable des litiges. Si la Plateforme venait à s'ouvrir aux consommateurs (B2C) à l'avenir, un dispositif de médiation de la consommation sera mis en place conformément à la législation applicable."
+msgstr ""
+"Bien que la Plateforme soit exclusivement destinée aux professionnels "
+"(B2B), l'Éditeur s'engage à favoriser la résolution amiable des litiges. "
+"Si la Plateforme venait à s'ouvrir aux consommateurs (B2C) à l'avenir, un"
+" dispositif de médiation de la consommation sera mis en place "
+"conformément à la législation applicable."
 
 #: app/templates/cgv.html:285
 msgid ""
@@ -738,7 +828,11 @@ msgid ""
 "that you have read, understood and accepted these CGV/CGU in their "
 "entirety. If you have any questions, please contact us at: <strong>legal"
 "@pieces-methanisation.fr</strong>"
-msgstr "<strong>📌 Note importante :</strong> En utilisant la Plateforme, vous confirmez avoir lu, compris et accepté ces CGV/CGU dans leur intégralité. Pour toute question, contactez-nous à : <strong>legal@pieces-methanisation.fr</strong>"
+msgstr ""
+"<strong>📌 Note importante :</strong> En utilisant la Plateforme, vous "
+"confirmez avoir lu, compris et accepté ces CGV/CGU dans leur intégralité."
+" Pour toute question, contactez-nous à : <strong>legal@pieces-"
+"methanisation.fr</strong>"
 
 #: app/templates/cgv.html:291 app/templates/comment_ca_marche.html:220
 #: app/templates/cookies.html:274 app/templates/mentions_legales.html:141
@@ -765,7 +859,11 @@ msgid ""
 "<strong>Pièces Méthanisation Pro</strong> is a <strong>B2B (Business-to-"
 "Business) platform</strong> dedicated to buying and selling equipment and"
 " spare parts for biogas and methanation installations."
-msgstr "<strong>Pièces Méthanisation Pro</strong> est une <strong>plateforme B2B (Business-to-Business)</strong> dédiée à l'achat et à la vente d'équipements et de pièces détachées pour les installations de biogaz et de méthanisation."
+msgstr ""
+"<strong>Pièces Méthanisation Pro</strong> est une <strong>plateforme B2B "
+"(Business-to-Business)</strong> dédiée à l'achat et à la vente "
+"d'équipements et de pièces détachées pour les installations de biogaz et "
+"de méthanisation."
 
 #: app/templates/comment_ca_marche.html:21
 msgid "Our role is that of a <strong>technical intermediary</strong> between:"
@@ -773,25 +871,36 @@ msgstr "Notre rôle est celui d'un <strong>intermédiaire technique</strong> ent
 
 #: app/templates/comment_ca_marche.html:24
 msgid "<strong>Sellers</strong>: professionals who offer equipment for sale"
-msgstr "<strong>Les vendeurs</strong> : professionnels qui proposent des équipements à la vente"
+msgstr ""
+"<strong>Les vendeurs</strong> : professionnels qui proposent des "
+"équipements à la vente"
 
 #: app/templates/comment_ca_marche.html:25
 msgid "<strong>Buyers</strong>: professionals who are looking for equipment"
-msgstr "<strong>Les acheteurs</strong> : professionnels qui recherchent des équipements"
+msgstr ""
+"<strong>Les acheteurs</strong> : professionnels qui recherchent des "
+"équipements"
 
 #: app/templates/comment_ca_marche.html:28
 msgid ""
 "<strong>⚠️ Important:</strong> We only provide a space for publishing and"
 " viewing listings. We <strong>do not participate in commercial "
 "transactions</strong> between sellers and buyers."
-msgstr "<strong>⚠️ Important :</strong> Nous ne faisons que mettre à disposition un espace de publication et de consultation d'annonces. Nous <strong>ne participons pas aux transactions commerciales</strong> entre vendeurs et acheteurs."
+msgstr ""
+"<strong>⚠️ Important :</strong> Nous ne faisons que mettre à disposition "
+"un espace de publication et de consultation d'annonces. Nous <strong>ne "
+"participons pas aux transactions commerciales</strong> entre vendeurs et "
+"acheteurs."
 
 #: app/templates/comment_ca_marche.html:31
 msgid ""
 "Negotiations, payment for equipment, delivery and after-sales service are"
 " handled <strong>directly between the parties</strong>, without our "
 "involvement."
-msgstr "Les négociations, le paiement des équipements, la livraison et le service après-vente se font <strong>directement entre les parties</strong>, sans notre intervention."
+msgstr ""
+"Les négociations, le paiement des équipements, la livraison et le service"
+" après-vente se font <strong>directement entre les parties</strong>, sans"
+" notre intervention."
 
 #: app/templates/comment_ca_marche.html:38
 msgid "2. Listing ranking and display"
@@ -1347,14 +1456,21 @@ msgid ""
 "A cookie is a <strong>small text file</strong> stored on your device "
 "(computer, tablet, smartphone) when you visit our website. It stores "
 "information about your browsing and improves your user experience."
-msgstr "Un cookie est un <strong>petit fichier texte</strong> stocké sur votre appareil (ordinateur, tablette, smartphone) lors de votre visite sur notre site web. Il permet de mémoriser des informations sur votre navigation et d'améliorer votre expérience utilisateur."
+msgstr ""
+"Un cookie est un <strong>petit fichier texte</strong> stocké sur votre "
+"appareil (ordinateur, tablette, smartphone) lors de votre visite sur "
+"notre site web. Il permet de mémoriser des informations sur votre "
+"navigation et d'améliorer votre expérience utilisateur."
 
 #: app/templates/cookies.html:21
 msgid ""
 "Cookies can be set by our site (<strong>internal cookies</strong>) or by "
 "third-party services we use (<strong>third-party cookies</strong>, such "
 "as Stripe for payments)."
-msgstr "Les cookies peuvent être déposés par notre site (<strong>cookies internes</strong>) ou par des services tiers que nous utilisons (<strong>cookies tiers</strong>, comme Stripe pour les paiements)."
+msgstr ""
+"Les cookies peuvent être déposés par notre site (<strong>cookies "
+"internes</strong>) ou par des services tiers que nous utilisons "
+"(<strong>cookies tiers</strong>, comme Stripe pour les paiements)."
 
 #: app/templates/cookies.html:24
 msgid ""
@@ -1362,7 +1478,11 @@ msgid ""
 "and its application in French law (article 82 of the Data Protection "
 "Act), we are required to inform you about the use of cookies and obtain "
 "your consent for some of them."
-msgstr "Conformément à la <strong>directive ePrivacy (2002/58/CE)</strong> et à son application en droit français (article 82 de la loi Informatique et Libertés), nous devons vous informer de l'utilisation des cookies et obtenir votre consentement pour certains d'entre eux."
+msgstr ""
+"Conformément à la <strong>directive ePrivacy (2002/58/CE)</strong> et à "
+"son application en droit français (article 82 de la loi Informatique et "
+"Libertés), nous devons vous informer de l'utilisation des cookies et "
+"obtenir votre consentement pour certains d'entre eux."
 
 #: app/templates/cookies.html:31
 msgid "2. Strictly necessary cookies (without consent)"
@@ -1373,7 +1493,11 @@ msgid ""
 "These cookies are <strong>essential for the site to function</strong> and"
 " cannot be disabled. They do <strong>not require prior consent</strong> "
 "in accordance with CNIL recommendations."
-msgstr "Ces cookies sont <strong>indispensables au fonctionnement du site</strong> et ne peuvent pas être désactivés. Ils <strong>ne nécessitent pas de consentement préalable</strong> conformément aux recommandations de la CNIL."
+msgstr ""
+"Ces cookies sont <strong>indispensables au fonctionnement du "
+"site</strong> et ne peuvent pas être désactivés. Ils <strong>ne "
+"nécessitent pas de consentement préalable</strong> conformément aux "
+"recommandations de la CNIL."
 
 #: app/templates/cookies.html:43
 msgid "Cookie name"
@@ -1393,7 +1517,9 @@ msgstr "Durée"
 msgid ""
 "Flask session cookie to maintain your active session while browsing "
 "(e.g., multi-step form)"
-msgstr "Cookie de session Flask pour maintenir votre session active lors de la navigation (ex : formulaire en plusieurs étapes)"
+msgstr ""
+"Cookie de session Flask pour maintenir votre session active lors de la "
+"navigation (ex : formulaire en plusieurs étapes)"
 
 #: app/templates/cookies.html:54
 msgid "Session (deleted when browser is closed)"
@@ -1403,7 +1529,9 @@ msgstr "Session (supprimé à la fermeture du navigateur)"
 msgid ""
 "Protection against CSRF (Cross-Site Request Forgery) attacks to secure "
 "your forms"
-msgstr "Protection contre les attaques CSRF (Cross-Site Request Forgery) pour sécuriser vos formulaires."
+msgstr ""
+"Protection contre les attaques CSRF (Cross-Site Request Forgery) pour "
+"sécuriser vos formulaires."
 
 #: app/templates/cookies.html:61
 msgid "Session"
@@ -1425,7 +1553,10 @@ msgstr "3. Cookies analytiques (consentement requis)"
 msgid ""
 "These cookies allow us to analyze site usage and improve our services. "
 "<strong>Your consent is required</strong> before they are activated."
-msgstr "Ces cookies nous permettent d'analyser l'utilisation du site et d'améliorer nos services. <strong>Votre consentement est requis</strong> avant qu'ils ne soient activés."
+msgstr ""
+"Ces cookies nous permettent d'analyser l'utilisation du site et "
+"d'améliorer nos services. <strong>Votre consentement est requis</strong> "
+"avant qu'ils ne soient activés."
 
 #: app/templates/cookies.html:90 app/templates/cookies.html:129
 msgid "Service"
@@ -1454,7 +1585,10 @@ msgid ""
 "ℹ️ <strong>Currently, no analytical cookies are enabled on this "
 "site.</strong> If we decide to use them in the future, you will be "
 "informed and can manage your preferences via the cookie banner."
-msgstr "ℹ️ <strong>Actuellement, aucun cookie analytique n'est activé sur ce site.</strong> Si nous décidons d'en utiliser à l'avenir, vous serez informé et pourrez gérer vos préférences via le bandeau cookies."
+msgstr ""
+"ℹ️ <strong>Actuellement, aucun cookie analytique n'est activé sur ce "
+"site.</strong> Si nous décidons d'en utiliser à l'avenir, vous serez "
+"informé et pourrez gérer vos préférences via le bandeau cookies."
 
 #: app/templates/cookies.html:117
 msgid "4. Third-party cookies - Stripe (consent required)"
@@ -1465,7 +1599,10 @@ msgid ""
 "Our site uses <strong>Stripe</strong> for secure online payment "
 "processing. Stripe may set cookies on your device to prevent fraud and "
 "secure transactions."
-msgstr "Notre site utilise <strong>Stripe</strong> pour le traitement sécurisé des paiements en ligne. Stripe peut déposer des cookies sur votre appareil afin de prévenir la fraude et de sécuriser les transactions."
+msgstr ""
+"Notre site utilise <strong>Stripe</strong> pour le traitement sécurisé "
+"des paiements en ligne. Stripe peut déposer des cookies sur votre "
+"appareil afin de prévenir la fraude et de sécuriser les transactions."
 
 #: app/templates/cookies.html:136
 msgid "Stripe Checkout"
@@ -1486,7 +1623,11 @@ msgid ""
 "⚠️ <strong>Important:</strong> If you refuse Stripe cookies, you will not"
 " be able to make payments on our platform. Stripe cookies are necessary "
 "for the secure payment process to function properly."
-msgstr "⚠️ <strong>Important :</strong> Si vous refusez les cookies Stripe, vous ne pourrez pas effectuer de paiements sur notre plateforme. Les cookies Stripe sont nécessaires au bon fonctionnement du processus de paiement sécurisé."
+msgstr ""
+"⚠️ <strong>Important :</strong> Si vous refusez les cookies Stripe, vous "
+"ne pourrez pas effectuer de paiements sur notre plateforme. Les cookies "
+"Stripe sont nécessaires au bon fonctionnement du processus de paiement "
+"sécurisé."
 
 #: app/templates/cookies.html:153
 msgid "To learn more about Stripe's privacy policy:"
@@ -1528,7 +1669,9 @@ msgstr ""
 msgid ""
 "You can change your preferences at any time by clicking on the 'Manage "
 "cookies' link at the bottom of each page."
-msgstr "Vous pouvez modifier vos préférences à tout moment en cliquant sur le lien 'Gérer les cookies' présent en bas de chaque page."
+msgstr ""
+"Vous pouvez modifier vos préférences à tout moment en cliquant sur le "
+"lien 'Gérer les cookies' présent en bas de chaque page."
 
 #: app/templates/cookies.html:180
 msgid "5.2. Via your browser settings"
@@ -1539,7 +1682,11 @@ msgid ""
 "You can also configure your browser to automatically refuse cookies or be"
 " alerted when a cookie is set. Here are links to configuration guides for"
 " major browsers:"
-msgstr "Vous pouvez également configurer votre navigateur pour refuser automatiquement les cookies ou être alerté lorsqu'un cookie est déposé. Voici les liens vers les guides de configuration des principaux navigateurs :"
+msgstr ""
+"Vous pouvez également configurer votre navigateur pour refuser "
+"automatiquement les cookies ou être alerté lorsqu'un cookie est déposé. "
+"Voici les liens vers les guides de configuration des principaux "
+"navigateurs :"
 
 #: app/templates/cookies.html:187
 msgid "Google Chrome:"
@@ -1562,7 +1709,11 @@ msgid ""
 "⚠️ <strong>Warning:</strong> Disabling certain cookies may impact your "
 "browsing experience and limit access to certain site features (for "
 "example: inability to complete payment if Stripe cookies are blocked)."
-msgstr "⚠️ <strong>Attention :</strong> La désactivation de certains cookies peut impacter votre expérience de navigation et limiter l'accès à certaines fonctionnalités du site (exemple : impossibilité de finaliser un paiement si les cookies Stripe sont bloqués)."
+msgstr ""
+"⚠️ <strong>Attention :</strong> La désactivation de certains cookies peut"
+" impacter votre expérience de navigation et limiter l'accès à certaines "
+"fonctionnalités du site (exemple : impossibilité de finaliser un paiement"
+" si les cookies Stripe sont bloqués)."
 
 #: app/templates/cookies.html:222
 msgid "6. Cookie retention period"
@@ -1573,14 +1724,20 @@ msgid ""
 "In accordance with CNIL recommendations, the validity period of your "
 "consent (or refusal) is <strong>13 months maximum</strong>. After this "
 "period, your consent will be requested again."
-msgstr "Conformément aux recommandations de la CNIL, la durée de validité de votre consentement (ou refus) est de <strong>13 mois maximum</strong>. Au-delà de cette période, votre consentement vous sera redemandé."
+msgstr ""
+"Conformément aux recommandations de la CNIL, la durée de validité de "
+"votre consentement (ou refus) est de <strong>13 mois maximum</strong>. "
+"Au-delà de cette période, votre consentement vous sera redemandé."
 
 #: app/templates/cookies.html:230
 msgid ""
 "Cookies set with your consent have a variable lifespan depending on their"
 " purpose, but cannot exceed <strong>13 months</strong> for audience "
 "measurement cookies."
-msgstr "Les cookies déposés avec votre consentement ont une durée de vie variable selon leur finalité, mais ne peuvent excéder <strong>13 mois</strong> pour les cookies de mesure d'audience."
+msgstr ""
+"Les cookies déposés avec votre consentement ont une durée de vie variable"
+" selon leur finalité, mais ne peuvent excéder <strong>13 mois</strong> "
+"pour les cookies de mesure d'audience."
 
 #: app/templates/cookies.html:237
 msgid "7. Contact and complaints"
@@ -1588,7 +1745,9 @@ msgstr "7. Contact et réclamations"
 
 #: app/templates/cookies.html:242
 msgid "For any questions regarding our cookie policy, you can contact us at:"
-msgstr "Pour toute question concernant notre politique de cookies, vous pouvez nous contacter à :"
+msgstr ""
+"Pour toute question concernant notre politique de cookies, vous pouvez "
+"nous contacter à :"
 
 #: app/templates/cookies.html:245 app/templates/mentions_legales.html:25
 #: app/templates/mentions_legales.html:38
@@ -1597,7 +1756,6 @@ msgstr "Pour toute question concernant notre politique de cookies, vous pouvez n
 msgid "Email:"
 msgstr "Email :"
 
-#: app/templates/cookies.html:246
 #: app/templates/cookies.html:246
 msgid "Contact form:"
 msgstr "Formulaire de contact :"
@@ -1729,7 +1887,6 @@ msgid "Share capital:"
 msgstr ""
 
 #: app/templates/mentions_legales.html:26
-#: app/templates/politique_confidentialite.html:382
 #: app/templates/politique_confidentialite.html:382
 msgid "Phone:"
 msgstr "Téléphone :"
@@ -1992,7 +2149,9 @@ msgstr "2.1. Pour les vendeurs (utilisateurs qui publient des annonces)"
 
 #: app/templates/politique_confidentialite.html:42
 msgid "When posting a listing, we collect the following data:"
-msgstr "Lors de la publication d'une annonce, nous collectons les données suivantes :"
+msgstr ""
+"Lors de la publication d'une annonce, nous collectons les données "
+"suivantes :"
 
 #: app/templates/politique_confidentialite.html:45
 msgid "Identification data:"
@@ -2003,15 +2162,15 @@ msgid "Company name, contact first and last name"
 msgstr "Nom de l'entreprise, nom et prénom du contact"
 
 #: app/templates/politique_confidentialite.html:46
-#: app/templates/politique_confidentialite.html:46
 msgid "Contact information:"
 msgstr "Coordonnées :"
 
 #: app/templates/politique_confidentialite.html:46
 msgid "Email address, phone number, postal address (equipment location)"
-msgstr "Adresse email, numéro de téléphone, adresse postale (localisation de l'équipement)"
+msgstr ""
+"Adresse email, numéro de téléphone, adresse postale (localisation de "
+"l'équipement)"
 
-#: app/templates/politique_confidentialite.html:47
 #: app/templates/politique_confidentialite.html:47
 msgid "Billing information:"
 msgstr "Informations de facturation :"
@@ -2041,7 +2200,6 @@ msgid "IP address, browsing data (via cookies)"
 msgstr "Adresse IP, données de navigation (via cookies)"
 
 #: app/templates/politique_confidentialite.html:52
-#: app/templates/politique_confidentialite.html:52
 msgid "⚠️ Important information:"
 msgstr "⚠️ Information importante :"
 
@@ -2051,7 +2209,11 @@ msgid ""
 "publicly</strong> on your listing to allow buyers to contact you "
 "directly. By posting a listing, you expressly consent to this publication"
 " in accordance with Article 6.1.a of the GDPR."
-msgstr "Vos coordonnées (email et téléphone) seront <strong>publiées publiquement</strong> sur votre annonce pour permettre aux acheteurs de vous contacter directement. En publiant une annonce, vous consentez expressément à cette publication conformément à l'article 6.1.a du RGPD."
+msgstr ""
+"Vos coordonnées (email et téléphone) seront <strong>publiées "
+"publiquement</strong> sur votre annonce pour permettre aux acheteurs de "
+"vous contacter directement. En publiant une annonce, vous consentez "
+"expressément à cette publication conformément à l'article 6.1.a du RGPD."
 
 #: app/templates/politique_confidentialite.html:55
 msgid "2.2. For buyers (visitors browsing listings)"
@@ -2091,7 +2253,9 @@ msgstr "3. Finalités du traitement des données"
 
 #: app/templates/politique_confidentialite.html:76
 msgid "Your personal data is collected and processed for the following purposes:"
-msgstr "Vos données personnelles sont collectées et traitées pour les finalités suivantes :"
+msgstr ""
+"Vos données personnelles sont collectées et traitées pour les finalités "
+"suivantes :"
 
 #: app/templates/politique_confidentialite.html:80
 msgid "Listing publication and management:"

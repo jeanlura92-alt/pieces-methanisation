@@ -3,317 +3,299 @@
 {% block content %}
 <section class="form-page">
   <div class="form-container" style="max-width: 1000px;">
-    <h1>Conditions Générales de Vente et d'Utilisation (CGV/CGU)</h1>
-    <p class="subtitle">Plateforme B2B pour l'achat et la vente d'équipements de méthanisation</p>
+    <h1>{{ _("Terms and Conditions of Sale and Use (CGV/CGU)") }}</h1>
+    <p class="subtitle">{{ _("B2B platform for buying and selling biogas equipment") }}</p>
 
     <div style="margin-top: 40px;">
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          Article 1 : Objet et acceptation
+          {{ _("Article 1: Object and Acceptance") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Le site pieces-methanisation.onrender.com (ci-après "la Plateforme") est une <strong>marketplace B2B</strong> permettant aux professionnels de publier et de consulter des annonces d'équipements et de pièces détachées pour installations de méthanisation et de production de biogaz.
+            {{ _("The website pieces-methanisation.onrender.com (hereinafter 'the Platform') is a <strong>B2B marketplace</strong> allowing professionals to publish and consult ads for biogas and methanation equipment and spare parts.") }}
           </p>
           <p style="margin-bottom: 16px;">
-            Les présentes Conditions Générales de Vente et d'Utilisation (CGV/CGU) régissent les relations entre :
+            {{ _("These Terms and Conditions of Sale and Use (CGV/CGU) govern the relationships between:") }}
           </p>
           <ul style="margin-left: 24px; margin-bottom: 16px;">
-            <li style="margin-bottom: 8px;"><strong>[NOM DE LA SOCIÉTÉ]</strong>, éditeur de la Plateforme (ci-après "l'Éditeur")</li>
-            <li style="margin-bottom: 8px;">Les utilisateurs professionnels qui publient des annonces (ci-après "les Vendeurs")</li>
-            <li>Les utilisateurs professionnels qui consultent et contactent les vendeurs (ci-après "les Acheteurs")</li>
+            <li style="margin-bottom: 8px;">{{ _("<strong>[NOM DE LA SOCIÉTÉ]</strong>, publisher of the Platform (hereinafter 'the Publisher')") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("Professional users who publish ads (hereinafter 'the Sellers')") }}</li>
+            <li>{{ _("Professional users who view and contact sellers (hereinafter 'the Buyers')") }}</li>
           </ul>
           <p>
-            <strong>L'utilisation de la Plateforme implique l'acceptation pleine et entière des présentes CGV/CGU.</strong> 
-            Si vous n'acceptez pas ces conditions, vous devez cesser immédiatement d'utiliser le site.
+            {{ _("<strong>Using the Platform implies full acceptance of these CGV/CGU.</strong> If you do not accept these conditions, you must immediately cease using the site.") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          Article 2 : Publication d'annonces
+          {{ _("Article 2: Publishing Ads") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">2.1. Tarification</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("2.1. Pricing") }}</h3>
           <p style="margin-bottom: 16px;">
-            La publication d'une annonce sur la Plateforme est payante. Le tarif applicable est de <strong>49 € TTC par annonce</strong>.
+            {{ _("Publishing an ad on the Platform is paid. The applicable rate is <strong>€49 including tax per ad</strong>.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">2.2. Durée de validité</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("2.2. Validity Period") }}</h3>
           <p style="margin-bottom: 16px;">
-            Chaque annonce publiée reste active pendant une durée de <strong>30 jours calendaires</strong> à compter de la date de publication. 
-            À l'expiration de ce délai, l'annonce est automatiquement retirée de la Plateforme.
+            {{ _("Each published ad remains active for a period of <strong>30 calendar days</strong> from the publication date. After this period, the ad is automatically removed from the Platform.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">2.3. Limitation de contenu</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("2.3. Content Limitation") }}</h3>
           <p style="margin-bottom: 16px;">
-            Chaque annonce peut comporter <strong>un maximum de 1 photo</strong>. Les photos doivent être de qualité professionnelle et représenter fidèlement l'équipement proposé.
+            {{ _("Each ad can include <strong>a maximum of 1 photo</strong>. Photos must be of professional quality and faithfully represent the equipment offered.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">2.4. Processus de publication</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("2.4. Publication Process") }}</h3>
           <p style="margin-bottom: 16px;">
-            La publication d'une annonce se déroule en <strong>5 étapes</strong> via un wizard interactif :
+            {{ _("Publishing an ad takes place in <strong>5 steps</strong> via an interactive wizard:") }}
           </p>
           <ol style="margin-left: 24px; margin-bottom: 16px;">
-            <li style="margin-bottom: 8px;"><strong>Étape 1 :</strong> Type d'annonce et catégorie (Agitation, Pompage, Épuration, etc.)</li>
-            <li style="margin-bottom: 8px;"><strong>Étape 2 :</strong> Caractéristiques techniques (état, année, fabricant, description détaillée)</li>
-            <li style="margin-bottom: 8px;"><strong>Étape 3 :</strong> Upload de photo (1 photo maximum)</li>
-            <li style="margin-bottom: 8px;"><strong>Étape 4 :</strong> Prix et localisation</li>
-            <li style="margin-bottom: 8px;"><strong>Étape 5 :</strong> Coordonnées de contact et récapitulatif</li>
+            <li style="margin-bottom: 8px;">{{ _("<strong>Step 1:</strong> Ad type and category (Agitation, Pumping, Purification, etc.)") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("<strong>Step 2:</strong> Technical characteristics (condition, year, manufacturer, detailed description)") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("<strong>Step 3:</strong> Photo upload (1 photo maximum)") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("<strong>Step 4:</strong> Price and location") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("<strong>Step 5:</strong> Contact details and summary") }}</li>
           </ol>
           <p style="margin-bottom: 16px;">
-            Après validation du récapitulatif, le Vendeur est redirigé vers une page de <strong>paiement sécurisée Stripe</strong>. 
-            L'annonce est publiée <strong>immédiatement après confirmation du paiement</strong>.
+            {{ _("After validating the summary, the Seller is redirected to a <strong>secure Stripe payment</strong> page. The ad is published <strong>immediately after payment confirmation</strong>.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">2.5. Données obligatoires</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("2.5. Required Data") }}</h3>
           <p style="margin-bottom: 16px;">
-            Pour publier une annonce, le Vendeur doit obligatoirement fournir :
+            {{ _("To publish an ad, the Seller must provide:") }}
           </p>
           <ul style="margin-left: 24px; margin-bottom: 16px;">
-            <li style="margin-bottom: 8px;">Un titre clair et descriptif</li>
-            <li style="margin-bottom: 8px;">Une catégorie d'équipement</li>
-            <li style="margin-bottom: 8px;">Une description détaillée de l'équipement</li>
-            <li style="margin-bottom: 8px;">Une photo de l'équipement</li>
-            <li style="margin-bottom: 8px;">Un prix (ou mention "Sur devis")</li>
-            <li style="margin-bottom: 8px;">Une localisation géographique</li>
-            <li style="margin-bottom: 8px;">Des coordonnées de contact valides (email et téléphone)</li>
+            <li style="margin-bottom: 8px;">{{ _("A clear and descriptive title") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("An equipment category") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("A detailed description of the equipment") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("A photo of the equipment") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("A price (or 'Quote on request')") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("A geographic location") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("Valid contact details (email and phone)") }}</li>
           </ul>
           <p>
-            <strong>⚠️ Important :</strong> Les coordonnées de contact fournies seront <strong>publiées publiquement</strong> sur l'annonce. 
-            Le Vendeur doit donner son <strong>consentement explicite</strong> à cette publication (conformément au RGPD).
+            {{ _("<strong>⚠️ Important:</strong> The contact details provided will be <strong>published publicly</strong> on the ad. The Seller must give <strong>explicit consent</strong> to this publication (in accordance with GDPR).") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          Article 3 : Paiement
+          {{ _("Article 3: Payment") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">3.1. Modalités de paiement</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("3.1. Payment Terms") }}</h3>
           <p style="margin-bottom: 16px;">
-            Le paiement de la publication d'annonce s'effectue exclusivement en ligne via le système de paiement sécurisé <strong>Stripe Checkout</strong>. 
-            Les moyens de paiement acceptés sont : carte bancaire (Visa, Mastercard, American Express).
+            {{ _("Payment for ad publication is made exclusively online via the secure payment system <strong>Stripe Checkout</strong>. Accepted payment methods are: credit card (Visa, Mastercard, American Express).") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">3.2. Politique de remboursement</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("3.2. Refund Policy") }}</h3>
           <p style="margin-bottom: 16px;">
-            <strong>Aucun remboursement n'est possible après la publication de l'annonce.</strong> Le Vendeur est invité à vérifier attentivement toutes les informations avant de procéder au paiement.
+            {{ _("<strong>No refund is possible after the ad has been published.</strong> The Seller is advised to carefully check all information before proceeding with payment.") }}
           </p>
           <p style="margin-bottom: 16px;">
-            En cas d'erreur technique empêchant la publication de l'annonce malgré un paiement validé, l'Éditeur s'engage à résoudre le problème ou à procéder au remboursement intégral dans un délai de 14 jours.
+            {{ _("In the event of a technical error preventing the publication of the ad despite a validated payment, the Publisher undertakes to resolve the problem or to proceed with a full refund within 14 days.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">3.3. Facturation</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("3.3. Invoicing") }}</h3>
           <p>
-            Une facture est automatiquement générée et envoyée par email au Vendeur après validation du paiement. 
-            Les factures sont conservées conformément aux obligations légales comptables (10 ans).
+            {{ _("An invoice is automatically generated and sent by email to the Seller after payment validation. Invoices are kept in accordance with legal accounting obligations (10 years).") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          Article 4 : Responsabilités
+          {{ _("Article 4: Responsibilities") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">4.1. Rôle de la Plateforme</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("4.1. Role of the Platform") }}</h3>
           <p style="margin-bottom: 16px;">
-            La Plateforme agit en qualité de <strong>simple intermédiaire</strong> entre les Vendeurs et les Acheteurs. 
-            L'Éditeur met à disposition un espace de publication d'annonces mais <strong>ne participe en aucun cas aux transactions</strong> entre professionnels.
+            {{ _("The Platform acts as a <strong>simple intermediary</strong> between Sellers and Buyers. The Publisher provides a space for publishing ads but <strong>does not participate in any way in transactions</strong> between professionals.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">4.2. Responsabilité des Vendeurs</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("4.2. Sellers' Responsibility") }}</h3>
           <p style="margin-bottom: 16px;">
-            Les Vendeurs sont <strong>seuls responsables</strong> :
+            {{ _("Sellers are <strong>solely responsible</strong> for:") }}
           </p>
           <ul style="margin-left: 24px; margin-bottom: 16px;">
-            <li style="margin-bottom: 8px;">De l'exactitude des informations fournies dans leurs annonces</li>
-            <li style="margin-bottom: 8px;">De la qualité et de la conformité des équipements proposés</li>
-            <li style="margin-bottom: 8px;">Du respect de la législation applicable à la vente de leurs produits</li>
-            <li style="margin-bottom: 8px;">Des litiges qui pourraient survenir avec les Acheteurs</li>
-            <li>Du respect des droits de propriété intellectuelle sur les photos et contenus publiés</li>
+            <li style="margin-bottom: 8px;">{{ _("The accuracy of the information provided in their ads") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("The quality and compliance of the equipment offered") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("Compliance with legislation applicable to the sale of their products") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("Disputes that may arise with Buyers") }}</li>
+            <li>{{ _("Respect for intellectual property rights on published photos and content") }}</li>
           </ul>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">4.3. Responsabilité des Acheteurs</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("4.3. Buyers' Responsibility") }}</h3>
           <p style="margin-bottom: 16px;">
-            Les Acheteurs sont <strong>seuls responsables</strong> :
+            {{ _("Buyers are <strong>solely responsible</strong> for:") }}
           </p>
           <ul style="margin-left: 24px; margin-bottom: 16px;">
-            <li style="margin-bottom: 8px;">De la vérification de la conformité des équipements avant achat</li>
-            <li style="margin-bottom: 8px;">De la négociation des conditions de vente avec les Vendeurs</li>
-            <li>Du paiement et du transport des équipements achetés</li>
+            <li style="margin-bottom: 8px;">{{ _("Verifying the compliance of equipment before purchase") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("Negotiating the terms of sale with Sellers") }}</li>
+            <li>{{ _("Payment and transport of purchased equipment") }}</li>
           </ul>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">4.4. Limitation de responsabilité de la Plateforme</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("4.4. Platform Liability Limitation") }}</h3>
           <p style="margin-bottom: 16px;">
-            L'Éditeur ne peut être tenu responsable :
+            {{ _("The Publisher cannot be held responsible for:") }}
           </p>
           <ul style="margin-left: 24px; margin-bottom: 16px;">
-            <li style="margin-bottom: 8px;">De la qualité, de la conformité ou de la légalité des équipements proposés</li>
-            <li style="margin-bottom: 8px;">Des transactions conclues entre Vendeurs et Acheteurs</li>
-            <li style="margin-bottom: 8px;">Des litiges contractuels ou commerciaux entre utilisateurs</li>
-            <li style="margin-bottom: 8px;">Des interruptions temporaires du service pour maintenance</li>
-            <li>Des pertes de données en cas de défaillance technique indépendante de sa volonté</li>
+            <li style="margin-bottom: 8px;">{{ _("The quality, compliance or legality of the equipment offered") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("Transactions concluded between Sellers and Buyers") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("Contractual or commercial disputes between users") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("Temporary service interruptions for maintenance") }}</li>
+            <li>{{ _("Data loss in the event of a technical failure beyond its control") }}</li>
           </ul>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">4.5. Absence de garantie</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("4.5. No Warranty") }}</h3>
           <p>
-            L'Éditeur <strong>ne fournit aucune garantie</strong> sur les équipements proposés à la vente. Les garanties commerciales ou légales relèvent exclusivement de la responsabilité des Vendeurs.
+            {{ _("The Publisher <strong>provides no warranty</strong> on the equipment offered for sale. Commercial or legal warranties are exclusively the responsibility of the Sellers.") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          Article 5 : Protection des données personnelles
+          {{ _("Article 5: Personal Data Protection") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            La collecte et le traitement des données personnelles des utilisateurs sont régis par notre 
-            <a href="/politique-confidentialite" style="color: var(--primary-color); text-decoration: underline; font-weight: 600;">Politique de Confidentialité</a>, 
-            conforme au Règlement Général sur la Protection des Données (RGPD).
+            {{ _("The collection and processing of users' personal data is governed by our <a href='/politique-confidentialite' style='color: var(--primary-color); text-decoration: underline; font-weight: 600;'>Privacy Policy</a>, in compliance with the General Data Protection Regulation (GDPR).") }}
           </p>
           <p style="margin-bottom: 16px;">
-            <strong>⚠️ Avertissement important :</strong> Les coordonnées de contact des Vendeurs (email et téléphone) sont <strong>publiées publiquement</strong> sur les annonces 
-            pour permettre aux Acheteurs de les contacter directement. En publiant une annonce, le Vendeur consent expressément à cette publication.
+            {{ _("<strong>⚠️ Important warning:</strong> Sellers' contact details (email and phone) are <strong>published publicly</strong> on ads to allow Buyers to contact them directly. By publishing an ad, the Seller expressly consents to this publication.") }}
           </p>
           <p>
-            Pour exercer vos droits RGPD (accès, rectification, suppression, opposition), contactez : <strong>privacy@pieces-methanisation.fr</strong>
+            {{ _("To exercise your GDPR rights (access, rectification, deletion, opposition), contact: <strong>privacy@pieces-methanisation.fr</strong>") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          Article 6 : Propriété intellectuelle
+          {{ _("Article 6: Intellectual Property") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">6.1. Droits sur la Plateforme</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("6.1. Rights on the Platform") }}</h3>
           <p style="margin-bottom: 16px;">
-            L'ensemble des éléments constitutifs de la Plateforme (structure, design, textes, graphismes, logos, fonctionnalités) sont la propriété exclusive de l'Éditeur 
-            et sont protégés par le Code de la propriété intellectuelle.
+            {{ _("All constituent elements of the Platform (structure, design, texts, graphics, logos, functionalities) are the exclusive property of the Publisher and are protected by the Intellectual Property Code.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">6.2. Droits sur les contenus publiés</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("6.2. Rights on Published Content") }}</h3>
           <p style="margin-bottom: 16px;">
-            Les Vendeurs conservent l'entière propriété intellectuelle des contenus (photos, descriptions) qu'ils publient sur la Plateforme.
+            {{ _("Sellers retain full intellectual property of the content (photos, descriptions) they publish on the Platform.") }}
           </p>
           <p>
-            En publiant du contenu, les Vendeurs accordent à l'Éditeur une <strong>licence non exclusive, gratuite et mondiale</strong> d'utilisation, de reproduction et de représentation 
-            de ce contenu, uniquement dans le cadre de l'exploitation de la Plateforme et pour la durée de publication de l'annonce.
+            {{ _("By publishing content, Sellers grant the Publisher a <strong>non-exclusive, free and worldwide license</strong> to use, reproduce and represent this content, solely for the operation of the Platform and for the duration of the ad's publication.") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          Article 7 : Signalement et modération
+          {{ _("Article 7: Reporting and Moderation") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">7.1. Procédure de signalement</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("7.1. Reporting Procedure") }}</h3>
           <p style="margin-bottom: 16px;">
-            Conformément au Digital Services Act (DSA), tout utilisateur peut signaler un contenu qu'il estime illicite, frauduleux ou contraire aux présentes CGV/CGU 
-            via le formulaire accessible à l'adresse <a href="/signaler" style="color: var(--primary-color); text-decoration: underline; font-weight: 600;">/signaler</a>.
+            {{ _("In accordance with the Digital Services Act (DSA), any user can report content they consider illegal, fraudulent or contrary to these CGV/CGU via the form accessible at <a href='/signaler' style='color: var(--primary-color); text-decoration: underline; font-weight: 600;'>/signaler</a>.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">7.2. Droit de retrait</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("7.2. Right of Withdrawal") }}</h3>
           <p style="margin-bottom: 16px;">
-            L'Éditeur se réserve le droit de <strong>retirer sans préavis</strong> toute annonce qui :
+            {{ _("The Publisher reserves the right to <strong>remove without notice</strong> any ad that:") }}
           </p>
           <ul style="margin-left: 24px;">
-            <li style="margin-bottom: 8px;">Contient des informations fausses, trompeuses ou frauduleuses</li>
-            <li style="margin-bottom: 8px;">Viole les droits de propriété intellectuelle de tiers</li>
-            <li style="margin-bottom: 8px;">Contient du contenu illicite, diffamatoire ou portant atteinte à l'ordre public</li>
-            <li>Ne respecte pas les présentes CGV/CGU</li>
+            <li style="margin-bottom: 8px;">{{ _("Contains false, misleading or fraudulent information") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("Violates the intellectual property rights of third parties") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("Contains illegal, defamatory content or harms public order") }}</li>
+            <li>{{ _("Does not comply with these CGV/CGU") }}</li>
           </ul>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          Article 8 : Résiliation et suppression de compte
+          {{ _("Article 8: Termination and Account Deletion") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Conformément au RGPD, les utilisateurs disposent d'un <strong>droit à l'effacement</strong> ("droit à l'oubli") de leurs données personnelles.
+            {{ _("In accordance with GDPR, users have a <strong>right to erasure</strong> ('right to be forgotten') of their personal data.") }}
           </p>
           <p>
-            Pour demander la suppression de vos données, contactez : <strong>privacy@pieces-methanisation.fr</strong>. 
-            La suppression sera effectuée sous 30 jours, sauf obligation légale de conservation (par exemple : données comptables pour factures).
+            {{ _("To request the deletion of your data, contact: <strong>privacy@pieces-methanisation.fr</strong>. Deletion will be carried out within 30 days, except for legal retention obligations (for example: accounting data for invoices).") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          Article 9 : Modification des CGV/CGU
+          {{ _("Article 9: Modification of CGV/CGU") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            L'Éditeur se réserve le droit de modifier les présentes CGV/CGU à tout moment pour s'adapter aux évolutions légales, réglementaires ou techniques.
+            {{ _("The Publisher reserves the right to modify these CGV/CGU at any time to adapt to legal, regulatory or technical changes.") }}
           </p>
           <p>
-            Les utilisateurs seront informés des modifications <strong>au moins 15 jours avant leur entrée en vigueur</strong> via un email et/ou une notification sur la Plateforme. 
-            La poursuite de l'utilisation du site après l'entrée en vigueur des nouvelles CGV/CGU vaut acceptation de celles-ci.
+            {{ _("Users will be informed of modifications <strong>at least 15 days before they take effect</strong> via email and/or a notification on the Platform. Continued use of the site after the new CGV/CGU take effect constitutes acceptance of them.") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          Article 10 : Litiges et juridiction
+          {{ _("Article 10: Disputes and Jurisdiction") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">10.1. Droit applicable</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("10.1. Applicable Law") }}</h3>
           <p style="margin-bottom: 16px;">
-            Les présentes CGV/CGU sont soumises au <strong>droit français</strong>.
+            {{ _("These CGV/CGU are subject to <strong>French law</strong>.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">10.2. Juridiction compétente</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("10.2. Competent Jurisdiction") }}</h3>
           <p style="margin-bottom: 16px;">
-            En cas de litige relatif à l'interprétation ou à l'exécution des présentes CGV/CGU, et à défaut de résolution amiable, 
-            les <strong>tribunaux français</strong> seront seuls compétents.
+            {{ _("In the event of a dispute relating to the interpretation or execution of these CGV/CGU, and failing an amicable resolution, the <strong>French courts</strong> will have sole jurisdiction.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">10.3. Médiation de la consommation</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("10.3. Consumer Mediation") }}</h3>
           <p>
-            Bien que la Plateforme soit destinée exclusivement aux professionnels (B2B), l'Éditeur s'engage à privilégier une résolution amiable des litiges. 
-            Si la Plateforme devait s'ouvrir aux consommateurs (B2C) à l'avenir, un dispositif de médiation de la consommation sera mis en place conformément à la législation applicable.
+            {{ _("Although the Platform is exclusively intended for professionals (B2B), the Publisher is committed to favoring an amicable resolution of disputes. If the Platform were to open to consumers (B2C) in the future, a consumer mediation system will be put in place in accordance with applicable legislation.") }}
           </p>
         </div>
       </div>
 
       <div style="margin-top: 40px; padding: 24px; background: var(--bg-light); border-radius: var(--radius); border-left: 4px solid var(--secondary-color);">
         <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin: 0;">
-          <strong>📌 Note importante :</strong> En utilisant la Plateforme, vous confirmez avoir lu, compris et accepté l'intégralité des présentes CGV/CGU. 
-          Si vous avez des questions, n'hésitez pas à nous contacter à : <strong>legal@pieces-methanisation.fr</strong>
+          {{ _("<strong>📌 Important note:</strong> By using the Platform, you confirm that you have read, understood and accepted these CGV/CGU in their entirety. If you have any questions, please contact us at: <strong>legal@pieces-methanisation.fr</strong>") }}
         </p>
       </div>
 
       <div style="margin-top: 32px; text-align: center;">
         <p style="font-size: 13px; color: var(--text-light);">
-          Dernière mise à jour : Février 2026
+          {{ _("Last updated: February 2026") }}
         </p>
       </div>
 
     </div>
 
     <div style="margin-top: 40px; display: flex; justify-content: center;">
-      <a href="/" class="btn-secondary">← Retour à l'accueil</a>
+      <a href="/" class="btn-secondary">{{ _("← Back to home") }}</a>
     </div>
   </div>
 </section>

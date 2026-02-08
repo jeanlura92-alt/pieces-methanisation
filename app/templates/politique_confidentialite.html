@@ -3,129 +3,102 @@
 {% block content %}
 <section class="form-page">
   <div class="form-container" style="max-width: 1000px;">
-    <h1>Politique de Confidentialité</h1>
-    <p class="subtitle">Conformément au Règlement Général sur la Protection des Données (RGPD)</p>
+    <h1>{{ _("Privacy Policy") }}</h1>
+    <p class="subtitle">{{ _("In accordance with the General Data Protection Regulation (GDPR)") }}</p>
 
     <div style="margin-top: 40px;">
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          1. Responsable du traitement des données
+          {{ _("1. Data Controller") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Le responsable du traitement des données personnelles collectées sur la plateforme pieces-methanisation.onrender.com est :
+            {{ _("The data controller for personal data collected on the platform pieces-methanisation.onrender.com is:") }}
           </p>
-          <p style="margin-bottom: 12px;"><strong>Raison sociale :</strong> [NOM DE LA SOCIÉTÉ]</p>
-          <p style="margin-bottom: 12px;"><strong>Adresse :</strong> [ADRESSE COMPLÈTE DU SIÈGE SOCIAL]</p>
-          <p style="margin-bottom: 12px;"><strong>Email :</strong> contact@pieces-methanisation.fr</p>
-          <p style="margin-bottom: 16px;"><strong>Délégué à la protection des données (DPO) :</strong> privacy@pieces-methanisation.fr</p>
+          <p style="margin-bottom: 12px;"><strong>{{ _("Company name:") }}</strong> [NOM DE LA SOCIÉTÉ]</p>
+          <p style="margin-bottom: 12px;"><strong>{{ _("Address:") }}</strong> [ADRESSE COMPLÈTE DU SIÈGE SOCIAL]</p>
+          <p style="margin-bottom: 12px;"><strong>{{ _("Email:") }}</strong> contact@pieces-methanisation.fr</p>
+          <p style="margin-bottom: 16px;"><strong>{{ _("Data Protection Officer (DPO):") }}</strong> privacy@pieces-methanisation.fr</p>
           <p>
-            Pour toute question relative à la protection de vos données personnelles ou pour exercer vos droits, vous pouvez nous contacter à l'adresse : <strong>privacy@pieces-methanisation.fr</strong>
+            {{ _("For any questions regarding the protection of your personal data or to exercise your rights, you can contact us at:") }} <strong>privacy@pieces-methanisation.fr</strong>
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          2. Données personnelles collectées
+          {{ _("2. Personal Data Collected") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 20px;">
-            La collecte de données personnelles varie selon votre utilisation de la plateforme :
+            {{ _("The collection of personal data varies depending on your use of the platform:") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">2.1. Pour les vendeurs (utilisateurs qui publient des annonces)</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("2.1. For sellers (users who post listings)") }}</h3>
           <p style="margin-bottom: 12px;">
-            Lors de la publication d'une annonce, nous collectons les données suivantes :
+            {{ _("When posting a listing, we collect the following data:") }}
           </p>
           <ul style="margin-left: 24px; margin-bottom: 16px;">
-            <li style="margin-bottom: 8px;"><strong>Données d'identification :</strong> Nom de la société, nom et prénom du contact</li>
-            <li style="margin-bottom: 8px;"><strong>Coordonnées :</strong> Adresse email, numéro de téléphone, adresse postale (localisation de l'équipement)</li>
-            <li style="margin-bottom: 8px;"><strong>Données de facturation :</strong> Informations de paiement traitées par Stripe (numéro de carte bancaire, nom du titulaire)</li>
-            <li style="margin-bottom: 8px;"><strong>Données techniques de l'annonce :</strong> Photos, descriptions, caractéristiques techniques des équipements, prix</li>
-            <li style="margin-bottom: 8px;"><strong>Données de connexion :</strong> Adresse IP, données de navigation (via cookies)</li>
+            <li style="margin-bottom: 8px;"><strong>{{ _("Identification data:") }}</strong> {{ _("Company name, contact first and last name") }}</li>
+            <li style="margin-bottom: 8px;"><strong>{{ _("Contact information:") }}</strong> {{ _("Email address, phone number, postal address (equipment location)") }}</li>
+            <li style="margin-bottom: 8px;"><strong>{{ _("Billing information:") }}</strong> {{ _("Payment information processed by Stripe (credit card number, cardholder name)") }}</li>
+            <li style="margin-bottom: 8px;"><strong>{{ _("Listing technical data:") }}</strong> {{ _("Photos, descriptions, equipment technical specifications, price") }}</li>
+            <li style="margin-bottom: 8px;"><strong>{{ _("Connection data:") }}</strong> {{ _("IP address, browsing data (via cookies)") }}</li>
           </ul>
           <p style="padding: 16px; background: #FFF4E6; border-left: 4px solid #FF9800; border-radius: 4px; margin-bottom: 20px;">
-            <strong>⚠️ Information importante :</strong> Vos coordonnées de contact (email et téléphone) seront <strong>publiées publiquement</strong> sur votre annonce pour permettre aux acheteurs de vous contacter directement. 
-            En publiant une annonce, vous consentez expressément à cette publication conformément à l'article 6.1.a du RGPD.
+            <strong>{{ _("⚠️ Important information:") }}</strong> {{ _("Your contact details (email and phone) will be <strong>published publicly</strong> on your listing to allow buyers to contact you directly. By posting a listing, you expressly consent to this publication in accordance with Article 6.1.a of the GDPR.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">2.2. Pour les acheteurs (visiteurs qui consultent les annonces)</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("2.2. For buyers (visitors browsing listings)") }}</h3>
           <ul style="margin-left: 24px; margin-bottom: 20px;">
-            <li style="margin-bottom: 8px;"><strong>Données de connexion :</strong> Adresse IP, données de navigation (via cookies)</li>
-            <li style="margin-bottom: 8px;"><strong>Données de contact (si vous utilisez le formulaire) :</strong> Nom, prénom, email, téléphone, message</li>
+            <li style="margin-bottom: 8px;"><strong>{{ _("Connection data:") }}</strong> {{ _("IP address, browsing data (via cookies)") }}</li>
+            <li style="margin-bottom: 8px;"><strong>{{ _("Contact information (if you use the form):") }}</strong> {{ _("First name, last name, email, phone, message") }}</li>
           </ul>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">2.3. Pour tous les visiteurs (navigation anonyme)</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; margin-top: 24px; color: var(--text-dark);">{{ _("2.3. For all visitors (anonymous browsing)") }}</h3>
           <ul style="margin-left: 24px;">
-            <li style="margin-bottom: 8px;"><strong>Cookies techniques :</strong> Cookies de session pour le fonctionnement de la plateforme</li>
-            <li style="margin-bottom: 8px;"><strong>Données de navigation :</strong> Adresse IP, pages visitées, durée de session, type de navigateur</li>
-          </ul>
-        </div>
-      </div>
-
-      <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
-        <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          3. Finalités du traitement des données
-        </h2>
-        
-        <div style="line-height: 1.8; color: var(--text-dark);">
-          <p style="margin-bottom: 16px;">
-            Vos données personnelles sont collectées et traitées pour les finalités suivantes :
-          </p>
-          <ul style="margin-left: 24px;">
-            <li style="margin-bottom: 12px;">
-              <strong>Publication et gestion des annonces :</strong> Permettre la création, la publication et la diffusion des annonces d'équipements sur la plateforme
-            </li>
-            <li style="margin-bottom: 12px;">
-              <strong>Mise en relation B2B :</strong> Faciliter la prise de contact entre vendeurs et acheteurs professionnels
-            </li>
-            <li style="margin-bottom: 12px;">
-              <strong>Traitement des paiements :</strong> Gestion des paiements sécurisés pour la publication d'annonces (via Stripe)
-            </li>
-            <li style="margin-bottom: 12px;">
-              <strong>Facturation et comptabilité :</strong> Émission et conservation des factures conformément aux obligations légales
-            </li>
-            <li style="margin-bottom: 12px;">
-              <strong>Support client :</strong> Répondre aux demandes de contact et d'assistance technique
-            </li>
-            <li style="margin-bottom: 12px;">
-              <strong>Amélioration du service :</strong> Analyse de l'utilisation de la plateforme pour améliorer l'expérience utilisateur
-            </li>
-            <li style="margin-bottom: 12px;">
-              <strong>Conformité légale :</strong> Respect des obligations légales et réglementaires (RGPD, obligations comptables, lutte contre la fraude)
-            </li>
-            <li style="margin-bottom: 12px;">
-              <strong>Sécurité :</strong> Prévention de la fraude, détection des comportements abusifs, protection de la plateforme
-            </li>
+            <li style="margin-bottom: 8px;"><strong>{{ _("Technical cookies:") }}</strong> {{ _("Session cookies for platform functionality") }}</li>
+            <li style="margin-bottom: 8px;"><strong>{{ _("Browsing data:") }}</strong> {{ _("IP address, pages visited, session duration, browser type") }}</li>
           </ul>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          4. Base juridique du traitement
+          {{ _("3. Purpose of Data Processing") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Conformément à l'article 6 du RGPD, nos traitements de données reposent sur les bases juridiques suivantes :
+            {{ _("Your personal data is collected and processed for the following purposes:") }}
           </p>
           <ul style="margin-left: 24px;">
             <li style="margin-bottom: 12px;">
-              <strong>Consentement (article 6.1.a du RGPD) :</strong> Publication publique de vos coordonnées de contact sur les annonces
+              <strong>{{ _("Listing publication and management:") }}</strong> {{ _("Allow the creation, publication, and distribution of equipment listings on the platform") }}
             </li>
             <li style="margin-bottom: 12px;">
-              <strong>Exécution d'un contrat (article 6.1.b du RGPD) :</strong> Publication des annonces, traitement des paiements, fourniture du service de plateforme
+              <strong>{{ _("B2B matchmaking:") }}</strong> {{ _("Facilitate contact between professional sellers and buyers") }}
             </li>
             <li style="margin-bottom: 12px;">
-              <strong>Obligation légale (article 6.1.c du RGPD) :</strong> Conservation des factures (10 ans), respect des obligations comptables et fiscales
+              <strong>{{ _("Payment processing:") }}</strong> {{ _("Manage secure payments for listing publication (via Stripe)") }}
             </li>
             <li style="margin-bottom: 12px;">
-              <strong>Intérêts légitimes (article 6.1.f du RGPD) :</strong> Sécurisation de la plateforme, prévention de la fraude, amélioration du service
+              <strong>{{ _("Billing and accounting:") }}</strong> {{ _("Issue and retain invoices in compliance with legal obligations") }}
+            </li>
+            <li style="margin-bottom: 12px;">
+              <strong>{{ _("Customer support:") }}</strong> {{ _("Respond to contact requests and technical assistance") }}
+            </li>
+            <li style="margin-bottom: 12px;">
+              <strong>{{ _("Service improvement:") }}</strong> {{ _("Analyze platform usage to improve user experience") }}
+            </li>
+            <li style="margin-bottom: 12px;">
+              <strong>{{ _("Legal compliance:") }}</strong> {{ _("Compliance with legal and regulatory obligations (GDPR, accounting obligations, fraud prevention)") }}
+            </li>
+            <li style="margin-bottom: 12px;">
+              <strong>{{ _("Security:") }}</strong> {{ _("Fraud prevention, detection of abusive behavior, platform protection") }}
             </li>
           </ul>
         </div>
@@ -133,238 +106,256 @@
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          5. Destinataires des données
+          {{ _("4. Legal Basis for Processing") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Vos données personnelles sont destinées aux catégories de destinataires suivants :
+            {{ _("In accordance with Article 6 of the GDPR, our data processing is based on the following legal bases:") }}
+          </p>
+          <ul style="margin-left: 24px;">
+            <li style="margin-bottom: 12px;">
+              <strong>{{ _("Consent (Article 6.1.a of the GDPR):") }}</strong> {{ _("Public publication of your contact details on listings") }}
+            </li>
+            <li style="margin-bottom: 12px;">
+              <strong>{{ _("Contract performance (Article 6.1.b of the GDPR):") }}</strong> {{ _("Listing publication, payment processing, platform service provision") }}
+            </li>
+            <li style="margin-bottom: 12px;">
+              <strong>{{ _("Legal obligation (Article 6.1.c of the GDPR):") }}</strong> {{ _("Invoice retention (10 years), compliance with accounting and tax obligations") }}
+            </li>
+            <li style="margin-bottom: 12px;">
+              <strong>{{ _("Legitimate interests (Article 6.1.f of the GDPR):") }}</strong> {{ _("Platform security, fraud prevention, service improvement") }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
+        <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
+          {{ _("5. Data Recipients") }}
+        </h2>
+        
+        <div style="line-height: 1.8; color: var(--text-dark);">
+          <p style="margin-bottom: 16px;">
+            {{ _("Your personal data is intended for the following categories of recipients:") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">5.1. Personnel interne</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("5.1. Internal Staff") }}</h3>
           <p style="margin-bottom: 20px;">
-            Les employés habilités de [NOM DE LA SOCIÉTÉ] ont accès à vos données dans le cadre strict de leurs fonctions (support client, modération, administration).
+            {{ _("Authorized employees of [NOM DE LA SOCIÉTÉ] have access to your data strictly within the scope of their duties (customer support, moderation, administration).") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">5.2. Sous-traitants et prestataires techniques</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("5.2. Subcontractors and Technical Service Providers") }}</h3>
           <p style="margin-bottom: 12px;">
-            Nous faisons appel à des prestataires de services pour l'hébergement et le traitement de vos données. Ces prestataires sont soumis à des obligations contractuelles strictes de confidentialité et de sécurité :
+            {{ _("We use service providers for hosting and processing your data. These providers are subject to strict contractual confidentiality and security obligations:") }}
           </p>
           <ul style="margin-left: 24px; margin-bottom: 20px;">
             <li style="margin-bottom: 12px;">
-              <strong>Supabase (hébergement de base de données) :</strong> Stockage des données utilisateurs et des annonces<br>
-              <span style="font-size: 14px; color: var(--text-gray);">Serveurs situés aux États-Unis avec garanties de protection appropriées (clauses contractuelles types de l'UE)</span>
+              <strong>{{ _("Supabase (database hosting):") }}</strong> {{ _("Storage of user data and listings") }}<br>
+              <span style="font-size: 14px; color: var(--text-gray);">{{ _("Servers located in the United States with appropriate protection guarantees (EU standard contractual clauses)") }}</span>
             </li>
             <li style="margin-bottom: 12px;">
-              <strong>Stripe (traitement des paiements) :</strong> Gestion sécurisée des paiements en ligne<br>
-              <span style="font-size: 14px; color: var(--text-gray);">Conforme PCI-DSS niveau 1. Données de paiement traitées directement par Stripe, nous ne stockons aucune donnée bancaire</span>
+              <strong>{{ _("Stripe (payment processing):") }}</strong> {{ _("Secure online payment management") }}<br>
+              <span style="font-size: 14px; color: var(--text-gray);">{{ _("PCI-DSS Level 1 compliant. Payment data processed directly by Stripe, we do not store any banking data") }}</span>
             </li>
             <li style="margin-bottom: 12px;">
-              <strong>Render.com (hébergement applicatif) :</strong> Hébergement de l'application web<br>
+              <strong>{{ _("Render.com (application hosting):") }}</strong> {{ _("Web application hosting") }}<br>
               <span style="font-size: 14px; color: var(--text-gray);">Render Services, Inc., 525 Brannan Street, Suite 300, San Francisco, CA 94107, USA</span>
             </li>
           </ul>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">5.3. Utilisateurs de la plateforme</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("5.3. Platform Users") }}</h3>
           <p style="margin-bottom: 20px;">
-            <strong>⚠️ Important :</strong> Les coordonnées de contact des vendeurs (email et téléphone) sont <strong>rendues publiques</strong> sur les annonces. 
-            Tout visiteur de la plateforme peut donc consulter ces informations.
+            <strong>{{ _("⚠️ Important:") }}</strong> {{ _("Seller contact details (email and phone) are <strong>made public</strong> on listings. Any platform visitor can therefore view this information.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">5.4. Autorités légales</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("5.4. Legal Authorities") }}</h3>
           <p>
-            En cas de demande légale, vos données peuvent être communiquées aux autorités compétentes (police, justice, CNIL) dans le cadre d'une enquête ou d'une obligation légale.
+            {{ _("In the event of a legal request, your data may be communicated to the competent authorities (police, justice, CNIL) as part of an investigation or legal obligation.") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          6. Transferts de données hors Union Européenne
+          {{ _("6. Data Transfers Outside the European Union") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Certains de nos prestataires techniques sont situés en dehors de l'Union Européenne, notamment aux <strong>États-Unis</strong> :
+            {{ _("Some of our technical service providers are located outside the European Union, particularly in the <strong>United States</strong>:") }}
           </p>
           <ul style="margin-left: 24px; margin-bottom: 16px;">
-            <li style="margin-bottom: 8px;"><strong>Supabase :</strong> Serveurs aux États-Unis</li>
-            <li style="margin-bottom: 8px;"><strong>Stripe :</strong> Société américaine (conforme RGPD)</li>
-            <li style="margin-bottom: 8px;"><strong>Render.com :</strong> Serveurs aux États-Unis</li>
+            <li style="margin-bottom: 8px;"><strong>{{ _("Supabase:") }}</strong> {{ _("Servers in the United States") }}</li>
+            <li style="margin-bottom: 8px;"><strong>{{ _("Stripe:") }}</strong> {{ _("American company (GDPR compliant)") }}</li>
+            <li style="margin-bottom: 8px;"><strong>{{ _("Render.com:") }}</strong> {{ _("Servers in the United States") }}</li>
           </ul>
           <p style="margin-bottom: 16px;">
-            Ces transferts sont encadrés par des <strong>garanties appropriées</strong> conformément aux articles 44 à 50 du RGPD :
+            {{ _("These transfers are governed by <strong>appropriate guarantees</strong> in accordance with Articles 44 to 50 of the GDPR:") }}
           </p>
           <ul style="margin-left: 24px;">
             <li style="margin-bottom: 8px;">
-              <strong>Clauses contractuelles types (SCC) de l'Union Européenne</strong> : Contrats standardisés approuvés par la Commission européenne
+              <strong>{{ _("European Union Standard Contractual Clauses (SCC):") }}</strong> {{ _("Standardized contracts approved by the European Commission") }}
             </li>
             <li style="margin-bottom: 8px;">
-              <strong>Mesures techniques supplémentaires</strong> : Chiffrement des données en transit (HTTPS/TLS) et au repos
+              <strong>{{ _("Additional technical measures:") }}</strong> {{ _("Encryption of data in transit (HTTPS/TLS) and at rest") }}
             </li>
             <li style="margin-bottom: 8px;">
-              <strong>Certifications de sécurité</strong> : Nos prestataires disposent de certifications reconnues (SOC 2, ISO 27001, PCI-DSS)
+              <strong>{{ _("Security certifications:") }}</strong> {{ _("Our providers have recognized certifications (SOC 2, ISO 27001, PCI-DSS)") }}
             </li>
           </ul>
           <p style="margin-top: 16px;">
-            Pour plus d'informations sur les garanties mises en place, contactez-nous à : <strong>privacy@pieces-methanisation.fr</strong>
+            {{ _("For more information about the guarantees in place, contact us at:") }} <strong>privacy@pieces-methanisation.fr</strong>
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          7. Durée de conservation des données
+          {{ _("7. Data Retention Period") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Vos données personnelles sont conservées pour des durées différentes selon leur nature et leur finalité :
+            {{ _("Your personal data is retained for different periods depending on its nature and purpose:") }}
           </p>
 
           <table style="width: 100%; border-collapse: collapse; margin-top: 20px;">
             <thead>
               <tr style="background: var(--bg-light);">
-                <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Type de données</th>
-                <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Durée de conservation</th>
-                <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">Base légale</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">{{ _("Data Type") }}</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">{{ _("Retention Period") }}</th>
+                <th style="padding: 12px; text-align: left; border: 1px solid var(--border-color); font-weight: 600;">{{ _("Legal Basis") }}</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td style="padding: 12px; border: 1px solid var(--border-color);">Annonces publiées (actives)</td>
-                <td style="padding: 12px; border: 1px solid var(--border-color);"><strong>30 jours</strong></td>
-                <td style="padding: 12px; border: 1px solid var(--border-color);">Exécution du contrat</td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);">{{ _("Published listings (active)") }}</td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);"><strong>{{ _("30 days") }}</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);">{{ _("Contract performance") }}</td>
               </tr>
               <tr style="background: var(--bg-light);">
-                <td style="padding: 12px; border: 1px solid var(--border-color);">Annonces expirées</td>
-                <td style="padding: 12px; border: 1px solid var(--border-color);">Suppression immédiate après expiration</td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);">{{ _("Expired listings") }}</td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);">{{ _("Immediate deletion after expiration") }}</td>
                 <td style="padding: 12px; border: 1px solid var(--border-color);">-</td>
               </tr>
               <tr>
-                <td style="padding: 12px; border: 1px solid var(--border-color);">Factures et données comptables</td>
-                <td style="padding: 12px; border: 1px solid var(--border-color);"><strong>10 ans</strong></td>
-                <td style="padding: 12px; border: 1px solid var(--border-color);">Obligation légale (Code de commerce art. L123-22)</td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);">{{ _("Invoices and accounting data") }}</td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);"><strong>{{ _("10 years") }}</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);">{{ _("Legal obligation (Commercial Code art. L123-22)") }}</td>
               </tr>
               <tr style="background: var(--bg-light);">
-                <td style="padding: 12px; border: 1px solid var(--border-color);">Demandes de contact (formulaire)</td>
-                <td style="padding: 12px; border: 1px solid var(--border-color);"><strong>3 ans</strong></td>
-                <td style="padding: 12px; border: 1px solid var(--border-color);">Intérêt légitime (support client)</td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);">{{ _("Contact requests (form)") }}</td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);"><strong>{{ _("3 years") }}</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);">{{ _("Legitimate interest (customer support)") }}</td>
               </tr>
               <tr>
-                <td style="padding: 12px; border: 1px solid var(--border-color);">Logs de connexion et adresses IP</td>
-                <td style="padding: 12px; border: 1px solid var(--border-color);"><strong>12 mois</strong></td>
-                <td style="padding: 12px; border: 1px solid var(--border-color);">Obligation légale (sécurité et lutte contre la fraude)</td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);">{{ _("Connection logs and IP addresses") }}</td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);"><strong>{{ _("12 months") }}</strong></td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);">{{ _("Legal obligation (security and fraud prevention)") }}</td>
               </tr>
               <tr style="background: var(--bg-light);">
-                <td style="padding: 12px; border: 1px solid var(--border-color);">Cookies de session</td>
-                <td style="padding: 12px; border: 1px solid var(--border-color);">Fin de la session de navigation</td>
-                <td style="padding: 12px; border: 1px solid var(--border-color);">Fonctionnement technique</td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);">{{ _("Session cookies") }}</td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);">{{ _("End of browsing session") }}</td>
+                <td style="padding: 12px; border: 1px solid var(--border-color);">{{ _("Technical functionality") }}</td>
               </tr>
             </tbody>
           </table>
 
           <p style="margin-top: 20px; padding: 16px; background: #E3F2FD; border-left: 4px solid var(--primary-color); border-radius: 4px;">
-            <strong>💡 Note :</strong> À l'expiration de ces délais, vos données sont <strong>supprimées définitivement</strong> ou anonymisées de manière irréversible, 
-            sauf obligation légale de conservation plus longue.
+            <strong>{{ _("💡 Note:") }}</strong> {{ _("At the expiration of these periods, your data is <strong>permanently deleted</strong> or irreversibly anonymized, unless a legal obligation requires longer retention.") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          8. Vos droits RGPD
+          {{ _("8. Your GDPR Rights") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 20px;">
-            Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants concernant vos données personnelles :
+            {{ _("In accordance with the General Data Protection Regulation (GDPR), you have the following rights regarding your personal data:") }}
           </p>
 
           <div style="margin-bottom: 20px;">
             <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">
-              🔍 Droit d'accès (article 15 du RGPD)
+              {{ _("🔍 Right of access (Article 15 of the GDPR)") }}
             </h3>
             <p style="margin-left: 24px; margin-bottom: 16px;">
-              Vous pouvez obtenir une copie de l'ensemble des données personnelles que nous détenons sur vous, ainsi que des informations sur leur traitement.
+              {{ _("You can obtain a copy of all the personal data we hold about you, as well as information about their processing.") }}
             </p>
 
             <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">
-              ✏️ Droit de rectification (article 16 du RGPD)
+              {{ _("✏️ Right of rectification (Article 16 of the GDPR)") }}
             </h3>
             <p style="margin-left: 24px; margin-bottom: 16px;">
-              Vous pouvez demander la correction de données inexactes ou incomplètes vous concernant.
+              {{ _("You can request the correction of inaccurate or incomplete data concerning you.") }}
             </p>
 
             <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">
-              🗑️ Droit à l'effacement / "Droit à l'oubli" (article 17 du RGPD)
+              {{ _("🗑️ Right to erasure / \"Right to be forgotten\" (Article 17 of the GDPR)") }}
             </h3>
             <p style="margin-left: 24px; margin-bottom: 16px;">
-              Vous pouvez demander la suppression de vos données personnelles, sauf si une obligation légale nous impose de les conserver 
-              (par exemple : factures qui doivent être conservées 10 ans).
+              {{ _("You can request the deletion of your personal data, unless a legal obligation requires us to retain it (for example: invoices that must be kept for 10 years).") }}
             </p>
 
             <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">
-              ⏸️ Droit à la limitation du traitement (article 18 du RGPD)
+              {{ _("⏸️ Right to restriction of processing (Article 18 of the GDPR)") }}
             </h3>
             <p style="margin-left: 24px; margin-bottom: 16px;">
-              Vous pouvez demander la suspension temporaire du traitement de vos données dans certaines situations 
-              (par exemple : en cas de contestation de l'exactitude des données).
+              {{ _("You can request the temporary suspension of processing your data in certain situations (for example: in case of contestation of data accuracy).") }}
             </p>
 
             <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">
-              📦 Droit à la portabilité (article 20 du RGPD)
+              {{ _("📦 Right to data portability (Article 20 of the GDPR)") }}
             </h3>
             <p style="margin-left: 24px; margin-bottom: 16px;">
-              Vous pouvez récupérer vos données dans un format structuré, couramment utilisé et lisible par machine, 
-              et les transmettre à un autre responsable de traitement.
+              {{ _("You can retrieve your data in a structured, commonly used, and machine-readable format, and transmit it to another data controller.") }}
             </p>
 
             <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">
-              ⛔ Droit d'opposition (article 21 du RGPD)
+              {{ _("⛔ Right to object (Article 21 of the GDPR)") }}
             </h3>
             <p style="margin-left: 24px; margin-bottom: 16px;">
-              Vous pouvez vous opposer à tout moment au traitement de vos données pour des raisons tenant à votre situation particulière, 
-              notamment lorsque le traitement repose sur notre intérêt légitime.
+              {{ _("You can object at any time to the processing of your data for reasons relating to your particular situation, especially when the processing is based on our legitimate interest.") }}
             </p>
 
             <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">
-              🔄 Droit de retirer votre consentement (article 7 du RGPD)
+              {{ _("🔄 Right to withdraw your consent (Article 7 of the GDPR)") }}
             </h3>
             <p style="margin-left: 24px; margin-bottom: 16px;">
-              Lorsque le traitement repose sur votre consentement (par exemple : publication publique de vos coordonnées), 
-              vous pouvez le retirer à tout moment. Cela entraînera la suppression de votre annonce.
+              {{ _("When processing is based on your consent (for example: public publication of your contact details), you can withdraw it at any time. This will result in the deletion of your listing.") }}
             </p>
 
             <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--text-dark);">
-              🤖 Droit à ne pas faire l'objet d'une décision automatisée (article 22 du RGPD)
+              {{ _("🤖 Right not to be subject to automated decision-making (Article 22 of the GDPR)") }}
             </h3>
             <p style="margin-left: 24px;">
-              Vous avez le droit de ne pas faire l'objet d'une décision fondée exclusivement sur un traitement automatisé produisant des effets juridiques vous concernant.
+              {{ _("You have the right not to be subject to a decision based solely on automated processing that produces legal effects concerning you.") }}
             </p>
           </div>
 
           <div style="padding: 20px; background: #F3E5F5; border-left: 4px solid #9C27B0; border-radius: 4px; margin-top: 24px;">
             <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">
-              📧 Comment exercer vos droits ?
+              {{ _("📧 How to exercise your rights?") }}
             </h3>
             <p style="margin-bottom: 12px;">
-              Pour exercer l'un de ces droits, contactez-nous par email à l'adresse suivante :
+              {{ _("To exercise any of these rights, contact us by email at the following address:") }}
             </p>
             <p style="margin-bottom: 16px; font-size: 18px;">
               <strong style="color: var(--primary-color);">privacy@pieces-methanisation.fr</strong>
             </p>
             <p style="margin-bottom: 12px;">
-              Merci de préciser dans votre demande :
+              {{ _("Please specify in your request:") }}
             </p>
             <ul style="margin-left: 24px; margin-bottom: 12px;">
-              <li style="margin-bottom: 6px;">Votre identité (nom, prénom, email utilisé sur la plateforme)</li>
-              <li style="margin-bottom: 6px;">Le droit que vous souhaitez exercer</li>
-              <li style="margin-bottom: 6px;">Une copie d'une pièce d'identité (pour éviter toute usurpation d'identité)</li>
+              <li style="margin-bottom: 6px;">{{ _("Your identity (first name, last name, email used on the platform)") }}</li>
+              <li style="margin-bottom: 6px;">{{ _("The right you wish to exercise") }}</li>
+              <li style="margin-bottom: 6px;">{{ _("A copy of an identity document (to prevent identity theft)") }}</li>
             </ul>
             <p style="font-size: 14px; color: var(--text-gray);">
-              <strong>Délai de réponse :</strong> Nous nous engageons à vous répondre dans un délai maximum de <strong>1 mois</strong> à compter de la réception de votre demande 
-              (délai pouvant être prolongé de 2 mois en cas de demande complexe, avec notification préalable).
+              <strong>{{ _("Response time:") }}</strong> {{ _("We commit to responding to you within a maximum of <strong>1 month</strong> from receipt of your request (period that can be extended by 2 months in case of complex request, with prior notification).") }}
             </p>
           </div>
         </div>
@@ -372,184 +363,172 @@
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          9. Droit de réclamation auprès de la CNIL
+          {{ _("9. Right to Complaint to the CNIL") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Si vous estimez que le traitement de vos données personnelles constitue une violation du RGPD, 
-            vous avez le droit d'introduire une <strong>réclamation auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL)</strong>, 
-            autorité de contrôle française en matière de protection des données personnelles.
+            {{ _("If you believe that the processing of your personal data constitutes a violation of the GDPR, you have the right to file a <strong>complaint with the Commission Nationale de l'Informatique et des Libertés (CNIL)</strong>, the French supervisory authority for personal data protection.") }}
           </p>
 
           <div style="padding: 20px; background: var(--bg-light); border-radius: var(--radius); margin-top: 20px;">
             <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">
-              📍 Coordonnées de la CNIL
+              {{ _("📍 CNIL Contact Information") }}
             </h3>
-            <p style="margin-bottom: 8px;"><strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong></p>
+            <p style="margin-bottom: 8px;"><strong>{{ _("Commission Nationale de l'Informatique et des Libertés (CNIL)") }}</strong></p>
             <p style="margin-bottom: 8px;">3 Place de Fontenoy</p>
             <p style="margin-bottom: 8px;">TSA 80715</p>
             <p style="margin-bottom: 8px;">75334 Paris Cedex 07</p>
-            <p style="margin-bottom: 8px;"><strong>Téléphone :</strong> +33 (0)1 53 73 22 22</p>
+            <p style="margin-bottom: 8px;"><strong>{{ _("Phone:") }}</strong> +33 (0)1 53 73 22 22</p>
             <p style="margin-bottom: 16px;">
-              <strong>Site web :</strong> 
+              <strong>{{ _("Website:") }}</strong> 
               <a href="https://www.cnil.fr" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline; font-weight: 600;">www.cnil.fr</a>
             </p>
             <p style="font-size: 14px; color: var(--text-gray);">
-              Vous pouvez déposer une plainte en ligne sur le site de la CNIL : 
+              {{ _("You can file a complaint online on the CNIL website:") }} 
               <a href="https://www.cnil.fr/fr/plaintes" target="_blank" rel="noopener noreferrer" style="color: var(--primary-color); text-decoration: underline;">https://www.cnil.fr/fr/plaintes</a>
             </p>
           </div>
 
           <p style="margin-top: 20px; padding: 16px; background: #E8F5E9; border-left: 4px solid #4CAF50; border-radius: 4px;">
-            <strong>💬 Résolution amiable :</strong> Avant de saisir la CNIL, nous vous encourageons à nous contacter directement 
-            à l'adresse <strong>privacy@pieces-methanisation.fr</strong> afin que nous puissions résoudre ensemble tout problème éventuel.
+            <strong>{{ _("💬 Amicable resolution:") }}</strong> {{ _("Before contacting the CNIL, we encourage you to contact us directly at <strong>privacy@pieces-methanisation.fr</strong> so that we can resolve any issues together.") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          10. Sécurité des données
+          {{ _("10. Data Security") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour assurer un niveau de sécurité adapté aux risques, 
-            conformément à l'article 32 du RGPD.
+            {{ _("We implement appropriate technical and organizational measures to ensure a level of security appropriate to the risks, in accordance with Article 32 of the GDPR.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">10.1. Mesures techniques de sécurité</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("10.1. Technical Security Measures") }}</h3>
           <ul style="margin-left: 24px; margin-bottom: 20px;">
             <li style="margin-bottom: 8px;">
-              <strong>Chiffrement des communications :</strong> Toutes les données échangées entre votre navigateur et notre serveur sont chiffrées via le protocole HTTPS/TLS
+              <strong>{{ _("Communications encryption:") }}</strong> {{ _("All data exchanged between your browser and our server is encrypted via the HTTPS/TLS protocol") }}
             </li>
             <li style="margin-bottom: 8px;">
-              <strong>Chiffrement des données au repos :</strong> Les données stockées dans nos bases de données (Supabase) sont chiffrées
+              <strong>{{ _("Data encryption at rest:") }}</strong> {{ _("Data stored in our databases (Supabase) is encrypted") }}
             </li>
             <li style="margin-bottom: 8px;">
-              <strong>Sécurisation des paiements :</strong> Les données de paiement sont traitées directement par Stripe (certifié PCI-DSS niveau 1). 
-              Nous ne stockons aucune donnée bancaire sur nos serveurs.
+              <strong>{{ _("Payment security:") }}</strong> {{ _("Payment data is processed directly by Stripe (PCI-DSS Level 1 certified). We do not store any banking data on our servers.") }}
             </li>
             <li style="margin-bottom: 8px;">
-              <strong>Authentification sécurisée :</strong> Gestion des sessions utilisateur avec tokens sécurisés
+              <strong>{{ _("Secure authentication:") }}</strong> {{ _("User session management with secure tokens") }}
             </li>
             <li style="margin-bottom: 8px;">
-              <strong>Protection contre les attaques :</strong> Pare-feu applicatif, protection CSRF, validation des entrées utilisateur
+              <strong>{{ _("Protection against attacks:") }}</strong> {{ _("Application firewall, CSRF protection, user input validation") }}
             </li>
             <li style="margin-bottom: 8px;">
-              <strong>Sauvegardes régulières :</strong> Sauvegardes automatiques quotidiennes des données
+              <strong>{{ _("Regular backups:") }}</strong> {{ _("Automatic daily data backups") }}
             </li>
           </ul>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">10.2. Mesures organisationnelles</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("10.2. Organizational Measures") }}</h3>
           <ul style="margin-left: 24px; margin-bottom: 20px;">
             <li style="margin-bottom: 8px;">
-              <strong>Accès restreint :</strong> Seul le personnel habilité a accès aux données personnelles, dans le cadre strict de ses fonctions
+              <strong>{{ _("Restricted access:") }}</strong> {{ _("Only authorized personnel have access to personal data, strictly within the scope of their duties") }}
             </li>
             <li style="margin-bottom: 8px;">
-              <strong>Clauses de confidentialité :</strong> Tous nos employés et prestataires sont soumis à des obligations de confidentialité
+              <strong>{{ _("Confidentiality clauses:") }}</strong> {{ _("All our employees and service providers are subject to confidentiality obligations") }}
             </li>
             <li style="margin-bottom: 8px;">
-              <strong>Surveillance et logs :</strong> Traçabilité des accès aux données et surveillance des activités suspectes
+              <strong>{{ _("Monitoring and logs:") }}</strong> {{ _("Traceability of data access and monitoring of suspicious activities") }}
             </li>
             <li style="margin-bottom: 8px;">
-              <strong>Gestion des incidents :</strong> Procédures de réponse aux violations de données conformes au RGPD (notification sous 72h à la CNIL si nécessaire)
+              <strong>{{ _("Incident management:") }}</strong> {{ _("Data breach response procedures compliant with GDPR (notification within 72 hours to CNIL if necessary)") }}
             </li>
           </ul>
 
           <p style="padding: 16px; background: #FFF3E0; border-left: 4px solid #FF9800; border-radius: 4px;">
-            <strong>⚠️ Notification de violation :</strong> En cas de violation de données susceptible d'engendrer un risque élevé pour vos droits et libertés, 
-            nous vous en informerons dans les meilleurs délais, conformément à l'article 34 du RGPD.
+            <strong>{{ _("⚠️ Breach notification:") }}</strong> {{ _("In the event of a data breach likely to result in a high risk to your rights and freedoms, we will inform you as soon as possible, in accordance with Article 34 of the GDPR.") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color); margin-bottom: 24px;">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          11. Cookies et technologies similaires
+          {{ _("11. Cookies and Similar Technologies") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Notre plateforme utilise des cookies et des technologies similaires pour améliorer votre expérience de navigation et assurer le bon fonctionnement du site.
+            {{ _("Our platform uses cookies and similar technologies to improve your browsing experience and ensure proper site functionality.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">11.1. Qu'est-ce qu'un cookie ?</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("11.1. What is a cookie?") }}</h3>
           <p style="margin-bottom: 20px;">
-            Un cookie est un petit fichier texte déposé sur votre terminal (ordinateur, smartphone, tablette) lors de votre visite sur notre site. 
-            Il permet de mémoriser des informations relatives à votre navigation.
+            {{ _("A cookie is a small text file placed on your device (computer, smartphone, tablet) during your visit to our site. It allows us to remember information about your browsing.") }}
           </p>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">11.2. Types de cookies utilisés</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("11.2. Types of cookies used") }}</h3>
           <ul style="margin-left: 24px; margin-bottom: 20px;">
             <li style="margin-bottom: 12px;">
-              <strong>Cookies strictement nécessaires :</strong> Indispensables au fonctionnement du site (gestion des sessions, panier, sécurité). 
-              Ces cookies ne nécessitent pas de consentement.
+              <strong>{{ _("Strictly necessary cookies:") }}</strong> {{ _("Essential for site functionality (session management, cart, security). These cookies do not require consent.") }}
             </li>
             <li style="margin-bottom: 12px;">
-              <strong>Cookies de performance et d'analyse :</strong> Permettent de mesurer l'audience et d'améliorer le service 
-              (soumis à consentement préalable).
+              <strong>{{ _("Performance and analytics cookies:") }}</strong> {{ _("Allow us to measure audience and improve service (subject to prior consent).") }}
             </li>
           </ul>
 
-          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">11.3. Gestion de vos préférences</h3>
+          <h3 style="font-size: 18px; font-weight: 600; margin-bottom: 12px; color: var(--text-dark);">{{ _("11.3. Managing your preferences") }}</h3>
           <p style="margin-bottom: 16px;">
-            Pour en savoir plus sur les cookies utilisés et gérer vos préférences, consultez notre page dédiée :
+            {{ _("To learn more about the cookies used and manage your preferences, visit our dedicated page:") }}
           </p>
           <p style="text-align: center; margin: 24px 0;">
             <a href="/cookies" class="btn-primary" style="display: inline-block; text-decoration: none;">
-              🍪 Gérer mes préférences cookies
+              {{ _("🍪 Manage my cookie preferences") }}
             </a>
           </p>
           <p style="font-size: 14px; color: var(--text-gray);">
-            Vous pouvez également configurer votre navigateur pour refuser les cookies. Attention : certaines fonctionnalités du site pourraient ne plus fonctionner correctement.
+            {{ _("You can also configure your browser to refuse cookies. Warning: some site features may no longer work properly.") }}
           </p>
         </div>
       </div>
 
       <div style="background: var(--bg-white); padding: 32px; border-radius: var(--radius-lg); border: 1px solid var(--border-color);">
         <h2 style="font-size: 22px; font-weight: 700; color: var(--primary-color); margin-bottom: 20px; border-bottom: 2px solid var(--primary-color); padding-bottom: 12px;">
-          12. Modifications de la Politique de Confidentialité
+          {{ _("12. Privacy Policy Modifications") }}
         </h2>
         
         <div style="line-height: 1.8; color: var(--text-dark);">
           <p style="margin-bottom: 16px;">
-            Nous nous réservons le droit de modifier la présente Politique de Confidentialité à tout moment pour refléter les évolutions légales, 
-            réglementaires ou techniques de notre plateforme.
+            {{ _("We reserve the right to modify this Privacy Policy at any time to reflect legal, regulatory, or technical developments of our platform.") }}
           </p>
           <p style="margin-bottom: 16px;">
-            En cas de modification substantielle, nous vous en informerons par :
+            {{ _("In the event of substantial modifications, we will inform you by:") }}
           </p>
           <ul style="margin-left: 24px; margin-bottom: 16px;">
-            <li style="margin-bottom: 8px;">Une notification par email (si vous êtes un utilisateur enregistré)</li>
-            <li style="margin-bottom: 8px;">Une bannière d'information visible sur la plateforme</li>
+            <li style="margin-bottom: 8px;">{{ _("Email notification (if you are a registered user)") }}</li>
+            <li style="margin-bottom: 8px;">{{ _("An information banner visible on the platform") }}</li>
           </ul>
           <p>
-            Nous vous invitons à consulter régulièrement cette page pour prendre connaissance des éventuelles modifications. 
-            La date de dernière mise à jour est indiquée en bas de cette page.
+            {{ _("We invite you to regularly consult this page to be informed of any changes. The date of last update is indicated at the bottom of this page.") }}
           </p>
         </div>
       </div>
 
       <div style="margin-top: 40px; padding: 24px; background: var(--bg-light); border-radius: var(--radius); border-left: 4px solid var(--secondary-color);">
         <p style="font-size: 14px; color: var(--text-gray); line-height: 1.6; margin: 0;">
-          <strong>📌 Contact :</strong> Pour toute question concernant cette Politique de Confidentialité ou l'exercice de vos droits, 
-          contactez notre Délégué à la Protection des Données à l'adresse : <strong style="color: var(--text-dark);">privacy@pieces-methanisation.fr</strong>
+          <strong>{{ _("📌 Contact:") }}</strong> {{ _("For any questions regarding this Privacy Policy or to exercise your rights, contact our Data Protection Officer at:") }} <strong style="color: var(--text-dark);">privacy@pieces-methanisation.fr</strong>
         </p>
       </div>
 
       <div style="margin-top: 32px; text-align: center;">
         <p style="font-size: 13px; color: var(--text-light);">
-          Dernière mise à jour : Février 2026
+          {{ _("Last updated: February 2026") }}
         </p>
       </div>
 
     </div>
 
     <div style="margin-top: 40px; display: flex; justify-content: center; gap: 16px;">
-      <a href="/cookies" class="btn-secondary">🍪 Gestion des Cookies</a>
-      <a href="/" class="btn-secondary">← Retour à l'accueil</a>
+      <a href="/cookies" class="btn-secondary">{{ _("🍪 Cookie Management") }}</a>
+      <a href="/" class="btn-secondary">{{ _("← Back to home") }}</a>
     </div>
   </div>
 </section>

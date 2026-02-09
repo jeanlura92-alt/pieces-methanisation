@@ -38,7 +38,7 @@ This document summarizes the successful implementation of the full marketplace u
 - **Endpoints**: `/deposer/step5` (POST), `/webhook/stripe`, `/payment/success`, `/payment/cancel`
 - **Features**:
   - Stripe Checkout session creation
-  - 49€ pay-per-listing model
+  - 29€ pay-per-listing model
   - Webhook handling for payment confirmation
   - Automatic listing publication on payment success
   - Payment record tracking in database
@@ -176,7 +176,7 @@ Recommended for production:
 The marketplace upgrade has been successfully implemented with all required features:
 - ✅ 5-step wizard with draft saving
 - ✅ Supabase database integration
-- ✅ Stripe payment (49€ per listing)
+- ✅ Stripe payment (29€ per listing)
 - ✅ Seller dashboard
 - ✅ Buyer inquiry system
 - ✅ Comprehensive documentation

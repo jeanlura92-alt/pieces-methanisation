@@ -6,7 +6,7 @@ Plateforme professionnelle B2B pour l'achat et la vente d'équipements de métha
 
 ### Pour les vendeurs
 - **Wizard de publication en 5 étapes** : Création guidée d'annonces avec sauvegarde automatique
-- **Paiement par Stripe** : Paiement sécurisé de 49€ par annonce publiée
+- **Paiement par Stripe** : Paiement sécurisé de 29€ par annonce publiée
 - **Tableau de bord** : Gestion des annonces (brouillons, publiées, vendues) et suivi des demandes
 - **Demandes de contact** : Réception et suivi des demandes d'acheteurs
 
@@ -104,7 +104,7 @@ SUPABASE_STORAGE_BUCKET=listing-photos
 1. Créez un compte sur [stripe.com](https://stripe.com)
 2. Activez le mode test
 3. Récupérez vos clés API de test dans Developers > API keys
-4. Créez un produit "Publication d'annonce" à 49.00 EUR
+4. Créez un produit "Publication d'annonce" à 29.00 EUR
 5. Ajoutez les clés dans votre fichier `.env` :
 
 ```env
@@ -205,7 +205,7 @@ pieces-methanisation/
 
 ## 💰 Modèle de monétisation
 
-- **Pay-per-listing** : 49 € par annonce publiée
+- **Pay-per-listing** : 29 € par annonce publiée
 - **Paiement unique** : Pas d'abonnement, pas de frais cachés
 - **Couverture** : Europe (devise EUR)
 
@@ -265,7 +265,7 @@ STRIPE_SECRET_KEY=sk_live_...  # Clé LIVE, pas test
 STRIPE_PUBLISHABLE_KEY=pk_live_...
 STRIPE_WEBHOOK_SECRET=whsec_...
 APP_URL=https://votre-domaine.com
-LISTING_PRICE_AMOUNT=4900  # 49.00 EUR en centimes
+LISTING_PRICE_AMOUNT=2900  # 29.00 EUR en centimes
 ```
 
 ## 📝 Prochaines étapes

@@ -154,13 +154,13 @@ async def wizard_step1_post(
 ):
     """Save step 1 and redirect to step 2"""
     # Get or create user (simplified - in production you'd have auth)
-    user = db.get_or_create_user("anonymous@example.com")
+    user = db.get_or_create_user("contact@pieces-methanisation.fr")
     
     listing_data = {
         "listing_type": listing_type,
         "category": category,
         "title": title,
-        "contact_email": "anonymous@example.com",
+        "contact_email": "contact@pieces-methanisation.fr",
         "contact_phone": "+33000000000",
         "location": "Non défini",
     }

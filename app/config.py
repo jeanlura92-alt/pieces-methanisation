@@ -25,7 +25,7 @@ STRIPE_LISTING_PRICE_ID = os.getenv("STRIPE_LISTING_PRICE_ID", "")
 
 # Application Configuration
 APP_URL = os.getenv("APP_URL", "http://localhost:8000")
-LISTING_PRICE_AMOUNT = int(os.getenv("LISTING_PRICE_AMOUNT", "4900"))  # 49.00 EUR in cents
+LISTING_PRICE_AMOUNT = int(os.getenv("LISTING_PRICE_AMOUNT", "2900"))  # 29.00 EUR in cents
 
 # Categories for listings
 CATEGORIES = [

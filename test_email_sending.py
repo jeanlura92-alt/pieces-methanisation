@@ -72,8 +72,8 @@ class TestEmailSending(unittest.TestCase):
         if body_part.get('Content-Transfer-Encoding') == 'base64' or '\n' in body:
             try:
                 body = base64.b64decode(body).decode('utf-8')
-            except:
-                pass  # Already decoded
+            except (ValueError, UnicodeDecodeError):
+                pass  # Already decoded or not base64
         
         self.assertIn('Test User', body)
         self.assertIn('user@example.com', body)
@@ -205,8 +205,8 @@ class TestEmailSending(unittest.TestCase):
         if body_part.get('Content-Transfer-Encoding') == 'base64' or '\n' in body:
             try:
                 body = base64.b64decode(body).decode('utf-8')
-            except:
-                pass  # Already decoded
+            except (ValueError, UnicodeDecodeError):
+                pass  # Already decoded or not base64
         
         # Verify body shows "Non fourni" for missing fields
         self.assertIn('Non fourni', body)
@@ -214,21 +214,27 @@ class TestEmailSending(unittest.TestCase):
         self.assertIn('Aucune', body)
 
 
-def test_contact_form_integration():
-    """Integration test for contact form submission"""
-    response = client.post(
-        "/contact",
-        data={
-            "name": "Integration Test",
-            "email": "integration@example.com",
-            "subject": "integration-test",
-            "message": "This is an integration test message"
-        }
-    )
+class TestContactFormIntegration(unittest.TestCase):
+    """Integration tests for contact form"""
     
-    # Should return success even in mock mode
-    assert response.status_code == 200
-    assert "Message envoyé !" in response.text or "success" in response.text.lower()
+    def test_contact_form_integration(self):
+        """Integration test for contact form submission"""
+        response = client.post(
+            "/contact",
+            data={
+                "name": "Integration Test",
+                "email": "integration@example.com",
+                "subject": "integration-test",
+                "message": "This is an integration test message"
+            }
+        )
+        
+        # Should return success even in mock mode
+        self.assertEqual(response.status_code, 200)
+        self.assertTrue(
+            "Message envoyé !" in response.text or "success" in response.text.lower(),
+            "Success message should be present"
+        )
 
 
 if __name__ == "__main__":

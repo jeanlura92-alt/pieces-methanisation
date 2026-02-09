@@ -597,8 +597,8 @@ async def contact_post(
         # TODO: Ajouter une table 'contact_messages' si nécessaire
         
         # Envoyer un email via SMTP
-        from . import email
-        email_sent = await email.send_contact_email(name, email, phone, company, subject, reference, message)
+        from . import email as email_module
+        email_sent = await email_module.send_contact_email(name, email, phone, company, subject, reference, message)
         
         if not email_sent:
             logger.warning(f"Email not sent for contact form from {email} - SMTP may not be configured")

@@ -53,7 +53,7 @@ Message:
         
     except Exception as e:
         logger.error(f"❌ Failed to send contact email: {e}")
-        logger.error(f"Check SMTP configuration: SMTP_HOST={config.SMTP_HOST}, SMTP_PORT={config.SMTP_PORT}, SMTP_USER={config.SMTP_USER}")
+        logger.error(f"Check SMTP configuration: SMTP_HOST={config.SMTP_HOST}, SMTP_PORT={config.SMTP_PORT}, SMTP_USER={'<configured>' if config.SMTP_USER else '<not set>'}")
         return False
 
 async def send_contact_email(

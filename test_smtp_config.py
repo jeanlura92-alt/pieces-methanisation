@@ -37,7 +37,7 @@ async def test_smtp():
         email="test@example.com",
         phone="+33123456789",
         company="Test Company",
-        subject="test-email",
+        subject="SMTP Configuration Test",
         reference=None,
         message="This is a test email from the SMTP configuration test script."
     )

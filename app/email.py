@@ -48,11 +48,12 @@ Message:
             server.login(config.SMTP_USER, config.SMTP_PASSWORD)
             server.send_message(msg)
         
-        logger.info(f"Contact email sent successfully for {email}")
+        logger.info(f"✅ Contact email sent successfully to {config.CONTACT_EMAIL} from {email}")
         return True
         
     except Exception as e:
-        logger.error(f"Failed to send contact email: {e}")
+        logger.error(f"❌ Failed to send contact email: {e}")
+        logger.error(f"Check SMTP configuration: SMTP_HOST={config.SMTP_HOST}, SMTP_PORT={config.SMTP_PORT}, SMTP_USER={'<configured>' if config.SMTP_USER else '<not set>'}")
         return False
 
 async def send_contact_email(
@@ -67,7 +68,10 @@ async def send_contact_email(
     """Send contact form email notification"""
     # Vérifier si SMTP est configuré
     if not hasattr(config, 'SMTP_HOST') or not config.SMTP_HOST:
-        logger.warning("SMTP not configured - skipping email send")
+        logger.warning(
+            "SMTP not configured - email not sent. "
+            "Configure SMTP_HOST, SMTP_USER, SMTP_PASSWORD in .env to enable email sending."
+        )
         return True  # Mode mock
     
     # Run blocking SMTP in thread pool to avoid blocking event loop

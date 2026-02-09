@@ -590,18 +590,26 @@ async def contact_post(
     """Handle contact form submission"""
     try:
         # Logger les données (note: sanitize sensitive data in production logs)
-        logger.info(f"Contact form submitted by {name} ({email})")
-        logger.info(f"Subject: {subject}, Message: {message[:100]}...")
+        logger.info(f"📝 Contact form submitted by {name} ({email})")
+        logger.info(f"📋 Subject: {subject}, Reference: {reference or 'None'}")
+        logger.debug(f"Message preview: {message[:100]}...")
+        if phone:
+            logger.debug(f"Phone: {phone}")
+        if company:
+            logger.debug(f"Company: {company}")
         
         # Sauvegarder dans la base de données (optionnel mais recommandé)
         # TODO: Ajouter une table 'contact_messages' si nécessaire
         
         # Envoyer un email via SMTP
+        logger.info("📧 Attempting to send contact email...")
         from . import email as email_module
         email_sent = await email_module.send_contact_email(name, email, phone, company, subject, reference, message)
         
-        if not email_sent:
-            logger.warning(f"Email not sent for contact form from {email} - SMTP may not be configured")
+        if email_sent:
+            logger.info(f"✅ Contact form processed successfully for {email}")
+        else:
+            logger.warning(f"⚠️  Email not sent for contact form from {email} - SMTP may not be configured or failed")
         
         # Rediriger avec message de succès
         return templates.TemplateResponse(
@@ -614,7 +622,7 @@ async def contact_post(
         )
         
     except Exception as e:
-        logger.error(f"Error processing contact form: {e}")
+        logger.error(f"❌ Error processing contact form: {e}", exc_info=True)
         return templates.TemplateResponse(
             "contact.html",
             {

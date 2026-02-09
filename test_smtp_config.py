@@ -26,9 +26,19 @@ async def test_smtp():
     if not config.SMTP_HOST:
         print("⚠️  SMTP not configured - emails will not be sent")
         print("   Configure SMTP in .env file to enable email sending")
+        print()
+        print("Example .env configuration:")
+        print("  SMTP_HOST=smtp.gmail.com")
+        print("  SMTP_PORT=587")
+        print("  SMTP_USER=your-email@gmail.com")
+        print("  SMTP_PASSWORD=your-app-password")
+        print("  CONTACT_EMAIL=recipient@example.com")
         return False
     
     print("Sending test email...")
+    print(f"  From: {config.SMTP_USER}")
+    print(f"  To: {config.CONTACT_EMAIL}")
+    print(f"  Subject: SMTP Configuration Test")
     print()
     
     # Send test email
@@ -42,13 +52,25 @@ async def test_smtp():
         message="This is a test email from the SMTP configuration test script."
     )
     
+    print()
     if success:
         print("✅ Test email sent successfully!")
         print(f"   Check inbox: {config.CONTACT_EMAIL}")
+        print()
+        print("📋 Troubleshooting tips:")
+        print("   - Check spam/junk folder if email not received")
+        print("   - Verify sender email is not blocked")
+        print("   - Check email server logs for delivery status")
         return True
     else:
         print("❌ Failed to send test email")
         print("   Check logs above for error details")
+        print()
+        print("📋 Common issues:")
+        print("   - Wrong SMTP credentials (SMTP_USER/SMTP_PASSWORD)")
+        print("   - Firewall blocking SMTP port (usually 587 or 465)")
+        print("   - SMTP server requires app-specific password (Gmail, Outlook)")
+        print("   - TLS/SSL issues with SMTP server")
         return False
 
 if __name__ == "__main__":

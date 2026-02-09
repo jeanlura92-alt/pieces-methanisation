@@ -130,6 +130,45 @@ Pour recevoir les confirmations de paiement :
    - Sélectionnez l'événement : `checkout.session.completed`
    - Copiez le webhook secret et ajoutez-le dans vos variables d'environnement
 
+### Configuration SMTP (Envoi d'emails)
+
+Pour que le formulaire de contact envoie réellement des emails, vous devez configurer un serveur SMTP.
+
+#### Option A : Gmail (Tests)
+
+1. Activez la validation en 2 étapes sur votre compte Google
+2. Créez un "Mot de passe d'application" : https://myaccount.google.com/apppasswords
+3. Ajoutez dans `.env` :
+
+```bash
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your-email@gmail.com
+SMTP_PASSWORD=your-app-password
+CONTACT_EMAIL=contact@pieces-methanisation.fr
+```
+
+#### Option B : SendGrid (Production recommandée)
+
+1. Créez un compte sur https://sendgrid.com (100 emails/jour gratuits)
+2. Créez une clé API dans Settings > API Keys
+3. Ajoutez dans `.env` :
+
+```bash
+SMTP_HOST=smtp.sendgrid.net
+SMTP_PORT=587
+SMTP_USER=apikey
+SMTP_PASSWORD=your-sendgrid-api-key
+CONTACT_EMAIL=contact@pieces-methanisation.fr
+```
+
+#### Mode Mock (sans SMTP)
+
+Si aucune configuration SMTP n'est fournie, l'application fonctionne en "mode mock" :
+- Le formulaire affiche un message de succès
+- Les données sont loguées dans la console
+- **Aucun email n'est envoyé**
+
 ## 🌐 Routes disponibles
 
 ### Pages publiques
